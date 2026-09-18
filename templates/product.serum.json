@@ -96,8 +96,8 @@
             "link": "shopify://pages/diagnostic",
             "text": "Faire un diagnostic",
             "stretch": false,
-            "background": "#2D464B",
-            "text_color": "#FFFFFF"
+            "background": "#2d464b",
+            "text_color": "#ffffff"
           }
         },
         "accordion_Yw977X": {
@@ -168,7 +168,7 @@
         "product_info_size": 50,
         "show_sticky_add_to_cart": true,
         "center_basic_info": false,
-        "desktop_media_layout": "grid",
+        "desktop_media_layout": "carousel_thumbnails_bottom",
         "desktop_media_grid_gap": 0,
         "mobile_controls": "free_scroll",
         "enable_media_autoplay": false,
