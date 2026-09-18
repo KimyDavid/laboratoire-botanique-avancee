@@ -1,0 +1,40 @@
+<div class="spacer" style="--height-desktop:{{ section.settings.spacer }}px;--height-mobile:{{ section.settings.spacer_mobile }}px">
+</div>
+
+{% schema %}
+{
+  "name": "Espacement",
+  "class": "shopify-section--spacer",
+  "tag": "div",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "settings": [
+    {
+        "type": "range",
+        "id": "spacer",
+        "min": 0,
+        "max": 240,
+        "step": 8,
+        "unit": "px",
+        "label": "Espacement desktop",
+        "default": 128
+    },
+    {
+        "type": "range",
+        "id": "spacer_mobile",
+        "min": 0,
+        "max": 240,
+        "step": 8,
+        "unit": "px",
+        "label": "Espacement mobile",
+        "default": 128
+    }
+  ],
+  "presets": [
+    {
+      "name": "Espacement",
+    }
+  ]
+}
+{% endschema %}

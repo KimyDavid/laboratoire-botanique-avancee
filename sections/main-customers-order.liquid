@@ -1,0 +1,213 @@
+<div class="section-spacing section-spacing--tight">
+  <div class="container container--xl">
+    <div class="section-stack">
+
+      <div class="customer-account__wrapper">
+        {% render 'customer-sidebar' %}
+        <div class="customer-account__content">
+          <div class="customer-account__order-header">
+            <a href="{{ routes.account_url }}" class="text-with-icon cta">
+              {%- render 'icon' with 'arrow-left-lba', width: 10, direction_aware: true -%}
+              {{- 'customer.order.back' | t: name: order.name -}}
+            </a>
+            <h1 class="h2">{{ 'customer.order.order_name' | t: name: order.name }}</h1>
+          </div>
+          <div class="customer-account__section">
+            <div class="customer-account__cols">
+              <div class="customer-account__col customer-account__col--full-mobile">
+                <h2>Contact</h2>
+                <p>{{ order.email }}</p>
+                <p>{{- order.billing_address | format_address -}}</p>
+              </div>
+              {%- if order.shipping_address -%}
+                <div class="customer-account__col customer-account__col--full-mobile">
+                  <h2>{{ 'customer.order.shipping_address' | t }}</h2>
+                  <p>{{- order.shipping_address | format_address -}}</p>
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+          <div class="customer-account__section">
+            <div class="customer-account__cols">
+              <div class="customer-account__col">
+                <h2>Statut</h2>
+                <p>{{ order.fulfillment_status_label }}</p>
+              </div>
+              <div class="customer-account__col">
+                <h2>Livraison</h2>
+                <p>
+                  {% for method in order.shipping_methods limit: 1 %}
+                    {{ method.title }}<br>
+                  {% endfor %}
+                </p>
+              </div>
+              <div class="customer-account__col">
+                <h2>Paiement</h2>
+                <p>{{ order.financial_status_label }}</p>
+              </div>
+              <div class="customer-account__col">
+                <h2>Date</h2>
+                <p>{{ order.created_at | date: "%d.%m.%y" }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="customer-account__section">
+            <div class="customer-order">
+              <div class="customer-order__details">
+                {%- comment -%}
+                ----------------------------------------------------------------------------------------------------------------
+                ORDER STATUS
+                ----------------------------------------------------------------------------------------------------------------
+                {%- endcomment -%}
+
+                {%- if order.cancelled -%}
+                  {%- assign cancelled_on = order.cancelled_at | date: format: 'date_at_time' -%}
+                  {%- assign cancel_message = 'customer.order.cancelled_on' | t: date: cancelled_on, reason: order.cancel_reason_label -%}
+                  {%- render 'banner', status: 'error', content: cancel_message -%}
+                {%- endif -%}
+
+                {%- assign fulfillment = order.line_items | where: 'fulfillment' | map: 'fulfillment' | sort: 'created_at' | last -%}
+
+                {%- if order.shipping_address and fulfillment -%}
+                  {%- assign created_at = fulfillment.created_at | date: format: 'date' -%}
+
+                  {%- if fulfillment.tracking_number -%}
+                    {%- assign fulfillment_message = 'customer.order.fulfillment_with_number' | t: date: created_at, tracking_number: fulfillment.tracking_number -%}
+                  {%- else -%}
+                    {%- assign fulfillment_message = 'customer.order.fulfillment' | t: date: created_at -%}
+                  {%- endif -%}
+
+                  {%- if fulfillment.tracking_url -%}
+                    {%- capture fulfillment_message -%}
+                      {%- assign button_content = 'customer.order.track_shipment' | t -%}
+
+                      <div class="banner__text-with-button">
+                        {{- fulfillment_message -}}
+                        {%- render 'button', href: fulfillment.tracking_url, external: true, content: button_content, size: 'sm' -%}
+                      </div>
+                    {%- endcapture -%}
+                  {%- endif -%}
+
+                  {%- render 'banner', status: 'success', content: fulfillment_message -%}
+                {%- endif -%}
+
+                {%- comment -%}
+                ----------------------------------------------------------------------------------------------------------------
+                ORDER SUMMARY
+                ----------------------------------------------------------------------------------------------------------------
+                {%- endcomment -%}
+                <table class="order-summary table--reduce-border">
+                  {% comment %} <thead class="order-summary__header">
+                    <tr>
+                      <th>{{ 'customer.order.product' | t }}</th>
+                      <th class="text-center">{{ 'customer.order.quantity' | t }}</th>
+                      <th class="text-end">{{ 'customer.order.total' | t }}</th>
+                    </tr>
+                  </thead> {% endcomment %}
+
+                  <tbody class="order-summary__body">
+                    {%- for line_item in order.line_items -%}
+                      <tr>
+                        <td>{%- render 'line-item', line_item: line_item -%}</td>
+                        <td class="text-end">{{ line_item.final_line_price | money }}</td>
+                      </tr>
+                    {%- endfor -%}
+                  </tbody>
+
+                  <tfoot class="order-summary__footer">
+                    <tr>
+                      <td colspan="2">
+                        <div class="h-stack gap-2 justify-between">
+                          <span class="h2">{{ 'customer.order.subtotal' | t }}</span>
+                          <span class="text-end">{{ order.line_items_subtotal_price | money }}</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    {%- for discount_application in order.cart_level_discount_applications -%}
+                      <tr>
+                        <td colspan="2">
+                          <div class="h-stack gap-2 justify-between">
+                            <span class="h2">{{ 'customer.order.discount' | t }} ({{ discount_application.title }})</span>
+                            <span class="text-end">-{{ discount_application.total_allocated_amount | money }}</span>
+                          </div>
+                        </td>
+                      </tr>
+                    {%- endfor -%}
+
+                    {%- for shipping_method in order.shipping_methods -%}
+                      <tr>
+                        <td colspan="2">
+                          <div class="h-stack gap-2 justify-between">
+                            <span class="h2">{{ 'customer.order.shipping' | t }}</span>
+                            <span class="text-end">{{ shipping_method.price | money }}</span>
+                          </div>
+                        </td>
+                      </tr>
+                    {%- endfor -%}
+
+                    {%- for tax_line in order.tax_lines -%}
+                      <tr>
+                        <td colspan="2">
+                          <div class="h-stack gap-2 justify-between">
+                            <span class="h2">
+                              {%- if cart.taxes_included -%}
+                                {{ 'customer.order.taxes_included' | t }} ({{ tax_line.title }} {{ tax_line.rate_percentage }}%)
+                              {%- else -%}
+                                {{ 'customer.order.taxes_excluded' | t }} ({{ tax_line.title }} {{ tax_line.rate_percentage }}%)
+                              {%- endif -%}
+                            </span>
+                            <span class="text-end">{{ tax_line.price | money }}</span>
+                          </div>
+                        </td>
+                      </tr>
+                    {%- endfor -%}
+
+                    {%- if order.total_duties > 0 -%}
+                      <tr>
+                        <td colspan="2">
+                          <div class="h-stack gap-2 justify-between">
+                            <span class="h2">{{ 'customer.order.total_duties' | t }}</span>
+                            <span class="text-end">{{ order.total_duties | money }}</span>
+                          </div>
+                        </td>
+                      </tr>
+                    {%- endif -%}
+
+                    {%- if order.total_refunded_amount > 0 -%}
+                      <tr>
+                        <td colspan="2">
+                          <div class="h-stack gap-2 justify-between">
+                            <span class="h2">{{ 'customer.order.refunded_amount' | t }}</span>
+                            <span class="text-end">{{ order.total_refunded_amount | money }}</span>
+                          </div>
+                        </td>
+                      </tr>
+                    {%- endif -%}
+
+                    <tr>
+                      <td colspan="2">
+                        <div class="h-stack gap-2 justify-between">
+                          <span class="h2">{{ 'customer.order.total' | t }}</span>
+                          <span class="h2 text-end">{{ order.total_net_amount | money_with_currency }}</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main_customers_order.name",
+  "class": "shopify-section--main-customers-order",
+  "tag": "section"
+}
+{% endschema %}

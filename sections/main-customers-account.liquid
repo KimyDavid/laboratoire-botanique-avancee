@@ -1,0 +1,168 @@
+<div class="section-spacing section-spacing--tight">
+  <div class="container container--xl">
+    <div class="section-stack">
+      <div class="customer-account__wrapper">
+        {% render 'customer-sidebar' %}
+        <div class="customer-account__content" id="customer-details">
+          <div class="customer-account__section">
+            <h2>Bonjour {{ customer.first_name }}</h2>
+            <p>{{ customer.first_name }} {{ customer.last_name }}</p>
+            {% if customer.metafields.custom.date_de_naissance != blank %}
+              <p>{{ customer.metafields.custom.date_de_naissance }}</p>
+            {% endif %}
+            <p>{{ customer.email }}</p>
+          </div>
+          <div class="customer-account__section">
+            <h2>Mot de passe</h2>
+            <p>•••••••••••••••••</p>
+            <a href="" class="cta cta--underline">{{ 'customer.reset_password.submit' | t }}</a>
+          </div>
+          <div class="customer-account__section">
+            <h2>Adresse de livraison</h2>
+            {%- if customer.addresses_count == 0 -%}
+              <p>{{ 'customer.addresses.no_addresses' | t }}</p>
+            {%- else -%}
+              {{- customer.default_address | format_address -}}
+            {%- endif -%}
+            <a href="{{ routes.account_addresses_url }}" class="cta cta--underline">{{ 'customer.account.manage_addresses' | t }}</a>
+          </div>
+
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when '@app' -%}
+                <div class="customer-account__section">
+                  {%- render block -%}
+                </div>
+
+              {%- when 'liquid' -%}
+                <div class="customer-account__section">
+                  {%- if block.settings.liquid != blank -%}
+                    <div {{ block.shopify_attributes }}>
+                      {{- block.settings.liquid -}}
+                    </div>
+                  {%- endif -%}
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+        {%- for block in section.blocks -%}
+          <div class="customer-account__content" id="customer-orders" hidden>
+            <h2>{{- 'customer.account.orders' | t -}}</h2>
+            <div class="customer-account__section">
+              {%- case block.type -%}
+                {%- when 'orders' -%}
+                  <div {{ block.shopify_attributes }}>
+                    <!-- CUSTOMER ORDERS -->
+                      {%- if customer.orders.size == 0 -%}
+                        <div class="prose">
+                          <p>{{ 'customer.account.no_orders' | t }}</p>
+
+                          {% comment %} {%- assign button_label = 'customer.account.continue_shopping' | t -%}
+                          {%- render 'button', href: routes.all_products_collection_url, content: button_label -%} {% endcomment %}
+                        </div>
+                      {%- else -%}
+                        {%- paginate customer.orders by 16 -%}
+                          <div class="v-stack gap-6 md:hidden">
+                            <div class="v-stack gap-8">
+                              {%- for order in customer.orders -%}
+                                <div class="v-stack gap-2">
+                                  <div class="v-stack gap-4">
+                                    <div class="customer-account-order-grid">
+                                      <div>
+                                        <p>{{ 'customer.order.order_name' | t: name: order.name }}</p>
+                                      </div>
+
+                                      <div>
+                                        {% comment %} <p class="text-subdued">{{ 'customer.order.fulfillment_status' | t }}</p> {% endcomment %}
+                                        <p class="text-end">{{ order.fulfillment_status_label }}</p>
+                                      </div>
+
+                                      <div>
+                                        {% comment %} <p class="text-subdued">{{ 'customer.order.payment_status' | t }}</p> {% endcomment %}
+                                        <p>{{ order.financial_status_label }}</p>
+                                      </div>
+
+                                      <div>
+                                        {% comment %} <p class="text-subdued">{{ 'customer.order.total' | t }}</p> {% endcomment %}
+                                        <p class="text-end">{{ order.total_net_amount | money }}</p>
+                                      </div>
+
+                                      <div>
+                                        {% comment %} <p class="text-subdued">{{ 'customer.order.date' | t }}</p> {% endcomment %}
+                                        <p>{{ order.created_at | date: "%d.%m.%y" }}</p>
+                                      </div>
+
+                                      <div class="text-end"><a href="{{ order.customer_url }}" class="cta cta--underline">{{ 'customer.order.view_details' | t }}</a></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              {%- endfor -%}
+                            </div>
+                          </div>
+
+                          <table class="table table--reduce-border table--lg hidden md:table">
+                            {% comment %} <thead>
+                            <tr>
+                              <th>{{ 'customer.order.order' | t }}</th>
+                              <th>{{ 'customer.order.date' | t }}</th>
+                              <th>{{ 'customer.order.payment_status' | t }}</th>
+                              <th>{{ 'customer.order.fulfillment_status' | t }}</th>
+                              <th class="text-end">{{ 'customer.order.total' | t }}</th>
+                            </tr>
+                            </thead> {% endcomment %}
+
+                            <tbody>
+                              {%- for order in customer.orders -%}
+                                <tr onclick="window.location.href = '{{ order.customer_url }}'">
+                                  <td>{{ order.name }}</td>
+                                  <td>{{ order.created_at | date: "%d.%m.%y" }}</td>
+                                  <td>{{ order.financial_status_label }}</td>
+                                  <td>{{ order.fulfillment_status_label }}</td>
+                                  <td>{{ order.total_net_amount | money }}</td>
+                                  <td class="text-end"><span class="cta cta--underline">{{ 'customer.order.view_details' | t }}</span></td>
+                                </tr>
+                              {%- endfor -%}
+                            </tbody>
+                          </table>
+
+                          {%- render 'pagination', paginate: paginate -%}
+                        {%- endpaginate -%}
+                      {%- endif -%}
+                  </div>
+              {%- endcase -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main_customers_account.name",
+  "class": "shopify-section--main-customers-account",
+  "tag": "section",
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "liquid",
+      "name": "t:sections.main_customers_account.blocks.liquid.name",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "liquid",
+          "label": "t:global.code.liquid"
+        }
+      ]
+    },
+    {
+      "type": "orders",
+      "name": "t:sections.main_customers_account.blocks.order_list.name",
+      "limit": 1
+    }
+  ]
+}
+{% endschema %}

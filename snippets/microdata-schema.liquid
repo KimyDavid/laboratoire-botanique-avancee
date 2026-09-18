@@ -1,0 +1,204 @@
+{%- comment -%}
+This snippet structures the micro-data using JSON-LD specification. Starting from Prestige 10, we are using
+the structured_data built-in filter to ensure that Shopify can keep it up to date without requiring theme upgrade. If
+you believe some information for products are missing, please reach Shopify support directly, as it is no longer
+managed at the theme level.
+{%- endcomment -%}
+
+{%- if request.page_type == 'product' -%}
+  <script type="application/ld+json">
+    {{- product | structured_data -}}
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": {{ product.title | json }},
+      "brand": {
+        "@type": "Brand",
+        "name": "Laboratoires Botanique Avancée"
+      },
+      "image": "{{ product.featured_image | image_url: width: 1920 }}",
+      "offers": {
+        "@type": "Offer",
+        "price": "{{ product.selected_or_first_available_variant.price | money_without_currency | strip_html | replace: ',', '.' }}",
+        "priceCurrency": "{{ cart.currency.iso_code }}",
+        "availability": "{% if product.selected_or_first_available_variant.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
+        "url": "{{ shop.url }}{{ product.url }}"
+      },
+      "url": "{{ shop.url }}{{ product.url }}",
+      {% if product.handle == 'creme-fondante-regenerative' %}
+        "additionalProperty": [
+          {"@type": "PropertyValue", "name": "Concentration en actifs", "value": "30%"},
+          {"@type": "PropertyValue", "name": "Cellules souches végétales", "value": "20 millions"},
+          {"@type": "PropertyValue", "name": "Gènes réactivés", "value": "136"},
+          {"@type": "PropertyValue", "name": "Fermeté après 3 mois", "value": "+53%"},
+          {"@type": "PropertyValue", "name": "Réduction des rides après 3 mois", "value": "-20%"}
+        ]
+      {% elsif product.handle == 'serum-creme-regeneratif' %}
+        "additionalProperty": [
+          {"@type": "PropertyValue", "name": "Concentration en actifs", "value": "30%"},
+          {"@type": "PropertyValue", "name": "Cellules souches végétales", "value": "7,5 millions"},
+          {"@type": "PropertyValue", "name": "Fermeté après 3 mois", "value": "+53%"},
+          {"@type": "PropertyValue", "name": "Réduction des rides après 3 mois", "value": "-21%"},
+          {"@type": "PropertyValue", "name": "Perte en eau après 3 mois", "value": "-18%"}
+        ]
+      {% elsif product.handle == 'creme-yeux-soyeuse-regenerative' %}
+        "additionalProperty": [
+          {"@type": "PropertyValue", "name": "Concentration en actifs", "value": "32%"},
+          {"@type": "PropertyValue", "name": "Paupières plus fermes après 1 mois", "value": "97%"},
+          {"@type": "PropertyValue", "name": "Réduction des rides, cernes et poches après 1 mois", "value": "80%"},
+          {"@type": "PropertyValue", "name": "Peau hydratée après 1 mois", "value": "95%"}
+        ]
+      {% elsif product.handle == 'lotion-infusion-hydratation' %}
+        "additionalProperty": [
+          {"@type": "PropertyValue", "name": "Ingrédients d'origine naturelle", "value": "97%"},
+          {"@type": "PropertyValue", "name": "Cellules souches végétales", "value": "7 millions"},
+          {"@type": "PropertyValue", "name": "Grain de peau affiné et peau plus lisse après 1 mois", "value": "95%"},
+          {"@type": "PropertyValue", "name": "Peau plus hydratée après 1 mois", "value": "95%"},
+          {"@type": "PropertyValue", "name": "Peau plus éclatante après 1 mois", "value": "100%"},
+          {"@type": "PropertyValue", "name": "Peau revitalisée et sublimée après 1 mois", "value": "100%"},
+        ]
+      {% endif %}
+    }
+  </script>
+{%- elsif request.page_type == 'article' -%}
+  <script type="application/ld+json">
+    {{- article | structured_data -}}
+  </script>
+{%- endif -%}
+
+{% if request.path == '/pages/expertise' %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jean-Marc Lemaître",
+      "jobTitle": "Directeur de recherche INSERM",
+      "affiliation": [
+        { "@type": "Organization", "name": "INSERM, Institut de Médecine Régénérative de Montpellier" }
+      ],
+      "knowsAbout": ["vieillissement cellulaire", "médecine régénérative", "organoïde de peau"]
+    }
+  </script>
+{% endif %}
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": {{ 'general.home' | t | json }},
+        "item": "{{ shop.url }}"
+      }
+
+      {%- if request.page_type == 'product' -%}
+        {%- if collection -%}
+          ,{
+            "@type": "ListItem",
+            "position": 2,
+            "name": {{ collection.title | json }},
+            "item": "{{ shop.url }}{{ collection.url }}"
+          }, {
+            "@type": "ListItem",
+            "position": 3,
+            "name": {{ product.title | json }},
+            "item": "{{ shop.url }}{{ product.url }}"
+          }
+        {%- else -%}
+          ,{
+            "@type": "ListItem",
+            "position": 2,
+            "name": {{ product.title | json }},
+            "item": "{{ shop.url }}{{ product.url }}"
+          }
+        {%- endif -%}
+      {%- elsif request.page_type == 'collection' -%}
+          ,{
+            "@type": "ListItem",
+            "position": 2,
+            "name": {{ collection.title | json }},
+            "item": "{{ shop.url }}{{ collection.url }}"
+          }
+      {%- elsif request.page_type == 'blog' -%}
+          ,{
+            "@type": "ListItem",
+            "position": 2,
+            "name": {{ blog.title | json }},
+            "item": "{{ shop.url }}{{ blog.url }}"
+          }
+      {%- elsif request.page_type == 'article' -%}
+          ,{
+            "@type": "ListItem",
+            "position": 2,
+            "name": {{ blog.title | json }},
+            "item": "{{ shop.url }}{{ blog.url }}"
+          }, {
+            "@type": "ListItem",
+            "position": 3,
+            "name": {{ blog.title | json }},
+            "item": "{{ shop.url }}{{ article.url }}"
+          }
+      {%- elsif request.page_type == 'page' -%}
+        ,{
+            "@type": "ListItem",
+            "position": 2,
+            "name": {{ page.title | json }},
+            "item": "{{ shop.url }}{{ page.url }}"
+          }
+      {%- endif -%}
+    ]
+  }
+</script>
+
+{%- if request.page_type == 'index' -%}
+  {%- assign potential_action_target = request.origin | append: routes.search_url | append: "?q={search_term_string}" -%}
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": {{ shop.name | json }},
+      "url": {{ shop.url | append: page.url | json }},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {{ potential_action_target | json }},
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": {{ shop.name | json }},
+      {%- if shop.brand.logo -%}
+        "logo": {{ shop.brand.logo | image_url: width: shop.brand.logo.width | prepend: "https:" | json }},
+      {%- endif -%}
+      {%- if shop.brand.short_description -%}
+        "description": {{ shop.brand.short_description | json }},
+      {%- endif -%}
+      {%- if shop.brand.slogan -%}
+        "slogan": {{ shop.brand.slogan | json }},
+      {%- endif -%}
+      "parentOrganization": { "@type": "Organization", "name": "FLC Group" },
+      "founder": { "@type": "Person", "name": "Nathalie Cantagrel" },
+      "foundingDate": "2025-12",
+      "location": { "@type": "Place", "name": "Domaine de Baulieu, Aix-en-Provence" },
+      "sameAs": [
+        "https://laboratoires-botanique-avancee.com/pages/llms",
+        "https://www.instagram.com/laboratoiresbotaniqueavancee/",
+        "https://www.facebook.com/people/Laboratoires-Botanique-Avanc%C3%A9e/61584284395122/"
+        {%- if shop.brand.metafields.social_links.size > 0 -%}
+          {%- for social_link in shop.brand.metafields.social_links -%}
+            ,{{- social_link.last.value | json -}}
+          {%- endfor -%}
+        {%- endif -%}
+      ],
+      "url": {{ shop.url | append: page.url | json }}
+    }
+  ]
+  </script>
+{%- endif -%}

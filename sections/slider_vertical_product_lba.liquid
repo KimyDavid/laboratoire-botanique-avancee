@@ -1,0 +1,313 @@
+
+<style>
+  .section-{{ section.id }} .vertical-slider-wrapper.slider_vertical_product .section {
+    height: 100vh;
+    background-size: 100vw;
+    width: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .section-{{ section.id }} .slide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    color: white;
+    text-align: center;
+  }
+  .section-{{ section.id }} #slider_vertical_product .price {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-{{ section.id }} .slide .button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: white;
+    color: black;
+    border-radius: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  .section-{{ section.id }} .slide .button:hover {
+    background: #eee;
+  }
+  .section-{{ section.id }} .overlay-left .container_image::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-90deg, rgba(45, 64, 70, 0.00) 50%, #2D4046 100%);
+    pointer-events: none;
+    z-index: 2;
+  }
+  .section-{{ section.id }} .overlay-right .container_image::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(45, 64, 70, 0.00) 31.09%, rgba(45, 64, 70, 0.71) 73.5%, rgba(45, 70, 75, 0.95) 100%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  @media (max-width: 1000px) {   
+    .section-{{ section.id }} .vertical-slider-wrapper.slider_vertical_product .section {
+      justify-content: flex-end;
+      padding-bottom: 72px;
+    }
+
+    .section-{{ section.id }} .container_image::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(45, 64, 70, 0) 40.73%, #2D4046 67.14%) !important;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .section-{{ section.id }} .content_info {
+      color: white !important;
+    }
+  }
+</style>
+
+<div id="{{ section.settings.id }}" class="section-{{ section.id }}">
+  <div id="slider_vertical_product" class="vertical-slider-wrapper slider_vertical_product">
+    <div>
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'product_slide' %}
+              {% assign product = all_products[block.settings.product] %}
+              <div class="product_slide product section {% if block.settings.enable_blur %}blur{% endif %}" >
+                <div class="container_image">
+                <picture>
+                  {%- if block.settings.image_mobile != blank -%}
+                    <source
+                      media="(max-width: 699px)"
+                      srcset="{{ block.settings.image_mobile | image_url: width: 400 }} 400w, {{ block.settings.image_mobile | image_url: width: 600 }} 600w, {{ block.settings.image_mobile | image_url: width: 800 }} 800w"
+                    >
+                  {%- endif -%}
+
+                  {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', class: 'w-full' -}}
+                </picture>
+
+                  {% comment %} <image-parallax class="contents"> {% endcomment %}
+                    {% comment %} {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', class: 'w-full' -}} {% endcomment %}
+                  {% comment %} </image-parallax> {% endcomment %}
+
+                  {% comment %} <img class="slider_image" src="{{ block.settings.image | image_url: width: 1920 }}" /> {% endcomment %}
+                </div>
+                <div class="container container--xl">
+                  <div class="flex justify-end">
+                    <div class="content_info _left prose flex flex-column gap-8" style="color:{{ block.settings.text_color }};">                  
+                      {% if block.settings.title != blank  %}
+                        <h3 class="subtitle uppercase">{{ block.settings.title }}</h3>
+                      {% endif %}          
+                      {% if block.settings.description %}
+                        <p class="description">{{ block.settings.description }}</p>
+                      {% endif %}
+                    </div>
+                    <div class="content_info _right flex gap-48">                  
+                      {% if product %}
+                        <div class="price cta"><span>{{ product.price | money }}</span> {% if product.metafields.custom.contenance != blank %}<span>|</span><span>{{ product.metafields.custom.contenance }}</span>{% endif %}</div>
+                        <a href="{{ product.url }}" class="cta  btn-t-white-lba" style="">
+                          {{ 'product.general.buy_btn' | t }} {% render 'icon', icon: 'arrow-right-lba' %}
+                        </a>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% when 'texte_slide' %}
+              <div class="product_slide texte section  overlay-{{ block.settings.image_overlay }}">
+                <div class="container_image">
+
+                  <picture>
+                    {%- if block.settings.image_mobile != blank -%}
+                      <source
+                        media="(max-width: 699px)"
+                        srcset="{{ block.settings.image_mobile | image_url: width: 400 }} 400w, {{ block.settings.image_mobile | image_url: width: 600 }} 600w, {{ block.settings.image_mobile | image_url: width: 800 }} 800w"
+                      >
+                    {%- endif -%}
+
+                    {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', class: 'w-full' -}}
+                  </picture>
+
+                  {% comment %} <image-parallax class="contents"> {% endcomment %}
+                    {% comment %} {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', class: 'w-full' -}} {% endcomment %}
+                  {% comment %} </image-parallax> {% endcomment %}
+                  {% comment %} <img class="slider_image" src="{{ block.settings.image | image_url: width: 1920 }}" /> {% endcomment %}
+                </div>
+                <div class="container container--xl">
+                  <div class="flex justify-{{ block.settings.text_position }}">
+                    <div class="content_info _left prose" style="max-width:{{ block.settings.width_content }};color:{{ block.settings.text_color }};">                  
+                      {% if block.settings.title != blank  %}
+                        <h2 class="h2">{{ block.settings.title }}</h2>
+                      {% endif %}          
+                      {% if block.settings.description %}
+                        <div class="description  margin-b-12">{{ block.settings.description }}</div>
+                      {% endif %}
+                        <a href="{{ block.settings.button }}" class="cta cta--underline">{{ block.settings.button_texte }}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Slider vertical produit",
+  "class": "slider_vertical_product",
+  "settings": [
+    {
+      "type": "text",
+      "id": "id",
+      "label": "Identifiant de la section",
+      "info": "Permet de faire une ancre vers la section"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_slide",
+      "name": "Produit",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Produit"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image de fond"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Couleur du texte",
+          "default": "#fff"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titre"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+          {
+            "type": "checkbox",
+            "id": "enable_blur",
+            "label": "Blur section",
+            "default": false
+          },
+      ]
+    },
+    {
+      "type": "texte_slide",
+      "name": "Texte",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image de fond"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Image de fond mobile"
+        },
+        {
+          "type": "select",
+          "id": "image_overlay",
+          "label": "Overlay image",
+          "options": [
+            { "value": "left", "label": "Gauche" },
+            { "value": "right", "label": "Droite" },
+            { "value": "none", "label": "Aucun" }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "select",
+          "id": "text_position",
+          "label": "Position du texte",
+          "options": [
+            { "value": "start", "label": "Gauche" },
+            { "value": "end", "label": "Droite" }
+          ],
+          "default": "end"
+        },
+        {
+          "type": "select",
+          "id": "width_content",
+          "label": "Largeur max du texte",
+          "options": [
+            { "value": "470px", "label": "470px" },
+            { "value": "600px", "label": "600px" },
+            { "value": "100%", "label": "100%" }
+          ],
+          "default": "470px"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Couleur du texte",
+          "default": "#fff"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titre"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "button_texte",
+          "label": "titre du lien"
+        },
+        {
+          "type": "url",
+          "id": "button",
+          "label": "Lien"
+        }
+      ]
+    },
+  ],
+  "presets": [
+    {
+      "name": "Slider vertical produit"
+    }
+  ]
+}
+{% endschema %}

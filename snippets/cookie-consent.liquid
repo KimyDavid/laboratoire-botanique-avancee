@@ -1,0 +1,37 @@
+<script>
+  window.Shopify.loadFeatures(
+    [{ name: "consent-tracking-api", version: "0.1" }],
+    function (error) {
+      if (error) return;
+
+      // Etat par défaut avant choix
+      if (window.Shopify.customerPrivacy) {
+        window.Shopify.customerPrivacy.setTrackingConsent(
+          {
+            analytics: false,
+            marketing: false,
+            preferences: false,
+            sale_of_data: false
+          },
+          function () {}
+        );
+      }
+    }
+  );
+
+  window.addEventListener("CookiebotOnConsentReady", function () {
+    if (!window.Cookiebot || !window.Shopify || !window.Shopify.customerPrivacy) return;
+
+    const c = window.Cookiebot.consent;
+
+    window.Shopify.customerPrivacy.setTrackingConsent(
+      {
+        analytics: !!c.statistics,
+        marketing: !!c.marketing,
+        preferences: !!c.preferences,
+        sale_of_data: !!c.marketing
+      },
+      function () {}
+    );
+  });
+</script>

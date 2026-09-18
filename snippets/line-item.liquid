@@ -1,0 +1,130 @@
+{%- comment -%}
+----------------------------------------------------------------------------------------------------------------------
+LINE ITEM
+----------------------------------------------------------------------------------------------------------------------
+
+This component renders a single line item product information, and is used on order and cart page.
+
+********************************************
+Supported variables
+********************************************
+
+* line_item: the line item to render (required)
+* show_quantity_selector: if set to true, the quantity selector is displayed (useful for instance of mini-cart)
+{%- endcomment -%}
+
+<line-item class="line-item {% if line_item.product.tags contains '_free_gift' %}free-gift{% endif %}">
+  {%- if line_item.image != blank -%}
+    {{- line_item.image | image_url: width: line_item.image.width | image_tag: loading: 'lazy', sizes: '(max-width: 699px) 70px, 120px', widths: '70,120,140,210,240,360', class: 'line-item__media' -}}
+  {%- endif -%}
+
+  <div class="line-item-info">
+    {%- assign text_class = 'h3' -%}
+
+    {%- if settings.product_card_text_font == 'heading' -%}
+      {%- assign text_class = 'h6' -%}
+    {%- endif -%}
+
+    <div class="v-stack gap-1">
+      {%- if settings.show_vendor and line_item.vendor != blank -%}
+        {%- capture vendor_class -%}smallcaps {% if settings.product_card_text_font == 'heading' %}heading{% endif %}{% endcapture %}
+        {%- render 'vendor' with line_item.vendor, class: vendor_class -%}
+      {%- endif -%}
+
+      <div class="v-stack justify-items-start gap-1">
+        {%- if line_item.url != blank -%}
+          {% unless line_item.product.tags contains '_free_gift' %}
+            <a href="{{ line_item.url }}" class="{{ text_class }}">{{ line_item.product.title | default: line_item.title }}</a>
+          {% else %}
+            <p class="{{ text_class }}">{{ line_item.product.title | default: line_item.title }}</p>
+          {% endunless %}
+        {%- else -%}
+          <p class="{{ text_class }}">{{ line_item.product.title | default: line_item.title }}</p>
+        {%- endif -%}
+      </div>
+
+      {%- capture secondary_information -%}
+        <div class="v-stack gap-2">
+          {%- unless line_item.product.has_only_default_variant or line_item.gift_card -%}
+            <p class="">{{ line_item.variant.title }}</p>
+          {%- endunless -%}
+
+          {%- if line_item.selling_plan_allocation -%}
+            <p class="">{{ line_item.selling_plan_allocation.selling_plan.name }}</p>
+          {%- endif -%}
+
+          {%- unless line_item.properties == empty -%}
+            <ul>
+              {%- for property in line_item.properties -%}
+                {%- assign first_character_in_key = property.first | truncate: 1, '' -%}
+
+                {%- if property.last == blank or first_character_in_key == '_' -%}
+                  {%- continue -%}
+                {%- endif -%}
+
+                <li>
+                  {%- if property.last contains '/uploads/' -%}
+                    <a href="{{ property.last }}">{{  }}</a>
+                  {%- else -%}
+                    {% assign property_name = property.first%}
+                    {% if localization.language.iso_code %}
+                      {% if property_name == "Recipient email" %}
+                        {% assign property_name = "Email destinataire" %}
+                      {% elsif property_name == "Recipient name" %}
+                        {% assign property_name = "Nom destinataire" %}
+                      {% elsif property_name == "Send on" %}
+                        {% assign property_name = "À envoyer le" %}
+                      {% endif %}
+                    {% endif %}
+                    {{ property_name }} : {{ property.last }}
+                  {%- endif -%}
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- endunless -%}
+
+          {% if line_item.product.tags contains '_free_gift' and settings.free_gift_description != blank %}
+            <p class="small">{{ settings.free_gift_description }}</p>
+          {% endif %}
+        </div>
+      {%- endcapture -%}
+
+      {%- if secondary_information != blank -%}
+        <div class="h-stack justify-between gap-4">
+          {{- secondary_information -}}
+
+          {% unless line_item.product.tags contains '_free_gift' %}
+            {%- render 'price-list', line_item: line_item, context: 'line_item' -%}
+          {% else %}
+            <span class="price-list">Offert</span>
+          {% endunless %}
+        </div>
+      {%- endif -%}
+
+      {%- if show_quantity_selector -%}
+        {% unless line_item.product.tags contains '_free_gift' %}
+          <line-item-quantity class="h-stack gap-4 align-end justify-between">
+            <a href="{{ line_item.url_to_remove }}" class="cta cta--underline" aria-label="{{ 'cart.order.remove_with_title' | t: title: line_item.title | escape }}">
+              {{- 'cart.order.remove' | t -}}
+            </a>
+
+            {%- render 'quantity-selector', line_item: line_item, size: 'sm' -%}
+          </line-item-quantity>
+        {% endunless %}
+      {%- else -%}
+        {{  'product.quantity.label' | t }} : {{ line_item.quantity }}
+        {% comment %} <p class="text-subdued text-sm sm:hidden">{{ 'customer.order.quantity' | t }}: {{ line_item.quantity }}</p> {% endcomment %}
+      {%- endif -%}
+
+      {%- if line_item.line_level_discount_allocations != blank -%}
+        <ul class="v-stack justify-items-start gap-1 unstyled-list" role="list">
+          {%- for discount_allocation in line_item.line_level_discount_allocations -%}
+            <li class="discount-badge text-xs">
+              {%- render 'icon' with 'discount', width: 12 -%} {{ discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </div>
+  </div>
+</line-item>

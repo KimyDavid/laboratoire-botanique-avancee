@@ -1,0 +1,344 @@
+{%- if section.blocks.size > 0 -%}
+  <style>
+    #shopify-section-{{ section.id }} {
+      --testimonials-font-size: calc(clamp(1.125rem, 1.064516129032258rem + 0.25806451612903225vw, 1.25rem) * {{ section.settings.font_size_factor }});
+    }
+
+    #shopify-section-{{ section.id }} .testimonial-has-bg {
+      background-image: var(--bg-image-mobile, var(--bg-image-desktop));
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    @media screen and (min-width: 700px) {
+      #shopify-section-{{ section.id }} .testimonial-has-bg {
+        background-image: var(--bg-image-desktop, var(--bg-image-mobile));
+      }
+    }
+  </style>
+
+  {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+  {%- assign carousel_id = 'testimonial-carousel-' | append: section.id -%}
+  {%- assign cycle_speed = section.settings.cycle_speed | default: 5 | times: 1000 -%}
+
+  {%- capture section_style -%}
+    {% render 'surface', background: section.settings.background, text_color: section.settings.text_color %}
+    {%- if section.settings.background_image != blank -%}
+      --bg-image-desktop: url('{{ section.settings.background_image | image_url: width: 2000 }}');
+    {%- endif -%}
+    {%- if section.settings.background_image_mobile != blank -%}
+      --bg-image-mobile: url('{{ section.settings.background_image_mobile | image_url: width: 800 }}');
+    {%- endif -%}
+  {%- endcapture -%}
+
+  <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %} {% if section.settings.background_image != blank or section.settings.background_image_mobile != blank %}testimonial-has-bg{% endif %}" style="{{ section_style }}">
+    <div class="container {% if section.settings.text_alignment == 'center' %}container--xl{% endif %}">
+      {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content, text_alignment: section.settings.text_alignment -%}
+    </div>
+
+        <div class="testimonial-carousel-wrapper testimonial-carousel-wrapper--{{ section.settings.text_alignment }}" id="{{ carousel_id }}" data-autoplay="{{ section.settings.auto_rotate_between_testimonials }}" data-speed="{{ cycle_speed }}">
+          {%- for block in section.blocks -%}
+            <div class="testimonial-item {% if forloop.first %}is-selected{% endif %}" {{ block.shopify_attributes }}>
+              <div class="testimonial-item__content">
+                {%- if block.settings.content != blank -%}
+                  {%- assign content_stripped = block.settings.content | strip_html | strip -%}
+                  {%- if content_stripped != blank -%}
+                    <div class="testimonial-item__quote prose">
+                      {{- block.settings.content -}}
+                    </div>
+                  {%- endif -%}
+                {%- endif -%}
+
+                {%- if block.settings.author != blank -%}
+                  <p class="testimonial-item__author">{{- block.settings.author -}}</p>
+                {%- endif -%}
+
+                {%- if block.settings.image != blank -%}
+                  <div class="testimonial-item__logo">
+                    {%- capture logo_style -%}
+                      --image-max-width: {{ block.settings.logo_max_width }}px;
+                      --image-mobile-max-width: {{ block.settings.logo_mobile_max_width }}px;
+                    {%- endcapture -%}
+                    {%- capture logo_sizes -%}
+                      (max-width: 699px) {{ block.settings.logo_mobile_max_width }}px, {{ block.settings.logo_max_width }}px
+                    {%- endcapture -%}
+                    {%- capture logo_widths -%}
+                      {{ block.settings.logo_mobile_max_width }}, {{ block.settings.logo_mobile_max_width | times: 2 }}, {{ block.settings.logo_max_width }}, {{ block.settings.logo_max_width | times: 2 }}
+                    {%- endcapture -%}
+                    {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: sizes: logo_sizes, widths: logo_widths, style: logo_style, loading: 'lazy' -}}
+                  </div>
+                {%- endif -%}
+              </div>
+
+              {%- comment -%} Colonne droite vide pour laisser de l'espace à l'image de fond {%- endcomment -%}
+              <div class="testimonial-item__image"></div>
+            </div>
+          {%- endfor -%}
+        </div>
+
+        {%- if section.blocks.size > 1 -%}
+          <div class="testimonial-dots" role="list">
+            {%- for block in section.blocks -%}
+              <button
+                class="testimonial-dot {% if forloop.first %}is-active{% endif %}"
+                data-index="{{ forloop.index0 }}"
+                data-carousel="{{ carousel_id }}"
+                aria-label="{{ 'general.accessibility.go_to_item' | t: index: forloop.index }}"
+              ></button>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+  </div>
+
+  <script>
+    (function() {
+      const carousel = document.getElementById('{{ carousel_id }}');
+      if (!carousel) return;
+
+      const slides = carousel.querySelectorAll('.testimonial-item');
+      const dots = document.querySelectorAll('[data-carousel="{{ carousel_id }}"]');
+      const autoplay = carousel.dataset.autoplay === 'true';
+      const speed = parseInt(carousel.dataset.speed) || 5000;
+      let current = 0;
+      let timer = null;
+
+      function goTo(index) {
+        slides[current].classList.remove('is-selected');
+        dots[current]?.classList.remove('is-active');
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add('is-selected');
+        dots[current]?.classList.add('is-active');
+
+        dots.forEach(dot => { dot.style.transform = 'translateZ(0)'; });
+      }
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          goTo(parseInt(dot.dataset.index));
+          if (autoplay) {
+            clearInterval(timer);
+            startAutoplay();
+          }
+        });
+      });
+
+      function startAutoplay() {
+        timer = setInterval(() => goTo(current + 1), speed);
+      }
+
+      if (autoplay && slides.length > 1) startAutoplay();
+
+      // Swipe support
+      let startX = 0;
+      let startY = 0;
+      let isDragging = false;
+      let isHorizontal = null;
+
+      carousel.addEventListener('touchstart', e => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        isHorizontal = null;
+        isDragging = true;
+      }, { passive: true });
+
+      carousel.addEventListener('touchmove', e => {
+        if (!isDragging) return;
+        const dx = e.touches[0].clientX - startX;
+        const dy = e.touches[0].clientY - startY;
+
+        if (isHorizontal === null) {
+          isHorizontal = Math.abs(dx) > Math.abs(dy);
+        }
+
+        if (isHorizontal) {
+          e.preventDefault();
+        }
+      }, { passive: false }); 
+
+      carousel.addEventListener('touchend', e => {
+        if (!isDragging) return;
+        isDragging = false;
+        if (!isHorizontal) return;
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) {
+          goTo(diff > 0 ? current + 1 : current - 1);
+          if (autoplay) { clearInterval(timer); startAutoplay(); }
+        }
+      }, { passive: true });
+    })();
+  </script>
+
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.testimonials.name",
+  "class": "shopify-section--testimonials",
+  "tag": "section",
+  "max_blocks": 5,
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-3"
+    },
+    {
+      "type": "checkbox",
+      "id": "separate_section_with_border",
+      "label": "t:global.section.separate_section_with_border",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_rotate_between_testimonials",
+      "label": "t:sections.testimonials.auto_rotate_between_testimonials"
+    },
+    {
+      "type": "range",
+      "id": "cycle_speed",
+      "min": 3,
+      "max": 20,
+      "step": 1,
+      "unit": "sec",
+      "label": "t:sections.testimonials.cycle_speed",
+      "default": 5,
+      "visible_if": "{{ section.settings.auto_rotate_between_testimonials }}"
+    },
+    {
+      "type": "range",
+      "id": "font_size_factor",
+      "min": 0.5,
+      "max": 1.5,
+      "label": "t:global.text.font_size_factor",
+      "step": 0.1,
+      "default": 1
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "t:global.text.alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "t:global.position.left"
+        },
+        {
+          "value": "center",
+          "label": "t:global.position.center"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "t:global.section.header_category"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "t:global.text.subheading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "t:global.text.heading"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "t:global.text.content"
+    },
+    {
+      "type": "header",
+      "content": "Image de fond"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Image de fond desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_mobile",
+      "label": "Image de fond mobile"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "t:sections.testimonials.blocks.testimonial.name",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "t:global.text.content",
+          "default": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.testimonials.blocks.testimonial.avatar",
+          "info": "t:sections.testimonials.blocks.testimonial.avatar_size_recommendation"
+        },
+        {
+          "type": "range",
+          "id": "logo_max_width",
+          "min": 50,
+          "max": 500,
+          "step": 5,
+          "unit": "px",
+          "label": "t:global.image.width",
+          "default": 140
+        },
+        {
+          "type": "range",
+          "id": "logo_mobile_max_width",
+          "min": 50,
+          "max": 300,
+          "step": 5,
+          "unit": "px",
+          "label": "t:global.image.mobile_width",
+          "default": 100
+        },
+        {
+          "type": "inline_richtext",
+          "id": "author",
+          "label": "t:sections.testimonials.blocks.testimonial.author"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.testimonials.presets.testimonials.name",
+      "blocks": [
+        {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

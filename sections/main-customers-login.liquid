@@ -1,0 +1,68 @@
+<div class="section-spacing">
+  <div class="container container--xxs">
+    <div class="customer-account-box">
+      <div class="v-stack gap-6">
+        {% comment %} <div class="v-stack gap-4">
+          <h1 class="h3">{{ 'customer.login.title' | t }}</h1>
+          <p>{{ 'customer.login.instructions' | t }}</p>
+        </div> {% endcomment %}
+
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when '@app' -%}
+              {%- render block -%}
+
+            {%- when 'liquid' -%}
+              {%- if block.settings.liquid != blank -%}
+                <div {{ block.shopify_attributes }}>
+                  {{- block.settings.liquid -}}
+                </div>
+              {%- endif -%}
+
+            {%- when 'fields' -%}
+              <div {{ block.shopify_attributes }}>
+                {% render 'account-form' %}
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main_customers_login.name",
+  "class": "shopify-section--main-customers-login",
+  "tag": "section",
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "fields",
+      "name": "t:sections.main_customers_login.blocks.fields.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "url",
+          "id": "return_to",
+          "label": "t:sections.main_customers_login.blocks.fields.redirect_upon_login",
+          "info": "t:sections.main_customers_login.blocks.fields.redirect_upon_login_info"
+        }
+      ]
+    },
+    {
+      "type": "liquid",
+      "name": "t:sections.main_customers_login.blocks.liquid.name",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "liquid",
+          "label": "t:global.code.liquid"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

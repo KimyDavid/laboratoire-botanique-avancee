@@ -1,0 +1,242 @@
+{%- comment -%}
+----------------------------------------------------------------------------------------------------------------------
+HEADER SIDEBAR COMPONENT
+----------------------------------------------------------------------------------------------------------------------
+
+This snippet the navigation sidebar for the header. It is used for both the mobile menu and for the desktop menu when
+the merchant configures the drawer mode.
+
+********************************************
+Supported variables
+********************************************
+
+* menu: the menu to render
+* color_scheme: the color scheme to use for the sidebar
+* show_dividers: whether dividers are shown for the collapsible
+* open_second_level_menus: if true, second level dropdown are open by default
+{%- endcomment -%}
+
+{%- comment -%}
+IMPLEMENTATION NOTE: while being a drawer, the sidebar has a completely different structure for the content. We are
+therefore using a different structure for the Shadow DOM template
+{%- endcomment -%}
+<template id="header-sidebar-template">
+  <div part="base">
+    <div part="overlay"></div>
+
+    <div part="content">
+      <header part="header">
+        <dialog-close-button class="contents">
+          <button type="button" part="close-button tap-area" aria-label="{{ 'general.accessibility.close' | t | escape }}">
+            {%- render 'icon' with 'close', width: 14 -%}
+          </button>
+        </dialog-close-button>
+      </header>
+
+      <div part="panel-list">
+        <slot name="main-panel"></slot>
+
+        {%- if menu.levels > 0 -%}
+          <slot name="collapsible-panel"></slot>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</template>
+
+<header-sidebar id="sidebar-menu" class="header-sidebar drawer drawer--sm color-scheme color-scheme--{{ color_scheme.id }}" template="header-sidebar-template" open-from="left">
+  {%- comment -%}We are using a Shadow DOM where each panel has a slot, so we can directly render each level individually{%- endcomment -%}
+
+  {%- comment -%}Panel 1 is the first level{%- endcomment -%}
+  <div class="header-sidebar__main-panel" slot="main-panel">
+    <div class="header-sidebar__scroller">
+      {% if section.settings.header_mobile_link != blank %}
+        <a href="{{ section.settings.header_mobile_link }}" class="header-sidebar__banner">
+      {% endif %}
+        {% if section.settings.header_mobile_title != blank %}
+          <p class="h3">{{ section.settings.header_mobile_title }}</p>
+        {% endif %}
+        {% if section.settings.header_mobile_banner != blank %}
+          {{- section.settings.header_mobile_banner | image_url: width: 800 | image_tag: sizes: '100vw', widths: '200,300,400,500,600,700,800' -}}
+        {% endif %}
+        {% if section.settings.header_mobile_button != blank %}
+          <span class="header-sidebar__banner-btn cta cta--underline">{{ section.settings.header_mobile_button }}</span>
+        {% endif %}
+      {% if section.settings.header_mobile_link != blank %}
+        </a>
+      {% endif %}
+
+      <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list" role="list">
+        {%- for link in menu.links -%}
+          <li class="header-sidebar__linklist-item">
+            <a href="{{ link.url }}" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h2{% endif %}">
+              {{- link.title -}}
+            </a>
+
+            {%- if link.links.size > 0 -%}
+              {% for sublink in link.links %}
+                <a href="{{ sublink.url }}" class="header-sidebar__linklist-button h5">
+                  {{- sublink.title -}}
+                </a>
+              {% endfor %}
+            {% endif %}
+
+            {% comment %}{%- if link.links.size > 0 -%}
+              <button type="button" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h2{% endif %}" aria-controls="header-panel-{{ forloop.index }}" aria-expanded="false">
+                {{- link.title -}}
+              </button>
+            {%- else -%}
+              <a href="{{ link.url }}" data-action="close-panel" class="header-sidebar__linklist-button {% if section.settings.sidebar_text_font == 'heading' %}h2{% endif %}">
+                {{- link.title -}}
+              </a>
+            {%- endif -%}{% endcomment %}
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+
+    {%- liquid
+      if section.settings.show_country_selector and localization.available_countries.size > 1
+        assign show_country_selector = true
+      endif
+
+      if section.settings.show_locale_selector and localization.available_languages.size > 1
+        assign show_locale_selector = true
+      endif
+    -%}
+
+    {%- if shop.customer_accounts_enabled or show_country_selector or show_locale_selector -%}
+      <div class="header-sidebar__footer">   
+        <p>
+          <a href="{{ routes.search_url }}"  class="text-with-icon smallcaps sm:hidden" aria-controls="header-search-{{ section.id }}">
+              {%- render 'icon' with 'search_mobile', width: 20 -%}
+              {{ 'header.general.search_mobile' | t }}
+          </a>
+        </p>
+        {%- if shop.customer_accounts_enabled -%}
+          <p>
+            <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}" class="text-with-icon smallcaps sm:hidden">
+              {%- render 'icon' with 'account_mobile', width: 20 -%}
+              
+                {{- 'header.general.my_account' | t -}}
+            </a>
+          </p>
+        {%- endif -%}
+
+        <p>
+          <a href="/pages/nos-boutiques" class="text-with-icon smallcaps sm:hidden">
+            {%- render 'icon' with 'found_boutique', width: 20 -%}
+              {{- 'header.general.trouver_une_boutique' | t -}}
+          </a>
+        </p>
+
+        <div class="lang_selector_mobile">
+          <a href="#" class="text-with-icon smallcaps sm:hidden">
+            {%- render 'icon' with 'picto-localization', width: 20 -%}
+              {{- 'general.localization.language' | t -}}
+          </a>
+           {%- render 'localization-selector', type: 'locale', placement: 'top-start' -%}
+                <noscript>
+                  <div class="lang-switcher-noscript">
+                    <a href="https://laboratoires-botanique-avancee.com" hreflang="fr" lang="fr">FR</a>
+                    <a href="https://laboratoires-botanique-avancee.com/en" hreflang="en" lang="en">EN</a>
+                  </div>
+                </noscript>
+        </div>
+
+        {%- if show_country_selector or show_locale_selector -%}
+          <div class="localization-selectors">
+            {%- if show_country_selector -%}
+              {%- render 'localization-selector', type: 'country', placement: 'top-start', show_country_name: section.settings.show_country_name, show_country_flag: section.settings.show_country_flag, id_prefix: 'header-sidebar' -%}
+            {%- endif -%}
+
+            {%- if show_country_selector and show_locale_selector -%}
+              <span class="localization-selectors__separator" aria-hidden="true"></span>
+            {%- endif -%}
+
+            {%- if show_locale_selector -%}
+              {%- render 'localization-selector', type: 'locale', placement: 'top-start', id_prefix: 'header-sidebar' -%}
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+
+  {%- comment -%}Panel 2 holds all the second levels{%- endcomment -%}
+  {% comment %}{%- if menu.levels > 0 -%}
+    <header-sidebar-collapsible-panel class="header-sidebar__collapsible-panel" slot="collapsible-panel">
+      <div class="header-sidebar__scroller">
+        {%- for link in menu.links -%}
+          {%- if link.links.size > 0 -%}
+            <div id="header-panel-{{ forloop.index }}" class="header-sidebar__sub-panel" hidden>
+              <button type="button" class="p header-sidebar__back-button link-faded {% if show_dividers %}is-divided{% endif %} text-with-icon {% if section.settings.sidebar_text_font == 'heading' %}h6{% endif %} md:hidden" data-action="close-panel">
+                {%- render 'icon' with 'chevron-left-lba', width: 12, direction_aware: true -%}
+                {{- link.title -}}
+              </button>
+              
+                {% assign as_sub_child = false %}
+                {%- for sub_link in link.links -%}
+                    {%- if sub_link.links.size > 0 -%}
+                      {% assign as_sub_child = true %}
+                    {%- endif -%}              
+                {%- endfor -%}
+              
+              <ul class="header-sidebar__linklist {% if show_dividers %}divide-y{% endif %} unstyled-list {% if as_sub_child %}with_child{% endif %}" role="list">
+                {%- for sub_link in link.links -%}
+                  <li>
+                    {%- if sub_link.links.size > 0 -%}
+                      <accordion-disclosure>
+                        <details class="accordion__disclosure group" {% if open_second_level_menus %}open{% endif %}>
+                          <summary class="header-sidebar__linklist-button">
+                            {{- sub_link.title -}}
+                            <span class="hide animated-plus group-expanded:rotate" aria-hidden="true"></span>
+                          </summary>
+
+                          <div class="header-sidebar__nested-linklist">
+                            {%- for sub_sub_link in sub_link.links -%}
+                              <a href="{{ sub_sub_link.url }}" class="link-faded-reverse h2">{{ sub_sub_link.title }}</a>
+                            {%- endfor -%}
+                          </div>
+                        </details>
+                      </accordion-disclosure>
+                    {%- else -%}
+                      <a href="{{ sub_link.url }}" class="{% if as_sub_child %}cta cta--underline{% else %}h2 header-sidebar__linklist-button{% endif %} last-item">
+                        {{- sub_link.title -}}
+                      </a>
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+              </ul>
+
+              {%- liquid
+                assign link_title_downcase = link.title | strip | downcase
+                assign mega_menu_block = ''
+
+                for block in section.blocks
+                  assign menu_item_downcase = block.settings.menu_item | strip | downcase
+
+                  if menu_item_downcase == link_title_downcase
+                    assign mega_menu_block = block
+                    break
+                  endif
+
+                endfor
+              -%}
+
+              {%- capture mega_menu_content -%}
+                {%- render 'mega-menu-images', context: 'sidebar', block: mega_menu_block -%}
+              {%- endcapture -%}
+
+              {%- if mega_menu_content != blank -%}
+                <div class="header-sidebar__promo scroll-area bleed md:unbleed">
+                  {{- mega_menu_content -}}
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </header-sidebar-collapsible-panel>
+  {%- endif -%}{% endcomment %}
+</header-sidebar>

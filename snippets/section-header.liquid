@@ -1,0 +1,40 @@
+{%- comment -%}
+----------------------------------------------------------------------------------------------------------------------
+SECTION HEADER
+----------------------------------------------------------------------------------------------------------------------
+
+This component renders a section header, which is a pattern in many sections of the theme.
+
+********************************************
+Supported variables
+********************************************
+
+* subheading: the subheading (if any)
+* heading: the heading to show
+* content: an optional content to show
+* text_alignment: alignment of header's text (supports "start", "center" or "end") - default to being centered
+{%- endcomment -%}
+
+{% assign heading_class = heading_class | default: 'h2' %}
+
+{% if subheading != blank or heading != blank or content != blank %}
+  <div class="section-header justify-self-{{ text_alignment | default: 'center' }} text-{{ text_alignment | default: 'center' }} {% if button_label != blank and button_link != blank %}with-link{% endif %}">
+    {%- if subheading != blank or heading != blank or content != blank -%}
+      <div class="prose">
+        {%- if subheading != blank -%}
+          <p class="h6">{{- subheading -}}</p>
+        {%- endif -%}
+
+        {%- if heading != blank -%}
+          <h2 class="{{ heading_class }}">{{- heading -}}</h2>
+        {%- endif -%}
+
+        {{- content -}}
+      </div>
+    {%- endif -%}
+
+    {% if button_label != blank and button_link != blank %}
+      <a href="{{ button_link }}" class="cta cta--underline">{{ button_label }}</a>
+    {% endif %}
+  </div>
+{%- endif -%}

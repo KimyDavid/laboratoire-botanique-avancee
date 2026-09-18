@@ -1,0 +1,432 @@
+{% style %}
+  #shopify-section-{{ section.id }}{
+    background: {{ section.settings.background_color }}
+  }
+  .duo-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    max-width: 100%;
+  }
+  .duo-section--full-height {
+    max-height:100vh;
+    height:100vh;
+  }
+  .duo-section .duo-section__content h3{
+    margin-bottom: 16px;
+  }  
+  .duo-section .duo-section__content .p.content_text{
+    margin-bottom: 32px;
+  }
+  .duo-section__inner {
+    display: flex;
+    height:100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .duo-section__image {
+    position: relative;
+  }
+  .duo-section__image video-media {
+    height: 100vh;
+    min-height: 100%;
+  }
+  .duo-section__image,
+  .duo-section__content {
+    width: 100%;
+  }
+
+  .duo-section__video--auto {
+    display: flex;
+    align-items: center;
+  }
+
+  .duo-section__video--auto video-media {
+    height: auto;
+    min-height: auto;
+  }
+
+  @media (max-width: 768px) {
+    .duo-section__image video-media {
+      height: auto;
+      position: relative;
+    }
+
+    .duo-section__image video-media::after {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+      width: 100%;
+    }
+
+    .duo-section__image video-media video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .duo-section__image,
+    .duo-section__content {
+      width: 50%;
+    }
+    .duo-section__inner.image-right {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .duo-section__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 100vh;
+  }
+
+  .duo-section__content {
+    padding: 40px max(var(--container-gutter),50% - var(--container-max-width) / 2);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .duo-section.boxed .duo-section__inner {
+    gap: 188px;
+    padding: 128px 188px;    
+    justify-content: space-around;
+  }
+  .duo-section.boxed  .duo-section__image,.duo-section.boxed  .duo-section__content {
+    width: calc(50% - 188px);
+  }
+  .duo-section.boxed  .duo-section__content {
+    max-width: 584px;  
+    width: 100%;
+    padding: 0;
+  }
+  .expert-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 72px 0 0;  
+    padding: 0;
+  }
+
+  .expert-section img {
+    width: 225px;
+    height: 300px;
+    min-width: 225px;
+    object-fit: cover;
+  }
+
+  .expert-content h3 {
+    margin-bottom: 8px;
+  }
+
+
+  @media (max-width: 768px) {
+    .expert-section img {
+      width: 100px;
+      height: 170px;
+      min-width: 130px;
+    }
+  }
+  @media(max-width:1544px){
+    .duo-section.boxed .duo-section__inner {
+      gap: 146px;
+      padding: 128px 0;    
+      justify-content: space-around;    
+      max-width: 1163px;
+      margin: 0 auto;
+    }
+    .duo-section.boxed .duo-section__image, .duo-section.boxed .duo-section__content {
+      width: 100%;
+      max-width: calc(50% - 146px) !important;
+    }
+  }
+  @media(max-width:1244px){
+    .duo-section.boxed .duo-section__inner {
+      gap: 80px;
+      padding: 128px 32px;    
+      justify-content: space-around;    
+      max-width: 1163px;
+      margin: 0 auto;
+    }
+    .duo-section.boxed .duo-section__image, .duo-section.boxed .duo-section__content {
+      width: 100%;
+      max-width: calc(50% - 80px) !important;
+    }
+  }
+  @media(max-width:1000px){
+    .duo-section.boxed .duo-section__inner {
+      gap: 24px;
+      padding: 72px 32px;    
+      justify-content: space-around;    
+      max-width: 1163px;
+      margin: 0 auto;    
+      max-height: initial;
+    }
+    .duo-section.boxed .duo-section__image, .duo-section.boxed .duo-section__content {
+      width: 100%;
+      max-width: 100% !important;
+    }
+
+    .duo-section {
+      max-height:initial;
+      height:initial;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .duo-section__content {
+      background: #FAFAFA;
+      padding: 32px 32px 72px;
+    }
+
+    .expert-section {
+      margin-bottom: 0;
+    }
+  }
+{% endstyle %}
+
+<section id="{{ section.id }}" class="duo-section {{ section.settings.image_layout }} duo-section--{{ section.settings.section_height }}">
+  <div id="{{ section.settings.id }}" class="duo-section__inner {% if section.settings.image_position == 'right' %}image-right{% endif %}">
+    <div class="duo-section__image {% if section.settings.video %}duo-section__video duo-section__video--{{ section.settings.video_size }}{% endif %}">
+      {% if section.settings.video %}
+        {% liquid  
+          render 'media', media: section.settings.video, autoplay: true, loop: true, controls: false, preload: true
+        %}
+      {% else  %}
+        {% if section.settings.image %}
+          <img src="{{ section.settings.image | image_url: width: 1200 }}" alt="{{section.settings.image.alt}}" />
+        {% endif %}
+      {% endif %}
+
+      {%- if section.settings.video != blank -%}
+        <div class="container_control">
+          <div class="slideshow__play_pause-control">
+            <button data-action="pause">
+              <span class="sr-only">{{ 'general.accessibility.unmute_video' | t }}</span>
+              {%- render 'icon' with 'play-lba' -%}
+            </button>
+  
+            <button data-action="play" hidden>
+              <span class="sr-only">{{ 'general.accessibility.mute_video' | t }}</span>
+              {%- render 'icon' with 'pause-lba' -%}
+            </button>
+          </div>
+          <div class="slideshow__volume-control">
+            <button data-action="unmute">
+              <span class="sr-only">{{ 'general.accessibility.unmute_video' | t }}</span>
+              {%- render 'icon' with 'unmute-lba' -%}
+            </button>
+  
+            <button data-action="mute" hidden>
+              <span class="sr-only">{{ 'general.accessibility.mute_video' | t }}</span>
+              {%- render 'icon' with 'mute-lba' -%}
+            </button>
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+    <div class="duo-section__content">
+      <div class="content_inner m-auto">
+        <h2 class="uppercase">{{ section.settings.title }}</h2>
+        <div class="p content_text">{{ section.settings.text }}</div>
+        {% if section.settings.button_link %}
+          <a class="cta cta--underline" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+        {% endif %}
+        {% for block in section.blocks %}
+          {% if block.settings.image and block.settings.title_ %}
+            <div class="expert-section">
+              <div class="expert-image">
+                <img src="{{ block.settings.image | image_url: width: 250 }}" alt="{{ block.settings.title_ }}">
+              </div>
+              <div class="expert-content">
+                <h3>{{ block.settings.title_ }}</h3>
+                <div class="expert-description p2">
+                {% comment %} <div class="expert-description"> {% endcomment %}
+                  {{ block.settings.text }}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{%- if section.settings.video != blank -%}
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const videoWrapper = document.querySelector('#{{ section.id }}');
+      const video = videoWrapper.querySelector('video');
+      if (video) {
+        const pauseButton = videoWrapper.querySelector('[data-action="pause"]');
+        const playButton = videoWrapper.querySelector('[data-action="play"]');
+        const muteButton = videoWrapper.querySelector('[data-action="mute"]');
+        const unmuteButton = videoWrapper.querySelector('[data-action="unmute"]');
+
+        pauseButton.addEventListener('click', function() {
+          playButton.hidden = false;
+          pauseButton.hidden = true;
+          video.pause();
+        });
+
+        playButton.addEventListener('click', function() {
+          pauseButton.hidden = false;
+          playButton.hidden = true;
+          video.play();
+        });
+
+        muteButton.addEventListener('click', function() {
+          unmuteButton.hidden = false;
+          muteButton.hidden = true;
+          video.muted = true;
+        });
+
+        unmuteButton.addEventListener('click', function() {
+          muteButton.hidden = false;
+          unmuteButton.hidden = true;
+          video.muted = false;
+        });
+      }
+    });
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Duo image + texte",
+  "settings": [
+    {
+      "type": "select",
+      "id": "section_height",
+      "label": "Hauteur de la section",
+      "options": [
+        { "value": "full-height", "label": "Pleine hauteur" },
+        { "value": "auto", "label": "Automatique" }
+      ],
+      "default": "full-height"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type" :"color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#fff"
+    },
+    {
+      "type": "select",
+      "id": "image_layout",
+      "label": "Taille de l'image",
+      "default": "full",
+      "options": [
+        {
+          "value": "full",
+          "label": "Full width image"
+        },
+        {
+          "value": "boxed",
+          "label": "Boxed image"
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Vidéo"
+    },
+    {
+      "type": "select",
+      "id": "video_size",
+      "label": "Hauteur de la vidéo",
+      "options": [
+        { "value": "full-height", "label": "Pleine hauteur" },
+        { "value": "auto", "label": "Automatique" }
+      ],
+      "default": "full-height"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Position de l'image",
+      "options": [
+        { "value": "left", "label": "Gauche" },
+        { "value": "right", "label": "Droite" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre",
+      "default": "Efficacité prouvée"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Texte"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Lien du bouton"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Texte du bouton",
+      "default": "En savoir plus"
+    },
+    {
+      "type": "text",
+      "id": "id",
+      "label": "Identifiant de la section",
+      "info": "Permet de faire une ancre vers la section"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "description",
+      "name": "expert",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title_",
+          "label": "titre"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "description",
+        }
+      ]
+    }
+  ],
+  "max_blocks": 1,
+  "presets": [
+    {
+      "name": "Duo image + texte"
+    }
+  ]
+}
+{% endschema %}

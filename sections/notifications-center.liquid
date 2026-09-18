@@ -1,0 +1,128 @@
+{% if section.settings.enable_notifications %}
+  <div
+    class="notifications-center"
+    id="notifications-center"
+    data-section-id="{{ section.id }}"
+  >
+    {% for block in section.blocks %}
+      {% if block.settings.enable_notification %}
+        <a href="{{ block.settings.link }}"
+          class="notification-toast hidden"
+          data-id="notif-{{ block.id }}"
+          data-delay="{{ block.settings.delay | times: 1000 }}"
+          data-duration="{{ block.settings.duration | times: 1000 }}"
+          data-first-visit="{{ block.settings.first_visit_only }}"
+          data-returning="{{ block.settings.returning_only }}"
+        >
+          {% if block.settings.image != blank %}
+            <img
+              class="notification-toast__image"
+              src="{{ block.settings.image | image_url: width: 80 }}"
+              alt="{{ block.settings.text }}"
+            >
+          {% endif %}
+
+          <div class="notification-toast__content">
+            <p>{{ block.settings.text }}</p>
+
+            {% if block.settings.link != blank %}
+              <span class="notification-toast__link">
+                {% render 'icon', icon: 'arrow-right-lba' %}
+              </span>
+            {% endif %}
+          </div>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}
+
+
+{% schema %}
+{
+  "name": "Centre de notifications",
+  "tag": "section",
+  "class": "shopify-section--notifications-center",
+  "disabled_on": {
+    "groups": ["footer", "aside", "custom.overlay"]
+  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_notifications",
+      "label": "Activer le centre de notifications",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "notification",
+      "name": "Notification",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_notification",
+          "label": "Activer cette notification",
+          "default": true
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image de la notification"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "Texte de la notification",
+          "default": "Votre message ici"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Lien de redirection"
+        },
+        {
+          "type": "range",
+          "id": "delay",
+          "label": "Délai avant affichage (secondes)",
+          "min": 0,
+          "max": 60,
+          "step": 1,
+          "default": 3
+        },
+        {
+          "type": "range",
+          "id": "duration",
+          "label": "Durée d'affichage (secondes)",
+          "min": 2,
+          "max": 30,
+          "step": 1,
+          "default": 6
+        },
+        {
+          "type": "checkbox",
+          "id": "first_visit_only",
+          "label": "Afficher uniquement lors de la première visite",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "returning_only",
+          "label": "Afficher uniquement aux visiteurs récurrents",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Centre de notifications",
+      "blocks": [
+        {
+          "type": "notification"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

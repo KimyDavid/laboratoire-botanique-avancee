@@ -1,0 +1,80 @@
+{%- capture _form_recover_capture -%}
+  {%- form 'recover_customer_password' -%}
+    {%- capture form_recover_status -%}
+      {%- if form.posted_successfully? -%}
+        {%- assign success_message = 'customer.recover_password.success_message' | t -%}
+        {%- render 'banner', status: 'success', content: success_message -%}
+      {%- endif -%}
+    {%- endcapture -%}
+  {%- endform -%}
+{%- endcapture -%}
+                
+<account-login>
+  <div id="login">
+    {%- form 'customer_login', class: 'form' -%}
+      <input type="hidden" name="checkout_url" value="{{ block.settings.return_to | default: routes.account_url }}">
+
+      <div class="fieldset">
+        <span class="h2">{{ 'customer.login.title' | t }}</span>
+        <p>{{ 'customer.login.instructions' | t }}</p>
+
+        {%- if form.errors -%}
+          {%- render 'banner', status: 'error', content: form.errors.messages['form'] -%}
+        {%- endif -%}
+
+        {%- if form_recover_status != blank -%}
+          {{- form_recover_status -}}
+        {%- endif -%}
+
+        {%- assign email_label = 'customer.login.email' | t -%}
+        {%- render 'input', type: 'email', name: 'customer[email]', label: email_label, autocomplete: 'email', required: true -%}
+
+        <div class="relative">
+          {%- assign password_label = 'customer.login.password' | t -%}
+          {%- render 'input', type: 'password', name: 'customer[password]', label: password_label, autocomplete: 'current-password', required: true -%}
+
+          <div class="form-link">
+            <a href="#recover" allow-hash-change class="">{{ 'customer.login.forgot_password' | t }}</a>
+          </div>
+        </div>
+      </div>
+
+      {%- assign submit_label = 'customer.login.submit' | t -%}
+      {%- render 'button', content: submit_label, type: 'submit', style: 'primary' -%}
+
+      <div class="fieldset form__login-bottom">
+        <span class="h2">{{ 'customer.login.no_account' | t }}</span>
+        <p>Accédez à votre espace dédié pour gérer vos informations et vos commandes</p>
+        <a href="{{ routes.account_register_url }}" class="button button--primary">{{ 'customer.login.sign_up' | t }}</a>
+      </div>
+    {%- endform -%}
+  </div>
+
+  <div class="v-stack gap-6" id="recover" hidden>
+    <div class="v-stack gap-4">
+      <h2 class="h2">{{ 'customer.recover_password.title' | t }}</h2>
+      <p>{{ 'customer.recover_password.instructions' | t }}</p>
+    </div>
+
+    {%- form 'recover_customer_password', class: 'form' -%}
+      <div class="fieldset">
+        {%- if form.errors -%}
+          {%- render 'banner', status: 'error', content: form.errors.messages['form'] -%}
+        {%- endif -%}
+
+        {%- assign email_label = 'customer.recover_password.email' | t -%}
+        {%- render 'input', type: 'email', name: 'email', label: email_label, autocomplete: 'email', required: true -%}
+      </div>
+
+      {%- unless form.posted_successfully? -%}
+        {%- assign submit_label = 'customer.recover_password.submit' | t -%}
+        {%- render 'button', content: submit_label, type: 'submit', style: 'primary' -%}
+      {%- endunless -%}
+
+      <div class="fieldset form__login-bottom">
+        <span class="h3">{{ 'customer.recover_password.remember_password' | t }}</span>
+        <a href="#login" allow-hash-change class="button button--primary">{{ 'customer.recover_password.back_to_login' | t }}</a>
+      </div>
+    {%- endform -%}
+  </div>
+</account-login>

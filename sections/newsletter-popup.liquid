@@ -1,0 +1,231 @@
+{%- unless request.page_type == 'captcha' or section.settings.show_only_on_index and template != 'index' -%}
+  {%- unless section.settings.show_only_for_visitors and customer -%}
+    {%- assign posted_successfully = false -%}
+    {%- assign newsletter_id = 'newsletter-' | append: section.id -%}
+
+    {%- capture _temporary -%}
+      {%- form 'customer', id: newsletter_id, class: 'form' -%}
+        {%- assign posted_successfully = form.posted_successfully? -%}
+      {%- endform -%}
+    {%- endcapture -%}
+
+    <newsletter-popup class="pop-in newsletter-popup color-scheme color-scheme--{{ section.settings.color_scheme.id }}" title="Newsletter popup" {% if section.settings.show_only_once %}only-once{% endif %} apparition-delay="{{ section.settings.apparition_delay }}" {% if posted_successfully %}open{% endif %} handle-editor-events>
+      <div class="v-stack gap-8">
+        {% if section.settings.image %}
+          <img src="{{ section.settings.image | img_url: '500x' }}" alt="Newsletter Image" class="newsletter-popup__image"/>
+        {% endif %}
+        {%- if section.settings.title != blank or section.settings.content != blank -%}
+          <div class="v-stack relative">
+            <dialog-close-button class="contents">
+              <button class="pop-in__close-button tap-area">
+                <span class="sr-only">{{ 'general.accessibility.close' | t }}</span>
+                {%- render 'icon' with 'close' -%}
+              </button>
+            </dialog-close-button>
+
+            {%- if section.settings.title != blank -%}
+              <p class="h3">{{ section.settings.title }}</p>
+            {%- endif -%}
+
+            {%- if section.settings.content != blank -%}
+              <div class="prose newsletter-popup__description">
+                {{ section.settings.content }}
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+        {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+          <div class="newsletter-popup__button">
+            <a href="{{ section.settings.button_link }}" class="button button--primary">{{ section.settings.button_label }}</a>
+          </div>
+        {% else %}
+          {%- if section.settings.show_newsletter_form -%}
+            <div class="klaviyo-form-X3VeLv"></div>
+          {% endif %}
+        {% endif %}
+
+        {% if section.settings.show_legal_text %}
+          <p class="newsletter-legal p2">
+            {{ section.settings.newsletter_legal_text }}
+            {% if section.settings.privacy_policy_url != blank %}
+              <a href="{{ section.settings.privacy_policy_url }}" target="_blank">Politique de confidentialité</a>.
+            {% endif %}
+          </p>
+        {% endif %}
+
+        {% comment %}{%- if section.settings.show_newsletter_form -%}
+          {%- form 'customer', id: newsletter_id, class: 'form' -%}
+            {%- if form.posted_successfully? -%}
+              {%- capture success_message -%}{{ 'general.newsletter.subscribed_successfully' | t }}{%- endcapture -%}
+              {%- render 'banner', content: success_message, status: 'success', text_alignment: 'center' -%}
+
+              <script>
+                localStorage.setItem('theme:popup-filled', 'true');
+              </script>
+            {%- else -%}
+              {%- if form.errors -%}
+                {%- assign content = form.errors | default_errors -%}
+                {%- render 'banner', status: 'error', content: content, text_alignment: 'center' -%}
+              {%- endif -%}
+
+              <div class="fieldset">
+                <input type="hidden" name="contact[tags]" value="newsletter">
+
+                {%- assign label = 'blog.comments.email' | t -%}
+                {%- render 'input', type: 'email', name: 'contact[email]', label: label, value: customer.email, required: true, autocomplete: 'email' -%}
+              </div>
+
+              {%- render 'button', content: section.settings.button_text, type: 'submit' -%}
+            {%- endif -%}
+          {%- endform -%}
+        {%- endif -%}{% endcomment %}
+      </div>
+    </newsletter-popup>
+
+    {% if section.settings.show_sample_form %}
+      <div class="newsletter-popup__secondary-form password__popup-wrapper">
+        <div class="password__popup-overlay"></div>
+        <div class="password__popup">
+          <span class="password__popup-close">{% render 'icon', icon: 'close' %}</span>
+          <h2 class="h2">DÉCOUVREZ L’EFFICACITÉ LBA</h2>
+          <p>Nous vous offrons nos deux soins emblématiques, le sérum et la crème en format découverte, pour une semaine de soin.</p>
+          <p>Une efficacité prouvée cliniquement : la peau est plus éclatante, lisse et uniforme en seulement 7 jours.</p>
+          <div style="margin:0 auto;" class="password__form pxFormGenerator" id="-STk6EaEj7jufYXFtYVjSQ"></div>
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const newsletterPopup = document.querySelector('.newsletter-popup__secondary-form');
+        const newsletterPopupClose = document.querySelectorAll('.newsletter-popup__secondary-form .password__popup-overlay, .newsletter-popup__secondary-form .password__popup-close');
+
+        newsletterPopupClose.forEach(close => {
+          close.addEventListener('click', function() {
+            newsletterPopup.classList.remove('open');
+          });
+        });
+
+        window.addEventListener('klaviyoForms', function(e) {
+          if (e.detail.type == 'submit' && e.detail.formId == 'X3VeLv') {
+            newsletterPopup.classList.add('open');
+          }
+        });
+      });
+      </script>
+    {% endif %}
+  {%- endunless -%}
+{%- endunless -%}
+
+{% schema %}
+{
+  "name": "t:sections.newsletter_popup.name",
+  "class": "shopify-section--popup",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.newsletter_popup.instructions"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-3"
+    },
+    {
+      "type": "range",
+      "id": "apparition_delay",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "sec",
+      "label": "t:sections.newsletter_popup.delay",
+      "default": 5
+    },
+    {
+      "type": "checkbox",
+      "id": "show_only_on_index",
+      "label": "t:sections.newsletter_popup.show_only_on_home_page",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_for_account_holders",
+      "label": "t:sections.newsletter_popup.hide_for_account_holders",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_only_once",
+      "label": "t:sections.newsletter_popup.show_only_once",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_newsletter_form",
+      "label": "t:sections.newsletter_popup.show_newsletter_form",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sample_form",
+      "label": "Afficher le formulaire d'envoi d'échantillon",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_legal_text",
+      "label": "Afficher le texte légal",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "t:global.text.heading",
+      "default": "Signup for our newsletter"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "content",
+      "label": "t:global.text.content",
+      "default": "Describe what your customers will receive when subscribing to your newsletter."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "t:global.text.button_text",
+      "default": "Subscribe"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_legal_text",
+      "label": "Texte légal",
+      "default": "En cliquant sur \"Valider\", j'accepte de recevoir la newsletter. Pour plus d'informations, lire la"
+    },
+    {
+      "type": "url",
+      "id": "privacy_policy_url",
+      "label": "Lien vers la politique de confidentialité",
+    },
+      {
+        "type": "header",
+        "content": "Bouton"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Texte du bouton"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Lien du bouton"
+      }
+  ]
+}
+{% endschema %}

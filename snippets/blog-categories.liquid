@@ -1,0 +1,25 @@
+{%- liquid
+    assign blogs_nav    = 'lba,le-domaine,les-soins,intelligence-botanique,experience-lba,cosmetique-longevite' | split: ','
+    assign blogs_labels = 'Journal LBA,Le domaine,Les Soins,Intelligence Botanique,Expérience LBA,Cosmétique Longévité' | split: ','
+-%}
+
+<div class="blog-navigation">
+    <div class="container">
+        <ul class="blog-tags unstyled-list" role="tablist" aria-label="Catégories du blog">
+            {%- for blog_handle in blogs_nav -%}
+            {%- assign tab_label = blogs_labels[forloop.index0] -%}
+            {%- assign tab_blog  = blogs[blog_handle] -%}
+            <li class="link-faded article-tag h3">
+                <a
+                    href="{{ tab_blog.url }}"
+                    class="{% if blog.handle == blog_handle %} blog-tab--active{% endif %}"
+                    role="tab"
+                    {% if blog.handle == blog_handle %}aria-selected="true"{% endif %}
+                >
+                    {{ tab_label }}
+                </a>
+            </li>
+            {%- endfor -%}
+        </ul>
+    </div>
+</div>

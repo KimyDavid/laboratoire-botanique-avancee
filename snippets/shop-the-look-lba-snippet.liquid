@@ -1,0 +1,215 @@
+<div class="container_hotspot">
+  <div class="hotspot-wrapper">
+    <div class="hotspot-image desktop">
+      {% if datasection.settings.desktop_image_hotspot %}
+        <image-parallax class="contents">
+          <img src="{{ datasection.settings.desktop_image_hotspot | image_url: width: 1600 }}" alt="Hotspot Desktop" loading="lazy">
+        </image-parallax>
+      {% endif %}
+      {% for block in datasection.blocks %}
+        <div class="hotspot-point" style="top: {{ block.settings.top_desktop }}%; left: {{ block.settings.left_desktop }}%;" data-index="{{ forloop.index0 }}">
+        </div>
+      {% endfor %}
+    </div>
+  
+    <div class="hotspot-image mobile">
+      {% if datasection.settings.mobile_image_hotspot %}
+        <image-parallax class="contents">
+          <img src="{{ datasection.settings.mobile_image_hotspot | image_url: width: 800 }}" alt="Hotspot Mobile" loading="lazy">
+        </image-parallax>
+      {% endif %}
+      {% for block in datasection.blocks %}
+        <div class="hotspot-point" style="top: {{ block.settings.top_mobile }}%; left: {{ block.settings.left_mobile }}%;" data-index="{{ forloop.index0 }}">
+        </div>
+      {% endfor %}
+    </div>
+  
+    {% for block in datasection.blocks %}
+      <div class="hotspot-card" data-index="{{ forloop.index0 }}">
+        {%- render 'product-card', product: block.settings.product_id, quick_buy_context: 'hotspot', hide_info: true -%}
+      </div>
+    {% endfor %}
+  </div>
+  
+  
+  <style>
+    .container_hotspot {
+    width: 100vw;
+    height: 100vh;
+    margin: 80px 0;
+  }
+  .hotspot-wrapper {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hotspot-image {
+    position: relative;  
+    height: 100vh;
+  }
+  .hotspot-image img {
+    width: 100%;
+    display: block;
+    height: 100vh;
+    object-fit: cover;
+  }
+  .hotspot-point {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;
+    animation: pulse 1.6s ease-out infinite;
+    box-shadow: 0 0 0 12px rgba(255, 255, 255, 0.30);
+  }
+  .hotspot-point:hover {
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+  .hotspot-card product-card.product-card{
+      max-width: 100% !important;
+  }
+  .hotspot-card {
+    border-radius: 4px;
+    background: #FFF;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+    max-width: 320px;
+    padding: 0;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 300ms ease, transform 300ms ease;
+  }
+  
+  .hotspot-card.active {
+    opacity: 1;
+    transform: translateY(0px);
+    pointer-events: all;
+  }
+  .hotspot-image.mobile {
+    display: none;
+  }
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.30);
+    }
+    60% {
+      box-shadow: 0 0 0 12px rgba(255, 255, 255, 0.30);
+    }
+    100% {
+      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.30);
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .hotspot-image.desktop {
+      display: none;
+    }
+    .hotspot-image.mobile {
+      display: block;
+    }
+    .container_hotspot {
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+    }
+    .hotspot-card.active product-card {
+      flex-direction: row;
+      display: flex;
+    }
+    .hotspot-card.active product-card p {
+      display: none;
+    }
+    .hotspot-card.active .product-card__media {
+      width: 96px;
+      height: 96px;
+    }
+    .hotspot-card.active .product-card__info.empty\:hidden {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    
+    .hotspot-card {
+      pointer-events: all;
+      top: inherit !important;
+      bottom: 24px !important;
+      left: 16px !important;
+      right: 16px !important;
+      max-width: 100%;
+      z-index:-1;  
+    }
+    .hotspot-card.active {
+      opacity: 1;
+      z-index:1;  
+    }
+    .hotspot-point {
+      width: 8px;
+      height: 8px;
+    }
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.30);
+      }
+      60% {
+        box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.30);
+      }
+      100% {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.30);
+      }
+    }
+  }
+  
+  </style>
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const points = document.querySelectorAll('.hotspot-point');
+    const cards = document.querySelectorAll('.hotspot-card');
+    const wrapper = document.querySelector('.hotspot-wrapper');
+  
+    function closeAllCards() {
+      cards.forEach(card => card.classList.remove('active'));
+    }
+  
+    points.forEach(point => {
+      point.addEventListener('click', (e) => {
+        const index = point.dataset.index;
+        const card = wrapper.querySelector(`.hotspot-card[data-index="${index}"]`);
+        if (!card) return;
+  
+        closeAllCards();
+  
+        // Récupère position du point relatif au wrapper
+        const pointRect = point.getBoundingClientRect();
+        const wrapperRect = wrapper.getBoundingClientRect();
+  
+        const top = pointRect.top - wrapperRect.top;
+        const left = pointRect.left - wrapperRect.left;
+  
+        // Décalage : place la carte à droite du point
+      const cardOffsetX = 30; // ← plus grand pour décaler davantage à droite
+      const cardOffsetY = - card.offsetHeight / 2; 
+  
+        card.style.top = `${top + cardOffsetY}px`;
+        card.style.left = `${left + cardOffsetX}px`;
+        card.classList.add('active');
+      });
+    });
+  
+    // Clique en dehors => ferme la carte
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.hotspot-point') && !e.target.closest('.hotspot-card')) {
+        closeAllCards();
+      }
+    });
+  });
+  
+  </script>
+</div>

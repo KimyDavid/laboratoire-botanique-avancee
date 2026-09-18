@@ -1,0 +1,11 @@
+<x-drawer id="account-drawer" class="drawer drawer--account color-scheme color-scheme--dialog">
+    <div class="h-stack gap-4" slot="header">
+        <div class="v-stack">
+            <p class="h2">{{ 'header.general.my_account' | t }}</p>
+        </div>
+    </div>
+
+    <div class="v-stack gap-4 divide-y">
+        {% render 'account-form' %}
+    </div>
+</x-drawer>

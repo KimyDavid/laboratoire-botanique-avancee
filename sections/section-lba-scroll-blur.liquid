@@ -1,0 +1,283 @@
+
+<style>
+.scroll-blur-section {
+  position: relative;
+  height: 220vh;
+}
+.scroll-blur-section.scroll-blur-section--simple {
+  height: 100vh;
+}
+.scroll-blur-section .scroll-inner {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+  box-sizing: border-box;  
+  overflow: hidden;
+}
+.scroll-blur-section .scroll-left {
+  flex: 1;
+  max-width: 40%;
+  z-index: 1;
+}
+.scroll-blur-section .scroll-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+}
+.scroll-blur-section .scroll-image {
+  max-width: 100%;
+  transition: filter 0.3s ease;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;   
+  height: 100%;
+}
+.scroll-blur-section picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.scroll-blur-section .title {
+  max-width: 400px;
+}
+.scroll-blur-section picture::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backdrop-filter: blur(var(--blur-amount, 0px));
+  transition: backdrop-filter 0.3s ease;
+}
+/* --- Animation des blocs texte --- */
+.text-block-wrapper {
+  position: relative;
+  height: 500px; /* ajuste selon ton contenu */
+  overflow: hidden;
+}
+.text-block {
+  position: absolute;
+  top: 50%; left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+.text-block * {
+  color: white;
+}
+.text-block.active {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+.text-block.exit {
+  opacity: 0;
+  transform: translateY(-150px);
+}
+.scroll-blur-section .content_info {
+  max-width: 470px;
+  align-items: center;
+  gap: 48px;
+}
+.scroll-blur-section .content_info .price {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+@media(max-width:1000px){
+  .scroll-blur-section .scroll-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    position: absolute;
+    bottom: 48px;
+    left: 32px;
+    right: 32px;
+  }
+  .scroll-blur-section .content_info {
+    max-width: unset;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    white-space: nowrap;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .scroll-blur-section .scroll-right .cta {
+    margin: 0;
+  }
+  .scroll-blur-section .scroll-left {
+    flex: 1;
+    max-width: 100%;
+    z-index: 1;
+  }
+  .scroll-inner::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, #06312D 0%, rgba(6, 49, 45, 0) 29.51%);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .scroll-blur-section .scroll-inner {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .block-default {
+    top: 0;
+  }
+  .block-default.active {
+    transform: translateY(0%);
+  }
+}
+</style>
+{% assign product = all_products[section.settings.product] %}
+<section class="scroll-blur-section {% if section.settings.description_alt == blank %}scroll-blur-section--simple{% endif %}">
+  <div class="scroll-inner">
+    <div class="scroll-left">
+      <div class="text-block-wrapper">
+        <div class="text-block block-default active">
+          <h2 class="title white">{{ section.settings.title }}</h2>
+          <div class="description white prose">{{ section.settings.description }}</div>
+        </div>
+        {% if section.settings.description_alt != blank %}
+          <div class="text-block block-alt">
+            <div class="description white prose">{{ section.settings.description_alt }}</div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="scroll-right">
+      {% if section.settings.cta_text != blank %}
+        {% if product %}
+          <div class="content_info _right flex gap-48">  
+            <div class="price cta white"  style="">
+              <span>{{ product.price | money }}</span> 
+              {% if product.metafields.custom.contenance != blank %}<span class="separator">|</span><span>{{ product.metafields.custom.contenance }}</span>{% endif %}
+            </div>
+            <a href="{{ product.url }}" class="cta  btn-t-white-lba" style="">
+              {{ section.settings.cta_text }} {% render 'icon', icon: 'arrow-right-lba' %}
+            </a>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+    {% if section.settings.image %}
+      <picture>
+        {%- if section.settings.image_mobile != blank -%}
+          <source
+            media="(max-width: 699px)"
+            srcset="{{ section.settings.image_mobile | image_url: width: 400 }} 400w, {{ section.settings.image_mobile | image_url: width: 600 }} 600w, {{ section.settings.image_mobile | image_url: width: 800 }} 800w, {{ section.settings.image_mobile | image_url: width: 1000 }} 1000w, {{ section.settings.image_mobile | image_url: width: 1200 }} 1200w"
+          >
+        {%- endif -%}
+
+        {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: widths: '200,300,400,500,600,800,1000,1200,1400,2000', class: 'scroll-image' -}}
+      </picture>
+    {% endif %}
+  </div>
+</section>
+
+{% if section.settings.description_alt != blank %}
+  <script>
+    document.addEventListener("scroll", () => {
+      const section = document.querySelector(".scroll-blur-section");
+      if (!section) return;
+
+      const image = section.querySelector("picture");
+      const blockDefault = section.querySelector(".block-default");
+      const blockAlt = section.querySelector(".block-alt");
+
+      const rect = section.getBoundingClientRect();
+      const progress = Math.min(Math.max(0, (window.innerHeight - rect.top) / rect.height), 1);
+
+      if (progress <= 0.6) {
+        if (!blockDefault.classList.contains("active")) {
+          blockDefault.classList.add("active");
+          blockDefault.classList.remove("exit");
+          blockAlt.classList.remove("active");
+        }
+        if (image) image.style.setProperty('--blur-amount', `0px`)
+      }
+
+      if (progress > 0.6) {
+        const blur = Math.min(30, (progress - 0.4) * 50); 
+        if (image) image.style.setProperty('--blur-amount', `${blur}px`)
+
+        if (!blockAlt.classList.contains("active")) {
+          blockDefault.classList.add("exit");
+          blockDefault.classList.remove("active");
+          blockAlt.classList.add("active");
+        }
+      }
+    });
+  </script>
+{% endif %}
+
+
+{% schema %}
+{
+  "name": "Scroll Blur Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image principale"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Image mobile"
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Produit"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre",
+      "default": "La Crème Visage"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Fermeté, teint uniforme, confort.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "description_alt",
+      "label": "Texte de remplacement (après blur)",
+      "default": "<p>Texte alternatif qui apparaît quand l'image est floutée.</p>"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "Texte du bouton",
+      "default": "Acheter →"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Scroll Blur Section"
+    }
+  ]
+}
+{% endschema %}

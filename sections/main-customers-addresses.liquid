@@ -1,0 +1,85 @@
+<div class="section-spacing section-spacing--tight">
+  <div class="container container--xl">
+    <div class="section-stack">
+      <div class="customer-account__wrapper">
+        {% render 'customer-sidebar' %}
+        <div class="customer-account__content">
+          {%- if customer.addresses_count == 0 -%}
+              <div class="prose">
+                <h1 class="h2">{{ 'customer.addresses.title' | t }}</h1>
+                <p>{{ 'customer.addresses.no_addresses' | t }}</p>
+                <button class="cta cta--underline" type="button" aria-controls="customer-address-new">{{ 'customer.addresses.add_address' | t }}</button>
+              </div>
+          {%- else -%}
+            <div class="customer-account__section">
+              <div class="prose">
+                <h1 class="h3">{{ 'customer.addresses.title' | t }}</h1>
+                <button class="cta cta--underline" type="button" aria-controls="customer-address-new">{{ 'customer.addresses.add_address' | t }}</button>
+              </div>
+            </div>
+
+            {%- paginate customer.addresses by 16 -%}
+              {%- if customer.addresses_count == 0 -%}
+                <div class="customer-account__section">
+                  <div class="empty-state">
+                    <p>{{ 'customer.addresses.no_addresses' | t }}</p>
+
+                    {%- assign button_content = 'customer.addresses.add_address' | t -%}
+                    {%- render 'button', content: button_content, aria_controls: 'customer-address-new' -%}
+                  </div>
+                </div>
+              {%- else -%}
+                  {%- for address in customer.addresses -%}
+                    <div class="customer-account__section  {% if address != customer.default_address %}customer-account__section--last{% endif %}">
+                      <div class="h-stack justify-between">
+                        <span class="h2">{{ address.name }}</span>
+                        {%- if address == customer.default_address -%}
+                          <p class="text-end">{{ 'customer.addresses.default_address' | t }}</p>
+                        {%- endif -%}
+                      </div>
+                      
+                      {{- address | format_address -}}
+
+                      <div class="cta__wrapper h-stack gap-4">
+                        <button type="button" class="cta cta--underline" aria-controls="customer-address-{{ address.id }}">{{ 'customer.addresses.edit' | t }}</button>
+
+                        <form method="post" action="{{ address.url }}">
+                          <input type="hidden" name="_method" value="delete">
+
+                          <confirm-button data-message="{{ 'customer.addresses.delete_confirm' | t | escape }}">
+                            <button type="submit" class="cta cta--underline">{{ 'customer.addresses.delete' | t }}</button>
+                          </confirm-button>
+                        </form>
+                      </div>
+                    </div>
+                  {%- endfor -%}
+
+                {%- render 'pagination', paginate: paginate -%}
+              {%- endif -%}
+            {%- endpaginate -%}
+          {%- endif -%}
+
+          {%- comment -%}
+          --------------------------------------------------------------------------------------------------------------------
+          GENERATE THE FORMS
+          --------------------------------------------------------------------------------------------------------------------
+          {%- endcomment -%}
+
+          {%- render 'address-form', address: customer.new_address -%}
+
+          {%- for address in customer.addresses -%}
+            {%- render 'address-form', address: address -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main_customers_addresses.name",
+  "class": "shopify-section--main-customers-addresses",
+  "tag": "section"
+}
+{% endschema %}

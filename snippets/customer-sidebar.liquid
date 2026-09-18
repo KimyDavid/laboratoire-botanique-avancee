@@ -1,0 +1,7 @@
+<div class="customer-account__sidebar">
+    <a href="{{ routes.account_url }}" class="cta {% if request.path == routes.account_url %}cta--underline{% endif %}">{{ "customer.account.details" | t }}</a>
+    <a href="{{ routes.account_url }}#orders" class="cta {% if request.path contains 'orders' %}cta--underline{% endif %}" toggle-customer-section="customer-orders">{{- 'customer.account.orders' | t -}}</a>
+    <a href="{{ routes.account_addresses_url }}" class="cta {% if request.path == routes.account_addresses_url %}cta--underline{% endif %}">{{ "customer.addresses.title" | t }}</a>
+    <a href="/tools/recurring/login" class="cta">{{ "customer.account.subscriptions" | t }}</a>
+    <a href="{{ routes.account_logout_url }}" class="cta">{{- 'customer.account.logout' | t -}}</a>
+</div>

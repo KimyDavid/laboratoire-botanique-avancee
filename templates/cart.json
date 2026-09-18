@@ -1,0 +1,86 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "show_cart_note": false,
+        "show_order_weight": false,
+        "show_shipping_text": true,
+        "show_accelerated_buttons": false,
+        "show_shipping_estimator": false
+      }
+    },
+    "text_with_icons_prHgRy": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_DDRreF": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-delivery-truck",
+            "custom_icon": "shopify://shop_images/Icons_2.svg",
+            "icon_width": 52,
+            "mobile_icon_width": 52,
+            "title": "Paiement sécurisé",
+            "content": "",
+            "button_label": "En savoir plus",
+            "button_link": "#"
+          }
+        },
+        "item_ncNzJ8": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-delivery-truck",
+            "custom_icon": "shopify://shop_images/Icons.svg",
+            "icon_width": 52,
+            "mobile_icon_width": 52,
+            "title": "Livraison offerte",
+            "content": "",
+            "button_label": "En savoir plus",
+            "button_link": "#"
+          }
+        },
+        "item_ntmGFj": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-delivery-truck",
+            "custom_icon": "shopify://shop_images/Icons_1.svg",
+            "icon_width": 52,
+            "mobile_icon_width": 52,
+            "title": "Échantillons exclusifs",
+            "content": "",
+            "button_label": "En savoir plus",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "item_DDRreF",
+        "item_ncNzJ8",
+        "item_ntmGFj"
+      ],
+      "name": "t:sections.text_with_icons.presets.text_with_icons.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": true,
+        "stack_on_mobile": true,
+        "icon_color": "",
+        "text_color": "",
+        "text_alignment": "center"
+      }
+    },
+  },
+  "order": [
+    "main",
+    "text_with_icons_prHgRy"
+  ]
+}

@@ -1,0 +1,297 @@
+{% if section.settings.product_ref != blank and template.name == 'index' or template.name == 'product' %}
+  {% assign notif_variant = nil %}
+  {% assign notif_product = nil %}
+
+  {%- assign notif_product = all_products[section.settings.product_ref] -%}
+  <style>
+    .product-notif {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      z-index: 3;
+      width: 320px;
+      max-width: 90%;
+      transform: translateY(40px);
+      opacity: 0;
+      transition: all 0.5s ease;
+      font-family: inherit;
+      pointer-events: none;
+    }
+
+    #product-notification__index .product-notif {    
+      bottom: unset;
+      top: calc(100vh - 28px);
+      transform: translateY(-100%);
+      position: absolute;
+    }
+
+    .product-notif.show {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .product-notif .notif-content {
+      display: flex;
+      align-items: center;  
+      flex-direction: column;
+    }
+
+    .product-notif img {
+      width: 100%;
+      height: 320px;
+      height: auto;
+      border-radius: 0;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .product-notif .notif-text {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .product-notif .notif-title {
+      margin-bottom: 6px;
+    }
+
+    .product-notif .notif-desc {
+      margin-bottom: 8px;
+    }
+
+    .product-notif .notif-price {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .product-notif .notif-link {
+      width: fit-content;
+    }
+
+    .product-notif__close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      cursor: pointer;
+      color: white;
+      transition: opacity .3s ease;
+    }
+
+    .product-notif__close:hover {
+      opacity: .7;
+    }
+
+    .product-notif__close svg {
+      width: 12px;
+    }
+
+    /* Version mobile */
+    @media (max-width: 768px) {
+      
+      .product-notif .notif-content {
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      .product-notif {    
+        max-width: unset;
+        left: 16px;
+        right: 16px;
+        width: calc(100% - 32px);
+        bottom: 48px;
+      }
+
+      .product-notif img {
+        width: 100px;
+      }
+
+      .product-notif .notif-text {
+        padding: 12px 16px;
+        flex: 1;
+      }
+
+      .product-notif .notif-title {
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+
+      .product-notif .notif-price {
+        font-size: 13px;
+      }
+
+      .product-notif .notif-desc {
+        display: none;
+      }
+
+      .product-notif__close svg {    
+        color: rgb(var(--text-color));
+      }
+
+      #product-notification__product-page {
+        position: absolute;
+        top: 54px;
+        left: 0;
+        width: 100%;
+        bottom: unset;
+        pointer-events: all;
+        background: transparent;
+        box-shadow: none;
+        max-height: 448px;
+      }
+
+      #product-notification__product-page.show-mobile {
+        opacity: 1;
+        transform: none;
+        pointer-events: none;
+      }
+
+      #product-notification__product-page::before {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+      }
+
+      #product-notification__product-page .notif-content {
+        background: white;
+        border-radius: 6px;
+        pointer-events: all;
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+        right: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+      }
+    }
+  </style>
+
+    <div id="product-notification{%- if template.name == 'product' -%}__product-page{% endif %}{%- if template.name == 'index' -%}__index{% endif %}" class="product-notif">
+      <div class="notif-content">
+        <span class="product-notif__close">{% render 'icon', icon: 'close' %}</span>
+        {%- if notif_variant and notif_variant.featured_image -%}
+          <img src="{{ notif_variant.featured_image | img_url: '620x' }}" alt="{{ notif_product.title }}" height="325px" width="325px" /> 
+        {%- elsif notif_product.featured_image -%}
+          <img src="{{ notif_product.featured_image | img_url: '620x' }}"  alt="{{ notif_product.title }}" height="325px" width="325px">
+        {%- endif -%}
+
+        <div class="notif-text">
+          <h3 class="notif-title uppercase">
+            {%- if notif_variant -%}
+              {{ notif_variant.title }}
+            {%- else -%}
+              {{ notif_product.title }}
+            {%- endif -%}
+            </h3>
+
+          {% if notif_product.description != blank %}
+            {%- if notif_variant -%}
+            {%- else -%}
+              <div class="notif-desc p">{{ notif_product.description | strip_html | truncate: 80 }}</div>
+            {%- endif -%}
+          {% endif %}
+
+          <div class="flex space-between">
+            <div class="notif-price cta">
+              {%- if notif_variant -%}
+              {%- else -%}
+                {{ notif_product.price | money }}
+              {%- endif -%}
+            </div>
+            <a href="{% if notif_variant %}{{ notif_variant.url }}{% else %}{{ notif_product.url }}{% endif %}" class="cta cta--underline notif-link">ACHETER</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let popupClosed = localStorage.getItem('popupClosed');
+
+      const notifClose = document.querySelector('.product-notif__close');
+      const notifBox = document.querySelector('.product-notif');
+      notifClose.addEventListener('click', function() {
+        notifBox.classList.remove('show');
+        localStorage.setItem('popupClosed', 'true');
+      });
+
+      setTimeout(function () {
+        const notif = document.getElementById("product-notification__index");
+        if (notif && !popupClosed) notif.classList.add("show");
+        console.log('notif', notif);
+        console.log('popupClosed', popupClosed);
+      }, {{ section.settings.delay | default: 2 }} * 1000);
+
+      setTimeout(function () {
+        const notif = document.getElementById("product-notification__product-page");
+        if (notif && !popupClosed) notif.classList.add("show-mobile");
+        console.log('notif', notif);
+        console.log('popupClosed', popupClosed);
+      }, 2 * 1000);
+
+
+      if (!popupClosed) {
+        const section = document.querySelector('.product');
+        const popup = document.querySelector('#product-notification__product-page');
+
+        if (!section || !popup) return;
+
+        const sectionHeight = section.offsetHeight;
+        const navHeight = window.innerHeight;
+        const halfPoint = section.offsetTop + sectionHeight / 2;
+        const endPoint = section.offsetTop + sectionHeight + navHeight / 4;
+
+        function onScroll() {
+          let popupClosed = localStorage.getItem('popupClosed');
+          if (!popupClosed) {
+            const scrollY = window.scrollY + window.innerHeight / 2;
+            if (scrollY > halfPoint && scrollY < endPoint) {
+              popup.classList.add('show');
+            } else {
+              popup.classList.remove('show');
+            }
+          }
+        }
+
+        window.addEventListener('scroll', onScroll);
+        onScroll();
+      }
+    });
+  </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Notification produit",
+  "tag": "section",
+  "class": "notification-product",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product_ref",
+      "label": "Produit à afficher"
+    },
+    {
+      "type": "range",
+      "id": "delay",
+      "label": "Délai avant affichage (secondes)",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "default": 2
+    }
+  ],
+  "presets": [
+    {
+      "name": "Notification produit",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

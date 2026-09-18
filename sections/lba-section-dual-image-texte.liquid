@@ -1,0 +1,252 @@
+<style>
+  .intro-section {
+    padding: 0px 0px 128px;
+  }
+
+  .blocks {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .intro-block {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  @media (min-width: 1280px) {
+    .intro-block {
+      gap: 146px;
+    }
+  }
+
+  @media (min-width: 1520px) {
+    .intro-block {
+      gap: 188px
+    }
+  }
+
+  .image-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: calc(1234px / 2) ;
+  }
+  .parallax-image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    transform: translateY(0);
+    transition: transform 0.3s ease-out;
+  }
+
+  .text-wrapper{
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+  }
+  .text-wrapper {
+    text-align: left;
+  }
+  .text-wrapper .cta {
+    margin-top: 32px;
+    display: inline-block;
+  }
+  @media (max-width: 768px) {
+    .text-wrapper .cta {
+      margin-top: 16px;
+    }
+  }
+  .blocks.horizontal .intro-block {
+    flex-direction: row;
+    flex: 1;  align-items: center;
+  }
+  .blocks.horizontal .intro-block .image-wrapper{
+    height: initial;
+    aspect-ratio: 1/1;
+    width: 50%;  
+    min-width: 50%;
+  } 
+  .blocks.horizontal .intro-block  .text-wrapper{
+    height: initial;
+    width: 50%;  
+  }
+  @media(max-width:1500px){
+    .image-wrapper {
+      height: calc(754px / 2);
+    }
+  }
+  @media(max-width:1000px){
+    .intro-block {
+      flex: 1 1 100%;
+    }
+
+    .blocks.horizontal .intro-block .image-wrapper,
+    .blocks.horizontal .intro-block  .text-wrapper{
+      width: 100%;  
+      min-width: 100%;
+    }
+    .blocks.horizontal .intro-block {
+      flex-direction: column;
+      flex: 1;  
+      align-items: center;
+    }
+    .image-wrapper {
+      height: calc(100vw - 64px);
+    }
+    .intro-section {
+      padding: 0px 0 72px;
+    }
+  }
+</style>
+
+<section id="{{ section.settings.id }}" class="intro-section ">
+  <div class="container container--xl">
+    {% if section.settings.main_title != blank %}
+      <{{section.settings.balisage_hn}} class="main-title">{{ section.settings.main_title }}</{{section.settings.balisage_hn}}>
+    {% endif %}
+    <div class="blocks {{ section.settings.layout_type }}">
+      {% for block in section.blocks %}
+        <div class="intro-block">
+          <div class="image-wrapper">
+            <div class="parallax-image" style="background-image: url({{ block.settings.image | image_url }});"></div>
+          </div>
+          <div class="text-wrapper">
+            {% if section.settings.layout_type == 'horizontal' %}
+              <div class="container_innertext w-587  m-auto">
+                <h2>{{ block.settings.title }}</h2>
+                <div>{{ block.settings.text }}</div>
+                {% if block.settings.button_label and block.settings.button_link %}
+                  <a href="{{ block.settings.button_link }}" class="cta cta--underline">{{ block.settings.button_label }}</a>
+                {% endif %}
+              </div>
+            {% else %}
+              <h3>{{ block.settings.title }}</h3>
+              <p>{{ block.settings.text }}</p>
+                {% if block.settings.button_label and block.settings.button_link %}
+                  <a href="{{ block.settings.button_link }}" class="cta cta--underline">{{ block.settings.button_label }}</a>
+                {% endif %}
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<script>
+  document.addEventListener('scroll', () => {
+    const images = document.querySelectorAll('.parallax-image');
+    images.forEach((img) => {
+      const rect = img.getBoundingClientRect();
+      const offset = window.scrollY + rect.top;
+      const scroll = window.scrollY;
+      const speed = 0.025;
+      img.style.transform = `translateY(${(scroll - offset) * speed}px)`;
+    });
+  });
+</script>
+{% schema %}
+{
+  "name": "Intro Botanique",
+  "tag": "section",
+  "class": "intro-botanique",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Titre principal",
+      "default": "LA BOTANIQUE AVANCÉE POUR LA LONGÉVITÉ DE LA BEAUTÉ"
+    },
+    {
+      "type": "select",
+      "id": "balisage_hn",
+      "label": "Titre Hn",
+      "default": "h2",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+      ]
+    },
+    {
+      "type": "select",
+      "id": "layout_type",
+      "label": "Disposition des éléments",
+      "default": "horizontal",
+      "options": [
+        {
+          "value": "vertical",
+          "label": "L'un en dessous de l'autre"
+        },
+        {
+          "value": "horizontal",
+          "label": "L'un à côté de l'autre"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "id",
+      "label": "Identifiant de la section",
+      "info": "Permet de faire une ancre vers la section"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content_block",
+      "name": "Bloc contenu",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titre",
+          "default": "Titre du bloc"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Texte",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Texte du bouton"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Lien du bouton "
+        },
+      ]
+    }
+  ],
+  "max_blocks": 2,
+  "presets": [
+    {
+      "name": "Intro Botanique"
+    }
+  ]
+}
+{% endschema %}

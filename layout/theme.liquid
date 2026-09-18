@@ -1,0 +1,500 @@
+<!doctype html>
+
+<html lang="{{ request.locale.iso_code }}" dir="{% render 'direction' %}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=5.0">
+
+    {% if template == 'password' %}
+      <title>Laboratoires Botanique Avancée : ouverture prochaine de notre boutique</title>
+    {% else %}
+      <title>{% if page_title == blank %}{{ shop.name }}{% else %}{{ page_title }}{% if current_page != 1 %} &ndash; {{ 'general.page' | t: page: current_page }}{% endif %}{% endif %}</title>
+    {% endif %}
+
+    {%- if page_description -%}
+      <meta name="description" content="{{ page_description | escape }}">
+    {%- endif -%}
+
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {%- if settings.favicon -%}
+      <link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 96 }}">
+      <link rel="apple-touch-icon" href="{{ settings.favicon | image_url: width: 180 }}">
+    {%- endif -%}
+
+    <script data-cookieconsent="ignore">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+
+
+    <!-- Google Tag Manager (noscript) -->
+
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="ceee46e7-7fd8-466d-a39f-3768f4270bb6" data-blockingmode="auto" type="text/javascript" defer></script>
+
+    {%- comment -%}Few prefetch to increase performance on commonly used third-parties
+    <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+
+    {%- unless settings.heading_font.system? -%}
+      <link rel="preload" href="{{ settings.heading_font | font_url }}" as="font" type="font/woff2" crossorigin>
+    {%- endunless -%}
+
+    {%- unless settings.text_font.system? -%}
+      <link rel="preload" href="{{ settings.text_font | font_url }}" as="font" type="font/woff2" crossorigin>
+    {%- endunless -%}
+    {%- endcomment -%}
+    {%- render 'social-meta-tags' -%}
+    {%- render 'microdata-schema' -%}
+    {%- render 'css-variables' -%}
+    {%- render 'js-variables' -%}
+
+    {%- if request.page_type == 'gift_card' -%}
+      <script src="{{ 'vendor/qrcode.js' | shopify_asset_url }}" defer></script>
+    {%- endif -%}
+    
+    <script>
+      window.freeGiftConfig = {
+        enabled: {{ settings.free_gift_enabled | json }},
+        variantId: {{ settings.free_gift_product.first_available_variant.id | default: 'null' }},
+        startDate: {{ settings.free_gift_start_date | default: '' | json }},
+        endDate: {{ settings.free_gift_end_date | default: '' | json }},
+        description: {{ settings.free_gift_description | default: '' | json }}
+      };
+    </script>
+
+    <script type="importmap">
+      {%- comment -%}On Safari 16.3 and lower, a polyfill is used to load importmap{%- endcomment -%}
+      {
+        "imports": {
+          "vendor": "{{ 'vendor.min.js' | asset_url }}",
+          "theme": "{{ 'theme.js' | asset_url }}",
+          "photoswipe": "{{ 'photoswipe.min.js' | asset_url }}"
+        }
+      }
+    </script>
+
+    <script type="module" src="{{ 'vendor.min.js' | asset_url }}"></script>
+    <script type="module" src="{{ 'theme.js' | asset_url }}"></script>
+
+    {{ content_for_header }}
+    {% render 'cookie-consent' %}
+    {{- 'theme.css' | asset_url | stylesheet_tag: preload: true -}}
+    {{- 'custom_style.css' | asset_url | stylesheet_tag: preload: true -}}
+
+    <style>
+      @font-face {
+        font-family: 'Neutraface Text Book';
+        src: url('https://cdn.shopify.com/s/files/1/0948/7073/3145/files/Neutra2Text-Book.woff?v=1760106880') format('woff'),
+            url('https://cdn.shopify.com/s/files/1/0948/7073/3145/files/Neutra2Text-Book.woff2?v=1760106880') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+    
+      @font-face {
+        font-family: 'Neutraface Text Demi';
+        src: url('https://cdn.shopify.com/s/files/1/0948/7073/3145/files/Neutra2Text-Demi.woff?v=1760106880') format('woff'),
+            url('https://cdn.shopify.com/s/files/1/0948/7073/3145/files/Neutra2Text-Demi.woff2?v=1760106880') format('woff2');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+    
+      @font-face {
+        font-family: 'Neutraface Text Light';
+        src: url('https://cdn.shopify.com/s/files/1/0948/7073/3145/files/Neutra2Text-Light.woff?v=1760652823') format('woff'),
+            url('https://cdn.shopify.com/s/files/1/0948/7073/3145/files/Neutra2Text-Light.woff2?v=1760652822') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'CormorantGaramond Light';
+        src: url('https://cdn.shopify.com/s/files/1/0948/7073/3145/files/CormorantGaramond-Light.ttf?v=1758029583') format('opentype');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+      }
+    
+      @font-face {
+        font-family: 'CormorantGaramond Regular';
+        src: url('https://cdn.shopify.com/s/files/1/0948/7073/3145/files/CormorantGaramond-Regular.ttf?v=1758029583') format('opentype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+    
+      @font-face {
+        font-family: 'CormorantGaramond Bold';
+        src: url('https://cdn.shopify.com/s/files/1/0948/7073/3145/files/CormorantGaramond-Bold.ttf?v=1758029583') format('opentype');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
+
+    <style>
+      /* ---------------- BASE ---------------- */
+      body {
+        font-family: "Neutraface Text Book";
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+      }
+      
+      /* ---------------- DESKTOP ---------------- */
+      h1, .h1 {
+        font-family: 'Neutraface Text Demi';
+        font-size: 36px;
+        line-height: 100%;
+        letter-spacing: 0.08em;
+        font-variant: all-small-caps;
+        font-weight: 400;
+      }
+      .h1-light{
+        font-family: "CormorantGaramond Light";
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 120%;
+      }
+      .h1-light strong {
+        font-weight: bold;
+      }
+      h2, .h2 {
+        font-family: 'Neutraface Text Demi';
+        font-size: 30px;
+        letter-spacing: 1.92px;
+        line-height: 100%;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-variant: all-small-caps;
+        --heading-font-family: 'Neutraface Text Demi';
+        --heading-font-weight: 600;
+        --heading-letter-spacing: 2px;
+      }
+      h2 + *, .h2 + * {
+        margin-top: 24px;
+      }
+      @media (max-width: 768px) {
+        h2, .h2 {        
+          font-size: 24px;
+          letter-spacing: 1.68px;
+        }
+        h2 + *, .h2 + * {
+          margin-top: 16px;
+        }
+      }
+      h3,.h3 {
+        font-family: 'Neutraface Text Demi';
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 1.92px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-variant: all-small-caps;
+        --heading-font-family: 'Neutraface Text Demi';
+        --heading-font-weight: 600;
+        --heading-letter-spacing: 2px;
+      }
+      h3 + *, .h3 + * {
+        margin-top: 16px;
+      }
+      h4,.h4 {
+        font-family: 'Neutraface Text Demi';
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 2px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        font-variant: all-small-caps;
+        --heading-font-family: 'Neutraface Text Demi';
+        --heading-font-weight: 600;
+        --heading-letter-spacing: 2px;
+      }
+      summary.h6 {
+        font-family: 'Neutraface Text Demi';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+        font-variant: all-small-caps;
+        letter-spacing: 1.92px;
+      }
+      .mega-menu__linklist.unstyled-list li {
+        line-height: 1;
+      }
+      .mega-menu__linklist.unstyled-list li a:not(.cta) {
+         font-family: 'Neutraface Text Demi';
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 100%;
+          font-variant: all-small-caps;
+          letter-spacing: 2.4px;
+      }
+      .cta_link_lba{
+        font-family: 'Neutraface Text Demi';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%; /* 16px */
+        font-variant: all-small-caps;
+        letter-spacing: 1.92px;
+      }
+      .mega-menu__linklist.unstyled-list:not(.no_sub_child) a.h6 {
+        font-family: 'Neutraface Text Book';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;  
+        font-variant: initial;
+        letter-spacing: 0px;
+      }
+      p.huge {
+        font-family: 'CormorantGaramond Regular';
+        font-size: 24px;
+        line-height: 130%;
+        letter-spacing: 0;
+        font-weight: 400;
+      }
+      
+      p, .p,::placeholder, .checkbox-control label {
+        font-family: 'Neutraface Text Book';
+        line-height: 1.4;
+        letter-spacing: 0;
+        font-weight: 400;
+      }
+      
+      p.p2, .p2 p{
+        font-family: 'Neutraface Text Book';
+        font-size: 14px;
+        letter-spacing: 0;
+        font-weight: 400;
+      }
+      
+      p.psmall {
+        font-family: 'CormorantGaramond Regular';
+        font-size: 12px;
+        line-height: 150%;
+        letter-spacing: 0;
+        font-weight: 400;
+      }
+      
+      .cta {
+        font-family: 'Neutraface Text Demi';
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 1.3px;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-variant: all-small-caps;
+        cursor: pointer;
+      }
+      .cta--underline {
+        background: linear-gradient(to top, currentColor 1px, currentColor 1px, transparent 1px, transparent);
+        padding-bottom: 2px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        transition: background-size .3s ease;
+      }
+      .cta--underline:hover {
+        background-size: 0% 100%;
+      }
+      .cta-lba-green {
+        display: flex;
+        padding: 16px 32px;
+        justify-content: center;
+        align-items: center;
+        flex: 1 0 0;
+        border-radius: 6px;
+        background: var(--GreenBlack, #2D464B);
+        color: white;
+        font-variant: all-small-caps;
+        text-align: center;
+      }
+      .header__primary-nav-item .block.no-mega.h6 {
+        font-family: 'Neutraface Text Demi';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+        font-variant: all-small-caps;
+        letter-spacing: 1.92px;
+      }
+      /* ---------------- Tablette ---------------- */
+      @media screen and (max-width: 1440px) {
+        .h1-light{
+          font-family: "CormorantGaramond Light";
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 120%;
+        }
+      }
+      /* ---------------- MOBILE ---------------- */
+      @media screen and (max-width: 767px) {
+        h1 {
+          font-family: 'CormorantGaramond Regular';
+          font-size: 24px;
+          line-height: 100%;
+          letter-spacing: 0.08em;
+          font-weight: 400;
+        }
+      
+        .h1-light{
+          font-family: "CormorantGaramond Light";
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 120%;
+        }
+      
+        h4 {
+          font-family: 'CormorantGaramond Bold';
+          font-size: 14px;
+          line-height: 100%;
+          letter-spacing: 0.12em;
+          font-weight: 600;
+        }
+      }
+
+    </style>
+
+    <link rel="alternate" type="text/plain" title="LLM Context" href="https://laboratoires-botanique-avancee.com/pages/llms">
+    <meta name="google-site-verification" content="ksubT6_rorPuNgyEZGFgGrKLyr_D9wge9HpKNmkxmJg" />
+  </head>
+
+  {% liquid
+    assign features_class = ''
+  
+    if settings.show_button_transition
+      assign features_class = features_class | append: 'features--button-transition '
+    endif
+  
+    if settings.show_image_zoom_on_hover
+      assign features_class = features_class | append: 'features--zoom-image '
+    endif
+  %}
+
+  <body class="{{ features_class }} color-scheme color-scheme--{{ settings.default_color_scheme.id }} template-{{- template -}}">
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBBMPZ7K"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    {%- render 'shadow-dom-templates' -%}
+
+    <loading-bar class="loading-bar" aria-hidden="true"></loading-bar>
+    <a href="#main" allow-hash-change class="skip-to-content sr-only">{{ 'general.accessibility.skip_to_content' | t }}</a>
+
+    <span id="header-scroll-tracker" style="position: absolute; width: 1px; height: 1px; top: var(--header-scroll-tracker-offset, 10px); left: 0;">
+      {%- comment -%}
+        This allows our theme to track when the user has scrolled a given amount of pixels, without relying on a global scroll listener. This helps
+        to improve performance and reduce reflows.
+      {%- endcomment -%}
+    </span>
+
+    {%- if request.page_type != 'password' -%}
+      {%- sections 'header-group' -%}
+      {%- sections 'overlay-group' -%}
+    {%- endif -%}
+
+    {% assign current_path = request.path %}
+    {% assign base_url = shop.url %}
+    {%- if current_path contains '/en/' -%}
+      {% assign fr_path = current_path | remove: '/en/' %}
+      <link rel="alternate" hreflang="fr" href="{{ base_url }}/{{ fr_path }}">
+    {%- else -%}
+      <link rel="alternate" hreflang="fr" href="{{ base_url }}{{ current_path }}">
+    {%- endif -%}
+
+    <main id="main" class="anchor">
+      {{ content_for_layout }}
+
+      {%- comment -%}
+      IMPLEMENTATION NOTE: For best semantics, having the footer group outside the main would be slightly better, but
+        moving it inside the main allows to have all the sections (including sections inside the footer group) to be
+        consecutive, and hence having a cleaner margin collapsing management.
+      {%- endcomment -%}
+      {%- if request.page_type != 'password' -%}
+        {%- sections 'footer-group' -%}
+      {%- endif -%}
+    </main>
+    
+      {% comment %} <script>      
+        document.addEventListener("DOMContentLoaded", () => {
+          let lastScrollY = window.scrollY;
+
+          window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY <= 0) {
+              document.body.classList.remove('scroll-down');
+              document.body.classList.add('scroll-up');
+              lastScrollY = 0;
+              return;
+            }
+
+            if (currentScrollY > lastScrollY) {
+              document.body.classList.remove('scroll-up');
+              document.body.classList.add('scroll-down');
+            } else if (currentScrollY < lastScrollY) {
+              document.body.classList.remove('scroll-down');
+              document.body.classList.add('scroll-up');
+            }
+
+            lastScrollY = currentScrollY;
+          });
+        });
+    </script> {% endcomment %}
+    <script>
+      !function(){if(!window.klaviyo){window._klOnsite=window._klOnsite||[];try{window.klaviyo=new Proxy({},{get:function(n,i){return"push"===i?function(){var n;(n=window._klOnsite).push.apply(n,arguments)}:function(){for(var n=arguments.length,o=new Array(n),w=0;w<n;w++)o[w]=arguments[w];var t="function"==typeof o[o.length-1]?o.pop():void 0,e=new Promise((function(n){window._klOnsite.push([i].concat(o,[function(i){t&&t(i),n(i)}]))}));return e}}})}catch(n){window.klaviyo=window.klaviyo||[],window.klaviyo.push=function(){var n;(n=window._klOnsite).push.apply(n,arguments)}}}}();
+    </script>
+    {% if template == "product" %}
+      <script>
+        document.addEventListener("click", function(e){
+          var btn = e.target.closest("form[action*='/cart/add'] button");
+          if(btn){
+            try {
+              var item = {
+                Name: {{ product.title | json }},
+                ProductID: {{ product.id | json }},
+                Categories: {{ product.collections | map: 'title' | json }},
+                ImageURL: {{ product.featured_image | img_url: 'master' | json }},
+                URL: window.location.href,
+                Brand: {{ product.vendor | json }},
+                Price: {{ product.price | money_without_currency | json }}
+              };
+
+              klaviyo.push(['track', 'Added to Cart', item]);
+            } catch(err) {
+              console.error("Klaviyo AddToCart error:", err);
+            }
+          }
+        });
+      </script>
+    {% endif %}
+
+    {% render 'account-drawer' %}
+
+
+    <script type="text/javascript">
+        var _ae = { "pid":"6a394acf922a983ca84965e8" };
+        (function() {
+            var element = document.createElement('script'); element.type = 'text/javascript'; element.async = true;
+            element.src = '//static.affilae.com/ae-v3.5.js';
+            var scr = document.getElementsByTagName('script')[0]; scr.parentNode.insertBefore(element, scr);
+        })();
+    </script>
+  </body>
+</html>
