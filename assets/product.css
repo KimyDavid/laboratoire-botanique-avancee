@@ -121,6 +121,11 @@ section .section-reviews .jm-review-widget__header-and-body {
   gap: 32px;
 }
 
+section .section-reviews .jm-carousel__viewport::before,
+section .section-reviews .jm-carousel__viewport::after {
+  display: none;
+}
+
 section .section-reviews .jdgm-carousel-review-list {
   background: transparent;
 }
