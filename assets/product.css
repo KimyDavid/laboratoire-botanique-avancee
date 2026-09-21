@@ -113,8 +113,10 @@ section .section-reviews .jm-filters__buttons {
   --cluster-space: 8px !important;
 }
 
-section .section-reviews .jm-cluster > .jm-stack:first-child * {
-  color: white;
+section .section-reviews .jm-cluster > .jm-stack:first-child *,
+section .section-reviews .jm-review-item *
+section .section-reviews .jm-star-rating__font-icon {
+  color: white !important;
 }
 
 section .section-reviews .jm-review-widget__header-and-body {
