@@ -1,0 +1,149 @@
+{%- comment -%}
+  Compact product card usable anywhere in a page: image on the left, title, description and a button that can include the price ("Acheter - 58€").
+  Displayed on mobile only by default (see the "Affichage" setting).
+{%- endcomment -%}
+
+{%- assign teaser_product = section.settings.product -%}
+{%- assign teaser_image = section.settings.image | default: teaser_product.featured_image -%}
+{%- assign teaser_title = section.settings.title | default: teaser_product.title -%}
+{%- assign teaser_url = section.settings.button_link | default: teaser_product.url -%}
+
+{%- capture teaser_button_label -%}
+  {{- section.settings.button_label | default: 'Acheter' -}}
+  {%- if section.settings.show_price_in_button and teaser_product != blank %} - {{ teaser_product.price | money_without_trailing_zeros }}{% endif -%}
+{%- endcapture -%}
+
+{%- if teaser_image != blank or teaser_title != blank -%}
+  <section
+    style="background: {{ section.settings.background_color }}; color: {{ section.settings.text_color }};"
+    class="product-teaser {% if section.settings.spacing_top %}product-teaser--pad-top{% endif %} {% if section.settings.spacing_bottom %}product-teaser--pad-bottom{% endif %} {% render 'responsive-visibility', visibility: section.settings.visibility %}"
+  >
+    <div class="container">
+      <div class="product-teaser__inner">
+        {%- if teaser_image != blank -%}
+          <a {% if teaser_url != blank %}href="{{ teaser_url }}"{% endif %} class="product-teaser__image-link">
+            {{- teaser_image | image_url: width: 600 | image_tag: class: 'product-teaser__image', loading: 'lazy', widths: '200,300,400,600', sizes: '40vw' -}}
+          </a>
+        {%- endif -%}
+
+        <div class="product-teaser__content">
+          {%- if teaser_title != blank -%}
+            <h2 class="product-teaser__title h3">{{ teaser_title }}</h2>
+          {%- endif -%}
+
+          {%- if section.settings.description != blank -%}
+            <div class="product-teaser__description prose">{{ section.settings.description }}</div>
+          {%- endif -%}
+
+          {%- if teaser_url != blank -%}
+            <div class="product-teaser__button">
+              {%- render 'button', size: "sm", href: teaser_url, style: 'solid', content: teaser_button_label, background: section.settings.text_color, text_color: section.settings.background_color -%}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Carte produit (mobile)",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Produit",
+      "info": "Fournit l'image, le titre, le prix et le lien du bouton par défaut."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "Facultatif : remplace l'image du produit."
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre",
+      "info": "Facultatif : remplace le titre du produit."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "header",
+      "content": "Bouton"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Texte du bouton",
+      "default": "Acheter"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_price_in_button",
+      "label": "Afficher le prix dans le bouton",
+      "info": "Ex : « Acheter - 58€ ».",
+      "default": true
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Lien du bouton",
+      "info": "Facultatif : remplace le lien vers la page du produit."
+    },
+    {
+      "type": "header",
+      "content": "Affichage"
+    },
+    {
+      "type": "select",
+      "id": "visibility",
+      "label": "t:global.visibility.label",
+      "options": [
+        { "value": "all", "label": "t:global.visibility.options.all" },
+        { "value": "mobile", "label": "t:global.visibility.options.mobile" },
+        { "value": "desktop", "label": "t:global.visibility.options.desktop" }
+      ],
+      "default": "mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "spacing_top",
+      "label": "Espace en haut",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "spacing_bottom",
+      "label": "Espace en bas",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Couleur de fond",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Couleur du texte",
+      "default": "#3C626B"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Carte produit (mobile)"
+    }
+  ]
+}
+{% endschema %}

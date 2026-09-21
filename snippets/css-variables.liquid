@@ -42,7 +42,7 @@ note that this may have impact on different places.
     --container-md-max-width: 71.875rem; /* 1150px */
     --container-lg-max-width: 78.75rem; /* 1260px */
     --container-xl-max-width: 95rem; /* 1540 */
-    --container-gutter: 32px;
+    --container-gutter: 24px;
 
     --section-vertical-spacing: {% if settings.section_vertical_spacing == 'xs' %}2rem{%- elsif settings.section_vertical_spacing == 'sm' %}2.25rem{% elsif settings.section_vertical_spacing == 'md' %}2.5rem{% elsif settings.section_vertical_spacing == 'lg' %}3rem{% else %}4rem{% endif %};
     --section-vertical-spacing-tight: {%- if settings.section_vertical_spacing == 'xs' %}2rem{% elsif section.settings_vertical_spacing == 'sm' %}2.25rem{% else %}2.5rem{% endif %};
@@ -83,7 +83,7 @@ note that this may have impact on different places.
     --text-font-weight: {{ settings.text_font.weight }};
     --text-font-style: {{ settings.text_font.style }};
     --text-letter-spacing: {% if language_code == 'ar' %}0{% else %}{{ settings.text_font_letter_spacing | divided_by: 100.0 }}{% endif %}em;
-    --button-font: {% if settings.button_text_font == 'heading' %}var(--heading-font-style) var(--heading-font-weight) var(--text-sm) / 1.65 var(--heading-font-family){% else %}var(--text-font-style) var(--text-font-weight) var(--text-sm) / 1.65 var(--text-font-family){% endif %};
+    --button-font: {% if settings.button_text_font == 'heading' %}var(--heading-font-style) var(--heading-font-weight) var(--text-sm) var(--heading-font-family){% else %}var(--text-font-style) var(--text-font-weight) var(--text-sm) / 1.65 var(--text-font-family){% endif %};
     --button-text-transform: {{ settings.button_text_transform }};
     --button-letter-spacing: {% if language_code == 'ar' %}0{% else %}{{ settings.button_letter_spacing | divided_by: 100.0 }}{% endif %}em;
 

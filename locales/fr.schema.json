@@ -9,6 +9,14 @@
  */
 {
   "global": {
+    "visibility": {
+      "label": "Affichage",
+      "options": {
+        "all": "Mobile et desktop",
+        "mobile": "Mobile uniquement",
+        "desktop": "Desktop uniquement"
+      }
+    },
     "colors": {
       "category": "Couleurs",
       "scheme": "Nuancier de couleurs",

@@ -11,7 +11,7 @@ Supported variables
 
 * product: the product to render (if empty, renders placeholder content)
 * product_form_id: the product form id
-* desktop_layout: the layout on desktop (can be "carousel_thumbnails_left", "carousel_thumbnails_bottom", "carousel_dots", "grid", "grid_2x" or "grid_2x_highlighted")
+* desktop_layout: the layout on desktop (can be "carousel_thumbnails_left", "carousel_thumbnails_bottom", "carousel_dots", "grid", "grid_2x" or "grid_2x_highlighted"). Thumbnails are only shown for the "carousel_thumbnails_*" layouts
 * mobile_controls: the controls to show on mobile (can be "thumbnails", "dots", "arrows" or "free_scroll")
 * enable_media_autoplay: if set to true media are autoplayed when switched to
 * enable_video_looping: if set to true videos automatically loop when finished
@@ -48,6 +48,21 @@ Supported variables
         --product-gallery-carousel-gap: {{ section.settings.desktop_media_grid_gap }}px;
       {%- endif -%}
     }
+
+    {%- if desktop_layout == 'carousel_thumbnails_bottom' -%}
+      /* Thumbnails below: 4 per row, spread over the full gallery width, extra ones scroll horizontally */
+      #shopify-section-{{ section.id }} .product-gallery {
+        --product-gallery-gap: 0.5rem;
+        --product-gallery-thumbnail-list-gap: 0.5rem;
+        --product-gallery-thumbnail-size: calc((100% - 3 * 0.5rem) / 4);
+      }
+
+      #shopify-section-{{ section.id }} .product-gallery__thumbnail-list {
+        position: relative;
+        inset-block-start: auto;
+        width: 100%;
+      }
+    {%- endif -%}
 
     {%- if desktop_layout == 'grid_2x_highlighted' -%}
       #shopify-section-{{ section.id }} .product-gallery__media:not([hidden]) {
@@ -216,7 +231,7 @@ only way to do it on Shopify right now.
         assign show_thumbnails_mobile = true
       endif
 
-      if desktop_layout contains 'thumbnails' or desktop_layout == 'grid'
+      if desktop_layout contains 'thumbnails'
         assign show_thumbnails_desktop = true
       endif
     -%}
@@ -227,7 +242,7 @@ only way to do it on Shopify right now.
           {%- if product != blank -%}
             {%- for media in product.media -%}
               <button type="button" class="product-gallery__thumbnail" {% if filtered_indexes contains media.position %}hidden{% endif %} data-media-type="{{ media.media_type }}" data-media-position="{{ media.position }}" data-media-id="{{ media.id }}" aria-current="{% if media == default_media %}true{% else %}false{% endif %}" aria-label="{{ 'general.accessibility.go_to_item' | t: index: forloop.index | escape }}">
-                {{- media | image_url: width: media.preview_image.width | image_tag: sizes: '56px', widths: '56,112,168', class: 'object-contain' -}}
+                {{- media | image_url: width: media.preview_image.width | image_tag: sizes: '(min-width: 1000px) 15vw, 25vw', widths: '120,240,360,480', class: 'product-gallery__thumbnail-image' -}}
 
                 {%- unless media.media_type == 'image' -%}
                   <div class="product-gallery__media-badge">

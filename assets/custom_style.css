@@ -36,7 +36,7 @@ body.template-index height-observer .header.is-solid .header__logo img {
   display:none !important;
 }
 .h6.cta_link_lba.text-subdued {
-  color: var(--GreenBlack, #2D464B);
+  color: var(--GreenBlack, #3C626B);
 }
 .hide{
   display:none;
@@ -118,8 +118,8 @@ body.template-index height-observer .header.is-solid .header__logo img {
   flex-wrap: wrap;
 }
 .section-spacing {
-  padding-block-start: 128px;
-  padding-block-end: 128px;
+  padding-block-start: 80px;
+  padding-block-end: 80px;
 }
 body.scroll-down header height-observer {
   transform: translateY(-100%);
@@ -136,7 +136,7 @@ body.scroll-down header height-observer {
   appearance: none;
   -webkit-appearance: none;
   background: none;
-  border: 1px solid #2D464B; 
+  border: 1px solid #3C626B; 
   width: 16px;
   height: 16px;
   display: inline-block;
@@ -147,7 +147,7 @@ body.scroll-down header height-observer {
 .facets .checkbox-control input[type="checkbox"].checkbox:checked::before {
   content: "";
   display: block;
-  background-color: #2D464B;
+  background-color: #3C626B;
   width: 8px;
   height: 8px;
   position: absolute;
@@ -190,11 +190,11 @@ div[slot="footer"] .contents .button--outline {
   align-items: center;
   flex: 1 0 0;
   transition: all .3s ease;
-  color: #2D464B;
+  color: #3C626B;
 }
 div[slot="footer"] .contents .button.w-full {
   border-radius: 4px;
-  background: var(--GreenBlack, #2D464B);
+  background: var(--GreenBlack, #3C626B);
   color: white;
   display: flex;
   height: 36px;
@@ -207,11 +207,11 @@ div[slot="footer"] .contents .button.w-full {
 
 div[slot="footer"] .contents .button.w-full:hover {
   background: white;
-  border: 1px solid #2D464B;
-  color: #2D464B;
+  border: 1px solid #3C626B;
+  color: #3C626B;
 }
 div[slot="footer"] .contents .button--outline:hover {
-  background: #2D464B;
+  background: #3C626B;
   color: white;
 }
 .facets .accordion-list .accordion__toggle {
@@ -280,7 +280,7 @@ div[slot="footer"] .contents .button--outline:hover {
   display: flex;
   gap: 12px;
   align-items: center;
-  color: #2D464B;
+  color: #3C626B;
   padding-bottom: 0;
 }
 .collection-toolbar .container_title {
@@ -462,8 +462,8 @@ div[slot="footer"] .contents .button--outline:hover {
 
 @media(max-width:767px){
   .section-spacing {
-    padding-block-start: 70px;
-    padding-block-end: 70px;
+    padding-block-start: 48px;
+    padding-block-end: 48px;
   }
   .content.flex.space-between.m-auto.w-1544 {
     padding: 72px 32px;
@@ -795,7 +795,7 @@ div[slot="footer"] .contents .button--outline:hover {
 .lang_selector_mobile .weglot_switcher.default_dropdown .wgcurrent:after {
   height: 28px !important;
     border: 0 !important;
-    color: #2D464B !important;
+    color: #3C626B !important;
 }
 
 .lang_selector .cta_link_lba {
@@ -1016,7 +1016,7 @@ div[slot="footer"] .contents .button--outline:hover {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #2D464B;
+  background: #3C626B;
   opacity: .3;
   border: none;
   cursor: pointer;
@@ -1072,7 +1072,7 @@ div[slot="footer"] .contents .button--outline:hover {
     line-height: 100%;
     font-variant: all-small-caps;
     letter-spacing: 1.92px;
-    color: #2D464B !important;
+    color: #3C626B !important;
 }
 
 .weglot_switcher.default_dropdown .wgcurrent:after {
@@ -1323,4 +1323,10 @@ div[slot="footer"] .contents .button--outline:hover {
 
 .jdgm-prev-badge .jdgm-prev-badge__text {
   margin-left: 5px;
+        font-family: 'CormorantGaramond Regular';
+        font-size: 14px;
+        line-height: 1.6;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: bold;
 }

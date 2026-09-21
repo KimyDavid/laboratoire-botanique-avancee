@@ -1,5 +1,13 @@
 {
   "global": {
+    "visibility": {
+      "label": "Visibility",
+      "options": {
+        "all": "Mobile and desktop",
+        "mobile": "Mobile only",
+        "desktop": "Desktop only"
+      }
+    },
     "colors": {
       "category": "Colors",
       "scheme": "Color scheme",

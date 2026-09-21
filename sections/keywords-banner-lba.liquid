@@ -1,0 +1,103 @@
+{%- comment -%}
+  Banner with a few short keywords (ex : "Formulé en France · Rechargeable · Livraison offerte") on a colored background.
+  On desktop the words are spread and centered, on mobile they stay glued on a single line.
+{%- endcomment -%}
+
+{%- if section.blocks.size > 0 -%}
+  <section
+    style="background: {{ section.settings.background_color }}; color: {{ section.settings.text_color }}; --keywords-banner-padding: {{ section.settings.padding_block }}px;"
+    class="keywords-banner {% if section.settings.show_separators %}keywords-banner--separators{% endif %} {% if section.settings.show_border_bottom %}keywords-banner--border{% endif %} {% render 'responsive-visibility', visibility: section.settings.visibility %}"
+  >
+    <ul class="keywords-banner__list">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.text != blank -%}
+          <li class="keywords-banner__item" {{ block.shopify_attributes }}>{{ block.settings.text }}</li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Bandeau mots-clés",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "select",
+      "id": "visibility",
+      "label": "t:global.visibility.label",
+      "options": [
+        { "value": "all", "label": "t:global.visibility.options.all" },
+        { "value": "mobile", "label": "t:global.visibility.options.mobile" },
+        { "value": "desktop", "label": "t:global.visibility.options.desktop" }
+      ],
+      "default": "all"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Couleur de fond",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Couleur du texte",
+      "default": "#3C626B"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_separators",
+      "label": "Afficher les séparateurs (•) entre les mots",
+      "info": "Visibles uniquement sur desktop.",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_border_bottom",
+      "label": "Afficher un trait en bas",
+      "info": "Utilise la couleur du texte.",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "padding_block",
+      "label": "Espace vertical",
+      "min": 8,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Mot-clé",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Texte",
+          "default": "Formulé en France"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bandeau mots-clés",
+      "blocks": [
+        { "type": "item", "settings": { "text": "Formulé en France" } },
+        { "type": "item", "settings": { "text": "Rechargeable" } },
+        { "type": "item", "settings": { "text": "Livraison offerte" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -23,12 +23,19 @@
 
   {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
 
-  <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+  <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %} {% render 'responsive-visibility', visibility: section.settings.visibility %}">
     <div class="container_full">
       {%- assign wrapper_carousel_id = 'featured-collections-carousel-' | append: section.id -%}
 
       <div class="section-stack featured-collections__wrapper featured-collections__wrapper--{{ section.settings.carousel_design }}">
-        <div class="v-stack justify-self-center gap-4 text-center sm:gap-5 w-100 flex space-between wrap align-center">
+        {%- assign has_visible_link = false -%}
+        {%- for block in section.blocks -%}
+          {%- if block.settings.link_text != blank -%}
+            {%- assign has_visible_link = true -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        <div class="v-stack justify-self-center gap-4 text-center sm:gap-5 w-100 flex {% if has_visible_link %}space-between{% else %}justify-center{% endif %} wrap align-center">
           {%- if section.settings.subheading != blank -%}
             <p class="h6 text-center">{{- section.settings.subheading -}}</p>
           {%- endif -%}
@@ -67,7 +74,7 @@
                 {%- endif -%}
 
                 {%- for product in block.settings.collection.products limit: block.settings.products_count -%}
-                  {%- render 'product-card', product: product, reveal: should_reveal, position: forloop.index, hide_product_information: section.settings.hide_product_information, block: block, show_product_subtitle: section.settings.show_product_subtitle, show_product_secondary_image: section.settings.show_product_secondary_image -%}
+                  {%- render 'product-card', product: product, reveal: should_reveal, position: forloop.index, hide_product_information: section.settings.hide_product_information, block: block, show_short_description: section.settings.show_product_description, show_buy_button: section.settings.show_buy_button, show_product_secondary_image: section.settings.show_product_secondary_image -%}
                 {%- else -%}
                   {%- for i in (1..block.settings.products_count) -%}
                     {%- render 'product-card-placeholder', reveal: should_reveal, loop_index: forloop.index0, hide_product_information: section.settings.hide_product_information -%}
@@ -136,6 +143,17 @@
       "default": true
     },
     {
+      "type": "select",
+      "id": "visibility",
+      "label": "t:global.visibility.label",
+      "options": [
+        { "value": "all", "label": "t:global.visibility.options.all" },
+        { "value": "mobile", "label": "t:global.visibility.options.mobile" },
+        { "value": "desktop", "label": "t:global.visibility.options.desktop" }
+      ],
+      "default": "all"
+    },
+    {
       "type": "checkbox",
       "id": "hide_product_information",
       "label": "t:global.product_list.hide_product_information",
@@ -143,10 +161,16 @@
     },
     {
       "type": "checkbox",
-      "id": "show_product_subtitle",
-      "label": "Afficher le sous-titre du produit",
-      "info": "Champ méta \"[Vignette] Sous titre descriptif\"",
+      "id": "show_product_description",
+      "label": "Afficher la description courte du produit",
+      "info": "Champ méta \"custom.vignette_courte_description\", affiché sous le sous-titre.",
       "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_buy_button",
+      "label": "Afficher le bouton \"Acheter\"",
+      "default": true
     },
     {
       "type": "checkbox",

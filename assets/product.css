@@ -79,6 +79,7 @@
 
 @media (min-width: 1000px) {
   .product-gallery {
-    padding-top: 89px;
+    position: sticky;
+    top: 80px;
   }
 }

@@ -208,18 +208,15 @@
       h3 + *, .h3 + * {
         margin-top: 16px;
       }
-      h4,.h4 {
-        font-family: 'Neutraface Text Demi';
-        font-size: 16px;
-        line-height: 100%;
-        letter-spacing: 2px;
-        font-weight: 600;
+      h4, .h4,
+      .prose :where(h4), .prose .h4 {
+        font-family: 'CormorantGaramond Regular';
+        font-size: 14px;
+        line-height: 1.6;
+        letter-spacing: 0.12em;
         margin-bottom: 8px;
         text-transform: uppercase;
-        font-variant: all-small-caps;
-        --heading-font-family: 'Neutraface Text Demi';
-        --heading-font-weight: 600;
-        --heading-letter-spacing: 2px;
+        font-weight: bold;
       }
       summary.h6 {
         font-family: 'Neutraface Text Demi';
@@ -317,7 +314,7 @@
         align-items: center;
         flex: 1 0 0;
         border-radius: 6px;
-        background: var(--GreenBlack, #2D464B);
+        background: var(--GreenBlack, #3C626B);
         color: white;
         font-variant: all-small-caps;
         text-align: center;
