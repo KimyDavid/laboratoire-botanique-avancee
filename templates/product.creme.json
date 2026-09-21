@@ -455,8 +455,8 @@
         "judge_me_reviews_review_widget_dAGzNf"
       ],
       "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": true,
+        "color_scheme": "scheme-4",
+        "separate_section_with_border": false,
         "remove_vertical_spacing": false,
         "remove_horizontal_spacing": false,
         "custom_class": "section-reviews"
