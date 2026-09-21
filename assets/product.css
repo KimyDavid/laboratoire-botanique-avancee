@@ -131,3 +131,8 @@ section .section-reviews .jm-review-item {
 section .section-reviews .jm-review-item > .jm-stack {
   padding: 0;
 }
+
+section .section-reviews .jdgm-carousel-review-list {
+  margin-left: -24px;
+  margin-right: -24px;
+}
