@@ -92,7 +92,7 @@ section .section-reviews .jm-review-widget {
   padding-top: 0;
 }
 
-section .section-reviews .jm-cluster {
+section .section-reviews .jm-review-widget__header > .jm-cluster {
   --cluster-space: 24px !important;
 }
 
@@ -150,12 +150,12 @@ section .section-reviews .jdgm-carousel-review-list {
 }
 
 section .section-reviews .jm-average-rating-display .jm-text:last-child {
-    font-family: CormorantGaramond Regular;
-    font-size: 14px;
-    line-height: 1.6;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    font-weight: 700;
+  font-family: CormorantGaramond Regular;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 section .section-reviews .jm-verified-buyer-badge__text {
