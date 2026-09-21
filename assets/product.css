@@ -97,6 +97,7 @@ section .section-reviews .jm-cluster > .jm-stack:first-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  --cluster-space: 24px !important;
 }
 
 section .section-reviews .jm-cluster > .jm-stack:first-child * {
