@@ -165,3 +165,7 @@ section .section-reviews .jm-average-rating-display .jm-text:last-child {
 section .section-reviews .jm-verified-buyer-badge__text {
   border-color: white;
 }
+
+section .section-reviews .jdgm-review-content__body-content {
+  font-size: 18px;
+}
