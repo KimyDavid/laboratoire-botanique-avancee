@@ -458,7 +458,8 @@
         "color_scheme": "",
         "separate_section_with_border": true,
         "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false
+        "remove_horizontal_spacing": false,
+        "custom_class": "section-reviews"
       }
     },
     "keywords_banner_lba_y7LgPz": {
