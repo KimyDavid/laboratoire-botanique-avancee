@@ -1090,6 +1090,12 @@ div[slot="footer"] .contents .button--outline:hover {
   padding-left: 10px !important;
 }
 
+@media (max-width: 768px) {
+  .weglot_switcher.default_dropdown .wgcurrent a {
+    padding-right: 16px;
+  }
+}
+
 .header-sidebar__banner {
   position: relative;
 }

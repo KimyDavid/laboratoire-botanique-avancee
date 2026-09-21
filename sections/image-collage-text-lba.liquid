@@ -1,5 +1,6 @@
 {%- comment -%}
   Collage of up to 3 images (1 main + 2 secondary) next to a text content.
+  Secondary image 1 is on the right (top or middle), secondary image 2 is on the left (bottom or middle).
   Desktop: displayed as is. Mobile (< 1000px): the whole section is folded into an accordion (can be disabled with a setting).
   Options: collage on the left or right, top and bottom borders around the text (the media is then at least as tall as the text),
   optional product whose price is displayed next to the button.
@@ -15,7 +16,7 @@
 {%- endif -%}
 {%- comment -%}Mobile variant: no top right image, so the main image goes full width and the title moves next to the bottom left image{%- endcomment -%}
 {%- assign is_bottom_left_only = false -%}
-{%- if image_1 == blank and image_2 != blank -%}
+{%- if image_1 == blank and image_2 != blank and section.settings.image_secondary_2_position != 'middle' -%}
   {%- assign is_bottom_left_only = true -%}
 {%- endif -%}
 {%- comment -%}Only a main image: it fills the whole media area instead of being inset like in the collage{%- endcomment -%}
@@ -27,6 +28,11 @@
 {%- assign is_middle_right = false -%}
 {%- if image_1 != blank and section.settings.image_secondary_1_position == 'middle' -%}
   {%- assign is_middle_right = true -%}
+{%- endif -%}
+{%- comment -%}Secondary image 2 can be placed in the middle left instead of the bottom left{%- endcomment -%}
+{%- assign is_middle_left = false -%}
+{%- if image_2 != blank and section.settings.image_secondary_2_position == 'middle' -%}
+  {%- assign is_middle_left = true -%}
 {%- endif -%}
 {%- assign use_accordion = section.settings.mobile_accordion -%}
 {%- assign button_product = section.settings.button_product -%}
@@ -46,7 +52,7 @@
         <button
           type="button"
           class="collage-text__toggle group"
-          aria-expanded="false"
+          aria-expanded="{% if section.settings.mobile_accordion_open %}true{% else %}false{% endif %}"
           aria-controls="{{ panel_id }}"
         >
           <span class="h3">{{ section.settings.mobile_accordion_label }}</span>
@@ -54,11 +60,11 @@
         </button>
       {%- endif -%}
 
-      <div id="{{ panel_id }}" class="collage-text__panel {% unless use_accordion %}is-open{% endunless %}">
+      <div id="{{ panel_id }}" class="collage-text__panel {% if use_accordion == false or section.settings.mobile_accordion_open %}is-open{% endif %}">
         <div class="collage-text__panel-inner">
           <div class="collage-text__inner {% unless has_media %}collage-text__inner--no-media{% endunless %} {% if section.settings.image_position == 'end' %}collage-text__inner--media-end{% endif %} {% if section.settings.bordered_content %}collage-text__inner--bordered{% endif %}">
             {%- if has_media -%}
-              <div class="collage-text__media {% if is_bottom_left_only %}collage-text__media--bottom-left-only{% endif %} {% if is_main_only %}collage-text__media--main-only{% endif %} {% if is_middle_right %}collage-text__media--middle-right{% endif %} {% if main_image != blank %}collage-text__media--has-main{% endif %}">
+              <div class="collage-text__media {% if is_bottom_left_only %}collage-text__media--bottom-left-only{% endif %} {% if is_main_only %}collage-text__media--main-only{% endif %} {% if is_middle_right %}collage-text__media--middle-right{% endif %} {% if is_middle_left %}collage-text__media--middle-left{% endif %} {% if main_image != blank %}collage-text__media--has-main{% endif %}">
                 {%- if main_image != blank -%}
                   {{- main_image | image_url: width: 1200 | image_tag: class: 'collage-text__image collage-text__image--main', loading: 'lazy', widths: '400,600,800,1200', sizes: '(min-width: 1000px) 40vw, 80vw' -}}
                 {%- endif -%}
@@ -76,7 +82,7 @@
 
             <div class="collage-text__text">
               {%- if section.settings.eyebrow != blank -%}
-                <p class="collage-text__eyebrow">{{ section.settings.eyebrow }}</p>
+                <p class="collage-text__eyebrow h4">{{ section.settings.eyebrow }}</p>
               {%- endif -%}
 
               {%- if section.settings.title != blank -%}
@@ -164,7 +170,17 @@
     {
       "type": "image_picker",
       "id": "image_secondary_2",
-      "label": "Image secondaire 2 (bas gauche)"
+      "label": "Image secondaire 2 (gauche)"
+    },
+    {
+      "type": "select",
+      "id": "image_secondary_2_position",
+      "label": "Position de l'image secondaire 2",
+      "options": [
+        { "value": "bottom", "label": "Bas gauche" },
+        { "value": "middle", "label": "Milieu gauche" }
+      ],
+      "default": "bottom"
     },
     {
       "type": "select",
@@ -251,6 +267,13 @@
       "label": "Libellé du bouton accordéon",
       "info": "Utilisé uniquement si l'accordéon est activé.",
       "default": "Voir plus"
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_accordion_open",
+      "label": "Accordéon ouvert par défaut",
+      "info": "Utilisé uniquement si l'accordéon est activé.",
+      "default": false
     },
     {
       "type": "header",

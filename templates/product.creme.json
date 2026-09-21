@@ -62,7 +62,7 @@
             "stretch": true,
             "background": "#3c626b",
             "text_color": "#ffffff",
-            "visibility": "all"
+            "visibility": "mobile"
           }
         },
         "product_upsell_A8RkbM": {
@@ -106,14 +106,42 @@
         "max_image_zoom_level": 3
       }
     },
+    "rich_text_DDzqQJ": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_L7aiN4": {
+          "type": "richtext",
+          "settings": {
+            "content": "<h3>Notre conciergerie est à votre écoute sur Whatsapp pour vous accompagner :<br/><a href=\"tel:+33632796960\" title=\"tel:+33632796960\">+33 6 32 79 69 60</a></h3>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_L7aiN4"
+      ],
+      "custom_css": [
+        ".section-spacing {padding-bottom: 0;}"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "visibility": "desktop",
+        "content_width": "xl",
+        "text_position": "center",
+        "remove_vertical_spacing": false,
+        "bordered_content": true
+      }
+    },
     "image_collage_text_lba_YNFGei": {
       "type": "image-collage-text-lba",
-      "name": "Collage images + text",
+      "name": "Actifs clés",
       "settings": {
         "image_main": "shopify://shop_images/1950X1950_CERAMIDES.webp",
         "image_secondary_1": "shopify://shop_images/niacinamide_2_copy.webp",
         "image_secondary_1_position": "top",
         "image_secondary_2": "shopify://shop_images/1950X1950_ECTOINE.webp",
+        "image_secondary_2_position": "bottom",
         "image_position": "start",
         "eyebrow": "136 gènes impliqués dans la jeunesse de la peau",
         "title": "Des actifs clés",
@@ -126,6 +154,7 @@
         "bordered_content": false,
         "mobile_accordion": true,
         "mobile_accordion_label": "Actifs clés",
+        "mobile_accordion_open": true,
         "visibility": "all",
         "spacing_top": true,
         "spacing_bottom": true,
@@ -134,11 +163,12 @@
     },
     "image_collage_text_lba_BeCCEW": {
       "type": "image-collage-text-lba",
-      "name": "Collage images + text",
+      "name": "Technologies néo-regen (mobile)",
       "settings": {
         "image_main": "shopify://shop_images/NEW_GAMME_LOTION2_3.jpg",
         "image_secondary_1_position": "top",
         "image_secondary_2": "shopify://shop_images/Rectangle_5872_013c8d41-2e75-49fc-b2e3-742ee1aff201.png",
+        "image_secondary_2_position": "bottom",
         "image_position": "start",
         "eyebrow": "",
         "title": "Collaboration avec dr. jean marc lemaître",
@@ -151,6 +181,7 @@
         "bordered_content": false,
         "mobile_accordion": true,
         "mobile_accordion_label": "Technologie neo regen",
+        "mobile_accordion_open": false,
         "visibility": "mobile",
         "spacing_top": true,
         "spacing_bottom": true,
@@ -170,14 +201,15 @@
       "block_order": [
         "richtext_hic6DW"
       ],
-      "name": "t:sections.rich_text.presets.rich_text.name",
+      "name": "Contenu contact (mobile)",
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
         "visibility": "mobile",
         "content_width": "sm",
         "text_position": "center",
-        "remove_vertical_spacing": false
+        "remove_vertical_spacing": false,
+        "bordered_content": false
       }
     },
     "product_teaser_lba_tqQFi4": {
@@ -191,7 +223,7 @@
         "show_price_in_button": true,
         "button_link": "shopify://products/coffret-decouverte-box",
         "visibility": "mobile",
-        "spacing_top": false,
+        "spacing_top": true,
         "spacing_bottom": true,
         "background_color": "#ffffff",
         "text_color": "#3c626b"
@@ -239,7 +271,7 @@
         "stat_67Jbbd",
         "stat_LnK8Bh"
       ],
-      "name": "Contenu + chiffres clés",
+      "name": "Efficacité prouvée cliniquement (mobile)",
       "settings": {
         "title": "Efficacité prouvée cliniquement",
         "content": "",
@@ -317,11 +349,39 @@
         "text_color": "#ffffff"
       }
     },
+    "image_collage_text_lba_JtF69y": {
+      "type": "image-collage-text-lba",
+      "name": "Technologies néo-regen (desktop)",
+      "settings": {
+        "image_main": "shopify://shop_images/NEW_GAMME_LOTION2_1.png",
+        "image_secondary_1_position": "middle",
+        "image_secondary_2": "shopify://shop_images/Rectangle_5872_013c8d41-2e75-49fc-b2e3-742ee1aff201.png",
+        "image_secondary_2_position": "middle",
+        "image_position": "end",
+        "eyebrow": "Collaboration avec dr. jean marc lemaître",
+        "title": "Technologie neo-regen",
+        "content": "<p>Notre technologie exclusive Neo Regen est composée de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.</p><p>136 gènes impliqués dans la jeunesse de la peau modulés. <br/>+71% de Collagène I.<br/>Régénération cellulaire, moléculaire et tissulaire.</p>",
+        "small_content": "",
+        "button_label": "En savoir plus",
+        "button_link": "shopify://pages/expertise",
+        "button_product": "",
+        "button_add_to_cart": false,
+        "bordered_content": false,
+        "mobile_accordion": true,
+        "mobile_accordion_label": "Technologie neo regen",
+        "mobile_accordion_open": false,
+        "visibility": "desktop",
+        "spacing_top": true,
+        "spacing_bottom": true,
+        "background_color": "#ffffff"
+      }
+    },
     "image_collage_text_lba_864VE9": {
       "type": "image-collage-text-lba",
-      "name": "Collage images + text",
+      "name": "Conseils d'utilisation (mobile)",
       "settings": {
         "image_secondary_1_position": "top",
+        "image_secondary_2_position": "bottom",
         "image_position": "end",
         "eyebrow": "",
         "title": "",
@@ -334,6 +394,7 @@
         "bordered_content": false,
         "mobile_accordion": true,
         "mobile_accordion_label": "Conseils d'utilisation",
+        "mobile_accordion_open": false,
         "visibility": "mobile",
         "spacing_top": true,
         "spacing_bottom": true,
@@ -342,12 +403,13 @@
     },
     "image_collage_text_lba_BFPfLh": {
       "type": "image-collage-text-lba",
-      "name": "Collage images + text",
+      "name": "Prouesse de formulation",
       "settings": {
         "image_main": "shopify://shop_images/VISUEL_LABO_HOME.jpg",
         "image_secondary_1_position": "top",
         "image_secondary_2": "shopify://shop_images/1950X1950_TEXTURE_FRETTE_CREME.webp",
-        "image_position": "end",
+        "image_secondary_2_position": "bottom",
+        "image_position": "start",
         "eyebrow": "",
         "title": "Prouesse de formulation",
         "content": "<p>Créés au sein de nos Laboratoires à Baulieu, nos formules sont exempts de tout ingrédient controversé. Zéro silicone, zéro PEG, zéro microplastique.</p><p>30% d’actifs.<br/>96% d'ingrédients naturels.<br/>Noté excellent sur Yuka.<br/>Délicat parfum frais et réconfortant.</p>",
@@ -359,18 +421,20 @@
         "bordered_content": false,
         "mobile_accordion": true,
         "mobile_accordion_label": "Formulation",
-        "visibility": "mobile",
-        "spacing_top": true,
-        "spacing_bottom": true,
+        "mobile_accordion_open": false,
+        "visibility": "all",
+        "spacing_top": false,
+        "spacing_bottom": false,
         "background_color": "#ffffff"
       }
     },
     "image_collage_text_lba_mmANCW": {
       "type": "image-collage-text-lba",
-      "name": "Collage images + text",
+      "name": "Recharge format voyage (mobile)",
       "settings": {
         "image_main": "shopify://shop_images/Rectangle_5938_1.jpg",
         "image_secondary_1_position": "top",
+        "image_secondary_2_position": "bottom",
         "image_position": "end",
         "eyebrow": "",
         "title": "",
@@ -383,6 +447,7 @@
         "bordered_content": false,
         "mobile_accordion": true,
         "mobile_accordion_label": "Recharge et format voyage",
+        "mobile_accordion_open": false,
         "visibility": "mobile",
         "spacing_top": true,
         "spacing_bottom": true,
@@ -391,10 +456,11 @@
     },
     "image_collage_text_lba_cQwKHN": {
       "type": "image-collage-text-lba",
-      "name": "Collage images + text",
+      "name": "Recharge format voyage (desktop)",
       "settings": {
         "image_main": "shopify://shop_images/Rectangle_5938.jpg",
         "image_secondary_1_position": "top",
+        "image_secondary_2_position": "bottom",
         "image_position": "end",
         "eyebrow": "",
         "title": "Plus qu'une Recharge, un format voyage",
@@ -407,34 +473,10 @@
         "bordered_content": true,
         "mobile_accordion": true,
         "mobile_accordion_label": "Voir plus",
+        "mobile_accordion_open": false,
         "visibility": "desktop",
         "spacing_top": true,
-        "spacing_bottom": true,
-        "background_color": "#ffffff"
-      }
-    },
-    "image_collage_text_lba_YLJhXi": {
-      "type": "image-collage-text-lba",
-      "name": "Collage images + text",
-      "settings": {
-        "image_main": "shopify://shop_images/NEW_GAMME_LOTION2_1.png",
-        "image_secondary_1": "shopify://shop_images/IMG_9122_2_copy.png",
-        "image_secondary_1_position": "middle",
-        "image_position": "start",
-        "eyebrow": "Collaboration avec dr. jean marc lemaître",
-        "title": "Première mondiale",
-        "content": "<p>Pour la première fois au monde et en collaboration avec le <strong>Dr Lemaitre</strong>, l'efficacité d'actifs cosmétiques est prouvée sur un modèle révolutionnaire, issu de 30 ans de recherche en médecine régénérative : <strong>l'organoïde de peau</strong>.</p>",
-        "small_content": "",
-        "button_label": "En savoir plus",
-        "button_link": "shopify://pages/histoire",
-        "button_product": "",
-        "button_add_to_cart": false,
-        "bordered_content": false,
-        "mobile_accordion": true,
-        "mobile_accordion_label": "Voir plus",
-        "visibility": "desktop",
-        "spacing_top": false,
-        "spacing_bottom": true,
+        "spacing_bottom": false,
         "background_color": "#ffffff"
       }
     },
@@ -505,7 +547,7 @@
         "collection_TCxwyY": {
           "type": "collection",
           "settings": {
-            "collection": "all",
+            "collection": "le-rituel",
             "products_count": 8,
             "title": "Compléter le rituel",
             "link_url": "",
@@ -662,17 +704,18 @@
   },
   "order": [
     "main",
+    "rich_text_DDzqQJ",
     "image_collage_text_lba_YNFGei",
     "image_collage_text_lba_BeCCEW",
     "rich_text_ajAqhj",
     "product_teaser_lba_tqQFi4",
     "content_key_figures_lba_ABhRYY",
     "content_key_figures_lba_7FRBmR",
+    "image_collage_text_lba_JtF69y",
     "image_collage_text_lba_864VE9",
     "image_collage_text_lba_BFPfLh",
     "image_collage_text_lba_mmANCW",
     "image_collage_text_lba_cQwKHN",
-    "image_collage_text_lba_YLJhXi",
     "178549901462df8b58",
     "keywords_banner_lba_y7LgPz",
     "featured_collections_fmd6QB",

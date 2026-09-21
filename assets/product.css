@@ -80,7 +80,7 @@
 @media (min-width: 1000px) {
   .product-gallery {
     position: sticky;
-    top: 80px;
+    top: 72px;
   }
 }
 
@@ -104,6 +104,16 @@ section .section-reviews .jm-cluster > .jm-stack:first-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (min-width: 1000px) {
+  section .section-reviews .jm-cluster > .jm-stack:first-child {
+    flex-direction: column;
+  }
+
+  section .section-reviews .jm-review-widget-minimal-header__button-and-filters {
+    justify-content: center;
+  }
 }
 
 section .section-reviews .jm-button--secondary,
@@ -168,4 +178,10 @@ section .section-reviews .jm-verified-buyer-badge__text {
 
 section .section-reviews .jdgm-review-content__body-content {
   font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  section .section-reviews {
+    margin-top: 16px;
+  }
 }

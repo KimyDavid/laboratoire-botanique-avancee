@@ -2521,22 +2521,16 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
   line-height: 1.6;
 }
 
-@media screen and (min-width: 700px) {
-  .product-card__info .product-description {
-    /* 4 lines reserved so the prices stay aligned from one card to another */
-    min-height: 6.4em;
-  }
-}
 @media (max-width: 768px) {
   .product-card__info .product-title {
     line-height: 1;
     margin-bottom: 8px;
   }
 
-.product-card__info .product-subtitle {
+  .product-card__info .product-subtitle {
     margin-bottom: 0;
     margin-top: 0;
-}
+  }
 
   .product-card__info .product-title .h3 {
     letter-spacing: .7px;
@@ -7167,7 +7161,7 @@ product-rerender {
   .product-info {
     position: sticky;
     inset-block-start: calc(var(--sticky-area-height)  + 20px);
-    padding-top: 48px;
+    padding-top: 16px;
     bottom: 40px;
     top: 88px !important;
   }
@@ -10302,7 +10296,7 @@ body .container_header_contact .contact_reference {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   padding: 0px 28px 72px;
   margin-top: -1px;
   z-index: 1;
@@ -10315,20 +10309,27 @@ body .container_header_contact .contact_reference {
   flex: 1;
 }
 
+.footer-column:last-child {
+  justify-content: flex-end;
+}
+
 .footer-nav {
   display: flex;
   gap: 40px;
 }
 
 .footer-center {
-  text-align: center;  
-  margin: auto;  
-  display: flex;
-  justify-content: center;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
 .footer-center img {
-  max-height: 120px;
+  max-height: 110px;
 }
 
 .footer-socials-wrapper {
@@ -10340,7 +10341,7 @@ body .container_header_contact .contact_reference {
 .footer-socials {
   display: flex;
   justify-content: flex-end;
-  gap: 12px;
+  gap: 16px;
   margin-top: auto;
 }
 .footer-socials-text {
@@ -10348,23 +10349,40 @@ body .container_header_contact .contact_reference {
   margin-left: auto;
 }
 .footer-socials a img {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
+}
+.newsletter-title {
+  margin-top: 24px;
 }
 .newsletter-section {
   text-align: center;
   display: flex;
-  padding: 256px 0;
+  padding: 64px 0;
+  margin-bottom: 64px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 48px;
   align-self: stretch;
+  background: rgb(var(--text-color)) !important;
+  color: rgb(var(--background));
+}
+.newsletter-section .klaviyo-form {
+  width: 100%;
 }
 .newsletter-wrapper {
   max-width: 600px;
   width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+.newsletter-logo {
+  display: block;
+  margin: 0 auto 24px;
+}
+
 .newsletter-title {
   margin-bottom: 8px;
   text-transform: uppercase;
@@ -10373,8 +10391,7 @@ body .container_header_contact .contact_reference {
 .newsletter-description {
   margin-left: auto;
   margin-right: auto;
-  max-width: 470px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 .newsletter-form {
   display: flex;
@@ -10428,12 +10445,29 @@ body .container_header_contact .contact_reference {
   text-decoration: underline;
 }
 
+/* Desktop footer menus: 2 columns of 3 rows each, the 2nd column is right aligned */
+@media (min-width: 1001px) {
+  .footer-custom .footer-nav ul:not(.mobile) {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+    grid-template-columns: auto auto;
+        column-gap: 32px;
+        row-gap: 8px;
+  }
+
+  .footer-custom .footer-nav ul:not(.mobile) > li:nth-child(n + 4) {
+    justify-self: end;
+    text-align: right;
+  }
+}
+
 @media (max-width: 1300px) {
   .footer-custom .cta_link_lba {
     font-size: 16px;
   }
 
-  .footer-center svg {
+  .footer-center > svg {
     width: 250px;
   }
 }
@@ -10493,14 +10527,16 @@ body .container_header_contact .contact_reference {
     margin: 0 auto 48px;
   }
   .footer-center {
-    margin: 48px auto;
+    margin: 0 auto 32px;
+    order: -1;
   }
   .footer-custom li {
     justify-content: center;
     line-height: 1;
   }
   .newsletter-section {
-    padding: 72px 32px;
+    padding: 32px 24px;
+    margin-bottom: 32px;
   }
   .klaviyo-form-YwnhWT form {
     padding-left: 0 !important;
@@ -10515,7 +10551,10 @@ body .container_header_contact .contact_reference {
   .newsletter-legal {
     margin-left: 0;
     font-size: 12px !important;
-    text-align: left;
+    text-align: center;
+  }
+  .newsletter-logo {
+    margin-inline-start: 0;
   }
   .newsletter-title {
     text-align: left;
@@ -10523,12 +10562,94 @@ body .container_header_contact .contact_reference {
   .newsletter-description {
     margin-left: 0;
     margin-right: auto;
-    text-align: left;
+    text-align: center;
   }
   .footer-socials {
     margin-bottom: 0;
     margin-top: 0;
     justify-content: center;
+  }
+}
+
+/* Mobile footer: logo, main menu, socials, then the legal links between two lines.
+   The columns and the center block are dissolved (display: contents) so that their children can be reordered. */
+@media (max-width: 1000px) {
+  .footer-custom {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding-bottom: 64px;
+  }
+
+  .footer-custom .footer-column:first-child,
+  .footer-custom .footer-column:first-child > div,
+  .footer-custom .footer-center {
+    display: contents;
+  }
+
+  .footer-custom .footer-column:last-child {
+    display: none;
+  }
+
+  .footer-custom .footer-center > :not(.footer-socials-wrapper) {
+    order: 1;
+    align-self: center;
+    margin: 0 0 48px;
+  }
+
+  .footer-custom .footer-menu-main {
+    order: 2;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    row-gap: 16px;
+    margin: 0 0 48px;
+  }
+
+  .footer-custom .footer-menu-main > li {
+    justify-self: start;
+    text-align: left;
+  }
+
+  .footer-custom .footer-menu-main > li:nth-child(n + 4) {
+    justify-self: end;
+    text-align: right;
+  }
+
+  .footer-custom .footer-socials-wrapper {
+    order: 3;
+    margin: 0 0 32px;
+  }
+
+  /* Same specificity as the older mobile rule on this list, which comes earlier in the file */
+  .footer-custom .footer-column:first-child ul.mobile {
+    order: 4;
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px 12px;
+    margin: 0;
+    padding: 20px 0;
+    border-block: 1px solid currentColor;
+  }
+
+  .footer-custom ul.mobile .footer-sep {
+    flex: none;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .footer-custom ul.mobile .footer-sep[hidden] {
+    display: none;
+  }
+
+  .footer-custom ul.mobile .cta_link_lba {
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 }
 
@@ -10757,7 +10878,6 @@ body .container_header_contact .contact_reference {
   background: rgb(var(--text-color));
   color: rgb(var(--background));
   display: flex;
-  border-radius: 6px;
   overflow: hidden;
 }
 
@@ -10947,6 +11067,32 @@ collage-text {
   transform: translateY(-50%);
 }
 
+/* Secondary image 2 in the middle left: mirror of the middle right layout */
+.collage-text__media--middle-left {
+  aspect-ratio: 719 / 657;
+}
+
+.collage-text__media--middle-left .collage-text__image--main {
+  inset-inline-start: auto;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+  width: 81.4%;
+  height: 100%;
+}
+
+.collage-text__media--middle-left .collage-text__image--secondary-2 {
+  inset-block-start: 50%;
+  inset-block-end: auto;
+  width: 38.9%;
+  transform: translateY(-50%);
+}
+
+/* Both secondary images in the middle: the main image sits between them */
+.collage-text__media--middle-left.collage-text__media--middle-right .collage-text__image--main {
+  inset-inline: 18.6% auto;
+  width: 62.8%;
+}
+
 .collage-text__image--secondary-1 {
   inset-inline-end: 0;
   inset-block-start: 0;
@@ -10967,7 +11113,7 @@ collage-text {
 
 .collage-text__eyebrow,
 .collage-text__media-title {
-  margin: 0 0 16px;
+  margin: 0 0 16px !important;
 }
 
 .collage-text__title {
@@ -11027,6 +11173,7 @@ collage-text {
     padding-top: 99.1%;
   }
 
+  .collage-text__inner--bordered .collage-text__media--middle-left::before,
   .collage-text__inner--bordered .collage-text__media--middle-right::before {
     padding-top: 91.4%;
   }
@@ -11107,6 +11254,16 @@ collage-text {
     margin: 0;
   }
 
+  .collage-text__media--has-main.collage-text__media--middle-left .collage-text__image--main {
+    width: 81.4%;
+    margin: 0 0 0 auto;
+  }
+
+  .collage-text__media--has-main.collage-text__media--middle-left.collage-text__media--middle-right .collage-text__image--main {
+    width: 62.8%;
+    margin: 0 auto;
+  }
+
   .collage-text__media--bottom-left-only .collage-text__media-title {
         display: block;
         position: absolute;
@@ -11140,12 +11297,13 @@ collage-text {
     padding-block-end: 32px;
   }
 
-  /* Consecutive accordions stay stuck together: only the first one keeps its top space and the last one its bottom space */
-  .shopify-section:has(> .collage-text:not(.collage-text--static)) + .shopify-section > .collage-text:not(.collage-text--static) {
+  /* Consecutive accordions stay stuck together: only the first one keeps its top space and the last one its bottom space.
+     Accordions hidden on mobile (desktop only) are ignored: they are not displayed, so they must not remove the spacing of their visible neighbours */
+  .shopify-section:has(> .collage-text:not(.collage-text--static, .md-max\:hidden)) + .shopify-section > .collage-text:not(.collage-text--static) {
     padding-block-start: 0;
   }
 
-  .shopify-section:has(> .collage-text:not(.collage-text--static)):has(+ .shopify-section > .collage-text:not(.collage-text--static)) > .collage-text {
+  .shopify-section:has(> .collage-text:not(.collage-text--static)):has(+ .shopify-section > .collage-text:not(.collage-text--static, .md-max\:hidden)) > .collage-text {
     padding-block-end: 0;
   }
 
@@ -11474,5 +11632,14 @@ collage-text {
   .keywords-banner__item {
     font-size: clamp(8px, 2.5vw, 12px);
     letter-spacing: 0.1em;
+  }
+}
+
+/* RICH TEXT - sections/rich-text.liquid */
+
+@media screen and (min-width: 1000px) {
+  .rich-text--bordered {
+    padding-block: 40px;
+    border-block: 1px solid currentColor;
   }
 }
