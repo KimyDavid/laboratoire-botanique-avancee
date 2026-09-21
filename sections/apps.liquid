@@ -1,7 +1,7 @@
 {%- if section.blocks.size > 0 -%}
   {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
 
-  <div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% unless section.settings.remove_vertical_spacing %}section-spacing{% endunless %} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+  <div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% unless section.settings.remove_vertical_spacing %}section-spacing{% endunless %} {% if section.settings.separate_section_with_border %}bordered-section{% endif %} {{ section.settings.custom_class | escape }}">
     <div {% unless section.settings.remove_horizontal_spacing %}class="container"{% endunless %}>
       {%- for block in section.blocks -%}
         {%- render block -%}
@@ -42,6 +42,12 @@
       "id": "remove_horizontal_spacing",
       "label": "t:global.spacing.remove_horizontal_spacing",
       "default": false
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Classe CSS personnalisée",
+      "info": "Ajoutée sur le conteneur de la section. Plusieurs classes possibles, séparées par un espace."
     }
   ],
   "blocks": [
