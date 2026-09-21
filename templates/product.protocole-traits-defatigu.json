@@ -387,7 +387,6 @@
         "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "hide_product_information": false,
-        "show_product_subtitle": false,
         "show_product_secondary_image": false,
         "carousel_design": "default",
         "stack_products": false,

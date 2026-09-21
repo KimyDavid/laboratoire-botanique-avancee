@@ -1,1 +1,856 @@
-{"sections":{"main":{"type":"main-product","blocks":{"title":{"type":"title","settings":{"heading_tag":"h2"}},"judge_me_reviews_preview_badge_jWmTcW":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{}},"description":{"type":"description","settings":{"collapse_content":false,"show_below_gallery":false}},"price":{"type":"price","settings":{"show_taxes_notice":false}},"relative_products_JBLBDc":{"type":"relative_products","settings":{}},"variant_picker":{"type":"variant_picker","disabled":true,"settings":{"hide_sold_out_variants":false,"selector_style":"block","swatch_selector_style":"block_swatch","variant_image_options":"","size_chart_page":""}},"recharge_subscriptions_subscription_widget_v2_zxAiiW":{"type":"shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget-v2\/371eed76-0b44-4869-9813-730372ea378e","settings":{}},"buy_buttons":{"type":"buy_buttons","settings":{"show_payment_button":false,"show_gift_card_recipient":false,"atc_button_background":"#3C626B","atc_button_text_color":"#ffffff","payment_button_background":"","payment_button_text_color":""}},"text_L6RDT6":{"type":"text","settings":{"text":"{{ product.metafields.custom.mot_conciergerie | metafield_tag }}"}},"line_informations_9jHJHa":{"type":"line-informations","settings":{}},"modal_QPCNeE":{"type":"modal","disabled":true,"settings":{"button_title":"Trouvez le soin qui vous convient","button_style":"link","stretch_button":false,"button_background":"","button_text_color":"","modal_title":"Trouvez le soin qui vous convient","modal_content":"","image":"shopify:\/\/shop_images\/TABLEAU_PRESCRIPTION_optimized.png","image_mobile":"shopify:\/\/shop_images\/TABLEAU_DE_PRESCRIPTION_-_MOBILE_optimized.png"}},"button_HUyMtW":{"type":"button","settings":{"link":"shopify:\/\/pages\/diagnostic","text":"Faire un diagnostic","stretch":false,"background":"#3C626B","text_color":"#ffffff"}},"accordion_Yw977X":{"type":"accordion","settings":{"show_open":false,"show_below_gallery":false,"icon":"none","title":"Actifs clés","content":"{{ product.metafields.custom.info_produit_actifs_cles | metafield_tag }}","show_image_above_text":false,"liquid":"","page":""}},"accordion_NkdxHP":{"type":"accordion","settings":{"show_open":false,"show_below_gallery":false,"icon":"none","title":"How to use","content":"{{ product.metafields.custom.info_produit_how_to_use | metafield_tag }}","show_image_above_text":false,"liquid":"","page":""}},"accordion_Ab4cXq":{"type":"accordion","settings":{"show_open":false,"show_below_gallery":false,"icon":"none","title":"Design éco-conçu","content":"{{ product.metafields.custom.info_produit_design | metafield_tag }}<p>Consigne de tri :<\/p>","show_image_above_text":false,"image":"shopify:\/\/shop_images\/Picto-triCoffret-Deluxe-LBA-Creme-50ml_f991ed76-8981-4e63-9d05-86c408719d70.png","liquid":"","page":""}},"accordion_aBRcw4":{"type":"accordion","disabled":true,"settings":{"show_open":true,"show_below_gallery":false,"icon":"none","title":"Avant \/ Après","content":"","show_image_above_text":true,"image":"shopify:\/\/shop_images\/P_CREME_-_1048_x_784.jpg","liquid":"","page":""}}},"block_order":["title","judge_me_reviews_preview_badge_jWmTcW","description","price","relative_products_JBLBDc","variant_picker","recharge_subscriptions_subscription_widget_v2_zxAiiW","buy_buttons","text_L6RDT6","line_informations_9jHJHa","modal_QPCNeE","button_HUyMtW","accordion_Yw977X","accordion_NkdxHP","accordion_Ab4cXq","accordion_aBRcw4"],"custom_css":[".accordion img {max-width: 350px; width: 100%; height: auto;}"],"settings":{"color_scheme":"scheme-2","container_size":"full","product_info_size":50,"show_sticky_add_to_cart":true,"center_basic_info":false,"desktop_media_layout":"grid","desktop_media_grid_gap":0,"mobile_controls":"free_scroll","enable_media_autoplay":false,"enable_video_looping":true,"enable_image_zoom":false,"max_image_zoom_level":3}},"rich_text_CLpUjt":{"type":"rich-text","blocks":{"heading_yiyQy6":{"type":"heading","disabled":true,"settings":{"text":"La Crème Fondante Régénérative <strong>relance les mécanismes de régénération<\/strong> de la peau.","heading_tag":"h1-light"}},"heading_Bf9aX6":{"type":"heading","settings":{"text":"<em>87% des femmes trouvent leur peau plus dense, apaisée et renforcée<\/em>","heading_tag":"h1-light"}}},"block_order":["heading_yiyQy6","heading_Bf9aX6"],"name":"t:sections.rich_text.presets.rich_text.name","settings":{"color_scheme":"scheme-1","separate_section_with_border":false,"content_width":"md","text_position":"center","remove_vertical_spacing":false}},"image_with_text_bwQMiT":{"type":"image-with-text","blocks":{"heading_bTwndt":{"type":"heading","settings":{"text":"UNE EFFICACITÉ RÉGÉNÉRATIVE DURABLE, PROUVÉE CLINIQUEMENT","heading_tag":"h2"}},"richtext_G7wAh8":{"type":"richtext","disabled":true,"settings":{"content":"<p>13 tests cliniques sur 30 critères ont été menés pour prouver l’efficacité de la Crème Fondante Régénérative. <\/p>","font_size":"base"}},"heading_ipcRVW":{"type":"heading","disabled":true,"settings":{"text":"Après 3 mois d'utilisation","heading_tag":"h3"}},"number_jGDPBV":{"type":"number","settings":{"title":"100%","description":"Peau plus lisse et régulière¹"}},"number_FHQPTd":{"type":"number","settings":{"title":"91%","description":"Peau confortable tout au long delà journée¹"}},"number_akWKMR":{"type":"number","settings":{"title":"+92%","description":"Peau plus éclatante²"}},"number_kYmMjj":{"type":"number","settings":{"title":"87%","description":"Peau plus dense¹"}},"number_F479fq":{"type":"number","settings":{"title":"87%","description":"Peau apaisée et renforcée¹"}},"richtext_kjqkRL":{"type":"richtext","settings":{"content":"<p>¹ Étude d’auto-évaluation réalisée sur 23<br\/>volontaires à J+56, sous contrôle dermatologique.<br\/><br\/>² Étude Clinique réalisé sur 23 volontaires à J+56. <\/p>","font_size":"xxs"}}},"block_order":["heading_bTwndt","richtext_G7wAh8","heading_ipcRVW","number_jGDPBV","number_FHQPTd","number_akWKMR","number_kYmMjj","number_F479fq","richtext_kjqkRL"],"custom_css":[".text-base + .h3 {margin-top: 32px;}"],"name":"t:sections.image_with_text.presets.image_with_text.name","settings":{"color_scheme":"scheme-2","separate_section_with_border":false,"image":"shopify:\/\/shop_images\/KV_BAUME_web.jpg","image_fullsize":false,"reveal_on_scroll":true,"image_position":"end","content_width":"xl","remove_vertical_spacing":false,"id":"efficacite"}},"image_text_lba_mGkHMw":{"type":"image-text-lba","custom_css":["@media (min-width: 1000px) {.duo-section {display: none !important; }}"],"name":"Duo image + texte","settings":{"section_height":"full-height","image":"shopify:\/\/shop_images\/03_BULLE_V11_rvb_MD_ef0b5759-64c5-45c1-9134-d18f094c4320.png","background_color":"#ffffff","image_layout":"full","video_size":"full-height","image_position":"right","title":"LA TECHNOLOGIE EXCLUSIVE NEO-REGEN : UNE TRIPLE EFFICACITÉ","text":"<p>Créée en collaboration avec le<strong> Dr Lemaitre<\/strong>, l'expert français de la longévité, NEO-REGEN relance la régénération de la peau à 3 niveaux :  <strong>Régénération cellulaire, moléculaire et tissulaire.<\/strong><\/p><p>Efficacité prouvée. Action sur 136 gènes.<\/p>","button_link":"https:\/\/laboratoires-botanique-avancee.com\/pages\/expertise\/#technologie-neoregen","button_label":"Découvrir le neo-regen","id":"neo-regen"}},"slider_vertical_product_lba_6cdKzx":{"type":"slider_vertical_product_lba","blocks":{"texte_slide_MCMLDg":{"type":"texte_slide","settings":{"image":"shopify:\/\/shop_images\/043dcc447e389adc7fa2e3c32e22f7eb56c8b27b.png","image_overlay":"none","text_position":"start","width_content":"600px","text_color":"#ffffff","title":"CONCENTRÉ EN NEO-REGEN, TECHNOLOGIE EXCLUSIVE","description":"<p>Son efficacité est triple, elle relance la<br\/>régénération de la peau à 3 niveaux :<\/p><p>-Régénération cellulaire<br\/>-Régénération moléculaire<br\/>-Régénération tissulaire<br\/><br\/>Créée en collaboration avec le Dr Lemaitre, l’expert français de la<br\/>longévité.<\/p>","button_texte":"Découvrir le neo-regen","button":"\/pages\/expertise\/#technologie-neoregen"}}},"block_order":["texte_slide_MCMLDg"],"custom_css":["@media (min-width: 1280px) {.container {--container-gutter: 4rem; }}","@media (max-width: 1000px) {.vertical-slider-wrapper {display: none !important; }}"],"name":"Slider vertical produit","settings":{"id":"neo-regen"}},"multi_column_JnxFpy":{"type":"multi-column","blocks":{"image_with_text_NM9Btg":{"type":"image_with_text","settings":{"image":"shopify:\/\/shop_images\/BULLE_ONAGRE__1.jpg","title":"CELLULES SOUCHES D’ONAGRE","heading_tag":"h3","content":"<p><strong>Équilibre & Résilience <\/strong><\/p><ul><li>Agit en fonction des besoins de<br\/>votre peau pour faire face aux agressions extérieures.<\/li><li>Renforce la barrière cutanée.<\/li><li>Renforce la protection face au stress<br\/>oxydatif. <\/li><li>Favorise le renouvellement et le<br\/>remodelage tissulaire.<\/li><\/ul>","link_url":"","link_text":""}},"image_with_text_Hi9q4B":{"type":"image_with_text","settings":{"image":"shopify:\/\/shop_images\/pronad_plus_shopify_2000x2000_e2f21c25-c649-4036-a04e-2a63da3b67e7.jpg","title":"PRO NAD+","heading_tag":"h3","content":"<p><strong>Énergie & longévité cellulaire<\/strong><\/p><ul><li>Soutient la production d’énergie<br\/>cellulaire.<\/li><li>Favorise la réparation de l’ADN<br\/>et les défenses cellulaire. <\/li><li>Soutient l’activité de protéines<br\/>impliquées dans la longévité cellulaire.<\/li><\/ul>","link_url":"","link_text":""}},"image_with_text_DLzJpi":{"type":"image_with_text","settings":{"image":"shopify:\/\/shop_images\/ectoine_shopify_2000x2000_992ea019-3270-47c3-ab21-81c3abf5bfab.jpg","title":"<strong>ECTOÏNE BIOTECH<\/strong>","heading_tag":"h3","content":"<p><strong>Bouclier protecteur & antioxidation<\/strong><\/p><ul><li>Prévient les dommages des UV, lumière bleu et infra-rouge. <\/li><li>Protège la peau des polluants atmosphériques. <\/li><li>Protège la peau face aux changements de température. <\/li><\/ul>","link_url":"","link_text":""}}},"block_order":["image_with_text_NM9Btg","image_with_text_Hi9q4B","image_with_text_DLzJpi"],"name":"t:sections.multi_column.presets.multi_column.name","settings":{"color_scheme":"scheme-2","separate_section_with_border":false,"columns_per_row":3,"stack_on_mobile":false,"overlap_image":false,"content_alignment":"start","text_alignment":"start","spacing":"xs","subheading":"","title":"DES ACTIFS PUISSANTS, HAUTEMENT CONCENTRÉS","content":"","button_label":"","button_link":""}},"image_text_lba_pAxieN":{"type":"image-text-lba","custom_css":["section {background: #fafafa;}"],"name":"Duo image + texte","settings":{"section_height":"full-height","background_color":"#ffffff","image_layout":"full","video":"shopify:\/\/files\/videos\/LBA_26-BAUME-RECHARGE-260714.mp4","video_size":"full-height","image_position":"left","title":"Plus qu'une Recharge, un format voyage","text":"<p>Pensée comme un objet autonome, la recharge est dotée de son propre couvercle pour se transformer en format voyage. <br\/><br\/>Ainsi, votre produit peut s'utiliser sous deux formats différents : <\/p><p><br\/><\/p><ul><li>le format deluxe pour la salle de bain, avec le pot en verre et le couvercle en résigne, réalisés par des entreprises du Patrimoine Vivant française.<\/li><li>le format voyage :  à l'ouverture de votre boite, récupérez le couvercle de voyage de votre recharge sous la première cale. Une fois déclipsée, la recharge se ferme avec ce couvercle et se transforme en format voyage, pour accompagner tous vos déplacements.  <\/li><\/ul><p><\/p><p><br\/>Conçue en aluminium et protégée par deux dépôts de brevets, notre recharge incarne une nouvelle vision du soin de luxe, engagé et nomade.<\/p>","button_link":"\/pages\/expertise\/#dr-jm-lemaitre","button_label":"","id":""}},"rich_text_NjM6pw":{"type":"rich-text","blocks":{"heading_QAUCkL":{"type":"heading","settings":{"text":"<em>Collaboration exclusive avec le Dr Jean-Marc Lemaitre, l’expert français de la longévité<\/em>","heading_tag":"h1-light"}}},"block_order":["heading_QAUCkL"],"name":"t:sections.rich_text.presets.rich_text.name","settings":{"color_scheme":"","separate_section_with_border":false,"content_width":"md","text_position":"center","remove_vertical_spacing":false}},"image_text_lba_ELymAP":{"type":"image-text-lba","blocks":{"description_PxWdBb":{"type":"description","settings":{"image":"shopify:\/\/shop_images\/787ee7f667a8f258fcf01afa035928af7db6c96b_127be234-de9e-425c-b41a-38cfa8eaa30a.png","title_":"DR Jean-Marc Lemaitre","text":"<p>- Diplômé d'un Doctorat de Biologie Moléculaire et Cellulaire (1995).<br\/>- Première équipe au monde a avoir démontré que le vieillissement cellulaire est réversible (2011).<br\/>- Directeur de recherche INSERM.<br\/>- Co-directeur de l’Institut de Médecine Régénérative de Montpellier. <\/p>"}}},"block_order":["description_PxWdBb"],"custom_css":["section {background: #fafafa;}"],"name":"Duo image + texte","settings":{"section_height":"full-height","background_color":"#ffffff","image_layout":"full","video":"shopify:\/\/files\/videos\/LBA_CD_7s-30-ANS-RECHERCHE_1_1.mp4","video_size":"full-height","image_position":"left","title":"PREMIÈRE MONDIALE","text":"<p><strong>Pour la première fois au monde <\/strong>et en collaboration avec le<strong> Dr Lemaitre<\/strong>, l'efficacité d'actifs cosmétiques est prouvée sur un modèle révolutionnaire, issu de 30 ans de recherche en médecine régénérative : <strong>l'organoïde de peau. <\/strong><\/p>","button_link":"\/pages\/expertise\/#dr-jm-lemaitre","button_label":"En savoir plus","id":""}},"image_with_text_URTYB3":{"type":"image-with-text","blocks":{"heading_E9yaGJ":{"type":"heading","settings":{"text":"UNE PROUESSE DE FORMULATION","heading_tag":"h2"}},"richtext_VYaTdx":{"type":"richtext","settings":{"content":"<p>Le Baume Onctueux régénératif est concentré de 30% d’ingrédients actif, une véritable prouesse de formulation.<\/p><p>Nos scientifiques appliquent une charte de formulation restrictive : les silicones, PEG et tout ingrédient suspecté néfaste pour la peau sont bannis.<\/p><p>Comme la Crème Fondante Régénérative, sa structure lamellaire biomimétique permet une affinité avec la peau optimale et une meilleure pénétration des actifs.  <\/p>","font_size":"base"}},"heading_9iyyKC":{"type":"heading","settings":{"text":"UNE SIGNATURE OLFACTIVE ENVELOPPANTE","heading_tag":"h2"}},"richtext_ddcf6Y":{"type":"richtext","settings":{"content":"<p>Créé par Céline Barel (IFF), le parfum allie la douceur des fleurs blanches à la profondeur boisée, offrant une signature fraîche et réconfortante.<\/p><p><em>(Bergamote - Baies - Jasmin sambac - Lys blanc – racine d’Iris - Vétiver)<\/em><\/p>","font_size":"base"}}},"block_order":["heading_E9yaGJ","richtext_VYaTdx","heading_9iyyKC","richtext_ddcf6Y"],"name":"t:sections.image_with_text.presets.image_with_text.name","settings":{"color_scheme":"scheme-2","separate_section_with_border":false,"image":"shopify:\/\/shop_images\/TEXTURE_RECHARGE_BAUME.jpg","image_fullsize":true,"reveal_on_scroll":true,"image_position":"end","content_width":"xl","remove_vertical_spacing":false,"id":""}},"section_lba_scroll_blur_RQEcmJ":{"type":"section-lba-scroll-blur","disabled":true,"name":"Scroll Blur Section","settings":{"image":"shopify:\/\/shop_images\/Recharge_creme_RVB.webp","product":"recharge-creme-regenerative-visage","title":"La recharge crème fondante régénérative","description":"","description_alt":"<p>La recharge a été pensée comme un véritable objet nomade, utilisable seule grâce à son capot de voyage. <\/p><p>Conçue 100% en aluminium, elle se distingue par sa durabilité et sa recyclabilité infinie.<\/p>","cta_text":"découvrir"}},"image_text_lba_PXRV8M":{"type":"image-text-lba","disabled":true,"name":"Duo image + texte","settings":{"section_height":"full-height","background_color":"#ffffff","image_layout":"full","video":"shopify:\/\/files\/videos\/CREAM_1080x1350 (1).mp4","video_size":"full-height","image_position":"left","title":"l'abonnement","text":"<p>Lors de votre commande, sélectionnez un abonnement, disponible pour la plupart de nos produits. <br\/><br\/>Choisissez la fréquence qui vous convient et modifiez-la ou déplacez vos livraisons à tout moment. <br\/><br\/>Chaque commande est expédiée automatiquement selon vos préférences, avec un e-mail avant chaque envoi pour ajuster adresse ou pause. La livraison standard est gratuite sur toutes les commandes planifiées.<\/p>","button_link":"shopify:\/\/pages\/faq","button_label":"En savoir plus","id":"laboratoire-biotechnologie"}},"178549901462df8b58":{"type":"apps","blocks":{"judge_me_reviews_review_widget_dAGzNf":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{"review_data":"sample_data","max_width":1200,"show_shop_reviews":false,"empty_state":"empty_widget"}}},"block_order":["judge_me_reviews_review_widget_dAGzNf"],"settings":{"color_scheme":"","separate_section_with_border":true,"remove_vertical_spacing":false,"remove_horizontal_spacing":false}},"featured_collections_fmd6QB":{"type":"featured-collections","blocks":{"collection_TCxwyY":{"type":"collection","settings":{"collection":"all","products_count":8,"title":"La gamme","link_url":"shopify:\/\/collections\/all","link_text":"Voir tout"}}},"block_order":["collection_TCxwyY"],"name":"t:sections.featured_collections.presets.featured_collections.name","settings":{"color_scheme":"scheme-2","separate_section_with_border":false,"hide_product_information":false,"show_product_subtitle":false,"show_product_secondary_image":false,"carousel_design":"default","stack_products":false,"products_per_row_mobile":"2","products_per_row_desktop":4,"horizontal_spacing_factor":1,"vertical_spacing_factor":1,"subheading":""}},"text_with_icons_prHgRy":{"type":"text-with-icons","blocks":{"item_DDRreF":{"type":"item","settings":{"icon":"picto-delivery-truck","custom_icon":"shopify:\/\/shop_images\/Icons_2.svg","icon_width":52,"mobile_icon_width":52,"title":"Paiement sécurisé","content":"","button_label":"","button_link":"#"}},"item_ncNzJ8":{"type":"item","settings":{"icon":"picto-delivery-truck","custom_icon":"shopify:\/\/shop_images\/Icons.svg","icon_width":52,"mobile_icon_width":52,"title":"Livraison offerte en France métropolitaine","content":"","button_label":"","button_link":"#"}},"item_ntmGFj":{"type":"item","settings":{"icon":"picto-delivery-truck","custom_icon":"shopify:\/\/shop_images\/Icons_1.svg","icon_width":52,"mobile_icon_width":52,"title":"Échantillons exclusifs","content":"","button_label":"","button_link":"#"}}},"block_order":["item_DDRreF","item_ncNzJ8","item_ntmGFj"],"name":"t:sections.text_with_icons.presets.text_with_icons.name","settings":{"color_scheme":"scheme-2","separate_section_with_border":true,"stack_on_mobile":true,"icon_color":"","text_color":"","text_alignment":"center"}},"notification_product_lba_rVL7af":{"type":"notification_product_lba","disabled":true,"name":"Notification produit","settings":{"product_ref":"{{ product.metafields.custom.notification_product_push.value }}","delay":2}},"faq_YgE8kX":{"type":"faq","blocks":{"category_UYnjdk":{"type":"category","settings":{"title":"","icon":"none","icon_width":16}},"question_TNA9xR":{"type":"question","settings":{"question":"Quelle crème visage choisir ?","answer":"<p>La bonne crème est celle qui répond aux besoins biologiques réels de votre peau,  pas seulement à ses signes visibles. Avant de choisir une texture, interrogez les actifs : sont-ils présents en concentration suffisante ? Leur efficacité a-t-elle été mesurée sur tissu vivant ?<\/p><p>Chez LBA, deux formats selon l'intensité souhaitée : la <strong>Crème Fondante Régénérative<\/strong> pour une régénération quotidienne profonde, et le <strong>Sérum en Crème Régénératif<\/strong> pour les peaux qui cherchent une concentration maximale d'actifs. Les deux reposent sur la technologie NEO-REGEN® et les mêmes standards de validation clinique.<\/p>"}},"question_mbakFd":{"type":"question","settings":{"question":"Quels sont les actifs dont l'efficacité est réellement prouvée ?","answer":"<p>Parmi les ingrédients les mieux documentés scientifiquement : <strong>rétinol, niacinamide, acide hyaluronique, céramides<\/strong>. Nos formules intègrent niacinamide et sept types de céramides tout en allant plus loin avec des actifs biotechnologiques propriétaires que la recherche conventionnelle n'avait pas encore explorés à ce niveau.<\/p><p>Cellules souches de lys blanc et de pivoine, Eau de Baulieu minéralisée par la roche basaltique, ectoine : leur efficacité est évaluée sur organoïdes de peau humaine en collaboration avec le Pr Jean-Marc Lemaître, directeur de recherche à l'Inserm. Non pour valider une allégation mais pour comprendre ce qui se passe réellement dans les tissus.<\/p>"}},"question_iawK4y":{"type":"question","settings":{"question":"À quoi sert la niacinamide dans un soin visage ?","answer":"<p><strong>La niacinamide, ou vitamine B3, est l'un des actifs les mieux documentés en cosmétique<\/strong>. Elle soutient la synthèse des céramides, renforce la barrière cutanée, unifie le teint et réduit la visibilité des pores. Elle présente également des propriétés anti-oxydantes et anti-inflammatoires qui en font un actif de fond particulièrement polyvalent.<\/p><p>Dans nos formules, la niacinamide n'est pas utilisée isolément, elle s'intègre dans une <strong>synergie d'actifs biotechnologiques<\/strong> conçue pour adresser les mécanismes profonds du vieillissement cutané, pas seulement ses effets visibles.<\/p>"}},"question_Va8eLY":{"type":"question","settings":{"question":"Quels actifs contre les rides ?","answer":"<p>Les actifs dont l'action sur les rides est scientifiquement documentée incluent le rétinol, les peptides de signalisation, la niacinamide, et les céramides. La recherche sur les cellules souches végétales ouvre aujourd'hui une voie complémentaire : agir non pas sur le symptôme, mais sur la capacité cellulaire à maintenir la structure du tissu.<\/p><p>La technologie NEO-REGEN® de LBA a démontré une action mesurable sur <strong>136 gènes impliqués dans la régénération cutanée<\/strong>, avec des résultats cliniques de −21 % de rides et +53 % de fermeté à trois mois, mesurés sur tissu vivant.<\/p>"}},"question_azq9VR":{"type":"question","settings":{"question":"Quelle est la différence entre un sérum et une crème visage ?","answer":"<p><strong>Un sérum délivre une concentration élevée d'actifs<\/strong> dans les couches profondes de l'épiderme. <strong>Une crème renforce la barrière cutanée et maintient l'hydratation<\/strong>. Les deux remplissent des fonctions biologiques complémentaires.<\/p><p>Chez LBA, nous avons dépassé cette dichotomie avec le <strong>Sérum en Crème Régénératif<\/strong> : une texture hybride à structure lamellaire, conçue pour combiner la pénétration accélérée d'un sérum et l'action nourrissante d'une crème. Utilisé seul ou en association avec la Crème Fondante, il constitue un protocole de régénération complet.<\/p>"}},"question_kA6tPK":{"type":"question","settings":{"question":"Pourquoi produire des actifs en bioréacteurs ?","answer":"<p>La culture en bioréacteurs permet de multiplier des cellules souches végétales sélectionnées dans un environnement strictement contrôlé — sans aléas climatiques, sans pesticides, sans extraction massive sur les écosystèmes.<\/p><p><strong>Les avantages sont multiples<\/strong> : traçabilité absolue, composition stable et reproductible, pureté supérieure, impact environnemental réduit. Chez LBA, c'est le procédé utilisé pour l'ensemble de nos actifs végétaux. Un fragment infime d'une plante du Domaine de Baulieu suffit à donner naissance à des millions de cellules souches aux propriétés régénératives intactes.<\/p>"}},"question_4mxHGy":{"type":"question","settings":{"question":"Cette crème est-elle anti-âge ?","answer":"<p>Elle s'inscrit dans une <strong>démarche de longévité cutanée<\/strong> — ce qui est différent. L'approche anti-âge est corrective : elle agit sur les signes visibles du vieillissement. L'approche régénérative est préventive et structurelle : elle soutient la capacité de la peau à se renouveler, à maintenir sa densité, son éclat, sa vitalité dans le temps.<\/p><p>Chez LBA, nous ne combattons pas le vieillissement. Nous accompagnons la peau pour qu'elle reste ce qu'elle est capable d'être.<\/p>"}},"question_8Ay4Yn":{"type":"question","settings":{"question":"<strong>À partir de quel âge utiliser les soins LBA ?<\/strong>","answer":"<p>Dès que la peau nécessite un soutien face au stress environnemental ou aux premiers signes de ralentissement cellulaire, généralement à partir de la trentaine, parfois plus tôt selon les peaux et les modes de vie.<\/p><p><strong>La cosmétique régénérative ne s'adresse pas à un âge<\/strong>. Elle s'adresse à une peau qui cherche à préserver sa vitalité dans la durée.<\/p>"}},"question_pmtCWf":{"type":"question","settings":{"question":"Les soins LBA conviennent-ils aux peaux sensibles ?","answer":"<p>Nos formules sont conçues pour être biocompatibles , c'est-à-dire formulées en affinité avec la physiologie naturelle de la peau, <strong>sans ingrédients perturbateurs, sans silicones, sans PEG<\/strong>. Cette approche les rend particulièrement adaptées aux peaux exigeantes et aux peaux sensibles.<\/p><p>En cas de doute, <strong>notre conciergerie Le Cercle<\/strong> est disponible pour un conseil personnalisé avant toute adoption de rituel.<\/p>"}},"question_KEwyTG":{"type":"question","settings":{"question":"Peut-on utiliser les soins LBA matin et soir ?","answer":"<p>Oui, nos formules sont pensées pour une <strong>utilisation quotidienne, matin et soir<\/strong>. La peau régénère principalement la nuit : c'est le moment idéal pour l'application du Sérum en Crème. Le matin, la Crème Fondante prépare et protège la barrière cutanée pour la journée.<\/p>"}},"question_PkM9Be":{"type":"question","settings":{"question":"La formule LBA respecte-t-elle la physiologie de la peau ?","answer":"<p>C'est l'exigence centrale de notre approche formulatoire. Nos structures lamellaires biomimétiques reproduisent l'<strong>organisation naturelle des lipides cutanés<\/strong> — une architecture calquée sur la barrière épidermique, qui permet aux actifs de pénétrer là où ils doivent agir, sans perturber l'équilibre naturel de la peau.<\/p><p>Formuler en respectant la peau n'est <strong>pas un choix marketing<\/strong>. C'est un <strong>impératif biologique<\/strong>.<\/p>"}}},"block_order":["category_UYnjdk","question_TNA9xR","question_mbakFd","question_iawK4y","question_Va8eLY","question_azq9VR","question_kA6tPK","question_4mxHGy","question_8Ay4Yn","question_pmtCWf","question_KEwyTG","question_PkM9Be"],"custom_css":[".faq__container {background: #ffffff !important;}",".faq__container::before {background: #ffffff !important; opacity: 1 !important;}",".faq__wrapper,.section-stack,.container {background: #ffffff !important;}"],"name":"t:sections.faq.presets.faq.name","settings":{"color_scheme":"scheme-1","image_size":"auto","remove_vertical_spacing":true,"separate_section_with_border":true,"show_categories":false,"content_width":"sm","subheading":"","title":"FAQ","content":"","overlay_color":"#000000","overlay_opacity":30,"id":""}}},"order":["main","rich_text_CLpUjt","image_with_text_bwQMiT","image_text_lba_mGkHMw","slider_vertical_product_lba_6cdKzx","multi_column_JnxFpy","image_text_lba_pAxieN","rich_text_NjM6pw","image_text_lba_ELymAP","image_with_text_URTYB3","section_lba_scroll_blur_RQEcmJ","image_text_lba_PXRV8M","178549901462df8b58","featured_collections_fmd6QB","text_with_icons_prHgRy","notification_product_lba_rVL7af","faq_YgE8kX"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h2"
+          }
+        },
+        "judge_me_reviews_preview_badge_jWmTcW": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false,
+            "show_below_gallery": false
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "relative_products_JBLBDc": {
+          "type": "relative_products",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_style": "block",
+            "swatch_selector_style": "block_swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
+        "recharge_subscriptions_subscription_widget_v2_zxAiiW": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": false,
+            "atc_button_background": "#3C626B",
+            "atc_button_text_color": "#ffffff",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "text_L6RDT6": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.mot_conciergerie | metafield_tag }}"
+          }
+        },
+        "line_informations_9jHJHa": {
+          "type": "line-informations",
+          "settings": {}
+        },
+        "modal_QPCNeE": {
+          "type": "modal",
+          "disabled": true,
+          "settings": {
+            "button_title": "Trouvez le soin qui vous convient",
+            "button_style": "link",
+            "stretch_button": false,
+            "button_background": "",
+            "button_text_color": "",
+            "modal_title": "Trouvez le soin qui vous convient",
+            "modal_content": "",
+            "image": "shopify://shop_images/TABLEAU_PRESCRIPTION_optimized.png",
+            "image_mobile": "shopify://shop_images/TABLEAU_DE_PRESCRIPTION_-_MOBILE_optimized.png"
+          }
+        },
+        "button_HUyMtW": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/diagnostic",
+            "text": "Faire un diagnostic",
+            "stretch": false,
+            "background": "#3C626B",
+            "text_color": "#ffffff"
+          }
+        },
+        "accordion_Yw977X": {
+          "type": "accordion",
+          "settings": {
+            "show_open": false,
+            "show_below_gallery": false,
+            "icon": "none",
+            "title": "Actifs clés",
+            "content": "{{ product.metafields.custom.info_produit_actifs_cles | metafield_tag }}",
+            "show_image_above_text": false,
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "accordion_NkdxHP": {
+          "type": "accordion",
+          "settings": {
+            "show_open": false,
+            "show_below_gallery": false,
+            "icon": "none",
+            "title": "How to use",
+            "content": "{{ product.metafields.custom.info_produit_how_to_use | metafield_tag }}",
+            "show_image_above_text": false,
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "accordion_Ab4cXq": {
+          "type": "accordion",
+          "settings": {
+            "show_open": false,
+            "show_below_gallery": false,
+            "icon": "none",
+            "title": "Design éco-conçu",
+            "content": "{{ product.metafields.custom.info_produit_design | metafield_tag }}<p>Consigne de tri :</p>",
+            "show_image_above_text": false,
+            "image": "shopify://shop_images/Picto-triCoffret-Deluxe-LBA-Creme-50ml_f991ed76-8981-4e63-9d05-86c408719d70.png",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "accordion_aBRcw4": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "show_open": true,
+            "show_below_gallery": false,
+            "icon": "none",
+            "title": "Avant / Après",
+            "content": "",
+            "show_image_above_text": true,
+            "image": "shopify://shop_images/P_CREME_-_1048_x_784.jpg",
+            "liquid": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "judge_me_reviews_preview_badge_jWmTcW",
+        "description",
+        "price",
+        "relative_products_JBLBDc",
+        "variant_picker",
+        "recharge_subscriptions_subscription_widget_v2_zxAiiW",
+        "buy_buttons",
+        "text_L6RDT6",
+        "line_informations_9jHJHa",
+        "modal_QPCNeE",
+        "button_HUyMtW",
+        "accordion_Yw977X",
+        "accordion_NkdxHP",
+        "accordion_Ab4cXq",
+        "accordion_aBRcw4"
+      ],
+      "custom_css": [
+        ".accordion img {max-width: 350px; width: 100%; height: auto;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "container_size": "full",
+        "product_info_size": 50,
+        "show_sticky_add_to_cart": true,
+        "center_basic_info": false,
+        "desktop_media_layout": "grid",
+        "desktop_media_grid_gap": 0,
+        "mobile_controls": "free_scroll",
+        "enable_media_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": false,
+        "max_image_zoom_level": 3
+      }
+    },
+    "rich_text_CLpUjt": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_yiyQy6": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "text": "La Crème Fondante Régénérative <strong>relance les mécanismes de régénération</strong> de la peau.",
+            "heading_tag": "h1-light"
+          }
+        },
+        "heading_Bf9aX6": {
+          "type": "heading",
+          "settings": {
+            "text": "<em>87% des femmes trouvent leur peau plus dense, apaisée et renforcée</em>",
+            "heading_tag": "h1-light"
+          }
+        }
+      },
+      "block_order": [
+        "heading_yiyQy6",
+        "heading_Bf9aX6"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "content_width": "md",
+        "text_position": "center",
+        "remove_vertical_spacing": false
+      }
+    },
+    "image_with_text_bwQMiT": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_bTwndt": {
+          "type": "heading",
+          "settings": {
+            "text": "UNE EFFICACITÉ RÉGÉNÉRATIVE DURABLE, PROUVÉE CLINIQUEMENT",
+            "heading_tag": "h2"
+          }
+        },
+        "richtext_G7wAh8": {
+          "type": "richtext",
+          "disabled": true,
+          "settings": {
+            "content": "<p>13 tests cliniques sur 30 critères ont été menés pour prouver l’efficacité de la Crème Fondante Régénérative. </p>",
+            "font_size": "base"
+          }
+        },
+        "heading_ipcRVW": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "text": "Après 3 mois d'utilisation",
+            "heading_tag": "h3"
+          }
+        },
+        "number_jGDPBV": {
+          "type": "number",
+          "settings": {
+            "title": "100%",
+            "description": "Peau plus lisse et régulière¹"
+          }
+        },
+        "number_FHQPTd": {
+          "type": "number",
+          "settings": {
+            "title": "91%",
+            "description": "Peau confortable tout au long delà journée¹"
+          }
+        },
+        "number_akWKMR": {
+          "type": "number",
+          "settings": {
+            "title": "+92%",
+            "description": "Peau plus éclatante²"
+          }
+        },
+        "number_kYmMjj": {
+          "type": "number",
+          "settings": {
+            "title": "87%",
+            "description": "Peau plus dense¹"
+          }
+        },
+        "number_F479fq": {
+          "type": "number",
+          "settings": {
+            "title": "87%",
+            "description": "Peau apaisée et renforcée¹"
+          }
+        },
+        "richtext_kjqkRL": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>¹ Étude d’auto-évaluation réalisée sur 23<br/>volontaires à J+56, sous contrôle dermatologique.<br/><br/>² Étude Clinique réalisé sur 23 volontaires à J+56. </p>",
+            "font_size": "xxs"
+          }
+        }
+      },
+      "block_order": [
+        "heading_bTwndt",
+        "richtext_G7wAh8",
+        "heading_ipcRVW",
+        "number_jGDPBV",
+        "number_FHQPTd",
+        "number_akWKMR",
+        "number_kYmMjj",
+        "number_F479fq",
+        "richtext_kjqkRL"
+      ],
+      "custom_css": [
+        ".text-base + .h3 {margin-top: 32px;}"
+      ],
+      "name": "t:sections.image_with_text.presets.image_with_text.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": false,
+        "image": "shopify://shop_images/KV_BAUME_web.jpg",
+        "image_fullsize": false,
+        "reveal_on_scroll": true,
+        "image_position": "end",
+        "content_width": "xl",
+        "remove_vertical_spacing": false,
+        "id": "efficacite"
+      }
+    },
+    "image_text_lba_mGkHMw": {
+      "type": "image-text-lba",
+      "custom_css": [
+        "@media (min-width: 1000px) {.duo-section {display: none !important; }}"
+      ],
+      "name": "Duo image + texte",
+      "settings": {
+        "section_height": "full-height",
+        "image": "shopify://shop_images/03_BULLE_V11_rvb_MD_ef0b5759-64c5-45c1-9134-d18f094c4320.png",
+        "background_color": "#ffffff",
+        "image_layout": "full",
+        "video_size": "full-height",
+        "image_position": "right",
+        "title": "LA TECHNOLOGIE EXCLUSIVE NEO-REGEN : UNE TRIPLE EFFICACITÉ",
+        "text": "<p>Créée en collaboration avec le<strong> Dr Lemaitre</strong>, l'expert français de la longévité, NEO-REGEN relance la régénération de la peau à 3 niveaux :  <strong>Régénération cellulaire, moléculaire et tissulaire.</strong></p><p>Efficacité prouvée. Action sur 136 gènes.</p>",
+        "button_link": "https://laboratoires-botanique-avancee.com/pages/expertise/#technologie-neoregen",
+        "button_label": "Découvrir le neo-regen",
+        "id": "neo-regen"
+      }
+    },
+    "slider_vertical_product_lba_6cdKzx": {
+      "type": "slider_vertical_product_lba",
+      "blocks": {
+        "texte_slide_MCMLDg": {
+          "type": "texte_slide",
+          "settings": {
+            "image": "shopify://shop_images/043dcc447e389adc7fa2e3c32e22f7eb56c8b27b.png",
+            "image_overlay": "none",
+            "text_position": "start",
+            "width_content": "600px",
+            "text_color": "#ffffff",
+            "title": "CONCENTRÉ EN NEO-REGEN, TECHNOLOGIE EXCLUSIVE",
+            "description": "<p>Son efficacité est triple, elle relance la<br/>régénération de la peau à 3 niveaux :</p><p>-Régénération cellulaire<br/>-Régénération moléculaire<br/>-Régénération tissulaire<br/><br/>Créée en collaboration avec le Dr Lemaitre, l’expert français de la<br/>longévité.</p>",
+            "button_texte": "Découvrir le neo-regen",
+            "button": "/pages/expertise/#technologie-neoregen"
+          }
+        }
+      },
+      "block_order": [
+        "texte_slide_MCMLDg"
+      ],
+      "custom_css": [
+        "@media (min-width: 1280px) {.container {--container-gutter: 4rem; }}",
+        "@media (max-width: 1000px) {.vertical-slider-wrapper {display: none !important; }}"
+      ],
+      "name": "Slider vertical produit",
+      "settings": {
+        "id": "neo-regen"
+      }
+    },
+    "multi_column_JnxFpy": {
+      "type": "multi-column",
+      "blocks": {
+        "image_with_text_NM9Btg": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/BULLE_ONAGRE__1.jpg",
+            "title": "CELLULES SOUCHES D’ONAGRE",
+            "heading_tag": "h3",
+            "content": "<p><strong>Équilibre & Résilience </strong></p><ul><li>Agit en fonction des besoins de<br/>votre peau pour faire face aux agressions extérieures.</li><li>Renforce la barrière cutanée.</li><li>Renforce la protection face au stress<br/>oxydatif. </li><li>Favorise le renouvellement et le<br/>remodelage tissulaire.</li></ul>",
+            "link_url": "",
+            "link_text": ""
+          }
+        },
+        "image_with_text_Hi9q4B": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/pronad_plus_shopify_2000x2000_e2f21c25-c649-4036-a04e-2a63da3b67e7.jpg",
+            "title": "PRO NAD+",
+            "heading_tag": "h3",
+            "content": "<p><strong>Énergie & longévité cellulaire</strong></p><ul><li>Soutient la production d’énergie<br/>cellulaire.</li><li>Favorise la réparation de l’ADN<br/>et les défenses cellulaire. </li><li>Soutient l’activité de protéines<br/>impliquées dans la longévité cellulaire.</li></ul>",
+            "link_url": "",
+            "link_text": ""
+          }
+        },
+        "image_with_text_DLzJpi": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/ectoine_shopify_2000x2000_992ea019-3270-47c3-ab21-81c3abf5bfab.jpg",
+            "title": "<strong>ECTOÏNE BIOTECH</strong>",
+            "heading_tag": "h3",
+            "content": "<p><strong>Bouclier protecteur & antioxidation</strong></p><ul><li>Prévient les dommages des UV, lumière bleu et infra-rouge. </li><li>Protège la peau des polluants atmosphériques. </li><li>Protège la peau face aux changements de température. </li></ul>",
+            "link_url": "",
+            "link_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_NM9Btg",
+        "image_with_text_Hi9q4B",
+        "image_with_text_DLzJpi"
+      ],
+      "name": "t:sections.multi_column.presets.multi_column.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": false,
+        "columns_per_row": 3,
+        "stack_on_mobile": false,
+        "overlap_image": false,
+        "content_alignment": "start",
+        "text_alignment": "start",
+        "spacing": "xs",
+        "subheading": "",
+        "title": "DES ACTIFS PUISSANTS, HAUTEMENT CONCENTRÉS",
+        "content": "",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "image_text_lba_pAxieN": {
+      "type": "image-text-lba",
+      "custom_css": [
+        "section {background: #fafafa;}"
+      ],
+      "name": "Duo image + texte",
+      "settings": {
+        "section_height": "full-height",
+        "background_color": "#ffffff",
+        "image_layout": "full",
+        "video": "shopify://files/videos/LBA_26-BAUME-RECHARGE-260714.mp4",
+        "video_size": "full-height",
+        "image_position": "left",
+        "title": "Plus qu'une Recharge, un format voyage",
+        "text": "<p>Pensée comme un objet autonome, la recharge est dotée de son propre couvercle pour se transformer en format voyage. <br/><br/>Ainsi, votre produit peut s'utiliser sous deux formats différents : </p><p><br/></p><ul><li>le format deluxe pour la salle de bain, avec le pot en verre et le couvercle en résigne, réalisés par des entreprises du Patrimoine Vivant française.</li><li>le format voyage :  à l'ouverture de votre boite, récupérez le couvercle de voyage de votre recharge sous la première cale. Une fois déclipsée, la recharge se ferme avec ce couvercle et se transforme en format voyage, pour accompagner tous vos déplacements.  </li></ul><p></p><p><br/>Conçue en aluminium et protégée par deux dépôts de brevets, notre recharge incarne une nouvelle vision du soin de luxe, engagé et nomade.</p>",
+        "button_link": "/pages/expertise/#dr-jm-lemaitre",
+        "button_label": "",
+        "id": ""
+      }
+    },
+    "rich_text_NjM6pw": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QAUCkL": {
+          "type": "heading",
+          "settings": {
+            "text": "<em>Collaboration exclusive avec le Dr Jean-Marc Lemaitre, l’expert français de la longévité</em>",
+            "heading_tag": "h1-light"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QAUCkL"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "content_width": "md",
+        "text_position": "center",
+        "remove_vertical_spacing": false
+      }
+    },
+    "image_text_lba_ELymAP": {
+      "type": "image-text-lba",
+      "blocks": {
+        "description_PxWdBb": {
+          "type": "description",
+          "settings": {
+            "image": "shopify://shop_images/787ee7f667a8f258fcf01afa035928af7db6c96b_127be234-de9e-425c-b41a-38cfa8eaa30a.png",
+            "title_": "DR Jean-Marc Lemaitre",
+            "text": "<p>- Diplômé d'un Doctorat de Biologie Moléculaire et Cellulaire (1995).<br/>- Première équipe au monde a avoir démontré que le vieillissement cellulaire est réversible (2011).<br/>- Directeur de recherche INSERM.<br/>- Co-directeur de l’Institut de Médecine Régénérative de Montpellier. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "description_PxWdBb"
+      ],
+      "custom_css": [
+        "section {background: #fafafa;}"
+      ],
+      "name": "Duo image + texte",
+      "settings": {
+        "section_height": "full-height",
+        "background_color": "#ffffff",
+        "image_layout": "full",
+        "video": "shopify://files/videos/LBA_CD_7s-30-ANS-RECHERCHE_1_1.mp4",
+        "video_size": "full-height",
+        "image_position": "left",
+        "title": "PREMIÈRE MONDIALE",
+        "text": "<p><strong>Pour la première fois au monde </strong>et en collaboration avec le<strong> Dr Lemaitre</strong>, l'efficacité d'actifs cosmétiques est prouvée sur un modèle révolutionnaire, issu de 30 ans de recherche en médecine régénérative : <strong>l'organoïde de peau. </strong></p>",
+        "button_link": "/pages/expertise/#dr-jm-lemaitre",
+        "button_label": "En savoir plus",
+        "id": ""
+      }
+    },
+    "image_with_text_URTYB3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_E9yaGJ": {
+          "type": "heading",
+          "settings": {
+            "text": "UNE PROUESSE DE FORMULATION",
+            "heading_tag": "h2"
+          }
+        },
+        "richtext_VYaTdx": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Le Baume Onctueux régénératif est concentré de 30% d’ingrédients actif, une véritable prouesse de formulation.</p><p>Nos scientifiques appliquent une charte de formulation restrictive : les silicones, PEG et tout ingrédient suspecté néfaste pour la peau sont bannis.</p><p>Comme la Crème Fondante Régénérative, sa structure lamellaire biomimétique permet une affinité avec la peau optimale et une meilleure pénétration des actifs.  </p>",
+            "font_size": "base"
+          }
+        },
+        "heading_9iyyKC": {
+          "type": "heading",
+          "settings": {
+            "text": "UNE SIGNATURE OLFACTIVE ENVELOPPANTE",
+            "heading_tag": "h2"
+          }
+        },
+        "richtext_ddcf6Y": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Créé par Céline Barel (IFF), le parfum allie la douceur des fleurs blanches à la profondeur boisée, offrant une signature fraîche et réconfortante.</p><p><em>(Bergamote - Baies - Jasmin sambac - Lys blanc – racine d’Iris - Vétiver)</em></p>",
+            "font_size": "base"
+          }
+        }
+      },
+      "block_order": [
+        "heading_E9yaGJ",
+        "richtext_VYaTdx",
+        "heading_9iyyKC",
+        "richtext_ddcf6Y"
+      ],
+      "name": "t:sections.image_with_text.presets.image_with_text.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": false,
+        "image": "shopify://shop_images/TEXTURE_RECHARGE_BAUME.jpg",
+        "image_fullsize": true,
+        "reveal_on_scroll": true,
+        "image_position": "end",
+        "content_width": "xl",
+        "remove_vertical_spacing": false,
+        "id": ""
+      }
+    },
+    "section_lba_scroll_blur_RQEcmJ": {
+      "type": "section-lba-scroll-blur",
+      "disabled": true,
+      "name": "Scroll Blur Section",
+      "settings": {
+        "image": "shopify://shop_images/Recharge_creme_RVB.webp",
+        "product": "recharge-creme-regenerative-visage",
+        "title": "La recharge crème fondante régénérative",
+        "description": "",
+        "description_alt": "<p>La recharge a été pensée comme un véritable objet nomade, utilisable seule grâce à son capot de voyage. </p><p>Conçue 100% en aluminium, elle se distingue par sa durabilité et sa recyclabilité infinie.</p>",
+        "cta_text": "découvrir"
+      }
+    },
+    "image_text_lba_PXRV8M": {
+      "type": "image-text-lba",
+      "disabled": true,
+      "name": "Duo image + texte",
+      "settings": {
+        "section_height": "full-height",
+        "background_color": "#ffffff",
+        "image_layout": "full",
+        "video": "shopify://files/videos/CREAM_1080x1350 (1).mp4",
+        "video_size": "full-height",
+        "image_position": "left",
+        "title": "l'abonnement",
+        "text": "<p>Lors de votre commande, sélectionnez un abonnement, disponible pour la plupart de nos produits. <br/><br/>Choisissez la fréquence qui vous convient et modifiez-la ou déplacez vos livraisons à tout moment. <br/><br/>Chaque commande est expédiée automatiquement selon vos préférences, avec un e-mail avant chaque envoi pour ajuster adresse ou pause. La livraison standard est gratuite sur toutes les commandes planifiées.</p>",
+        "button_link": "shopify://pages/faq",
+        "button_label": "En savoir plus",
+        "id": "laboratoire-biotechnologie"
+      }
+    },
+    "178549901462df8b58": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_dAGzNf": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_dAGzNf"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false
+      }
+    },
+    "featured_collections_fmd6QB": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_TCxwyY": {
+          "type": "collection",
+          "settings": {
+            "collection": "all",
+            "products_count": 8,
+            "title": "La gamme",
+            "link_url": "shopify://collections/all",
+            "link_text": "Voir tout"
+          }
+        }
+      },
+      "block_order": [
+        "collection_TCxwyY"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": false,
+        "hide_product_information": false,
+        "show_product_secondary_image": false,
+        "carousel_design": "default",
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "text_with_icons_prHgRy": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_DDRreF": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-delivery-truck",
+            "custom_icon": "shopify://shop_images/Icons_2.svg",
+            "icon_width": 52,
+            "mobile_icon_width": 52,
+            "title": "Paiement sécurisé",
+            "content": "",
+            "button_label": "",
+            "button_link": "#"
+          }
+        },
+        "item_ncNzJ8": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-delivery-truck",
+            "custom_icon": "shopify://shop_images/Icons.svg",
+            "icon_width": 52,
+            "mobile_icon_width": 52,
+            "title": "Livraison offerte en France métropolitaine",
+            "content": "",
+            "button_label": "",
+            "button_link": "#"
+          }
+        },
+        "item_ntmGFj": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-delivery-truck",
+            "custom_icon": "shopify://shop_images/Icons_1.svg",
+            "icon_width": 52,
+            "mobile_icon_width": 52,
+            "title": "Échantillons exclusifs",
+            "content": "",
+            "button_label": "",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "item_DDRreF",
+        "item_ncNzJ8",
+        "item_ntmGFj"
+      ],
+      "name": "t:sections.text_with_icons.presets.text_with_icons.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": true,
+        "stack_on_mobile": true,
+        "icon_color": "",
+        "text_color": "",
+        "text_alignment": "center"
+      }
+    },
+    "notification_product_lba_rVL7af": {
+      "type": "notification_product_lba",
+      "disabled": true,
+      "name": "Notification produit",
+      "settings": {
+        "product_ref": "{{ product.metafields.custom.notification_product_push.value }}",
+        "delay": 2
+      }
+    },
+    "faq_YgE8kX": {
+      "type": "faq",
+      "blocks": {
+        "category_UYnjdk": {
+          "type": "category",
+          "settings": {
+            "title": "",
+            "icon": "none",
+            "icon_width": 16
+          }
+        },
+        "question_TNA9xR": {
+          "type": "question",
+          "settings": {
+            "question": "Quelle crème visage choisir ?",
+            "answer": "<p>La bonne crème est celle qui répond aux besoins biologiques réels de votre peau,  pas seulement à ses signes visibles. Avant de choisir une texture, interrogez les actifs : sont-ils présents en concentration suffisante ? Leur efficacité a-t-elle été mesurée sur tissu vivant ?</p><p>Chez LBA, deux formats selon l'intensité souhaitée : la <strong>Crème Fondante Régénérative</strong> pour une régénération quotidienne profonde, et le <strong>Sérum en Crème Régénératif</strong> pour les peaux qui cherchent une concentration maximale d'actifs. Les deux reposent sur la technologie NEO-REGEN® et les mêmes standards de validation clinique.</p>"
+          }
+        },
+        "question_mbakFd": {
+          "type": "question",
+          "settings": {
+            "question": "Quels sont les actifs dont l'efficacité est réellement prouvée ?",
+            "answer": "<p>Parmi les ingrédients les mieux documentés scientifiquement : <strong>rétinol, niacinamide, acide hyaluronique, céramides</strong>. Nos formules intègrent niacinamide et sept types de céramides tout en allant plus loin avec des actifs biotechnologiques propriétaires que la recherche conventionnelle n'avait pas encore explorés à ce niveau.</p><p>Cellules souches de lys blanc et de pivoine, Eau de Baulieu minéralisée par la roche basaltique, ectoine : leur efficacité est évaluée sur organoïdes de peau humaine en collaboration avec le Pr Jean-Marc Lemaître, directeur de recherche à l'Inserm. Non pour valider une allégation mais pour comprendre ce qui se passe réellement dans les tissus.</p>"
+          }
+        },
+        "question_iawK4y": {
+          "type": "question",
+          "settings": {
+            "question": "À quoi sert la niacinamide dans un soin visage ?",
+            "answer": "<p><strong>La niacinamide, ou vitamine B3, est l'un des actifs les mieux documentés en cosmétique</strong>. Elle soutient la synthèse des céramides, renforce la barrière cutanée, unifie le teint et réduit la visibilité des pores. Elle présente également des propriétés anti-oxydantes et anti-inflammatoires qui en font un actif de fond particulièrement polyvalent.</p><p>Dans nos formules, la niacinamide n'est pas utilisée isolément, elle s'intègre dans une <strong>synergie d'actifs biotechnologiques</strong> conçue pour adresser les mécanismes profonds du vieillissement cutané, pas seulement ses effets visibles.</p>"
+          }
+        },
+        "question_Va8eLY": {
+          "type": "question",
+          "settings": {
+            "question": "Quels actifs contre les rides ?",
+            "answer": "<p>Les actifs dont l'action sur les rides est scientifiquement documentée incluent le rétinol, les peptides de signalisation, la niacinamide, et les céramides. La recherche sur les cellules souches végétales ouvre aujourd'hui une voie complémentaire : agir non pas sur le symptôme, mais sur la capacité cellulaire à maintenir la structure du tissu.</p><p>La technologie NEO-REGEN® de LBA a démontré une action mesurable sur <strong>136 gènes impliqués dans la régénération cutanée</strong>, avec des résultats cliniques de −21 % de rides et +53 % de fermeté à trois mois, mesurés sur tissu vivant.</p>"
+          }
+        },
+        "question_azq9VR": {
+          "type": "question",
+          "settings": {
+            "question": "Quelle est la différence entre un sérum et une crème visage ?",
+            "answer": "<p><strong>Un sérum délivre une concentration élevée d'actifs</strong> dans les couches profondes de l'épiderme. <strong>Une crème renforce la barrière cutanée et maintient l'hydratation</strong>. Les deux remplissent des fonctions biologiques complémentaires.</p><p>Chez LBA, nous avons dépassé cette dichotomie avec le <strong>Sérum en Crème Régénératif</strong> : une texture hybride à structure lamellaire, conçue pour combiner la pénétration accélérée d'un sérum et l'action nourrissante d'une crème. Utilisé seul ou en association avec la Crème Fondante, il constitue un protocole de régénération complet.</p>"
+          }
+        },
+        "question_kA6tPK": {
+          "type": "question",
+          "settings": {
+            "question": "Pourquoi produire des actifs en bioréacteurs ?",
+            "answer": "<p>La culture en bioréacteurs permet de multiplier des cellules souches végétales sélectionnées dans un environnement strictement contrôlé — sans aléas climatiques, sans pesticides, sans extraction massive sur les écosystèmes.</p><p><strong>Les avantages sont multiples</strong> : traçabilité absolue, composition stable et reproductible, pureté supérieure, impact environnemental réduit. Chez LBA, c'est le procédé utilisé pour l'ensemble de nos actifs végétaux. Un fragment infime d'une plante du Domaine de Baulieu suffit à donner naissance à des millions de cellules souches aux propriétés régénératives intactes.</p>"
+          }
+        },
+        "question_4mxHGy": {
+          "type": "question",
+          "settings": {
+            "question": "Cette crème est-elle anti-âge ?",
+            "answer": "<p>Elle s'inscrit dans une <strong>démarche de longévité cutanée</strong> — ce qui est différent. L'approche anti-âge est corrective : elle agit sur les signes visibles du vieillissement. L'approche régénérative est préventive et structurelle : elle soutient la capacité de la peau à se renouveler, à maintenir sa densité, son éclat, sa vitalité dans le temps.</p><p>Chez LBA, nous ne combattons pas le vieillissement. Nous accompagnons la peau pour qu'elle reste ce qu'elle est capable d'être.</p>"
+          }
+        },
+        "question_8Ay4Yn": {
+          "type": "question",
+          "settings": {
+            "question": "<strong>À partir de quel âge utiliser les soins LBA ?</strong>",
+            "answer": "<p>Dès que la peau nécessite un soutien face au stress environnemental ou aux premiers signes de ralentissement cellulaire, généralement à partir de la trentaine, parfois plus tôt selon les peaux et les modes de vie.</p><p><strong>La cosmétique régénérative ne s'adresse pas à un âge</strong>. Elle s'adresse à une peau qui cherche à préserver sa vitalité dans la durée.</p>"
+          }
+        },
+        "question_pmtCWf": {
+          "type": "question",
+          "settings": {
+            "question": "Les soins LBA conviennent-ils aux peaux sensibles ?",
+            "answer": "<p>Nos formules sont conçues pour être biocompatibles , c'est-à-dire formulées en affinité avec la physiologie naturelle de la peau, <strong>sans ingrédients perturbateurs, sans silicones, sans PEG</strong>. Cette approche les rend particulièrement adaptées aux peaux exigeantes et aux peaux sensibles.</p><p>En cas de doute, <strong>notre conciergerie Le Cercle</strong> est disponible pour un conseil personnalisé avant toute adoption de rituel.</p>"
+          }
+        },
+        "question_KEwyTG": {
+          "type": "question",
+          "settings": {
+            "question": "Peut-on utiliser les soins LBA matin et soir ?",
+            "answer": "<p>Oui, nos formules sont pensées pour une <strong>utilisation quotidienne, matin et soir</strong>. La peau régénère principalement la nuit : c'est le moment idéal pour l'application du Sérum en Crème. Le matin, la Crème Fondante prépare et protège la barrière cutanée pour la journée.</p>"
+          }
+        },
+        "question_PkM9Be": {
+          "type": "question",
+          "settings": {
+            "question": "La formule LBA respecte-t-elle la physiologie de la peau ?",
+            "answer": "<p>C'est l'exigence centrale de notre approche formulatoire. Nos structures lamellaires biomimétiques reproduisent l'<strong>organisation naturelle des lipides cutanés</strong> — une architecture calquée sur la barrière épidermique, qui permet aux actifs de pénétrer là où ils doivent agir, sans perturber l'équilibre naturel de la peau.</p><p>Formuler en respectant la peau n'est <strong>pas un choix marketing</strong>. C'est un <strong>impératif biologique</strong>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "category_UYnjdk",
+        "question_TNA9xR",
+        "question_mbakFd",
+        "question_iawK4y",
+        "question_Va8eLY",
+        "question_azq9VR",
+        "question_kA6tPK",
+        "question_4mxHGy",
+        "question_8Ay4Yn",
+        "question_pmtCWf",
+        "question_KEwyTG",
+        "question_PkM9Be"
+      ],
+      "custom_css": [
+        ".faq__container {background: #ffffff !important;}",
+        ".faq__container::before {background: #ffffff !important; opacity: 1 !important;}",
+        ".faq__wrapper,.section-stack,.container {background: #ffffff !important;}"
+      ],
+      "name": "t:sections.faq.presets.faq.name",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "image_size": "auto",
+        "remove_vertical_spacing": true,
+        "separate_section_with_border": true,
+        "show_categories": false,
+        "content_width": "sm",
+        "subheading": "",
+        "title": "FAQ",
+        "content": "",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30,
+        "id": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_CLpUjt",
+    "image_with_text_bwQMiT",
+    "image_text_lba_mGkHMw",
+    "slider_vertical_product_lba_6cdKzx",
+    "multi_column_JnxFpy",
+    "image_text_lba_pAxieN",
+    "rich_text_NjM6pw",
+    "image_text_lba_ELymAP",
+    "image_with_text_URTYB3",
+    "section_lba_scroll_blur_RQEcmJ",
+    "image_text_lba_PXRV8M",
+    "178549901462df8b58",
+    "featured_collections_fmd6QB",
+    "text_with_icons_prHgRy",
+    "notification_product_lba_rVL7af",
+    "faq_YgE8kX"
+  ]
+}
