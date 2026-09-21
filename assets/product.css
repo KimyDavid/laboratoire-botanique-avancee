@@ -117,6 +117,10 @@ section .section-reviews .jm-cluster > .jm-stack:first-child * {
   color: white;
 }
 
+section .section-reviews .jm-review-widget__header-and-body {
+  gap: 32px;
+}
+
 section .section-reviews .jdgm-carousel-review-list {
   background: transparent;
 }
