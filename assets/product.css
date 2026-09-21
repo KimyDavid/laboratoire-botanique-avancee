@@ -109,7 +109,8 @@ section .section-reviews .jdgm-sort-dropdown {
   --jm-review-widget-text-color: white;
 }
 
-section .section-reviews .jm-filters__buttons {
+section .section-reviews .jm-filters__buttons,
+section .section-reviews .jm-average-rating-display {
   --cluster-space: 8px !important;
 }
 
@@ -146,4 +147,13 @@ section .section-reviews .jm-review-item > .jm-stack {
 section .section-reviews .jdgm-carousel-review-list {
   margin-left: -24px;
   margin-right: -24px;
+}
+
+section .section-reviews .jm-average-rating-display .jm-text:last-child {
+    font-family: CormorantGaramond Regular;
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    font-weight: 700;
 }
