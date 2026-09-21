@@ -116,7 +116,8 @@ section .section-reviews .jm-average-rating-display {
 
 section .section-reviews .jm-cluster > .jm-stack:first-child *,
 section .section-reviews .jm-review-item *,
-section .section-reviews .jm-star-rating__font-icon {
+section .section-reviews .jm-star-rating__font-icon,
+section .section-reviews .jm-sort-filter {
   color: white !important;
 }
 
