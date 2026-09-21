@@ -103,7 +103,8 @@ section .section-reviews .jm-cluster > .jm-stack:first-child {
   align-items: center;
 }
 
-section .section-reviews .jm-button--secondary {
+section .section-reviews .jm-button--secondary,
+section .section-reviews .jdgm-sort-dropdown {
   --jm-widget-border-radius: 0px;
   --jm-review-widget-text-color: white;
 }
