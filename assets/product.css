@@ -98,3 +98,7 @@ section .section-reviews .jm-cluster > .jm-stack:first-child {
   justify-content: space-between;
   align-items: center;
 }
+
+section .section-reviews .jm-cluster > .jm-stack:first-child * {
+  color: white;
+}
