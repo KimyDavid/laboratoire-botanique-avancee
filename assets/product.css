@@ -91,3 +91,10 @@ section .section-reviews {
 section .section-reviews .jm-review-widget {
   padding-top: 0;
 }
+
+section .section-reviews .jm-cluster > .jm-stack:first-child {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
