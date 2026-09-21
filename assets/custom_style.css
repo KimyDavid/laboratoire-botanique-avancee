@@ -1302,6 +1302,9 @@ div[slot="footer"] .contents .button--outline:hover {
     min-height: 36px;
     min-inline-size: unset;
     inline-size: unset;
+    background: transparent;
+    color: white;
+    border-color: white;
 }
 
 #judgeme_product_reviews .jm-action-buttons.jm-review-widget-minimal-header__action-buttons {
