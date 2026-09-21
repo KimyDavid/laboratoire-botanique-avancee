@@ -157,3 +157,7 @@ section .section-reviews .jm-average-rating-display .jm-text:last-child {
     text-transform: uppercase;
     font-weight: 700;
 }
+
+section .section-reviews .jm-verified-buyer-badge__text {
+  border-color: white;
+}
