@@ -114,7 +114,7 @@ section .section-reviews .jm-filters__buttons {
 }
 
 section .section-reviews .jm-cluster > .jm-stack:first-child *,
-section .section-reviews .jm-review-item *
+section .section-reviews .jm-review-item *,
 section .section-reviews .jm-star-rating__font-icon {
   color: white !important;
 }
