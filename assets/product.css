@@ -87,6 +87,7 @@
 section .section-reviews {
   background-image: url(https://cdn.shopify.com/s/files/1/0948/7073/3145/files/reviews-mobile.jpg?v=1789991045);
   --jm-widget-border-radius: 0px;
+  --jm-review-widget-text-color: white;
 }
 
 section .section-reviews .jm-review-widget {
