@@ -86,8 +86,6 @@
 
 section .section-reviews {
   background-image: url(https://cdn.shopify.com/s/files/1/0948/7073/3145/files/reviews-mobile.jpg?v=1789991045);
-  --jm-widget-border-radius: 0px;
-  --jm-review-widget-text-color: white;
 }
 
 section .section-reviews .jm-review-widget {
@@ -103,6 +101,15 @@ section .section-reviews .jm-cluster > .jm-stack:first-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+section .section-reviews .jm-button--secondary {
+  --jm-widget-border-radius: 0px;
+  --jm-review-widget-text-color: white;
+}
+
+section .section-reviews .jm-filters__buttons {
+  --cluster-space: 8px !important;
 }
 
 section .section-reviews .jm-cluster > .jm-stack:first-child * {
