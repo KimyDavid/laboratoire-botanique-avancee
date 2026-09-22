@@ -185,3 +185,9 @@ section .section-reviews .jdgm-review-content__body-content {
     margin-top: 16px;
   }
 }
+
+@media (min-width: 768px) {
+  section .section-reviews .jm-carousel-review-item__body {
+    justify-content: center;
+  }
+}
