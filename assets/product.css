@@ -187,7 +187,7 @@ section .section-reviews .jdgm-review-content__body-content {
 }
 
 @media (min-width: 768px) {
-  section .section-reviews .jm-carousel-review-item__body {
+  section .section-reviews .jm-carousel-review-item__body > .jm-cluster:first-child {
     justify-content: center;
   }
 }
