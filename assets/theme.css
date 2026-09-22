@@ -11244,9 +11244,10 @@ collage-text {
     margin: 0;
   }
 
+  /* Reserves the gap where the title (and the overlapping secondary image) sit: kept clear of the main image so a wrapped title never overlaps it */
   .collage-text__media--has-main.collage-text__media--bottom-left-only .collage-text__image--main {
     width: 100%;
-    margin: 0 0 17.8%;
+    margin: 0 0 22%;
   }
 
   .collage-text__media--has-main.collage-text__media--middle-right .collage-text__image--main {
@@ -11274,10 +11275,6 @@ collage-text {
         font-size: 14px;
         line-height: 1.6;
         letter-spacing: 0.12em;
-  }
-
-  .collage-text__media-title br {
-    display: none;
   }
 
   .collage-text__wrapper {
