@@ -1,1 +1,221 @@
-{"type":"header","name":"Header group","sections":{"announcement-bar":{"type":"announcement-bar","blocks":{"message-1":{"type":"message","settings":{"text":"Announce something here"}}},"block_order":["message-1"],"disabled":true,"settings":{"color_scheme":"","enable_sticky":false,"autoplay":true,"cycle_speed":5,"desktop_font_size":11,"mobile_font_size":10}},"header":{"type":"header","blocks":{"mega_menu_3KFE9p":{"type":"mega_menu","settings":{"menu_item":"SHOP","images_position":"right","image_1":"shopify:\/\/shop_images\/LBA-COFFRETS-251126_124198_R2_copie.png","image_1_heading":"Coffret découverte","image_1_text":"","image_1_link":"shopify:\/\/products\/coffret-decouverte-box","image_2":"shopify:\/\/shop_images\/af3e1ae0128f3bccc33670f8a8a1b0886aee887d.png","image_2_heading":"Les formats voyage","image_2_text":"","image_2_link":"shopify:\/\/collections\/les-recharges"}},"mega_menu_djGb99":{"type":"mega_menu","settings":{"menu_item":"HISTOIRE","images_position":"right","image_1":"shopify:\/\/shop_images\/CHATEAU_BAULIEU_RVB_copy_c6670976-8b4e-49dc-95cd-440b66f55c20.png","image_1_heading":"Baulieu","image_1_text":"","image_1_link":"\/pages\/histoire\/#territoire-botanique","image_2":"shopify:\/\/shop_images\/3.webp","image_2_heading":"Nos engagements","image_2_text":"","image_2_link":"shopify:\/\/pages\/nos-engagements"}},"mega_menu_G3bYVH":{"type":"mega_menu","settings":{"menu_item":"EXPERTISE","images_position":"right","image_1":"shopify:\/\/shop_images\/1950X1950-LABO.webp","image_1_heading":"nos laboratoires","image_1_text":"","image_1_link":"\/pages\/expertise\/#laboratoire-biotechnologie","image_2":"shopify:\/\/shop_images\/1950X1950_FLEUR_COUPEE_2.webp","image_2_heading":"La technologie NEO-REGEN","image_2_text":"","image_2_link":"\/pages\/expertise\/#technologie-neoregen"}},"mega_menu_zqyJaE":{"type":"mega_menu","settings":{"menu_item":"SPA","images_position":"right","image_1":"shopify:\/\/shop_images\/1950X1950_TEXTURE-OUTIL.webp","image_1_heading":"les expériences de soin","image_1_text":"","image_1_link":"\/pages\/spa\/#nos-protocoles","image_2":"shopify:\/\/shop_images\/1950x1097_SPA_CHIMERE.webp","image_2_heading":"notre philosophie","image_2_text":"","image_2_link":"\/pages\/spa\/#philosophie"}}},"block_order":["mega_menu_3KFE9p","mega_menu_djGb99","mega_menu_G3bYVH","mega_menu_zqyJaE"],"custom_css":[],"settings":{"color_scheme":"scheme-2","enable_sticky":true,"hide_on_scroll":false,"show_separation_border":true,"reduce_padding":false,"logo":"shopify:\/\/shop_images\/Logo_3.svg","logo_max_width":240,"logo_mobile_max_width":45,"menu":"main-menu","sidebar_menu":"header-menu-mobile","menu_open_trigger":"click","menu_text_font":"heading","enable_search":true,"header_mobile_title":"NOUVELLE COSMÉTIQUE D'EXCEPTION","header_mobile_banner":"shopify:\/\/shop_images\/026194e4-f599-4ac5-a35e-0e7957a80373.png","header_mobile_link":"shopify:\/\/products\/coffret-decouverte-box","header_mobile_button":"Notre coffret découverte","sidebar_color_scheme":"","sidebar_text_font":"heading","sidebar_show_dividers":true,"sidebar_open_second_level_menus":true,"layout":"logo_center_navigation_inline","show_icons":true,"show_country_selector":false,"show_country_name":false,"show_country_flag":true,"show_locale_selector":true,"transparent_header_text_color":"#ffffff","transparent_logo":"shopify:\/\/shop_images\/logo_white.svg","search_menu":"recherche-termes-populaires","search_products":["creme-fondante-regenerative","recharge-creme-regenerative-visage"]}},"notifications_center_arHTfe":{"type":"notifications-center","blocks":{"notification_nfQd4b":{"type":"notification","disabled":true,"settings":{"enable_notification":true,"image":"shopify:\/\/shop_images\/Jardins-Baulieu-duo-savonsauge-pack-960x1240px_d313031c-6c7a-456c-836e-d5b6efd9741f.jpg","text":"En cadeau : un savon solide JARDINS BAULIEU, la marque française disponible au sein des Maisons Airelles.","link":"shopify:\/\/collections\/all","delay":3,"duration":6,"first_visit_only":false,"returning_only":false}}},"block_order":["notification_nfQd4b"],"name":"Centre de notifications","settings":{"enable_notifications":true}}},"order":["announcement-bar","header","notifications_center_arHTfe"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "message-1": {
+          "type": "message",
+          "settings": {
+            "text": "Announce something here"
+          }
+        }
+      },
+      "block_order": [
+        "message-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "enable_sticky": false,
+        "autoplay": true,
+        "cycle_speed": 5,
+        "desktop_font_size": 11,
+        "mobile_font_size": 10
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "mega_menu_3KFE9p": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "SHOP",
+            "images_position": "right",
+            "image_1": "shopify://shop_images/LBA-COFFRETS-251126_124198_R2_copie.png",
+            "image_1_heading": "Coffret découverte",
+            "image_1_text": "",
+            "image_1_link": "shopify://products/coffret-decouverte-box",
+            "image_2": "shopify://shop_images/af3e1ae0128f3bccc33670f8a8a1b0886aee887d.png",
+            "image_2_heading": "Les formats voyage",
+            "image_2_text": "",
+            "image_2_link": "shopify://collections/les-recharges"
+          }
+        },
+        "mega_menu_djGb99": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "HISTOIRE",
+            "images_position": "right",
+            "image_1": "shopify://shop_images/CHATEAU_BAULIEU_RVB_copy_c6670976-8b4e-49dc-95cd-440b66f55c20.png",
+            "image_1_heading": "Baulieu",
+            "image_1_text": "",
+            "image_1_link": "/pages/histoire/#territoire-botanique",
+            "image_2": "shopify://shop_images/3.webp",
+            "image_2_heading": "Nos engagements",
+            "image_2_text": "",
+            "image_2_link": "shopify://pages/nos-engagements"
+          }
+        },
+        "mega_menu_G3bYVH": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "EXPERTISE",
+            "images_position": "right",
+            "image_1": "shopify://shop_images/1950X1950-LABO.webp",
+            "image_1_heading": "nos laboratoires",
+            "image_1_text": "",
+            "image_1_link": "/pages/expertise/#laboratoire-biotechnologie",
+            "image_2": "shopify://shop_images/1950X1950_FLEUR_COUPEE_2.webp",
+            "image_2_heading": "La technologie NEO-REGEN",
+            "image_2_text": "",
+            "image_2_link": "/pages/expertise/#technologie-neoregen"
+          }
+        },
+        "mega_menu_zqyJaE": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "SPA",
+            "images_position": "right",
+            "image_1": "shopify://shop_images/1950X1950_TEXTURE-OUTIL.webp",
+            "image_1_heading": "les expériences de soin",
+            "image_1_text": "",
+            "image_1_link": "/pages/spa/#nos-protocoles",
+            "image_2": "shopify://shop_images/1950x1097_SPA_CHIMERE.webp",
+            "image_2_heading": "notre philosophie",
+            "image_2_text": "",
+            "image_2_link": "/pages/spa/#philosophie"
+          }
+        }
+      },
+      "block_order": [
+        "mega_menu_3KFE9p",
+        "mega_menu_djGb99",
+        "mega_menu_G3bYVH",
+        "mega_menu_zqyJaE"
+      ],
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "enable_sticky": true,
+        "hide_on_scroll": false,
+        "show_separation_border": true,
+        "reduce_padding": false,
+        "logo": "shopify://shop_images/Logo_3.svg",
+        "logo_max_width": 240,
+        "logo_mobile_max_width": 45,
+        "menu": "main-menu",
+        "sidebar_menu": "header-menu-mobile",
+        "menu_open_trigger": "click",
+        "menu_text_font": "heading",
+        "enable_search": true,
+        "header_mobile_title": "NOUVELLE COSMÉTIQUE D'EXCEPTION",
+        "header_mobile_banner": "shopify://shop_images/026194e4-f599-4ac5-a35e-0e7957a80373.png",
+        "header_mobile_link": "shopify://products/coffret-decouverte-box",
+        "header_mobile_button": "Notre coffret découverte",
+        "sidebar_color_scheme": "",
+        "sidebar_text_font": "heading",
+        "sidebar_show_dividers": true,
+        "sidebar_open_second_level_menus": true,
+        "layout": "logo_center_navigation_inline",
+        "show_icons": true,
+        "show_country_selector": false,
+        "show_country_name": false,
+        "show_country_flag": true,
+        "show_locale_selector": true,
+        "transparent_header_text_color": "#ffffff",
+        "transparent_logo": "shopify://shop_images/logo_white.svg",
+        "search_menu": "recherche-termes-populaires",
+        "search_products": [
+          "creme-fondante-regenerative",
+          "recharge-creme-regenerative-visage"
+        ]
+      }
+    },
+    "notifications_center_arHTfe": {
+      "type": "notifications-center",
+      "blocks": {
+        "notification_nfQd4b": {
+          "type": "notification",
+          "disabled": true,
+          "settings": {
+            "enable_notification": true,
+            "image": "shopify://shop_images/Jardins-Baulieu-duo-savonsauge-pack-960x1240px_d313031c-6c7a-456c-836e-d5b6efd9741f.jpg",
+            "text": "En cadeau : un savon solide JARDINS BAULIEU, la marque française disponible au sein des Maisons Airelles.",
+            "link": "shopify://collections/all",
+            "delay": 3,
+            "duration": 6,
+            "first_visit_only": false,
+            "returning_only": false
+          }
+        }
+      },
+      "block_order": [
+        "notification_nfQd4b"
+      ],
+      "name": "Centre de notifications",
+      "settings": {
+        "enable_notifications": true
+      }
+    },
+    "side_popup_lba_gaAJEb": {
+      "type": "side-popup-lba",
+      "blocks": {
+        "group_nkUy9B": {
+          "type": "group",
+          "settings": {
+            "title": "Sous-titre",
+            "content": "<ul><li>88% ont constaté une peau visiblement restaurée au réveil</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "group_nkUy9B"
+      ],
+      "name": "Popup latérale",
+      "settings": {
+        "popup_id": "liste-inci",
+        "title": "Liste INCI",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><ul><li>Dolor sit amet</li><li>Lorem ipsum</li><li>Commodo consequat</li></ul>"
+      }
+    },
+    "side_popup_lba_EPerJT": {
+      "type": "side-popup-lba",
+      "blocks": {
+        "group_bfcgnJ": {
+          "type": "group",
+          "settings": {
+            "title": "Sous-titre",
+            "content": "<ul><li>88% ont constaté une peau visiblement restaurée au réveil</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "group_bfcgnJ"
+      ],
+      "name": "Popup latérale",
+      "settings": {
+        "popup_id": "results",
+        "title": "Les résultats",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><ul><li>Dolor sit amet</li><li>Lorem ipsum</li><li>Commodo consequat</li></ul>"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header",
+    "notifications_center_arHTfe",
+    "side_popup_lba_gaAJEb",
+    "side_popup_lba_EPerJT"
+  ]
+}
