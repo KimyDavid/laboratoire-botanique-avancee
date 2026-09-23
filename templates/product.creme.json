@@ -235,7 +235,7 @@
           "settings": {
             "eyebrow": "",
             "value": "-20%",
-            "label": "Rides"
+            "label": "Rides²"
           }
         },
         "stat_LnK8Bh": {
@@ -243,7 +243,7 @@
           "settings": {
             "eyebrow": "",
             "value": "+92%",
-            "label": "Confort"
+            "label": "Confort²"
           }
         }
       },
