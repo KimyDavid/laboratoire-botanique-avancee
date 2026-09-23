@@ -44,6 +44,7 @@
   {%- assign sold_out_label = 'product.general.sold_out_button' | t -%}
 {%- endif -%}
 {%- assign panel_id = 'collage-panel-' | append: section.id -%}
+{%- assign popup_handle = section.settings.button_popup | handleize -%}
 
 <section id="{{ section.id }}-collage" style="background: {{ section.settings.background_color }};" class="collage-text {% if section.settings.spacing_top %}collage-text--pad-top{% endif %} {% if section.settings.spacing_bottom %}collage-text--pad-bottom{% endif %} {% unless use_accordion %}collage-text--static{% if is_bottom_left_only == false %} collage-text--titled{% endif %}{% endunless %} {% render 'responsive-visibility', visibility: section.settings.visibility %}">
   <collage-text class="container">
@@ -81,12 +82,12 @@
             {%- endif -%}
 
             <div class="collage-text__text">
-              {%- if section.settings.eyebrow != blank -%}
-                <p class="collage-text__eyebrow h4">{{ section.settings.eyebrow }}</p>
-              {%- endif -%}
-
               {%- if section.settings.title != blank -%}
                 <h2 class="collage-text__title h2">{{ section.settings.title | newline_to_br }}</h2>
+              {%- endif -%}
+
+              {%- if section.settings.eyebrow != blank -%}
+                <p class="collage-text__eyebrow h4">{{ section.settings.eyebrow }}</p>
               {%- endif -%}
 
               {%- if section.settings.content != blank -%}
@@ -97,9 +98,12 @@
                 <div class="collage-text__small prose">{{ section.settings.small_content }}</div>
               {%- endif -%}
 
-              {%- if section.settings.button_label != blank and button_url != blank -%}
+              {%- if section.settings.button_label != blank and button_url != blank or section.settings.button_label != blank and popup_handle != blank -%}
                 <div class="collage-text__button">
-                  {%- if is_add_to_cart -%}
+                  {%- if popup_handle != blank -%}
+                    {%- assign popup_id = 'side-popup-' | append: popup_handle -%}
+                    {%- render 'button', type: 'button', style: 'primary', content: section.settings.button_label, aria_controls: popup_id -%}
+                  {%- elsif is_add_to_cart -%}
                     {%- comment -%}Without a selling_plan field, the variant is added as a one-time purchase, even if the product offers subscriptions{%- endcomment -%}
                     {%- if button_product.variants.size == 1 and button_variant.requires_selling_plan == false -%}
                       <product-form>
@@ -229,6 +233,12 @@
       "id": "button_link",
       "label": "Lien du bouton",
       "info": "Facultatif si un produit est choisi : le bouton pointe alors vers sa page."
+    },
+    {
+      "type": "text",
+      "id": "button_popup",
+      "label": "Identifiant de la popup à ouvrir",
+      "info": "Facultatif. Si renseigné, le bouton ouvre la popup latérale ayant cet identifiant (sections « Popup latérale » du Header Group), à la place du lien ou de l'ajout au panier."
     },
     {
       "type": "product",

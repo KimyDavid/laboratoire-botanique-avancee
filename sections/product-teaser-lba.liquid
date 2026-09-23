@@ -19,7 +19,7 @@
     class="product-teaser {% if section.settings.spacing_top %}product-teaser--pad-top{% endif %} {% if section.settings.spacing_bottom %}product-teaser--pad-bottom{% endif %} {% render 'responsive-visibility', visibility: section.settings.visibility %}"
   >
     <div class="container">
-      <div class="product-teaser__inner">
+      <product-teaser class="product-teaser__inner">
         {%- if teaser_image != blank -%}
           <a {% if teaser_url != blank %}href="{{ teaser_url }}"{% endif %} class="product-teaser__image-link">
             {{- teaser_image | image_url: width: 600 | image_tag: class: 'product-teaser__image', loading: 'lazy', widths: '200,300,400,600', sizes: '40vw' -}}
@@ -41,9 +41,51 @@
             </div>
           {%- endif -%}
         </div>
-      </div>
+      </product-teaser>
     </div>
   </section>
+
+  <script>
+    // Keeps the image square while matching its height to the content on the right.
+    if (!window.customElements.get('product-teaser')) {
+      class ProductTeaser extends HTMLElement {
+        connectedCallback() {
+          this.image = this.querySelector('.product-teaser__image-link');
+          this.content = this.querySelector('.product-teaser__content');
+          if (!this.image || !this.content) return;
+
+          this.lastWidth = 0;
+          this.observer = new ResizeObserver(() => {
+            if (this.offsetWidth !== this.lastWidth) {
+              this.lastWidth = this.offsetWidth;
+              this.fit();
+            }
+          });
+          this.observer.observe(this);
+          document.fonts?.ready.then(() => this.fit());
+        }
+
+        disconnectedCallback() {
+          this.observer?.disconnect();
+        }
+
+        fit() {
+          // The content height depends on the image width, so iterate until both agree.
+          const maxSize = this.offsetWidth * 0.45;
+          let size = this.image.offsetWidth;
+
+          for (let i = 0; i < 6; i++) {
+            this.style.setProperty('--product-teaser-image-size', `${size}px`);
+            const contentHeight = Math.min(this.content.offsetHeight, maxSize);
+            if (Math.abs(contentHeight - size) < 1) break;
+            size = contentHeight;
+          }
+        }
+      }
+
+      window.customElements.define('product-teaser', ProductTeaser);
+    }
+  </script>
 {%- endif -%}
 
 {% schema %}

@@ -276,11 +276,6 @@ Supported variables
                 <div class="relative-products">
                   {% for sub_product in related_products %}
                     {% assign item_label = sub_product.metafields.custom.produits_relatifs_label | default: sub_product.title %}
-                    {% assign item_description = sub_product.metafields.custom.produits_relatifs_description.value %}
-
-                    {% if item_description == blank %}
-                      {% assign item_description = sub_product.description | strip_html %}
-                    {% endif %}
 
                     <a href="{{ sub_product.url }}" class="relative-product{% if sub_product.id == product.id %} is-current{% endif %}">
                       <div class="relative-product__content">
@@ -288,10 +283,6 @@ Supported variables
                           <span class="relative-product__label h3">{{ item_label }}</span>
                           <span class="relative-product__price h3">{{ sub_product.price | money }}</span>
                         </div>
-
-                        {% if item_description != blank %}
-                          <p class="relative-product__description">{{ item_description }}</p>
-                        {% endif %}
                       </div>
                     </a>
                   {% endfor %}
@@ -615,12 +606,88 @@ Supported variables
 
             {%- when 'button' -%}
               {%- if block.settings.text != blank -%}
-                {% if block.settings.background != '' %}
-                  {% assign button_style = 'primary' %}
-                {% else %}
-                  {% assign button_style = 'link' %}
-                {% endif %}
-                {%- render 'button', href: block.settings.link, style: button_style, content: block.settings.text, stretch: block.settings.stretch, background: block.settings.background, text_color: block.settings.text_color -%}
+                {%- liquid
+                  assign transparent = 'rgba(0,0,0,0)'
+                  assign bg_desktop = block.settings.background
+                  assign text_desktop = block.settings.text_color
+                  assign border_desktop = block.settings.border_color
+                  if bg_desktop == transparent
+                    assign bg_desktop = blank
+                  endif
+                  if text_desktop == transparent
+                    assign text_desktop = blank
+                  endif
+                  if border_desktop == transparent
+                    assign border_desktop = blank
+                  endif
+
+                  assign bg_mobile = block.settings.background_mobile
+                  assign text_mobile = block.settings.text_color_mobile
+                  assign border_mobile = block.settings.border_color_mobile
+                  if bg_mobile == blank
+                    assign bg_mobile = bg_desktop
+                  elsif bg_mobile == transparent
+                    assign bg_mobile = blank
+                  endif
+                  if text_mobile == blank
+                    assign text_mobile = text_desktop
+                  elsif text_mobile == transparent
+                    assign text_mobile = blank
+                  endif
+                  if border_mobile == blank
+                    assign border_mobile = border_desktop
+                  elsif border_mobile == transparent
+                    assign border_mobile = blank
+                  endif
+
+                  if bg_desktop != blank or border_desktop != blank or bg_mobile != blank or border_mobile != blank
+                    assign button_style = 'primary'
+                  else
+                    assign button_style = 'link'
+                  endif
+                -%}
+
+                {%- if button_style == 'primary' -%}
+                  {%- assign button_selector = '.product-info__block-item[data-block-id="' | append: block.id | append: '"] .button.button--primary' -%}
+                  <style>
+                    {%- for breakpoint in (1..2) -%}
+                      {%- if forloop.first -%}
+                        {%- assign media = 'screen and (min-width: 1000px)' -%}
+                        {%- assign bg = bg_desktop -%}
+                        {%- assign fg = text_desktop -%}
+                        {%- assign bd = border_desktop -%}
+                      {%- else -%}
+                        {%- assign media = 'screen and (max-width: 999px)' -%}
+                        {%- assign bg = bg_mobile -%}
+                        {%- assign fg = text_mobile -%}
+                        {%- assign bd = border_mobile -%}
+                      {%- endif -%}
+
+                      {%- assign bg_value = bg | default: 'transparent' -%}
+                      {%- assign fg_fallback = 'rgb(var(--text-color))' -%}
+                      {%- if bg != blank -%}{%- assign fg_fallback = '#ffffff' -%}{%- endif -%}
+                      {%- assign fg_value = fg | default: fg_fallback -%}
+                      {%- assign bd_value = bd | default: bg_value -%}
+                      {%- assign hover_bg = fg_value -%}
+                      {%- assign hover_fg = bg | default: '#ffffff' -%}
+
+                      @media {{ media }} {
+                        {{ button_selector }} {
+                          background: {{ bg_value }};
+                          color: {{ fg_value }};
+                          border-color: {{ bd_value }};
+                        }
+                        {{ button_selector }}:hover {
+                          background: {{ hover_bg }} !important;
+                          color: {{ hover_fg }} !important;
+                          border-color: {{ bd | default: hover_bg }} !important;
+                        }
+                      }
+                    {%- endfor -%}
+                  </style>
+                {%- endif -%}
+
+                {%- render 'button', href: block.settings.link, style: button_style, content: block.settings.text, stretch: block.settings.stretch -%}
               {%- endif -%}
 
             {%- when 'share_buttons' -%}

@@ -16,7 +16,7 @@
 
     @media screen and (min-width: 999px) {
       #shopify-section-{{ section.id }} {
-        --multi-column-gap: {% if section.settings.spacing == 'xs' %}4px{% elsif section.settings.spacing == 'sm' %}3.125rem{% elsif section.settings.spacing == 'md' %}4.375rem{% else %}5.625rem{% endif %};
+        --multi-column-gap: {% if section.settings.spacing == 'xs' %}4px{% elsif section.settings.spacing == 'sm' %}36px{% elsif section.settings.spacing == 'md' %}4.375rem{% else %}5.625rem{% endif %};
         --multi-column-columns-per-row: {{ section.settings.columns_per_row }};
         --multi-column-column-width: calc(100% / var(--multi-column-columns-per-row) - var(--multi-column-gap) * ((var(--multi-column-columns-per-row) - 1) / var(--multi-column-columns-per-row)));
         --multi-column-grid: auto / repeat(auto-fit, var(--multi-column-column-width));
@@ -25,15 +25,49 @@
   </style>
 
   {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+  {%- assign media_ratio = section.settings.image_ratio -%}
+  {%- assign button_style = section.settings.button_style -%}
+  {%- assign sold_out_label = 'product.general.sold_out_button' | t -%}
+  {%- assign accordion_mode = section.settings.accordion -%}
+  {%- assign accordion_label = section.settings.accordion_label | default: section.settings.title -%}
+  {%- assign panel_id = 'multi-column-panel-' | append: section.id -%}
 
-  <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+  <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %} {% render 'responsive-visibility', visibility: section.settings.visibility %}">
+    {%- if accordion_mode != 'none' -%}
+      <multi-column-accordion class="multi-column-accordion multi-column-accordion--{{ accordion_mode }} {% if section.settings.accordion_label == blank %}multi-column-accordion--title-in-toggle{% endif %}">
+        <div class="container container--xl">
+          <button
+            type="button"
+            class="multi-column-accordion__toggle group"
+            aria-expanded="{% if section.settings.accordion_open %}true{% else %}false{% endif %}"
+            aria-controls="{{ panel_id }}"
+          >
+            <h2 class="h2">{{ accordion_label }}</h2>
+            <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <div id="{{ panel_id }}" class="multi-column-accordion__panel {% if section.settings.accordion_open %}is-open{% endif %}">
+          <div class="multi-column-accordion__panel-inner">
+    {%- endif -%}
+
     <div class="container container--xl">
       <div class="section-stack">
-        {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content, text_alignment: section.settings.content_alignment, button_label: section.settings.button_label, button_link: section.settings.button_link -%}
+        {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, heading_class: 'h2 multi-column-accordion__heading', content: section.settings.content, text_alignment: section.settings.content_alignment, button_label: section.settings.button_label, button_link: section.settings.button_link -%}
 
         <multi-column class="multi-column {% unless section.settings.stack_on_mobile %}scroll-area snap-x bleed md:unbleed{% endunless %}">
           {%- for block in section.blocks -%}
             <div class="multi-column__item {% if section.settings.overlap_image and block.settings.title != blank %}multi-column__item--overlap{% endif %} snap-center group" {{ block.shopify_attributes }}>
+              {%- liquid
+                assign block_product = block.settings.product
+                assign block_url = block.settings.link_url | default: block_product.url
+                assign block_button_label = block.settings.link_text
+                if block_product != blank
+                  assign block_button_label = block_button_label | default: 'Acheter'
+                  assign block_variant = block_product.selected_or_first_available_variant
+                endif
+              -%}
+
               {%- capture sizes_attribute -%}
                 (max-width: 699px) 53vw, (max-width: 999px) 38vw, calc((100vw - 3rem * 2) / {{ section.settings.columns_per_row }})
               {%- endcapture -%}
@@ -61,18 +95,22 @@
               -%}
 
               {%- if media_content != blank -%}
-                {%- if block.type == 'image_with_text' and block.settings.link_url != blank -%}
-                  <a href="{{ block.settings.link_url }}" class="overflow-hidden">
+                {%- capture media_attributes -%}
+                  class="overflow-hidden multi-column__media {% if media_ratio != 'original' %}multi-column__media--ratio{% endif %}" {% if media_ratio != 'original' %}style="aspect-ratio: {{ media_ratio }};"{% endif %}
+                {%- endcapture -%}
+
+                {%- if block.type == 'image_with_text' and block_url != blank -%}
+                  <a href="{{ block_url }}" {{ media_attributes }}>
                     {{- media_content -}}
                   </a>
                 {%- else -%}
-                  <div class="overflow-hidden">
+                  <div {{ media_attributes }}>
                     {{- media_content -}}
                   </div>
                 {%- endif -%}
               {%- endif -%}
 
-              {%- if block.settings.title != blank or block.settings.content != blank or block.settings.link_text != blank -%}
+              {%- if block.settings.title != blank or block.settings.content != blank or block_button_label != blank -%}
                 <div class="text-{{ section.settings.text_alignment }} multi-column__content {% if section.settings.spacing == 'xs' %}multi-column__content--spacing{% endif %}">
                   {%- if block.settings.title != blank -%}
                     <{{ block.settings.heading_tag }} class="{{ block.settings.heading_tag }}" style="margin-bottom:4px;">{{ block.settings.title }}</{{ block.settings.heading_tag }}>
@@ -80,8 +118,39 @@
 
                   {{- block.settings.content -}}
 
-                  {%- if block.settings.link_text != blank -%}
-                    <a href="{{ block.settings.link_url }}" class="cta_link_lba link">{{ block.settings.link_text | escape }}</a>
+                  {%- if block_button_label != blank and block_url != blank -%}
+                    <div class="multi-column__footer">
+                      {%- if block_product != blank -%}
+                        {%- comment -%}Without a selling_plan field, the variant is added as a one-time purchase, even if the product offers subscriptions{%- endcomment -%}
+                        {%- if block_product.variants.size == 1 and block_variant.requires_selling_plan == false -%}
+                          <product-form>
+                            {%- form 'product', block_product -%}
+                              <input type="hidden" name="on_success" value="force_open_drawer">
+                              <input type="hidden" name="quantity" value="1">
+                              <input type="hidden" name="id" value="{{ block_variant.id }}">
+                              {%- if block_variant.available -%}
+                                {%- render 'multi-column-button', style: button_style, size: section.settings.button_size, type: 'submit', content: block_button_label -%}
+                              {%- else -%}
+                                {%- render 'multi-column-button', style: button_style, size: section.settings.button_size, type: 'submit', content: sold_out_label, disabled: true -%}
+                              {%- endif -%}
+                            {%- endform -%}
+                          </product-form>
+                        {%- else -%}
+                          {%- assign quick_buy_id = 'product-quick-buy-' | append: block.id | append: '-' | append: block_product.id -%}
+
+                          {%- render 'multi-column-button', style: button_style, size: section.settings.button_size, type: 'button', content: block_button_label, aria_controls: quick_buy_id -%}
+
+                          <quick-buy-modal handle="{{ block_product.handle }}?variant={{ block_variant.id }}" class="quick-buy-modal modal" id="{{ quick_buy_id }}">
+                          </quick-buy-modal>
+                        {%- endif -%}
+
+                        {%- if block.settings.show_price -%}
+                          <span class="multi-column__price h3">{{ block_product.price | money }}</span>
+                        {%- endif -%}
+                      {%- else -%}
+                        {%- render 'multi-column-button', style: button_style, size: section.settings.button_size, href: block_url, content: block_button_label -%}
+                      {%- endif -%}
+                    </div>
                   {%- endif -%}
                 </div>
               {%- endif -%}
@@ -90,6 +159,16 @@
         </multi-column>
       </div>
     </div>
+
+    {%- if accordion_mode != 'none' -%}
+          </div>
+        </div>
+
+        <div class="container container--xl">
+          <div class="multi-column-accordion__border"></div>
+        </div>
+      </multi-column-accordion>
+    {%- endif -%}
   </div>
 {%- endif -%}
 
@@ -133,6 +212,20 @@
       "id": "overlap_image",
       "label": "t:sections.multi_column.overlap_image",
       "default": false
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Ratio des images",
+      "options": [
+        { "value": "original", "label": "Original" },
+        { "value": "1 / 1", "label": "Carré (1:1)" },
+        { "value": "4 / 5", "label": "Portrait (4:5)" },
+        { "value": "4 / 3", "label": "Paysage (4:3)" },
+        { "value": "16 / 9", "label": "Large (16:9)" }
+      ],
+      "default": "original",
+      "info": "Les images et vidéos sont recadrées pour remplir le ratio."
     },
     {
       "type": "select",
@@ -228,6 +321,76 @@
       "type": "url",
       "id": "button_link",
       "label": "Lien du bouton"
+    },
+    {
+      "type": "header",
+      "content": "Boutons des colonnes"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Style",
+      "options": [
+        { "value": "link", "label": "Lien classique" },
+        { "value": "solid", "label": "Plein" },
+        { "value": "outline", "label": "Bordure" }
+      ],
+      "default": "link"
+    },
+    {
+      "type": "select",
+      "id": "button_size",
+      "label": "Taille",
+      "info": "Pour les styles « Plein » et « Bordure ».",
+      "options": [
+        { "value": "sm", "label": "Petit" },
+        { "value": "base", "label": "Normal" }
+      ],
+      "default": "sm"
+    },
+    {
+      "type": "header",
+      "content": "Accordéon"
+    },
+    {
+      "type": "select",
+      "id": "accordion",
+      "label": "Section repliable en accordéon",
+      "options": [
+        { "value": "none", "label": "Désactivé" },
+        { "value": "mobile", "label": "Mobile uniquement" },
+        { "value": "desktop", "label": "Desktop uniquement" },
+        { "value": "all", "label": "Mobile et desktop" }
+      ],
+      "default": "none",
+      "info": "Une bordure est ajoutée en bas de la section quand l'accordéon est actif."
+    },
+    {
+      "type": "text",
+      "id": "accordion_label",
+      "label": "Titre de l'accordéon",
+      "info": "Si vide, le titre de la section est utilisé (il n'est alors pas répété dans le contenu)."
+    },
+    {
+      "type": "checkbox",
+      "id": "accordion_open",
+      "label": "Accordéon ouvert par défaut",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Affichage"
+    },
+    {
+      "type": "select",
+      "id": "visibility",
+      "label": "t:global.visibility.label",
+      "options": [
+        { "value": "all", "label": "t:global.visibility.options.all" },
+        { "value": "mobile", "label": "t:global.visibility.options.mobile" },
+        { "value": "desktop", "label": "t:global.visibility.options.desktop" }
+      ],
+      "default": "all"
     }
   ],
   "blocks": [
@@ -294,6 +457,18 @@
           "type": "text",
           "id": "link_text",
           "label": "t:global.text.link_text"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Produit",
+          "info": "Facultatif. Le bouton ajoute le produit au panier (texte par défaut : « Acheter »). Un produit à variante unique est ajouté directement en achat unique, sinon la fenêtre de choix des options s'ouvre. Le lien est alors ignoré pour le bouton."
+        },
+        {
+          "type": "checkbox",
+          "id": "show_price",
+          "label": "Afficher le prix à côté du bouton",
+          "default": true
         }
       ]
     },
@@ -378,6 +553,18 @@
           "type": "text",
           "id": "link_text",
           "label": "t:global.text.link_text"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Produit",
+          "info": "Facultatif. Le bouton ajoute le produit au panier (texte par défaut : « Acheter »). Un produit à variante unique est ajouté directement en achat unique, sinon la fenêtre de choix des options s'ouvre. Le lien est alors ignoré pour le bouton."
+        },
+        {
+          "type": "checkbox",
+          "id": "show_price",
+          "label": "Afficher le prix à côté du bouton",
+          "default": true
         }
       ]
     }

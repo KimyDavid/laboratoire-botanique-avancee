@@ -1,0 +1,102 @@
+{%- comment -%}
+  Side popup (drawer) configured in the header group, one section per popup.
+  It is opened by any button whose "Identifiant de la popup à ouvrir" setting matches its identifier
+  (the button gets aria-controls="side-popup-<identifier>", handled by the theme's x-drawer component).
+  In the theme editor, the popup opens when its section is selected.
+{%- endcomment -%}
+
+{%- assign popup_handle = section.settings.popup_id | handleize -%}
+
+{%- if popup_handle != blank -%}
+  <x-drawer id="side-popup-{{ popup_handle }}" class="drawer side-popup color-scheme color-scheme--dialog" horizontal-on-mobile>
+    {%- if section.settings.title != blank -%}
+      <p class="side-popup__title h3" slot="header">{{ section.settings.title }}</p>
+    {%- endif -%}
+
+    <div class="side-popup__body">
+      {%- if section.settings.content != blank -%}
+        <div class="side-popup__content prose">{{ section.settings.content }}</div>
+      {%- endif -%}
+
+      {%- for block in section.blocks -%}
+        <div class="side-popup__group" {{ block.shopify_attributes }}>
+          {%- if block.settings.title != blank -%}
+            <p class="side-popup__subtitle h6">{{ block.settings.title }}</p>
+          {%- endif -%}
+
+          {%- if block.settings.content != blank -%}
+            <div class="side-popup__content prose">{{ block.settings.content }}</div>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </x-drawer>
+
+  {%- if request.design_mode -%}
+    <script>
+      // Theme editor only: open the popup while its section is selected.
+      if (!window.sidePopupEditorListeners) {
+        window.sidePopupEditorListeners = true;
+
+        const getPopup = (event) => document.querySelector(`#shopify-section-${event.detail.sectionId} x-drawer.side-popup`);
+
+        document.addEventListener('shopify:section:select', (event) => getPopup(event)?.show());
+        document.addEventListener('shopify:section:deselect', (event) => getPopup(event)?.hide());
+      }
+    </script>
+  {%- endif -%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Popup latérale",
+  "enabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "popup_id",
+      "label": "Identifiant",
+      "info": "Ex : essais-cliniques. À renseigner dans le champ « Identifiant de la popup à ouvrir » d'un bouton. Chaque popup doit avoir un identifiant différent."
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre",
+      "default": "Essais cliniques"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Contenu",
+      "info": "Affiché en haut de la popup, avant les sous-parties."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "group",
+      "name": "Sous-partie",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Sous-titre",
+          "default": "Sous-titre"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Contenu",
+          "default": "<ul><li>88% ont constaté une peau visiblement restaurée au réveil</li></ul>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Popup latérale"
+    }
+  ]
+}
+{% endschema %}

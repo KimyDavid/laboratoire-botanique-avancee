@@ -4,13 +4,21 @@
   The same section produces 2 renderings depending on its settings:
   - light: background/text colors + "Afficher les séparateurs" + a small eyebrow in each figure
   - dark: light text on colored background, no separators, a title above the table, no eyebrow in figures
+  The "Pleine largeur" layout centers everything in a single column on desktop (title, table on one row, content,
+  button, small content) and can show a background image on desktop only.
 {%- endcomment -%}
 
 {%- assign stats = section.blocks | where: 'type', 'stat' -%}
 {%- assign stats_rows = stats.size | plus: 1 | divided_by: 2 -%}
 {%- assign last_row_start = stats_rows | minus: 1 | times: 2 -%}
+{%- assign stats_columns = stats.size | at_most: 4 | at_least: 1 -%}
+{%- assign popup_handle = section.settings.button_popup | handleize -%}
 
-<section style="background: {{ section.settings.background_color }}; color: {{ section.settings.text_color }}; --key-figures-row-gap: {{ section.settings.row_gap }}px;" class="key-figures section-spacing {% if section.settings.show_dividers %}key-figures--dividers{% endif %} {% render 'responsive-visibility', visibility: section.settings.visibility %}">
+<section style="background: {{ section.settings.background_color }}; color: {{ section.settings.text_color }}; --key-figures-row-gap: {{ section.settings.row_gap }}px; --key-figures-columns: {{ stats_columns }};" class="key-figures section-spacing {% if section.settings.layout == 'full' %}key-figures--full{% endif %} {% if section.settings.show_dividers %}key-figures--dividers{% endif %} {% render 'responsive-visibility', visibility: section.settings.visibility %}">
+  {%- if section.settings.background_image != blank -%}
+    {{- section.settings.background_image | image_url: width: 3000 | image_tag: class: 'key-figures__background md-max:hidden', loading: 'lazy', sizes: '100vw', widths: '1000,1400,1800,2200,2600,3000', alt: '' -}}
+  {%- endif -%}
+
   <div class="container">
     <div class="key-figures__inner">
       <div class="key-figures__text">
@@ -26,9 +34,14 @@
           <div class="key-figures__small prose">{{ section.settings.small_content }}</div>
         {%- endif -%}
 
-        {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
+        {%- if section.settings.button_label != blank and section.settings.button_link != blank or section.settings.button_label != blank and popup_handle != blank -%}
           <div class="key-figures__button {% render 'responsive-visibility', visibility: section.settings.button_visibility %}">
-            {%- render 'button', href: section.settings.button_link, style: section.settings.button_style, content: section.settings.button_label, background: section.settings.text_color, text_color: section.settings.background_color -%}
+            {%- if popup_handle != blank -%}
+              {%- assign popup_id = 'side-popup-' | append: popup_handle -%}
+              {%- render 'button', type: 'button', aria_controls: popup_id, style: section.settings.button_style, content: section.settings.button_label, background: section.settings.text_color, text_color: section.settings.background_color -%}
+            {%- else -%}
+              {%- render 'button', href: section.settings.button_link, style: section.settings.button_style, content: section.settings.button_label, background: section.settings.text_color, text_color: section.settings.background_color -%}
+            {%- endif -%}
           </div>
         {%- endif -%}
       </div>
@@ -129,6 +142,12 @@
       "label": "Lien du bouton"
     },
     {
+      "type": "text",
+      "id": "button_popup",
+      "label": "Identifiant de la popup à ouvrir",
+      "info": "Facultatif. Si renseigné, le bouton ouvre la popup latérale ayant cet identifiant (sections « Popup latérale » du Header Group), à la place du lien."
+    },
+    {
       "type": "select",
       "id": "button_style",
       "label": "Style du bouton",
@@ -152,6 +171,17 @@
     {
       "type": "header",
       "content": "Tableau de chiffres"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Mise en page (desktop)",
+      "options": [
+        { "value": "split", "label": "Contenu à gauche, tableau à droite" },
+        { "value": "full", "label": "Pleine largeur (tableau sur une ligne)" }
+      ],
+      "default": "split",
+      "info": "En pleine largeur, le contenu small s'affiche sous le bouton (desktop et mobile)."
     },
     {
       "type": "text",
@@ -207,6 +237,12 @@
       "id": "text_color",
       "label": "Couleur du texte",
       "default": "#3C626B"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Image de fond (desktop)",
+      "info": "Non affichée sur mobile : la couleur de fond est utilisée."
     }
   ],
   "blocks": [
