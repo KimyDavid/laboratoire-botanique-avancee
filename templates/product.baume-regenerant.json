@@ -281,7 +281,7 @@
           "settings": {
             "eyebrow": "",
             "value": "100%",
-            "label": "peau plus lisse"
+            "label": "peau plus lisse¹"
           }
         },
         "stat_LLK6wN": {
@@ -305,7 +305,7 @@
           "settings": {
             "eyebrow": "",
             "value": "87%",
-            "label": "Douceur"
+            "label": "Douceur¹"
           }
         }
       },
