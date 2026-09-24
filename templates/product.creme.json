@@ -147,8 +147,8 @@
         "image_secondary_2_position": "bottom",
         "image_position": "start",
         "eyebrow": "",
-        "title": "Collaboration avec dr. jean marc lemaître",
-        "content": "<p>Notre technologie exclusive Neo Regen est composée de cellules souches de Lys, de Pivoine et d’Eau de Baulieu. </p><p>- 136 gènes impliqués dans la jeunesse de la peau modulés. <br/><br/>- +71% de Collagène I.<br/><br/>- Régénération cellulaire, moléculaire et tissulaire.</p>",
+        "title": "dr. jean-marc lemaître (INSERM)",
+        "content": "<p>Créé avec le Dr Lemaître<strong>, l'expert français </strong>de la longévité, notre<strong> actif exclusif NEO-REGEN</strong> est composé de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.&nbsp;</p><ul><li>Il réactive<strong> 136 gènes</strong> impliqués dans la jeunesse de la peau.&nbsp;</li><li><strong>+71% de Collagène I </strong>dès 8 jours.</li><li>Il <strong>relance la régénération </strong>cellulaire, moléculaire et tissulaire.</li></ul>",
         "small_content": "",
         "button_label": "En savoir plus",
         "button_link": "/pages/expertise#technologie-neoregen",
@@ -409,6 +409,7 @@
             "content": "<p><strong>Fermeté & homogénéité du teint</strong></p><ul><li>Stimule la synthèse de collagène.</li><li>Régulation de la mélanogénèse.</li><li>Amélioration de l'apparence des rides et ridules et de la qualité de la peau.</li></ul>",
             "link_url": "#",
             "link_text": "",
+            "button_popup": "",
             "product": "",
             "show_price": true
           }
@@ -422,6 +423,7 @@
             "content": "<p><strong>Réparation & confort</strong></p><ul><li>Amélioration de la structure de l'épiderme.</li><li>Renouvellement des cellules de l'épiderme (Kératinocytes).</li><li>Stimulation de la production de facteur d'hydratation naturelle (NMF)</li><li>Renforcement de la barrière cutanée.</li></ul>",
             "link_url": "",
             "link_text": "",
+            "button_popup": "",
             "product": "",
             "show_price": true
           }
@@ -435,6 +437,7 @@
             "content": "<p><strong>Bouclier protecteur & antioxidation</strong></p><ul><li>Prévient les dommages des UV, lumière bleu et infra-rouge.</li><li>Protège la peau des polluants atmosphériques.</li><li>Protège la peau face aux changements de température.</li></ul>",
             "link_url": "",
             "link_text": "",
+            "button_popup": "",
             "product": "",
             "show_price": false
           }
@@ -617,6 +620,7 @@
             "content": "<p>Créée au sein de nos Laboratoires à Baulieu, la Crème Fondante Régénérative est <strong>exempt de tout ingrédient controversé</strong>. Zéro silicone, zéro PEG, zéro microplastique.</p><p>30% d’actifs.<br/>96% d'ingrédients d’origine naturelle.<br/>Notée Excellent sur Yuka.<br/>Délicat parfum frais et réconfortant.</p>",
             "link_url": "#",
             "link_text": "Voir la liste INCI",
+            "button_popup": "",
             "product": "",
             "show_price": true
           }
@@ -630,6 +634,7 @@
             "content": "<p>1. Prélevez une noisette de crème à l’aide de la spatule, puis le réchauffer au creux des mains.</p><p>2. à l’aide des paumes de mains, masser de bas en haut puis du centre vers les extrémités.</p>",
             "link_url": "",
             "link_text": "",
+            "button_popup": "",
             "product": "",
             "show_price": true
           }
@@ -643,6 +648,7 @@
             "content": "<p>La recharge est logée dans son pot en verre pour une utilisation quotidienne.<br/>Lors de vos déplacements, elle se déclipse et se referme avec son couvercle dédié, dissimulé dans le coffret, pour devenir un <strong>véritable format nomade</strong>. Système breveté.La recharge est conçue 100% en aluminium.</p><p>L’écrin est créé 100% avec des <strong>artisans français</strong>. Pot en verre, couvercle en bio-résine. </p>",
             "link_url": "",
             "link_text": "Acheter",
+            "button_popup": "",
             "product": "recharge-creme-regenerative-visage",
             "show_price": true
           }
@@ -703,7 +709,6 @@
         "separate_section_with_border": false,
         "visibility": "desktop",
         "hide_product_information": false,
-        "show_product_description": false,
         "show_buy_button": false,
         "show_product_secondary_image": false,
         "carousel_design": "default",
