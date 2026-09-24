@@ -219,7 +219,7 @@
           "settings": {
             "eyebrow": "",
             "value": "100%",
-            "label": "peau plus lisse²"
+            "label": "peau plus lisse¹"
           }
         },
         "stat_Enqmq6": {
@@ -227,7 +227,7 @@
           "settings": {
             "eyebrow": "",
             "value": "92%",
-            "label": "éclat¹"
+            "label": "éclat²"
           }
         },
         "stat_67Jbbd": {
@@ -235,15 +235,15 @@
           "settings": {
             "eyebrow": "",
             "value": "91%",
-            "label": "confort²"
+            "label": "confort¹"
           }
         },
         "stat_LnK8Bh": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+92%",
-            "label": "Confort²"
+            "value": "87%",
+            "label": "Peau plus dense¹"
           }
         }
       },
