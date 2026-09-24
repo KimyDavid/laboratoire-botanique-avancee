@@ -280,7 +280,7 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+97%",
+            "value": "97%",
             "label": "Fermeté¹"
           }
         },
@@ -288,15 +288,15 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "-80%",
-            "label": "Rides¹"
+            "value": "80%",
+            "label": "Rides atténuées¹"
           }
         },
         "stat_NcfrmY": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+90%",
+            "value": "90%",
             "label": "contour des yeux nourri¹"
           }
         },
@@ -304,7 +304,7 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+95%",
+            "value": "95%",
             "label": "hydratation¹"
           }
         }
