@@ -9447,10 +9447,6 @@ ul {
   ::part(rc-content-wrap) {
     gap: 40px;
   }
-
-  ::part(rc-purchase-option) {
-    flex: unset;
-  } 
 }
 
 ::part(rc-learn-more) {
