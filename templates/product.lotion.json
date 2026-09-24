@@ -169,8 +169,8 @@
       "type": "image-collage-text-lba",
       "name": "Actifs clés (mobile)",
       "settings": {
-        "image_main": "shopify://shop_images/1950X1950_CERAMIDES.webp",
-        "image_secondary_1": "shopify://shop_images/niacinamide_2_copy.webp",
+        "image_main": "shopify://shop_images/1950X1950_INGREDIENTS_MOUSSE.webp",
+        "image_secondary_1": "shopify://shop_images/1950X1950_INGREDIENTS_ACIDE_GLYCOLIQUE.webp",
         "image_secondary_1_position": "top",
         "image_secondary_2": "shopify://shop_images/1950X1950_ECTOINE.webp",
         "image_secondary_2_position": "bottom",
