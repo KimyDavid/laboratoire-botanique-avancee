@@ -304,8 +304,8 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+92%",
-            "label": "Confort²"
+            "value": "-18%",
+            "label": "perte d'eau²"
           }
         }
       },
@@ -319,7 +319,7 @@
       "settings": {
         "title": "Efficacité prouvée cliniquement",
         "content": "",
-        "small_content": "<p>1. Test clinique par mesure instrumentale, 39 femmes caucasiennes, 2 applications par jour pendant 3 mois. &nbsp; &nbsp; &nbsp;2. Test clinique par auto-scorage, 39 femmes caucasiennes, 2 applications par jour pendant 3 mois.</p>",
+        "small_content": "<p>1. Mesure instrumentale, 40 femmes caucasiennes, 2 applications par jour pendant 3 mois.<br/>2. Test clinique par auto-scorage, 40 femmes caucasiennes, 2 applications par jour pendant 3 mois.<br/>3. Auto-évaluation, 40 femmes caucasiennes, 2 applications par jour pendant 3 mois.<br/><br/></p>",
         "content_visibility": "desktop",
         "button_label": "Voir tous les résultats",
         "button_link": "#",
