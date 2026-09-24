@@ -177,7 +177,7 @@
         "image_position": "start",
         "eyebrow": "136 gènes impliqués dans la jeunesse de la peau",
         "title": "Des actifs clés",
-        "content": "<p><strong>Niacinamide (Vitamine B3)</strong> : Stimule la synthèse de collagène, unifie le teint et améliore visiblement la qualité de la peau.<br/><strong>7 Céramides :</strong> Restaurent la barrière cutanée, renforcent l'hydratation et apportent confort à la peau. <br/><strong>Ectoïne Biotech :</strong> Protège la peau des agressions environnementales et préserve son équilibre face au stress oxydatif.</p><h4>96% d’ingrédients d’origine naturelle</h4>",
+        "content": "<p><strong>Niacinamide&nbsp;(Vitamine B3)</strong> : Stimule la synthèse de collagène, unifie le teint et améliore visiblement la qualité de la peau.<br/><strong>7 Céramides&nbsp;:</strong> Restaurent la barrière cutanée, renforcent l'hydratation et apportent confort à la peau.&nbsp;<br/><strong>Ectoïne Biotech&nbsp;:</strong> Protège la peau des agressions environnementales et préserve son équilibre face au stress oxydatif.</p><h4>96% d’ingrédients d’origine naturelle</h4>",
         "small_content": "",
         "button_label": "Voir la liste INCI",
         "button_link": "",
@@ -319,11 +319,11 @@
       "settings": {
         "title": "Efficacité prouvée cliniquement",
         "content": "",
-        "small_content": "<p>1. Test clinique par mesure instrumentale, 39 femmes caucasiennes, 2 applications par jour pendant 3 mois.      2. Test clinique par auto-scorage, 39 femmes caucasiennes, 2 applications par jour pendant 3 mois.</p>",
+        "small_content": "<p>1. Test clinique par mesure instrumentale, 39 femmes caucasiennes, 2 applications par jour pendant 3 mois. &nbsp; &nbsp; &nbsp;2. Test clinique par auto-scorage, 39 femmes caucasiennes, 2 applications par jour pendant 3 mois.</p>",
         "content_visibility": "desktop",
         "button_label": "Voir tous les résultats",
         "button_link": "#",
-        "button_popup": "",
+        "button_popup": "results",
         "button_style": "outline",
         "button_visibility": "all",
         "layout": "full",
@@ -509,7 +509,7 @@
         "image_position": "end",
         "eyebrow": "",
         "title": "",
-        "content": "<p>Pensée comme un objet autonome, la recharge est dotée de son propre couvercle pour se transformer en format voyage.</p><p>Ainsi, votre produit peut s'utiliser sous deux formats différents : </p><ul><li><strong>le format deluxe</strong> pour la salle de bain, avec le pot en verre et le couvercle en résigne, réalisés par des entreprises du Patrimoine Vivant française.</li><li><strong>le format voyage</strong> : à l'ouverture de votre boite, récupérez le couvercle de voyage de votre recharge sous la première cale. Une fois déclipsée, la recharge se ferme avec ce couvercle et se transforme en format voyage, pour accompagner tous vos déplacements.</li></ul><p>Conçue en aluminium et protégée par deux dépôts de brevets, notre recharge incarne une nouvelle vision du soin de luxe, engagé et nomade.</p>",
+        "content": "<p>Pensée comme un objet autonome, la recharge est dotée de son propre couvercle pour se transformer en format voyage.</p><p>Ainsi, votre produit peut s'utiliser sous deux formats différents :&nbsp;</p><ul><li><strong>le format deluxe</strong> pour la salle de bain, avec le pot en verre et le couvercle en résigne, réalisés par des entreprises du Patrimoine Vivant française.</li><li><strong>le format voyage</strong> : à l'ouverture de votre boite, récupérez le couvercle de voyage de votre recharge sous la première cale. Une fois déclipsée, la recharge se ferme avec ce couvercle et se transforme en format voyage, pour accompagner tous vos déplacements.</li></ul><p>Conçue en aluminium et protégée par deux dépôts de brevets, notre recharge incarne une nouvelle vision du soin de luxe, engagé et nomade.</p>",
         "small_content": "",
         "button_label": "",
         "button_link": "",
@@ -564,7 +564,7 @@
         "image_position": "end",
         "eyebrow": "",
         "title": "",
-        "content": "<p>La recharge est logé dans son pot en verre pour une utilisation quotidienne.</p><p>Lors de vos déplacements, elle se déclipse et se referme avec son couvercle dédié, dissimulé dans le coffret, pour devenir un véritable format nomade. Système breveté.</p><p>La recharge est conçue 100% en aluminium. L’écrin est créé 100% avec des artisans français. Pot en verre, couvercle en bio-résine. </p>",
+        "content": "<p>La recharge est logé dans son pot en verre pour une utilisation quotidienne.</p><p>Lors de vos déplacements, elle se déclipse et se referme avec son couvercle dédié, dissimulé dans le coffret, pour devenir un véritable format nomade. Système breveté.</p><p>La recharge est conçue 100% en aluminium. L’écrin est créé 100% avec des artisans français. Pot en verre, couvercle en bio-résine.&nbsp;</p>",
         "small_content": "",
         "button_label": "Acheter",
         "button_link": "shopify://products/recharge-creme-regenerative-visage",
@@ -714,131 +714,6 @@
         "vertical_spacing_factor": 1,
         "subheading": ""
       }
-    },
-    "faq_YgE8kX": {
-      "type": "faq",
-      "blocks": {
-        "category_UYnjdk": {
-          "type": "category",
-          "settings": {
-            "title": "",
-            "icon": "none",
-            "icon_width": 16
-          }
-        },
-        "question_TNA9xR": {
-          "type": "question",
-          "settings": {
-            "question": "Quelle crème visage choisir ?",
-            "answer": "<p>La bonne crème est celle qui répond aux besoins biologiques réels de votre peau,  pas seulement à ses signes visibles. Avant de choisir une texture, interrogez les actifs : sont-ils présents en concentration suffisante ? Leur efficacité a-t-elle été mesurée sur tissu vivant ?</p><p>Chez LBA, deux formats selon l'intensité souhaitée : la <strong>Crème Fondante Régénérative</strong> pour une régénération quotidienne profonde, et le <strong>Sérum en Crème Régénératif</strong> pour les peaux qui cherchent une concentration maximale d'actifs. Les deux reposent sur la technologie NEO-REGEN® et les mêmes standards de validation clinique.</p>"
-          }
-        },
-        "question_mbakFd": {
-          "type": "question",
-          "settings": {
-            "question": "Quels sont les actifs dont l'efficacité est réellement prouvée ?",
-            "answer": "<p>Parmi les ingrédients les mieux documentés scientifiquement : <strong>rétinol, niacinamide, acide hyaluronique, céramides</strong>. Nos formules intègrent niacinamide et sept types de céramides tout en allant plus loin avec des actifs biotechnologiques propriétaires que la recherche conventionnelle n'avait pas encore explorés à ce niveau.</p><p>Cellules souches de lys blanc et de pivoine, Eau de Baulieu minéralisée par la roche basaltique, ectoine : leur efficacité est évaluée sur organoïdes de peau humaine en collaboration avec le Pr Jean-Marc Lemaître, directeur de recherche à l'Inserm. Non pour valider une allégation mais pour comprendre ce qui se passe réellement dans les tissus.</p>"
-          }
-        },
-        "question_iawK4y": {
-          "type": "question",
-          "settings": {
-            "question": "À quoi sert la niacinamide dans un soin visage ?",
-            "answer": "<p><strong>La niacinamide, ou vitamine B3, est l'un des actifs les mieux documentés en cosmétique</strong>. Elle soutient la synthèse des céramides, renforce la barrière cutanée, unifie le teint et réduit la visibilité des pores. Elle présente également des propriétés anti-oxydantes et anti-inflammatoires qui en font un actif de fond particulièrement polyvalent.</p><p>Dans nos formules, la niacinamide n'est pas utilisée isolément, elle s'intègre dans une <strong>synergie d'actifs biotechnologiques</strong> conçue pour adresser les mécanismes profonds du vieillissement cutané, pas seulement ses effets visibles.</p>"
-          }
-        },
-        "question_Va8eLY": {
-          "type": "question",
-          "settings": {
-            "question": "Quels actifs contre les rides ?",
-            "answer": "<p>Les actifs dont l'action sur les rides est scientifiquement documentée incluent le rétinol, les peptides de signalisation, la niacinamide, et les céramides. La recherche sur les cellules souches végétales ouvre aujourd'hui une voie complémentaire : agir non pas sur le symptôme, mais sur la capacité cellulaire à maintenir la structure du tissu.</p><p>La technologie NEO-REGEN® de LBA a démontré une action mesurable sur <strong>136 gènes impliqués dans la régénération cutanée</strong>, avec des résultats cliniques de −21 % de rides et +53 % de fermeté à trois mois, mesurés sur tissu vivant.</p>"
-          }
-        },
-        "question_azq9VR": {
-          "type": "question",
-          "settings": {
-            "question": "Quelle est la différence entre un sérum et une crème visage ?",
-            "answer": "<p><strong>Un sérum délivre une concentration élevée d'actifs</strong> dans les couches profondes de l'épiderme. <strong>Une crème renforce la barrière cutanée et maintient l'hydratation</strong>. Les deux remplissent des fonctions biologiques complémentaires.</p><p>Chez LBA, nous avons dépassé cette dichotomie avec le <strong>Sérum en Crème Régénératif</strong> : une texture hybride à structure lamellaire, conçue pour combiner la pénétration accélérée d'un sérum et l'action nourrissante d'une crème. Utilisé seul ou en association avec la Crème Fondante, il constitue un protocole de régénération complet.</p>"
-          }
-        },
-        "question_kA6tPK": {
-          "type": "question",
-          "settings": {
-            "question": "Pourquoi produire des actifs en bioréacteurs ?",
-            "answer": "<p>La culture en bioréacteurs permet de multiplier des cellules souches végétales sélectionnées dans un environnement strictement contrôlé — sans aléas climatiques, sans pesticides, sans extraction massive sur les écosystèmes.</p><p><strong>Les avantages sont multiples</strong> : traçabilité absolue, composition stable et reproductible, pureté supérieure, impact environnemental réduit. Chez LBA, c'est le procédé utilisé pour l'ensemble de nos actifs végétaux. Un fragment infime d'une plante du Domaine de Baulieu suffit à donner naissance à des millions de cellules souches aux propriétés régénératives intactes.</p>"
-          }
-        },
-        "question_4mxHGy": {
-          "type": "question",
-          "settings": {
-            "question": "Cette crème est-elle anti-âge ?",
-            "answer": "<p>Elle s'inscrit dans une <strong>démarche de longévité cutanée</strong> — ce qui est différent. L'approche anti-âge est corrective : elle agit sur les signes visibles du vieillissement. L'approche régénérative est préventive et structurelle : elle soutient la capacité de la peau à se renouveler, à maintenir sa densité, son éclat, sa vitalité dans le temps.</p><p>Chez LBA, nous ne combattons pas le vieillissement. Nous accompagnons la peau pour qu'elle reste ce qu'elle est capable d'être.</p>"
-          }
-        },
-        "question_8Ay4Yn": {
-          "type": "question",
-          "settings": {
-            "question": "<strong>À partir de quel âge utiliser les soins LBA ?</strong>",
-            "answer": "<p>Dès que la peau nécessite un soutien face au stress environnemental ou aux premiers signes de ralentissement cellulaire, généralement à partir de la trentaine, parfois plus tôt selon les peaux et les modes de vie.</p><p><strong>La cosmétique régénérative ne s'adresse pas à un âge</strong>. Elle s'adresse à une peau qui cherche à préserver sa vitalité dans la durée.</p>"
-          }
-        },
-        "question_pmtCWf": {
-          "type": "question",
-          "settings": {
-            "question": "Les soins LBA conviennent-ils aux peaux sensibles ?",
-            "answer": "<p>Nos formules sont conçues pour être biocompatibles , c'est-à-dire formulées en affinité avec la physiologie naturelle de la peau, <strong>sans ingrédients perturbateurs, sans silicones, sans PEG</strong>. Cette approche les rend particulièrement adaptées aux peaux exigeantes et aux peaux sensibles.</p><p>En cas de doute, <strong>notre conciergerie Le Cercle</strong> est disponible pour un conseil personnalisé avant toute adoption de rituel.</p>"
-          }
-        },
-        "question_KEwyTG": {
-          "type": "question",
-          "settings": {
-            "question": "Peut-on utiliser les soins LBA matin et soir ?",
-            "answer": "<p>Oui, nos formules sont pensées pour une <strong>utilisation quotidienne, matin et soir</strong>. La peau régénère principalement la nuit : c'est le moment idéal pour l'application du Sérum en Crème. Le matin, la Crème Fondante prépare et protège la barrière cutanée pour la journée.</p>"
-          }
-        },
-        "question_PkM9Be": {
-          "type": "question",
-          "settings": {
-            "question": "La formule LBA respecte-t-elle la physiologie de la peau ?",
-            "answer": "<p>C'est l'exigence centrale de notre approche formulatoire. Nos structures lamellaires biomimétiques reproduisent l'<strong>organisation naturelle des lipides cutanés</strong> — une architecture calquée sur la barrière épidermique, qui permet aux actifs de pénétrer là où ils doivent agir, sans perturber l'équilibre naturel de la peau.</p><p>Formuler en respectant la peau n'est <strong>pas un choix marketing</strong>. C'est un <strong>impératif biologique</strong>.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "category_UYnjdk",
-        "question_TNA9xR",
-        "question_mbakFd",
-        "question_iawK4y",
-        "question_Va8eLY",
-        "question_azq9VR",
-        "question_kA6tPK",
-        "question_4mxHGy",
-        "question_8Ay4Yn",
-        "question_pmtCWf",
-        "question_KEwyTG",
-        "question_PkM9Be"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".faq__container {background: #ffffff !important;}",
-        ".faq__container::before {background: #ffffff !important; opacity: 1 !important;}",
-        ".faq__wrapper,.section-stack,.container {background: #ffffff !important;}"
-      ],
-      "name": "t:sections.faq.presets.faq.name",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "image_size": "auto",
-        "remove_vertical_spacing": true,
-        "separate_section_with_border": true,
-        "show_categories": false,
-        "content_width": "sm",
-        "subheading": "",
-        "title": "FAQ",
-        "content": "",
-        "overlay_color": "#000000",
-        "overlay_opacity": 30,
-        "id": ""
-      }
     }
   },
   "order": [
@@ -858,7 +733,6 @@
     "image_collage_text_lba_mmANCW",
     "178549901462df8b58",
     "multi_column_8zDNdN",
-    "featured_collections_fmd6QB",
-    "faq_YgE8kX"
+    "featured_collections_fmd6QB"
   ]
 }
