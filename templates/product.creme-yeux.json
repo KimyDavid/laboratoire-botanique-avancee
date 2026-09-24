@@ -32,7 +32,7 @@
         "text_qa4MPD": {
           "type": "text",
           "settings": {
-            "text": "<h4>Made in france. 96% d’ingrédients d’origine naturelle. Sans ingrédient controversé. Végan.</h4>"
+            "text": "<h4>Made in france. 97% d’ingrédients d’origine naturelle. Sans ingrédient controversé. Végan.</h4>"
           }
         },
         "relative_products_JBLBDc": {
@@ -218,15 +218,15 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+97%",
-            "label": "Fermeté¹"
+            "value": "97%",
+            "label": "paupière ferme¹"
           }
         },
         "stat_Enqmq6": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "-80%",
+            "value": "80%",
             "label": "rides¹"
           }
         },
