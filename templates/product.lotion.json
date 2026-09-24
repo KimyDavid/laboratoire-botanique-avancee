@@ -226,8 +226,8 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "95%",
-            "label": "Hydratation¹"
+            "value": "100%",
+            "label": "confort et douceur¹"
           }
         },
         "stat_67Jbbd": {
@@ -242,8 +242,8 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "100%",
-            "label": "Confort¹"
+            "value": "95%",
+            "label": "Hydratation¹"
           }
         }
       },
