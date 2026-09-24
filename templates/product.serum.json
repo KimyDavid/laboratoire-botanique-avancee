@@ -219,7 +219,7 @@
           "settings": {
             "eyebrow": "",
             "value": "+53%",
-            "label": "Fermeté²"
+            "label": "Fermeté³"
           }
         },
         "stat_Enqmq6": {
@@ -227,7 +227,7 @@
           "settings": {
             "eyebrow": "",
             "value": "+24%",
-            "label": "Uniformité du teint¹"
+            "label": "Uniformité du teint²"
           }
         },
         "stat_67Jbbd": {
@@ -243,7 +243,7 @@
           "settings": {
             "eyebrow": "",
             "value": "+92%",
-            "label": "Confort²"
+            "label": "Confort¹"
           }
         }
       },
