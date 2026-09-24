@@ -9443,12 +9443,6 @@ ul {
   margin: 0;
 }
 
-@media (min-width: 1000px) {
-  ::part(rc-content-wrap) {
-    gap: 40px;
-  }
-}
-
 ::part(rc-learn-more) {
   height: 20px;
 }
