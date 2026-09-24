@@ -177,7 +177,7 @@
         "image_position": "start",
         "eyebrow": "136 gènes impliqués dans la jeunesse de la peau",
         "title": "Des actifs clés",
-        "content": "<p><strong>Niacinamide&nbsp;(Vitamine B3)</strong> : Stimule la synthèse de collagène, unifie le teint et améliore visiblement la qualité de la peau.<br/><strong>7 Céramides&nbsp;:</strong> Restaurent la barrière cutanée, renforcent l'hydratation et apportent confort à la peau.&nbsp;<br/><strong>Ectoïne Biotech&nbsp;:</strong> Protège la peau des agressions environnementales et préserve son équilibre face au stress oxydatif.</p><h4>96% d’ingrédients d’origine naturelle</h4>",
+        "content": "<p><strong>Cellules Souches de Tubéreuse Biotech</strong> : Stimulent la production de collagène et d'élastine pour une peau plus ferme et redensifiée.&nbsp;<strong><br/><br/>Tétrapeptides + Caféine</strong> : Activent la microcirculation pour réduire visiblement les poches et les cernes.<br/><br/><strong>Ectoïne Biotech</strong> : Protège la peau des agressions environnementales et préserve son équilibre face au stress oxydatif.</p><h4>97% d’ingrédients d’origine naturelle</h4>",
         "small_content": "",
         "button_label": "Voir la liste INCI",
         "button_link": "",
@@ -218,32 +218,32 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+53%",
-            "label": "Fermeté²"
+            "value": "+97%",
+            "label": "Fermeté¹"
           }
         },
         "stat_Enqmq6": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+24%",
-            "label": "Uniformité du teint¹"
+            "value": "-80%",
+            "label": "rides¹"
           }
         },
         "stat_67Jbbd": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "-20%",
-            "label": "Rides²"
+            "value": "+90%",
+            "label": "contour des yeux nourri¹"
           }
         },
         "stat_LnK8Bh": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+92%",
-            "label": "Confort²"
+            "value": "+95%",
+            "label": "hydratation¹"
           }
         }
       },
@@ -257,7 +257,7 @@
       "settings": {
         "title": "Efficacité prouvée cliniquement",
         "content": "",
-        "small_content": "<p>1. Test clinique par mesure instrumentale, 39 femmes caucasiennes, 2 applications par jour pendant 3 mois. / 2. Test clinique par auto-scorage, 39 femmes caucasiennes, 2 applications par jour pendant 3 mois.</p>",
+        "small_content": "<p>1. Auto évaluation, 60 femmes caucasiennes, 2 applications par jour pendant 1 mois.</p>",
         "content_visibility": "desktop",
         "button_label": "Voir tous les résultats",
         "button_link": "#",
@@ -409,6 +409,7 @@
             "content": "<p><strong>Fermeté & homogénéité du teint</strong></p><ul><li>Stimule la synthèse de collagène.</li><li>Régulation de la mélanogénèse.</li><li>Amélioration de l'apparence des rides et ridules et de la qualité de la peau.</li></ul>",
             "link_url": "#",
             "link_text": "",
+            "button_popup": "",
             "product": "",
             "show_price": true
           }
@@ -422,6 +423,7 @@
             "content": "<p><strong>Réparation & confort</strong></p><ul><li>Amélioration de la structure de l'épiderme.</li><li>Renouvellement des cellules de l'épiderme (Kératinocytes).</li><li>Stimulation de la production de facteur d'hydratation naturelle (NMF)</li><li>Renforcement de la barrière cutanée.</li></ul>",
             "link_url": "",
             "link_text": "",
+            "button_popup": "",
             "product": "",
             "show_price": true
           }
@@ -435,6 +437,7 @@
             "content": "<p><strong>Bouclier protecteur & antioxidation</strong></p><ul><li>Prévient les dommages des UV, lumière bleu et infra-rouge.</li><li>Protège la peau des polluants atmosphériques.</li><li>Protège la peau face aux changements de température.</li></ul>",
             "link_url": "",
             "link_text": "",
+            "button_popup": "",
             "product": "",
             "show_price": false
           }
@@ -617,6 +620,7 @@
             "content": "<p>Créée au sein de nos Laboratoires à Baulieu, la Crème Fondante Régénérative est <strong>exempt de tout ingrédient controversé</strong>. Zéro silicone, zéro PEG, zéro microplastique.</p><p>30% d’actifs.<br/>96% d'ingrédients d’origine naturelle.<br/>Notée Excellent sur Yuka.<br/>Délicat parfum frais et réconfortant.</p>",
             "link_url": "#",
             "link_text": "Voir la liste INCI",
+            "button_popup": "",
             "product": "",
             "show_price": true
           }
@@ -630,6 +634,7 @@
             "content": "<p>1. Prélevez une noisette de crème à l’aide de la spatule, puis le réchauffer au creux des mains.</p><p>2. à l’aide des paumes de mains, masser de bas en haut puis du centre vers les extrémités.</p>",
             "link_url": "",
             "link_text": "",
+            "button_popup": "",
             "product": "",
             "show_price": true
           }
@@ -643,6 +648,7 @@
             "content": "<p>La recharge est logée dans son pot en verre pour une utilisation quotidienne.<br/>Lors de vos déplacements, elle se déclipse et se referme avec son couvercle dédié, dissimulé dans le coffret, pour devenir un <strong>véritable format nomade</strong>. Système breveté.La recharge est conçue 100% en aluminium.</p><p>L’écrin est créé 100% avec des <strong>artisans français</strong>. Pot en verre, couvercle en bio-résine. </p>",
             "link_url": "",
             "link_text": "Acheter",
+            "button_popup": "",
             "product": "recharge-creme-regenerative-visage",
             "show_price": true
           }
