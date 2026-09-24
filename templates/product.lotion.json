@@ -177,7 +177,7 @@
         "image_position": "start",
         "eyebrow": "136 gènes impliqués dans la jeunesse de la peau",
         "title": "Des actifs clés",
-        "content": "<p><strong>Cellules souches de Mousse Biotech</strong> : Optimisent les mécanismes naturels d'hydratation et renforcent la fonction barrière pour une peau durablement hydratée.<br/><br/><strong>Acide Glycolique</strong> : Exfolie en douceur, stimule le renouvellement cellulaire et affine visiblement le grain de peau.&nbsp;<br/><br/><strong>Ectoïne Biotech </strong>: Protège la peau des agressions environnementales et préserve son équilibre face au stress oxydatif.</p><h4>96% d’ingrédients d’origine naturelle</h4>",
+        "content": "<p><strong>Cellules souches de Mousse Biotech</strong> : Renforcent la fonction barrière de la peau et hydratent en profondeur.<br/><br/><strong>Acide Glycolique</strong> : Exfolie en douceur, stimule le renouvellement cellulaire et affine visiblement le grain de peau.&nbsp;<br/><br/><strong>Ectoïne Biotech </strong>: Bouclier protecteur, antioxydant, protège la peau des agressions extérieures.</p><h4>96% d’ingrédients d’origine naturelle</h4>",
         "small_content": "",
         "button_label": "Voir la liste INCI",
         "button_link": "",
@@ -226,8 +226,8 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "95%",
-            "label": "Hydratation¹"
+            "value": "100%",
+            "label": "CONFORT ET DOUCEUR¹"
           }
         },
         "stat_67Jbbd": {
@@ -242,8 +242,8 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "100%",
-            "label": "Confort¹"
+            "value": "95%",
+            "label": "HYDRATATION¹"
           }
         }
       },
@@ -342,7 +342,7 @@
         "item_tHqTnd": {
           "type": "item",
           "settings": {
-            "text": "PRODUIT en France"
+            "text": "Formulé en France"
           }
         },
         "item_9W6fTT": {
@@ -404,9 +404,9 @@
           "type": "image_with_text",
           "settings": {
             "image": "shopify://shop_images/1950X1950_INGREDIENTS_MOUSSE.webp",
-            "title": "<strong>Cellules souches de Mousse</strong>",
+            "title": "<strong>Cellules souches de Mousse Biotech</strong>&nbsp;",
             "heading_tag": "h3",
-            "content": "<p>Renforcent la fonction barrière de la peau et hydratent en profondeur.</p>",
+            "content": "<p>Optimisent les mécanismes naturels d'hydratation et renforcent la fonction barrière pour une peau durablement hydratée.</p>",
             "link_url": "#",
             "link_text": "",
             "button_popup": "",
@@ -434,7 +434,7 @@
             "image": "shopify://shop_images/1950X1950_ECTOINE.webp",
             "title": "ECTOÏNE BIOTECH",
             "heading_tag": "h3",
-            "content": "<p>Bouclier protecteur, antioxydant, protège la peau des agressions extérieures.</p>",
+            "content": "<p>Protège la peau des agressions environnementales et préserve son équilibre face au stress oxydatif.</p>",
             "link_url": "",
             "link_text": "",
             "button_popup": "",
