@@ -342,7 +342,7 @@
         "item_tHqTnd": {
           "type": "item",
           "settings": {
-            "text": "Formulé en France"
+            "text": "produit en France"
           }
         },
         "item_9W6fTT": {
@@ -404,7 +404,7 @@
           "type": "image_with_text",
           "settings": {
             "image": "shopify://shop_images/1950X1950_INGREDIENTS_MOUSSE.webp",
-            "title": "<strong>Cellules souches de Mousse Biotech</strong>&nbsp;",
+            "title": "<strong>Cellules souches de Mousse</strong>",
             "heading_tag": "h3",
             "content": "<p>Optimisent les mécanismes naturels d'hydratation et renforcent la fonction barrière pour une peau durablement hydratée.</p>",
             "link_url": "#",
