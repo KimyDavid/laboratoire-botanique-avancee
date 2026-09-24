@@ -280,16 +280,16 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+97%",
-            "label": "Fermeté²"
+            "value": "100%",
+            "label": "peau plus lisse"
           }
         },
         "stat_LLK6wN": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+80%",
-            "label": "Uniformité du teint¹"
+            "value": "+92%",
+            "label": "éclat¹"
           }
         },
         "stat_NcfrmY": {
