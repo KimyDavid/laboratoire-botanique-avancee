@@ -404,7 +404,7 @@
           "type": "image_with_text",
           "settings": {
             "image": "shopify://shop_images/niacinamide_2_copy.webp",
-            "title": "&nbsp;Cellules Souches d’iris Biotech",
+            "title": "Cellules Souches d’iris Biotech",
             "heading_tag": "h3",
             "content": "<p>Stimulent les constituants essentiels du derme pour améliorer fermeté, élasticité et souplesse.</p>",
             "link_url": "#",
@@ -418,7 +418,7 @@
           "type": "image_with_text",
           "settings": {
             "image": "shopify://shop_images/1950X1950_CERAMIDES.webp",
-            "title": "&nbsp;Centalla Asiatica Biotech",
+            "title": "Centalla Asiatica Biotech",
             "heading_tag": "h3",
             "content": "<p>Apaise la peau, favorise sa réparation et révèle un teint plus éclatant.</p>",
             "link_url": "",
@@ -434,7 +434,7 @@
             "image": "shopify://shop_images/1950X1950_ECTOINE.webp",
             "title": "ECTOÏNE BIOTECH",
             "heading_tag": "h3",
-            "content": "<p><strong>Bouclier protecteur & antioxidation</strong></p><ul><li>Prévient les dommages des UV, lumière bleu et infra-rouge.</li><li>Protège la peau des polluants atmosphériques.</li><li>Protège la peau face aux changements de température.</li></ul>",
+            "content": "<p>Protège la peau des agressions environnementales et préserve son équilibre face au stress oxydatif.</p>",
             "link_url": "",
             "link_text": "",
             "button_popup": "",
