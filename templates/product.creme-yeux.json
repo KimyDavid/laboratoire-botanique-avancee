@@ -226,23 +226,23 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "80%",
-            "label": "rides¹"
+            "value": "83%",
+            "label": "rides réduites¹"
           }
         },
         "stat_67Jbbd": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+90%",
-            "label": "contour des yeux nourri¹"
+            "value": "93%",
+            "label": "regard reposé¹"
           }
         },
         "stat_LnK8Bh": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+95%",
+            "value": "95%",
             "label": "hydratation¹"
           }
         }
