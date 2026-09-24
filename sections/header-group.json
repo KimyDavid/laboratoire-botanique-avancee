@@ -195,6 +195,7 @@
       "blocks": {
         "group_bfcgnJ": {
           "type": "group",
+          "disabled": true,
           "settings": {
             "title": "Sous-titre",
             "content": "<ul><li>88% ont constaté une peau visiblement restaurée au réveil</li></ul>"
@@ -208,7 +209,7 @@
       "settings": {
         "popup_id": "results",
         "title": "Les résultats après 1 mois",
-        "content": "<p>La Crème yeux réduit l’apparence des rides et des ridules du contour des yeux 83%<br/><br/>La Crème yeux comble les rides de la patte d’oie et les ridules, les rendant moins visibles 83%<br/><br/>La Crème yeux lisse l’apparence des ridules sous les yeux 83%<br/><br/>La Crème yeux rend les paupières plus fermes 97%<br/><br/>La Crème yeux réduit visiblement les signes de l’âge du contour des yeux 83%<br/><br/>La Crème yeux améliore la fermeté du contour des yeux 88%<br/><br/>La Crème yeux embellit le regard 88 % La Crème yeux réduit l’apparence des poches 83%&nbsp;<br/><br/>La Crème yeux réduit le gonflement des paupières au réveil 88%<br/><br/>La Crème yeux procure une sensation plus confortable pour les yeux au réveil 90%<br/><br/>&nbsp;La Crème yeux apporte au regard une apparence reposée 93%<br/><br/>La Crème yeux réduit la visibilité des cernes au réveil 80%<br/><br/>La Crème yeux revitalise le contour des yeux 93%<br/></p><p>&nbsp;La Crème yeux apaise le contour des yeux 93%<br/><br/>La Crème yeux rend le contour des yeux plus confortable 95%&nbsp;<br/><br/>La Crème yeux rend le regard plus éclatant et lumineux 93%<br/><br/>&nbsp;La Crème yeux nourrit le contour des yeux tout au long de la journée 90%<br/><br/>La Crème yeux rend l’apparence du contour des yeux plus souple 93%<br/></p><p>La Crème yeux améliore l’hydratation du contour des yeux 95%<br/><br/>La Crème yeux respecte la zone délicate du contour des yeux 100%<br/><br/>*Auto évaluation, 60 femmes caucasiennes, 2 applications par jour pendant 1 mois.</p>"
+        "content": "<p><span style=\"text-decoration:underline\">Scorage clinique<br/></span>+41 % de luminosité après 3 mois&nbsp;<br/><br/><span style=\"text-decoration:underline\">Mesure instrumentale clinique<br/></span>Glossimètre : +47 % d'éclat immédiatement<br/>Vapomètre : +18% PIE (Perte Insensible en Eau) après 3 mois : renforcement de la fonction barrière<br/>LC-OCT (testé après 3 mois)<br/>+47% d'éclat&nbsp;<br/>+53% de fermeté<br/>-21% de rides<br/>+27% peau douce<br/><br/><span style=\"text-decoration:underline\">Autoscorage</span>&nbsp;<br/><br/>IMMEDIATEMENT &nbsp;<br/>Ma peau parait plus hydratée 87,5%&nbsp;<br/><br/>APRES 7 JOURS&nbsp;<br/>Mon teint parait plus éclatant, plus lumineux 85%&nbsp;<br/>Ma peau parait plus douce 87,5%&nbsp;<br/><br/>APRES 1 MOIS<br/>Ma peau parait plus hydratée 92,5%<br/>Ma peau parait plus lisse 85% &nbsp;<br/>Ma peau parait plus souple, plus élastique 85 %<br/>Ma peau est comme revitalisée 87,5% &nbsp;Mon teint parait plus lumineux, plus éclatant 95 %&nbsp;<br/>Ma peau est comme défatiguée 90 %<br/><br/></p>"
       }
     }
   },
