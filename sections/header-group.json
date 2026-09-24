@@ -173,6 +173,7 @@
       "blocks": {
         "group_nkUy9B": {
           "type": "group",
+          "disabled": true,
           "settings": {
             "title": "Sous-titre",
             "content": "<ul><li>88% ont constaté une peau visiblement restaurée au réveil</li></ul>"
