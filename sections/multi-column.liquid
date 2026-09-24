@@ -66,7 +66,7 @@
                   assign block_button_label = block_button_label | default: 'Acheter'
                   assign block_variant = block_product.selected_or_first_available_variant
                 endif
-                assign popup_handle = section.settings.button_popup | handleize
+                assign popup_handle = block.settings.button_popup | handleize
               -%}
 
               {%- capture sizes_attribute -%}
@@ -119,9 +119,16 @@
 
                   {{- block.settings.content -}}
 
-                  {%- if block_button_label != blank and block_url != blank -%}
+                  {%- if block_button_label != blank and block_url != blank or block_button_label != blank and popup_handle != blank -%}
                     <div class="multi-column__footer">
-                      {%- if block_product != blank -%}
+                      {%- if popup_handle != blank -%}
+                        {%- assign popup_id = 'side-popup-' | append: popup_handle -%}
+                        {%- render 'multi-column-button', style: button_style, size: section.settings.button_size, type: 'button', content: block_button_label, aria_controls: popup_id -%}
+
+                        {%- if block_product != blank and block.settings.show_price -%}
+                          <span class="multi-column__price h3">{{ block_product.price | money }}</span>
+                        {%- endif -%}
+                      {%- elsif block_product != blank -%}
                         {%- comment -%}Without a selling_plan field, the variant is added as a one-time purchase, even if the product offers subscriptions{%- endcomment -%}
                         {%- if block_product.variants.size == 1 and block_variant.requires_selling_plan == false -%}
                           <product-form>
@@ -463,7 +470,7 @@
           "type": "text",
           "id": "button_popup",
           "label": "Identifiant de la popup à ouvrir",
-          "info": "Facultatif. Si renseigné, le bouton ouvre la popup latérale ayant cet identifiant (sections « Popup latérale » du Header Group), à la place du lien."
+          "info": "Facultatif. Si renseigné, le bouton ouvre la popup latérale ayant cet identifiant (sections « Popup latérale » du Header Group), à la place du lien ou de l'ajout au panier."
         },
         {
           "type": "product",
@@ -560,6 +567,12 @@
           "type": "text",
           "id": "link_text",
           "label": "t:global.text.link_text"
+        },
+        {
+          "type": "text",
+          "id": "button_popup",
+          "label": "Identifiant de la popup à ouvrir",
+          "info": "Facultatif. Si renseigné, le bouton ouvre la popup latérale ayant cet identifiant (sections « Popup latérale » du Header Group), à la place du lien ou de l'ajout au panier."
         },
         {
           "type": "product",

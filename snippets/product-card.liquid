@@ -22,7 +22,6 @@ Supported variables
 * hide_product_information: if set to true, all content (vendor, badge, title...) are not rendered, to create image-based grid
 * quick_buy_context: a unique text to dissociate quick buy if the same product is embedded multiple times
 * show_buy_button: show or not the "Acheter" link next to the price (default to true if nothing is set)
-* show_short_description: if set to true, displays the "custom.vignette_courte_description" metafield under the subtitle (only when it is filled)
 {%- endcomment -%}
 
 {%- liquid
@@ -159,9 +158,6 @@ Supported variables
               </div>
             {% else %}
             {% endif %}
-            {%- if show_short_description and product.metafields.custom.vignette_courte_description != blank -%}
-              <p class="product-description">{{ product.metafields.custom.vignette_courte_description.value | escape | newline_to_br }}</p>
-            {%- endif -%}
             <div class="container_cta_price">
               {%- if show_prices -%}
                 {%- if product.tags contains 'has-recharge' and collection.handle != 'les-recharges' -%}
