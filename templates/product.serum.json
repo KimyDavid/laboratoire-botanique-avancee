@@ -281,7 +281,7 @@
           "settings": {
             "eyebrow": "",
             "value": "75%",
-            "label": "peau plus souple et élastique ²"
+            "label": "peau plus souple et élastique³"
           }
         },
         "stat_LLK6wN": {
@@ -289,7 +289,7 @@
           "settings": {
             "eyebrow": "",
             "value": "+53%",
-            "label": "Fermeté¹"
+            "label": "Fermeté²"
           }
         },
         "stat_NcfrmY": {
@@ -305,7 +305,7 @@
           "settings": {
             "eyebrow": "",
             "value": "-18%",
-            "label": "perte d'eau²"
+            "label": "perte d'eau¹"
           }
         }
       },
