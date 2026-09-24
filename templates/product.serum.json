@@ -288,15 +288,15 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+24%",
-            "label": "Uniformité du teint¹"
+            "value": "+53%",
+            "label": "Fermeté¹"
           }
         },
         "stat_NcfrmY": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "-20%",
+            "value": "-21%",
             "label": "Rides²"
           }
         },
