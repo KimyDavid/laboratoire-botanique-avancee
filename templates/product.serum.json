@@ -218,7 +218,7 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+53%",
+            "value": "75%",
             "label": "Fermeté³"
           }
         },
@@ -226,7 +226,7 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+24%",
+            "value": "+53%",
             "label": "Uniformité du teint²"
           }
         },
@@ -234,7 +234,7 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "-20%",
+            "value": "-21%",
             "label": "Rides²"
           }
         },
@@ -242,7 +242,7 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+92%",
+            "value": "-18%",
             "label": "Confort¹"
           }
         }
@@ -257,7 +257,7 @@
       "settings": {
         "title": "Efficacité prouvée cliniquement",
         "content": "",
-        "small_content": "<p>1. Test clinique par mesure instrumentale, 39 femmes caucasiennes, 2 applications par jour pendant 3 mois. / 2. Test clinique par auto-scorage, 39 femmes caucasiennes, 2 applications par jour pendant 3 mois.</p>",
+        "small_content": "<p>1. Mesure instrumentale, 40 femmes caucasiennes, 2 applications par jour pendant 3 mois.<br/>2. Test clinique par auto-scorage, 40 femmes caucasiennes, 2 applications par jour pendant 3 mois.<br/>3. Auto-évaluation, 40 femmes caucasiennes, 2 applications par jour pendant 3 mois.</p>",
         "content_visibility": "desktop",
         "button_label": "Voir tous les résultats",
         "button_link": "#",
