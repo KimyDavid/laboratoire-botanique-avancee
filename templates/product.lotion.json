@@ -226,8 +226,8 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "100%",
-            "label": "CONFORT ET DOUCEUR¹"
+            "value": "95%",
+            "label": "Hydratation¹"
           }
         },
         "stat_67Jbbd": {
@@ -242,8 +242,8 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "95%",
-            "label": "HYDRATATION¹"
+            "value": "100%",
+            "label": "Confort¹"
           }
         }
       },
@@ -342,7 +342,7 @@
         "item_tHqTnd": {
           "type": "item",
           "settings": {
-            "text": "Formulé en France"
+            "text": "PRODUIT en France"
           }
         },
         "item_9W6fTT": {
