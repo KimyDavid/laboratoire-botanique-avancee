@@ -66,6 +66,7 @@
                   assign block_button_label = block_button_label | default: 'Acheter'
                   assign block_variant = block_product.selected_or_first_available_variant
                 endif
+                assign popup_handle = section.settings.button_popup | handleize
               -%}
 
               {%- capture sizes_attribute -%}
