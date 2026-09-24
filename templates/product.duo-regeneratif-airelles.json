@@ -703,7 +703,6 @@
         "separate_section_with_border": false,
         "visibility": "desktop",
         "hide_product_information": false,
-        "show_product_description": false,
         "show_buy_button": false,
         "show_product_secondary_image": false,
         "carousel_design": "default",
