@@ -87,6 +87,7 @@
 section .section-reviews {
   background-image: url(https://cdn.shopify.com/s/files/1/0948/7073/3145/files/reviews-mobile.jpg?v=1789991045);
   margin-top: 64px;
+  margin-bottom: 64px;
   background-size: cover;
   background-position: center;
 }
@@ -205,6 +206,7 @@ section .section-reviews .jdgm-review-content__body-content {
 @media (max-width: 768px) {
   section .section-reviews {
     margin-top: 16px;
+    margin-bottom: 16px;
   }
 }
 
