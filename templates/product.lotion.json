@@ -32,7 +32,7 @@
         "text_qa4MPD": {
           "type": "text",
           "settings": {
-            "text": "<h4>97% d’ingrédients d’origine naturelle. Végan.&nbsp;<br/>Sans ingrédient controversé. Made in france.&nbsp;</h4>"
+            "text": "<h4>97% d’ingrédients d’origine naturelle.&nbsp;<br/>Sans ingrédient controversé. produit en france.&nbsp;</h4>"
           }
         },
         "relative_products_JBLBDc": {
@@ -489,7 +489,7 @@
         "content": "<p>Créé avec le Dr Lemaître<strong>, l'expert français </strong>de la longévité, notre<strong> actif exclusif NEO-REGEN</strong> est composé de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.&nbsp;</p><ul><li>Il réactive<strong> 136 gènes</strong> impliqués dans la jeunesse de la peau.&nbsp;</li><li><strong>+71% de Collagène I </strong>dès 8 jours.</li><li>Il<strong> relance la régénération </strong>cellulaire, moléculaire et tissulaire.</li></ul>",
         "small_content": "",
         "button_label": "En savoir plus",
-        "button_link": "shopify://pages/expertise",
+        "button_link": "/pages/expertise#technologie-neoregen",
         "button_popup": "",
         "button_product": "",
         "button_add_to_cart": false,
