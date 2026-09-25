@@ -404,7 +404,7 @@
           "type": "image_with_text",
           "settings": {
             "image": "shopify://shop_images/1950X1950_INGREDIENTS_CELLULE_IRIS.webp",
-            "title": "Cellules Souches d’iris Biotech",
+            "title": "Cellules Souches d’iris",
             "heading_tag": "h3",
             "content": "<p>Stimulent les constituants essentiels du derme pour améliorer fermeté, élasticité et souplesse.</p>",
             "link_url": "#",
@@ -434,7 +434,7 @@
             "image": "shopify://shop_images/1950X1950_ECTOINE.webp",
             "title": "ECTOÏNE BIOTECH",
             "heading_tag": "h3",
-            "content": "<p>Protège la peau des agressions environnementales et préserve son équilibre face au stress oxydatif.</p>",
+            "content": "<p>Bouclier protecteur, antioxydant, protège des agressions extérieures, hydratation long terme.</p>",
             "link_url": "",
             "link_text": "",
             "button_popup": "",
