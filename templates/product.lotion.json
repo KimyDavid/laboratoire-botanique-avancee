@@ -32,7 +32,7 @@
         "text_qa4MPD": {
           "type": "text",
           "settings": {
-            "text": "<h4>97% d’ingrédients d’origine naturelle. Végan.&nbsp;<br/>Sans ingrédient controversé. Made in france.&nbsp;</h4>"
+            "text": "<h4>97% d’ingrédients d’origine naturelle.<br/>Sans ingrédient controversé. Made in france.&nbsp;</h4>"
           }
         },
         "relative_products_JBLBDc": {
@@ -177,7 +177,7 @@
         "image_position": "start",
         "eyebrow": "136 gènes impliqués dans la jeunesse de la peau",
         "title": "Des actifs clés",
-        "content": "<p><strong>Cellules souches de Mousse Biotech</strong> : Renforcent la fonction barrière de la peau et hydratent en profondeur.<br/><br/><strong>Acide Glycolique</strong> : Exfolie en douceur, stimule le renouvellement cellulaire et affine visiblement le grain de peau.&nbsp;<br/><br/><strong>Ectoïne Biotech </strong>: Bouclier protecteur, antioxydant, protège la peau des agressions extérieures.</p><h4>97% d’ingrédients d’origine naturelle</h4>",
+        "content": "<p><strong>Cellules souches de Mousse Biotech</strong> : Renforcent la fonction barrière de la peau et hydratent en profondeur.<br/><br/><strong>Acide Glycolique</strong> : Exfolie en douceur, stimule le renouvellement cellulaire et affine visiblement le grain de peau.&nbsp;<br/><br/><strong>Ectoïne Biotech </strong>: Bouclier protecteur, antioxydant, hydratation long terme</p><h4>97% d’ingrédients d’origine naturelle</h4>",
         "small_content": "",
         "button_label": "Voir la liste INCI",
         "button_link": "",
