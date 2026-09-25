@@ -1,1 +1,499 @@
-{"sections":{"slideshow_RPwAx6":{"type":"slideshow","blocks":{"video_YWrMCr":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/LBA_CD_18s_BAULIEU-SCIENCE_16_9.mp4","mobile_video":"shopify:\/\/files\/videos\/LBA_CD_18s_BAULIEU-SCIENCE_9_16.mp4","allow_sound":true,"subheading":"","title":"","content":"<p>Soins français d'exception créés au Domaine de Baulieu. <br\/>30% d'actifs pour réactiver la jeunesse de la peau. Efficacité prouvée cliniquement dès 7 jours.<\/p>","show_logo":true,"logo_size":120,"mobile_text_position":"place-self-end-center text-center","desktop_text_position":"sm:place-self-end-center sm:text-center","content_max_width":880,"title_size":32,"mobile_title_size":28,"subtitle_size":38,"button_1_text":"découvrir les soins","button_1_link":"shopify:\/\/collections\/all","button_1_style":"outline","button_1_background":"#ffffff","button_1_text_color":"#000000","button_2_text":"","button_2_link":"","button_2_style":"outline","button_2_background":"#ffffff","button_2_text_color":"#000000","background":"","background_opacity":0,"text_color":"#ffffff","border_color":"","gradient_overlay":"linear-gradient(180deg, rgba(NaN, NaN, NaN, 0), rgba(4, 4, 4, 0.65) 100%)"}}},"block_order":["video_YWrMCr"],"custom_css":["@media (max-width: 749px) {.slideshow__slide-title {line-height: 1 !important; margin-bottom: 20px !important; }}"],"name":"t:sections.slideshow.presets.slideshow.name","settings":{"allow_transparent_header":true,"show_next_section_button":false,"media_size":"fill","show_initial_transition":false,"autoplay":true,"autoplay_pause_on_video":true,"cycle_speed":5,"monogramme":"shopify:\/\/shop_images\/LBA_BLANC_SANS_CERCLAGE_CMJN_1_1.svg","background":"#000000","controls_color":"#ffffff"}},"text_with_icons_niH4qm":{"type":"text-with-icons","blocks":{"item_zhQ6mm":{"type":"item","settings":{"icon":"picto-customer-support","custom_icon":"shopify:\/\/shop_images\/COLLABORATION.png","icon_width":80,"mobile_icon_width":64,"title":"le domaine de baulieu","content":"<p>300 hectares d'un terroir botanique d'exception, au Pays d'Aix : c'est ici que nos laboratoires sont installés.<\/p>","button_label":"","button_link":""}},"item_cPPf8E":{"type":"item","settings":{"icon":"picto-delivery-truck","custom_icon":"shopify:\/\/shop_images\/LABO_389cdb19-ca64-4d80-9d16-d0fd0fea22d8.png","icon_width":80,"mobile_icon_width":64,"title":"30% d'actifs","content":"<p>Concentration exceptionnelle pour une efficacité cliniquement prouvée.<\/p>","button_label":"","button_link":""}},"item_Mf4Qy3":{"type":"item","settings":{"icon":"picto-award-gift","custom_icon":"shopify:\/\/shop_images\/EFFICACITE.png","icon_width":80,"mobile_icon_width":64,"title":"Dr. lemaître (inserm)","content":"<p>Création avec le Dr Lemaître de la technologie brevetée NEO-REGEN qui relance la régénération de la peau.<\/p>","button_label":"","button_link":""}},"item_TbbCEG":{"type":"item","settings":{"icon":"picto-shield","custom_icon":"shopify:\/\/shop_images\/CLEAN.png","icon_width":80,"mobile_icon_width":64,"title":"ils nous ont choisi","content":"<p>La marque est présente dans les plus belles adresses françaises : Le Bon Marché Rive Gauche et les Palaces Airelles.<\/p>","button_label":"","button_link":""}}},"block_order":["item_zhQ6mm","item_cPPf8E","item_Mf4Qy3","item_TbbCEG"],"custom_css":[".text-with-icons__item img {display: none;}",".h3 {min-height: 1em;}",".section-spacing {padding-block: 60px;}"],"name":"t:sections.text_with_icons.presets.text_with_icons.name","settings":{"color_scheme":"","separate_section_with_border":false,"stack_on_mobile":true,"icon_color":"","text_color":"","text_alignment":"center"}},"featured_collections_7b9Vyg":{"type":"featured-collections","blocks":{"collection_HiHMAM":{"type":"collection","settings":{"collection":"le-rituel","products_count":6,"title":"Une routine en quatre gestes","link_url":"shopify:\/\/collections\/le-rituel","link_text":"Voir tout"}}},"block_order":["collection_HiHMAM"],"name":"t:sections.featured_collections.presets.featured_collections.name","settings":{"color_scheme":"scheme-2","separate_section_with_border":false,"hide_product_information":false,"show_product_subtitle":true,"show_product_secondary_image":true,"carousel_design":"large","stack_products":false,"products_per_row_mobile":"2","products_per_row_desktop":2,"horizontal_spacing_factor":0.2,"vertical_spacing_factor":1,"subheading":""}},"slider_vertical_product_lba_PpRyff":{"type":"slider_vertical_product_lba","blocks":{"texte_slide_ArBkeq":{"type":"texte_slide","settings":{"image":"shopify:\/\/shop_images\/VISUEL_LABO.jpg","image_mobile":"shopify:\/\/shop_images\/VISUEL_LABO_HOME.jpg","image_overlay":"right","text_position":"end","width_content":"440px","text_color":"#ffffff","title":"efficacité visible prouvée cliniquement","description":"<p><strong>Dès 7 jours : <\/strong>la peau est plus lisse, plus ferme, nourrie, apaisée.<strong><br\/><\/strong><br\/>En 3 mois, la peau est <\/p><ul><li>Raffermie : +53% ¹<\/li><li>Lissée : -20% de rides ¹<\/li><li>Confortable +92% ¹<\/li><li>Eclatante :+41% ²<\/li><li>Uniforme : +24% ²<br\/><\/li><\/ul><p><\/p>","button_texte":"Découvrir la crème","button":"shopify:\/\/products\/creme-fondante-regenerative"}},"texte_slide_Ha3QnG":{"type":"texte_slide","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/1950x1097_complex_2HD.webp","image_overlay":"left","text_position":"start","width_content":"440px","text_color":"#ffffff","title":"LA TECHNOLOGIE EXCLUSIVE NEO-REGEN","description":"<p><strong>Créée en collaboration avec le Dr Jean-Marc Lemaitre<\/strong>, l'expert français de la longévité, NEO-REGEN <strong>relance la régénération à 3 niveaux<\/strong> : moléculaire, cellulaire et tissulaire. <\/p><p><strong>Les mécanismes de jeunesse de la peau sont réactivés, <\/strong>durablement. <strong>Efficacité prouvée cliniquement.<\/strong><\/p>","button_texte":"en savoir plus","button":"https:\/\/laboratoires-botanique-avancee.com\/pages\/expertise\/#technologie-neoregen"}}},"block_order":["texte_slide_ArBkeq","texte_slide_Ha3QnG"],"custom_css":["@media (min-width: 1280px) {.container {--container-gutter: 4rem; }}","@media (max-width: 1000px) {.vertical-slider-wrapper {display: none !important; }}"],"name":"Slider vertical produit","settings":{"id":""}},"image_text_lba_UAA8Qt":{"type":"image-text-lba","custom_css":["@media (min-width: 1000px) {.duo-section {display: none !important; }}",".duo-section__inner {padding-top: 0;}"],"name":"Duo image + texte","settings":{"section_height":"full-height","image":"shopify:\/\/shop_images\/db340635eae512d2e454864fdbab83a50f425d98.jpg","background_color":"#ffffff","image_layout":"full","video_size":"full-height","image_position":"right","title":"régénérer, PROUVER, SUBLIMER","text":"<p>Une efficacité visible <strong>prouvée cliniquement.  <br\/><\/strong><br\/>En 3 mois, la peau est <\/p><ul><li>Raffermie : +53% ¹<\/li><li>Lissée : -20% de rides ¹<\/li><li>Confortable +92% ¹<\/li><li>Eclatante :+41% ²<\/li><li>Uniforme : +24% ²<\/li><\/ul>","button_link":"shopify:\/\/pages\/expertise","button_label":"En savoir plus","id":""}},"slider_vertical_product_lba_gNUeH6":{"type":"slider_vertical_product_lba","blocks":{"texte_slide_wAeUdj":{"type":"texte_slide","settings":{"image":"shopify:\/\/shop_images\/DSC_2141_copie.webp","image_mobile":"shopify:\/\/shop_images\/d4d12003519a95818f6d8815502da3b353a98860_1c6da654-deed-4b6d-b8e4-976bb8e1305d.jpg","image_overlay":"none","text_position":"start","width_content":"470px","text_color":"#ffffff","title":"BAULIEU : TERROIR BOTANIQUE","description":"<p>Baulieu est un domaine de 300 hectares, situé sur <strong>le seul volcan de Provence et irrigué par deux sources d'eau régénérantes. <br\/><br\/><\/strong>C'est en ce lieu unique que nos laboratoires se sont installés, guidés par <strong>l'héritage botanique <\/strong>du domaine et ancrés dans la <strong>puissance du vivant.<\/strong><\/p>","button_texte":"en savoir plus","button":"https:\/\/laboratoires-botanique-avancee.com\/pages\/histoire\/#territoire-botanique"}}},"block_order":["texte_slide_wAeUdj"],"custom_css":["@media (max-width: 1000px) {.vertical-slider-wrapper {display: none !important; }}"],"name":"Slider vertical produit","settings":{"id":""}},"image_text_lba_6RDxrn":{"type":"image-text-lba","custom_css":["@media (min-width: 1000px) {.duo-section {display: none !important; }}",".duo-section__inner {padding-top: 0;}"],"name":"Duo image + texte","settings":{"section_height":"full-height","image":"shopify:\/\/shop_images\/Rectangle_2.webp","background_color":"#ffffff","image_layout":"full","video_size":"full-height","image_position":"right","title":"BAULIEU : TERROIR BOTANIQUE","text":"<p>Baulieu est un domaine de 300 hectares, situé sur <strong>le seul volcan de Provence et irrigué par deux sources d'eau régénérantes. <br\/><br\/><\/strong>C'est en ce lieu unique que nos laboratoires se sont installés, guidés par <strong>l'héritage botanique <\/strong>du domaine et ancrés dans la <strong>puissance du vivant.<\/strong><\/p>","button_link":"https:\/\/laboratoires-botanique-avancee.com\/pages\/histoire\/#territoire-botanique","button_label":"En savoir plus","id":""}},"testimonials_bF9n9E":{"type":"testimonials","blocks":{"testimonial_FNWgz7":{"type":"testimonial","settings":{"content":"<p>\"Une origine forte, une caution scientifique solide, une formulation irréprochable et une vision capable de durer.\"<\/p>","image":"shopify:\/\/shop_images\/logo-luxe-infinity-Vert.png","logo_max_width":300,"logo_mobile_max_width":100,"author":""}},"testimonial_7ykrjA":{"type":"testimonial","settings":{"content":"<p>\"Une première mondiale dans l’industrie cosmétique. La technologie exclusive Neo-Regen régénère la peau, tant au niveau moléculaire que cellulaire et tissulaire ; développée avec le spécialiste mondial du vieillissement cellulaire, le Dr Jean-Marc Lemaître.\"<\/p>","image":"shopify:\/\/shop_images\/40675991-26f2-4ec4-a189-571848a12721.png","logo_max_width":300,"logo_mobile_max_width":230,"author":""}},"testimonial_8DcqWz":{"type":"testimonial","settings":{"content":"<p>\"En collaboration avec le Dr Jean-Marc Lemaitre, elle mise sur des formules alliant cellules souches végétales et eau de source, riche en minéraux régénérants.\"<\/p>","image":"shopify:\/\/shop_images\/image-removebg-preview.png","logo_max_width":200,"logo_mobile_max_width":150,"author":""}},"testimonial_4n9Mca":{"type":"testimonial","settings":{"content":"<p>\"La nouvelle marque qui devrait rapidement faire parler d’elle. Des formules ultra concentrées à partir de cellules souches végétales pour un résultat quasi immédiat.\"<\/p>","image":"shopify:\/\/shop_images\/Madame_Figaro__logo_-GREEN.png","logo_max_width":200,"logo_mobile_max_width":140,"author":""}},"testimonial_Ar9jRA":{"type":"testimonial","settings":{"content":"<p>\"On pensait avoir tout vu en matière d’innovation. C’était sans compter sur Laboratoires Botanique Avancée, nouvelle marque française qui bouscule les codes.\"<\/p>","image":"shopify:\/\/shop_images\/40675991-26f2-4ec4-a189-571848a12721.png","logo_max_width":300,"logo_mobile_max_width":230,"author":""}}},"block_order":["testimonial_FNWgz7","testimonial_7ykrjA","testimonial_8DcqWz","testimonial_4n9Mca","testimonial_Ar9jRA"],"custom_css":[".section-spacing {padding-top: 40px; padding-bottom: 40px;}"],"name":"t:sections.testimonials.presets.testimonials.name","settings":{"color_scheme":"scheme-1","separate_section_with_border":false,"auto_rotate_between_testimonials":true,"cycle_speed":5,"font_size_factor":1,"text_alignment":"center","subheading":"","title":"La presse en parle","content":""}},"lba_section_dual_image_texte_aa7B4n":{"type":"lba-section-dual-image-texte","blocks":{"content_block_Ax9R8E":{"type":"content_block","settings":{"image":"shopify:\/\/shop_images\/LBA_NATTHALIE_CANTAGREL__1080x1080px_RVB.jpg","title":"Le mot de la fondatrice","text":"<p>Laboratoires Botanique Avancée s’inscrit à la croisée du vivant, de la biotechnologie et d’une expérience beauté rare. C’est à Baulieu que l’on crée, que l’on préserve aussi. <br\/><br\/>Nous nous sommes entourés d’experts  scientifiques de haut niveau, faisant des cellules souches végétales le noyau de l'efficacité de notre cosmétique régénérative. Avec cette vision, nous réinventons le soin de luxe : un luxe engagé, où la botanique avancée ouvre la voie à une beauté intelligente, sensible et durable.<\/p><p> <\/p><p><strong>Nathalie Cantagrel<\/strong><br\/>CEO  Laboratoires Botanique Avancée<br\/><em>Ingénieur Agronome et Diplomée HEC<br\/>20 ans d’expertise en cosmétique<\/em><br\/><br\/><\/p>","button_label":"","button_link":"shopify:\/\/collections\/all"}}},"block_order":["content_block_Ax9R8E"],"custom_css":[],"name":"Le mot de la fondatrice","settings":{"main_title":"","balisage_hn":"h2","layout_type":"horizontal","id":""}},"testimonials_64qFjP":{"type":"testimonials","blocks":{"testimonial_Kf33eR":{"type":"testimonial","settings":{"content":"<p>“Je pensais que la Lotion Infusion d'Hydratation était un soin de plus, c'est en réalité un indispensable qui prépare ma peau. Je ne peux plus m'en passer”<\/p>","logo_max_width":270,"logo_mobile_max_width":140,"author":"Myriam, 62 ans"}},"testimonial_z7eppA":{"type":"testimonial","settings":{"content":"<p>\"Aussi efficace qu'un sérum mais avec le vrai confort d'une crème. C'est simple, depuis que j'ai adopté ce Sérum en Crème j'ai abandonné mes autres soins\"<\/p>","logo_max_width":270,"logo_mobile_max_width":140,"author":"Joanna, 40 ans"}},"testimonial_E4U4dH":{"type":"testimonial","settings":{"content":"<p>\"Cette crème yeux a changé ma routine, je n'avais jamais pris soin de cette zone mais maintenant je ne l'oublie jamais.\"<\/p>","logo_max_width":270,"logo_mobile_max_width":140,"author":"Sophie, 47 ans"}},"testimonial_cENQbF":{"type":"testimonial","settings":{"content":"<p>\"Je vois chaque jour les effets de la Crème Fondante Régénérative et quel plaisir ! Elle fond dans la peau et son parfum subtil est devenu une véritable addiction\"<\/p>","logo_max_width":270,"logo_mobile_max_width":140,"author":"Florence, 53 ans"}}},"block_order":["testimonial_Kf33eR","testimonial_z7eppA","testimonial_E4U4dH","testimonial_cENQbF"],"disabled":true,"name":"t:sections.testimonials.presets.testimonials.name","settings":{"color_scheme":"","separate_section_with_border":false,"auto_rotate_between_testimonials":true,"cycle_speed":5,"font_size_factor":1,"text_alignment":"start","subheading":"","title":"les voix de nos clients","content":"","background_image":"shopify:\/\/shop_images\/Texture_Bandeau_PRESSE.jpg","background_image_mobile":"shopify:\/\/shop_images\/1b785d41-17c0-4b64-9bdb-6e3241d8461a.jpg"}},"section_lba_scroll_blur_h9wN3n":{"type":"section-lba-scroll-blur","disabled":true,"custom_css":["h6 {text-transform: none; font-family: \"Neutraface Text Book\"; font-size: 16px; letter-spacing: 0;}","h6 strong {font-family: Neutraface Text Light; font-size: 40px; font-variant: all-small-caps; line-height: 1; white-space: nowrap; font-weight: 400; margin-right: 8px;}",".block-alt p:last-child {line-height: 1;}","em {font-size: 70%; font-style: normal;}"],"name":"Scroll Blur Section","settings":{"image":"shopify:\/\/shop_images\/1950x1097_KV_CREME.webp","image_mobile":"shopify:\/\/shop_images\/45946a09a740500c9e916fab659bcfbc0804f1a6.webp","product":"creme-fondante-regenerative","title":"La crème                                              fondante                                       régénérative","description":"<p>Raffermit, corrige les rides et unifie le teint<\/p>","description_alt":"","cta_text":"Découvrir"}}},"order":["slideshow_RPwAx6","text_with_icons_niH4qm","featured_collections_7b9Vyg","slider_vertical_product_lba_PpRyff","image_text_lba_UAA8Qt","slider_vertical_product_lba_gNUeH6","image_text_lba_6RDxrn","testimonials_bF9n9E","lba_section_dual_image_texte_aa7B4n","testimonials_64qFjP","section_lba_scroll_blur_h9wN3n"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_RPwAx6": {
+      "type": "slideshow",
+      "blocks": {
+        "video_YWrMCr": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/LBA_CD_18s_BAULIEU-SCIENCE_16_9.mp4",
+            "mobile_video": "shopify://files/videos/LBA_CD_18s_BAULIEU-SCIENCE_9_16.mp4",
+            "allow_sound": true,
+            "subheading": "",
+            "title": "",
+            "content": "<p>Soins français d'exception créés au Domaine de Baulieu. <br/>30% d'actifs pour réactiver la jeunesse de la peau. Efficacité prouvée cliniquement dès 7 jours.</p>",
+            "show_logo": true,
+            "logo_size": 120,
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_text_position": "sm:place-self-end-center sm:text-center",
+            "content_max_width": 880,
+            "title_size": 32,
+            "mobile_title_size": 28,
+            "subtitle_size": 38,
+            "button_1_text": "découvrir les soins",
+            "button_1_link": "shopify://collections/all",
+            "button_1_style": "outline",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(180deg, rgba(NaN, NaN, NaN, 0), rgba(4, 4, 4, 0.65) 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "video_YWrMCr"
+      ],
+      "custom_css": [
+        "@media (max-width: 749px) {.slideshow__slide-title {line-height: 1 !important; margin-bottom: 20px !important; }}"
+      ],
+      "name": "t:sections.slideshow.presets.slideshow.name",
+      "settings": {
+        "allow_transparent_header": true,
+        "show_next_section_button": false,
+        "media_size": "fill",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "monogramme": "shopify://shop_images/LBA_BLANC_SANS_CERCLAGE_CMJN_1_1.svg",
+        "background": "#000000",
+        "controls_color": "#ffffff"
+      }
+    },
+    "text_with_icons_niH4qm": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_zhQ6mm": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-customer-support",
+            "custom_icon": "shopify://shop_images/COLLABORATION.png",
+            "icon_width": 80,
+            "mobile_icon_width": 64,
+            "title": "le domaine de baulieu",
+            "content": "<p>&nbsp;Nos laboratoires sont installés sur 300 hectares d'un terroir botanique d'exception.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "item_cPPf8E": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-delivery-truck",
+            "custom_icon": "shopify://shop_images/LABO_389cdb19-ca64-4d80-9d16-d0fd0fea22d8.png",
+            "icon_width": 80,
+            "mobile_icon_width": 64,
+            "title": "30% d'actifs",
+            "content": "<p>Concentration exceptionnelle pour une efficacité cliniquement prouvée dès 7 jours.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "item_Mf4Qy3": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-award-gift",
+            "custom_icon": "shopify://shop_images/EFFICACITE.png",
+            "icon_width": 80,
+            "mobile_icon_width": 64,
+            "title": "Dr. lemaître (inserm)",
+            "content": "<p>Co-création de la technologie brevetée NEO-REGEN, concentrée dans tous nos soins.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "item_TbbCEG": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-shield",
+            "custom_icon": "shopify://shop_images/CLEAN.png",
+            "icon_width": 80,
+            "mobile_icon_width": 64,
+            "title": "ils nous ont choisi",
+            "content": "<p>Le Bon Marché Rive Gauche et les Palaces Airelles.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_zhQ6mm",
+        "item_cPPf8E",
+        "item_Mf4Qy3",
+        "item_TbbCEG"
+      ],
+      "custom_css": [
+        ".text-with-icons__item img {display: none;}",
+        ".h3 {min-height: 1em;}",
+        ".section-spacing {padding-block: 60px;}"
+      ],
+      "name": "t:sections.text_with_icons.presets.text_with_icons.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "stack_on_mobile": true,
+        "icon_color": "",
+        "text_color": "",
+        "text_alignment": "center"
+      }
+    },
+    "featured_collections_7b9Vyg": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_HiHMAM": {
+          "type": "collection",
+          "settings": {
+            "collection": "le-rituel",
+            "products_count": 6,
+            "title": "Une routine en quatre gestes",
+            "link_url": "shopify://collections/le-rituel",
+            "link_text": "Voir tout"
+          }
+        }
+      },
+      "block_order": [
+        "collection_HiHMAM"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": false,
+        "visibility": "all",
+        "hide_product_information": false,
+        "show_buy_button": true,
+        "show_product_secondary_image": true,
+        "carousel_design": "large",
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 2,
+        "horizontal_spacing_factor": 0.2,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "slider_vertical_product_lba_PpRyff": {
+      "type": "slider_vertical_product_lba",
+      "blocks": {
+        "texte_slide_ArBkeq": {
+          "type": "texte_slide",
+          "settings": {
+            "image": "shopify://shop_images/VISUEL_LABO.jpg",
+            "image_mobile": "shopify://shop_images/VISUEL_LABO_HOME.jpg",
+            "image_overlay": "right",
+            "text_position": "end",
+            "width_content": "440px",
+            "text_color": "#ffffff",
+            "title": "efficacité visible prouvée cliniquement",
+            "description": "<p><strong>Dès 7 jours : </strong>la peau est plus lisse, plus ferme, nourrie, apaisée.<strong><br/></strong><br/>En 3 mois, la peau est </p><ul><li>Raffermie : +53% ¹</li><li>Lissée : -20% de rides ¹</li><li>Confortable +92% ¹</li><li>Eclatante :+41% ²</li><li>Uniforme : +24% ²<br/></li></ul><p></p>",
+            "button_texte": "Découvrir la crème",
+            "button": "shopify://products/creme-fondante-regenerative"
+          }
+        },
+        "texte_slide_Ha3QnG": {
+          "type": "texte_slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/1950x1097_complex_2HD.webp",
+            "image_overlay": "left",
+            "text_position": "start",
+            "width_content": "440px",
+            "text_color": "#ffffff",
+            "title": "LA TECHNOLOGIE EXCLUSIVE NEO-REGEN",
+            "description": "<p><strong>Créée en collaboration avec le Dr Jean-Marc Lemaitre</strong>, l'expert français de la longévité, NEO-REGEN <strong>relance la régénération à 3 niveaux</strong> : moléculaire, cellulaire et tissulaire. </p><p><strong>Les mécanismes de jeunesse de la peau sont réactivés, </strong>durablement. <strong>Efficacité prouvée cliniquement.</strong></p>",
+            "button_texte": "en savoir plus",
+            "button": "https://laboratoires-botanique-avancee.com/pages/expertise/#technologie-neoregen"
+          }
+        }
+      },
+      "block_order": [
+        "texte_slide_ArBkeq",
+        "texte_slide_Ha3QnG"
+      ],
+      "custom_css": [
+        "@media (min-width: 1280px) {.container {--container-gutter: 4rem; }}",
+        "@media (max-width: 1000px) {.vertical-slider-wrapper {display: none !important; }}"
+      ],
+      "name": "Slider vertical produit",
+      "settings": {
+        "id": ""
+      }
+    },
+    "image_text_lba_UAA8Qt": {
+      "type": "image-text-lba",
+      "custom_css": [
+        "@media (min-width: 1000px) {.duo-section {display: none !important; }}",
+        ".duo-section__inner {padding-top: 0;}"
+      ],
+      "name": "Duo image + texte",
+      "settings": {
+        "section_height": "full-height",
+        "image": "shopify://shop_images/db340635eae512d2e454864fdbab83a50f425d98.jpg",
+        "background_color": "#ffffff",
+        "image_layout": "full",
+        "video_size": "full-height",
+        "image_position": "right",
+        "title": "régénérer, PROUVER, SUBLIMER",
+        "text": "<p>Une efficacité visible <strong>prouvée cliniquement.  <br/></strong><br/>En 3 mois, la peau est </p><ul><li>Raffermie : +53% ¹</li><li>Lissée : -20% de rides ¹</li><li>Confortable +92% ¹</li><li>Eclatante :+41% ²</li><li>Uniforme : +24% ²</li></ul>",
+        "button_link": "shopify://pages/expertise",
+        "button_label": "En savoir plus",
+        "id": ""
+      }
+    },
+    "slider_vertical_product_lba_gNUeH6": {
+      "type": "slider_vertical_product_lba",
+      "blocks": {
+        "texte_slide_wAeUdj": {
+          "type": "texte_slide",
+          "settings": {
+            "image": "shopify://shop_images/DSC_2141_copie.webp",
+            "image_mobile": "shopify://shop_images/d4d12003519a95818f6d8815502da3b353a98860_1c6da654-deed-4b6d-b8e4-976bb8e1305d.jpg",
+            "image_overlay": "none",
+            "text_position": "start",
+            "width_content": "470px",
+            "text_color": "#ffffff",
+            "title": "BAULIEU : TERROIR BOTANIQUE",
+            "description": "<p>Baulieu est un domaine de 300 hectares, situé sur <strong>le seul volcan de Provence et irrigué par deux sources d'eau régénérantes. <br/><br/></strong>C'est en ce lieu unique que nos laboratoires se sont installés, guidés par <strong>l'héritage botanique </strong>du domaine et ancrés dans la <strong>puissance du vivant.</strong></p>",
+            "button_texte": "en savoir plus",
+            "button": "https://laboratoires-botanique-avancee.com/pages/histoire/#territoire-botanique"
+          }
+        }
+      },
+      "block_order": [
+        "texte_slide_wAeUdj"
+      ],
+      "custom_css": [
+        "@media (max-width: 1000px) {.vertical-slider-wrapper {display: none !important; }}"
+      ],
+      "name": "Slider vertical produit",
+      "settings": {
+        "id": ""
+      }
+    },
+    "image_text_lba_6RDxrn": {
+      "type": "image-text-lba",
+      "custom_css": [
+        "@media (min-width: 1000px) {.duo-section {display: none !important; }}",
+        ".duo-section__inner {padding-top: 0;}"
+      ],
+      "name": "Duo image + texte",
+      "settings": {
+        "section_height": "full-height",
+        "image": "shopify://shop_images/Rectangle_2.webp",
+        "background_color": "#ffffff",
+        "image_layout": "full",
+        "video_size": "full-height",
+        "image_position": "right",
+        "title": "BAULIEU : TERROIR BOTANIQUE",
+        "text": "<p>Baulieu est un domaine de 300 hectares, situé sur <strong>le seul volcan de Provence et irrigué par deux sources d'eau régénérantes. <br/><br/></strong>C'est en ce lieu unique que nos laboratoires se sont installés, guidés par <strong>l'héritage botanique </strong>du domaine et ancrés dans la <strong>puissance du vivant.</strong></p>",
+        "button_link": "https://laboratoires-botanique-avancee.com/pages/histoire/#territoire-botanique",
+        "button_label": "En savoir plus",
+        "id": ""
+      }
+    },
+    "testimonials_bF9n9E": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_FNWgz7": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>\"Une origine forte, une caution scientifique solide, une formulation irréprochable et une vision capable de durer.\"</p>",
+            "image": "shopify://shop_images/logo-luxe-infinity-Vert.png",
+            "logo_max_width": 300,
+            "logo_mobile_max_width": 100,
+            "author": ""
+          }
+        },
+        "testimonial_7ykrjA": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>\"Une première mondiale dans l’industrie cosmétique. La technologie exclusive Neo-Regen régénère la peau, tant au niveau moléculaire que cellulaire et tissulaire ; développée avec le spécialiste mondial du vieillissement cellulaire, le Dr Jean-Marc Lemaître.\"</p>",
+            "image": "shopify://shop_images/40675991-26f2-4ec4-a189-571848a12721.png",
+            "logo_max_width": 300,
+            "logo_mobile_max_width": 230,
+            "author": ""
+          }
+        },
+        "testimonial_8DcqWz": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>\"En collaboration avec le Dr Jean-Marc Lemaitre, elle mise sur des formules alliant cellules souches végétales et eau de source, riche en minéraux régénérants.\"</p>",
+            "image": "shopify://shop_images/image-removebg-preview.png",
+            "logo_max_width": 200,
+            "logo_mobile_max_width": 150,
+            "author": ""
+          }
+        },
+        "testimonial_4n9Mca": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>\"La nouvelle marque qui devrait rapidement faire parler d’elle. Des formules ultra concentrées à partir de cellules souches végétales pour un résultat quasi immédiat.\"</p>",
+            "image": "shopify://shop_images/Madame_Figaro__logo_-GREEN.png",
+            "logo_max_width": 200,
+            "logo_mobile_max_width": 140,
+            "author": ""
+          }
+        },
+        "testimonial_Ar9jRA": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>\"On pensait avoir tout vu en matière d’innovation. C’était sans compter sur Laboratoires Botanique Avancée, nouvelle marque française qui bouscule les codes.\"</p>",
+            "image": "shopify://shop_images/40675991-26f2-4ec4-a189-571848a12721.png",
+            "logo_max_width": 300,
+            "logo_mobile_max_width": 230,
+            "author": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_FNWgz7",
+        "testimonial_7ykrjA",
+        "testimonial_8DcqWz",
+        "testimonial_4n9Mca",
+        "testimonial_Ar9jRA"
+      ],
+      "custom_css": [
+        ".section-spacing {padding-top: 40px; padding-bottom: 40px;}"
+      ],
+      "name": "t:sections.testimonials.presets.testimonials.name",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "auto_rotate_between_testimonials": true,
+        "cycle_speed": 5,
+        "font_size_factor": 1,
+        "text_alignment": "center",
+        "subheading": "",
+        "title": "La presse en parle",
+        "content": ""
+      }
+    },
+    "lba_section_dual_image_texte_aa7B4n": {
+      "type": "lba-section-dual-image-texte",
+      "blocks": {
+        "content_block_Ax9R8E": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/LBA_NATTHALIE_CANTAGREL__1080x1080px_RVB.jpg",
+            "title": "Le mot de la fondatrice",
+            "text": "<p>Laboratoires Botanique Avancée s’inscrit à la croisée du vivant, de la biotechnologie et d’une expérience beauté rare. C’est à Baulieu que l’on crée, que l’on préserve aussi. <br/><br/>Nous nous sommes entourés d’experts  scientifiques de haut niveau, faisant des cellules souches végétales le noyau de l'efficacité de notre cosmétique régénérative. Avec cette vision, nous réinventons le soin de luxe : un luxe engagé, où la botanique avancée ouvre la voie à une beauté intelligente, sensible et durable.</p><p> </p><p><strong>Nathalie Cantagrel</strong><br/>CEO  Laboratoires Botanique Avancée<br/><em>Ingénieur Agronome et Diplomée HEC<br/>20 ans d’expertise en cosmétique</em><br/><br/></p>",
+            "button_label": "",
+            "button_link": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_Ax9R8E"
+      ],
+      "custom_css": [],
+      "name": "Le mot de la fondatrice",
+      "settings": {
+        "main_title": "",
+        "balisage_hn": "h2",
+        "layout_type": "horizontal",
+        "id": ""
+      }
+    },
+    "testimonials_64qFjP": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_Kf33eR": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>“Je pensais que la Lotion Infusion d'Hydratation était un soin de plus, c'est en réalité un indispensable qui prépare ma peau. Je ne peux plus m'en passer”</p>",
+            "logo_max_width": 270,
+            "logo_mobile_max_width": 140,
+            "author": "Myriam, 62 ans"
+          }
+        },
+        "testimonial_z7eppA": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>\"Aussi efficace qu'un sérum mais avec le vrai confort d'une crème. C'est simple, depuis que j'ai adopté ce Sérum en Crème j'ai abandonné mes autres soins\"</p>",
+            "logo_max_width": 270,
+            "logo_mobile_max_width": 140,
+            "author": "Joanna, 40 ans"
+          }
+        },
+        "testimonial_E4U4dH": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>\"Cette crème yeux a changé ma routine, je n'avais jamais pris soin de cette zone mais maintenant je ne l'oublie jamais.\"</p>",
+            "logo_max_width": 270,
+            "logo_mobile_max_width": 140,
+            "author": "Sophie, 47 ans"
+          }
+        },
+        "testimonial_cENQbF": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<p>\"Je vois chaque jour les effets de la Crème Fondante Régénérative et quel plaisir ! Elle fond dans la peau et son parfum subtil est devenu une véritable addiction\"</p>",
+            "logo_max_width": 270,
+            "logo_mobile_max_width": 140,
+            "author": "Florence, 53 ans"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_Kf33eR",
+        "testimonial_z7eppA",
+        "testimonial_E4U4dH",
+        "testimonial_cENQbF"
+      ],
+      "disabled": true,
+      "name": "t:sections.testimonials.presets.testimonials.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "auto_rotate_between_testimonials": true,
+        "cycle_speed": 5,
+        "font_size_factor": 1,
+        "text_alignment": "start",
+        "subheading": "",
+        "title": "les voix de nos clients",
+        "content": "",
+        "background_image": "shopify://shop_images/Texture_Bandeau_PRESSE.jpg",
+        "background_image_mobile": "shopify://shop_images/1b785d41-17c0-4b64-9bdb-6e3241d8461a.jpg"
+      }
+    },
+    "section_lba_scroll_blur_h9wN3n": {
+      "type": "section-lba-scroll-blur",
+      "disabled": true,
+      "custom_css": [
+        "h6 {text-transform: none; font-family: \"Neutraface Text Book\"; font-size: 16px; letter-spacing: 0;}",
+        "h6 strong {font-family: Neutraface Text Light; font-size: 40px; font-variant: all-small-caps; line-height: 1; white-space: nowrap; font-weight: 400; margin-right: 8px;}",
+        ".block-alt p:last-child {line-height: 1;}",
+        "em {font-size: 70%; font-style: normal;}"
+      ],
+      "name": "Scroll Blur Section",
+      "settings": {
+        "image": "shopify://shop_images/1950x1097_KV_CREME.webp",
+        "image_mobile": "shopify://shop_images/45946a09a740500c9e916fab659bcfbc0804f1a6.webp",
+        "product": "creme-fondante-regenerative",
+        "title": "La crème                                              fondante                                       régénérative",
+        "description": "<p>Raffermit, corrige les rides et unifie le teint</p>",
+        "description_alt": "",
+        "cta_text": "Découvrir"
+      }
+    }
+  },
+  "order": [
+    "slideshow_RPwAx6",
+    "text_with_icons_niH4qm",
+    "featured_collections_7b9Vyg",
+    "slider_vertical_product_lba_PpRyff",
+    "image_text_lba_UAA8Qt",
+    "slider_vertical_product_lba_gNUeH6",
+    "image_text_lba_6RDxrn",
+    "testimonials_bF9n9E",
+    "lba_section_dual_image_texte_aa7B4n",
+    "testimonials_64qFjP",
+    "section_lba_scroll_blur_h9wN3n"
+  ]
+}
