@@ -489,7 +489,7 @@
         "content": "<p>Notre technologie exclusive Neo Regen est composée de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.</p><ul><li>136 gènes impliqués dans la jeunesse de la peau modulés.&nbsp;</li><li>+71% de Collagène I.</li><li>Régénération cellulaire, moléculaire et tissulaire.</li></ul>",
         "small_content": "",
         "button_label": "En savoir plus",
-        "button_link": "shopify://pages/expertise",
+        "button_link": "/pages/expertise#technologie-neoregen",
         "button_popup": "",
         "button_product": "",
         "button_add_to_cart": false,
