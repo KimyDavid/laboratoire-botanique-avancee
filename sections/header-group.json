@@ -174,8 +174,8 @@
       "settings": {
         "popup_id": "liste-inci",
         "title": "Liste INCI",
-        "content": "<p>INGRÉDIENTS : Aqua (Water)*, Glycerin*, Coco-Caprylate/Caprate*, Niacinamide*, Glyceryl Stearate Citrate*, Isoamyl Laurate*, Butylene Glycol*, Polyglyceryl-3 Stearate*, Cetearyl Alcohol*, Camellia Oleifera Seed Oil*,Ectoin*, SilybumMarianumSeedOil*, Lilium Candidum Flower Extract*, PaeoniaLactiflora Root Extract*, Iris Pallida Root Extract*, Iris Florentina Root Extract*, Centella Asiatica Leaf Extract*, Adenosine*, Bacillus Ferment, Sodium Hyaluronate*, ButyrospermumParkii (Shea) Butter*,HydrogenatedLecithin*, Hydrolyzed Soy Flour*, Lecithin*, Hydrogenated Starch Hydrolysate*, Pentylene Glycol*, Sodium Stearoyl Glutamate*, Carbomer, XanthanGum, Caprylyl Glycol*, 1,2-Hexanediol*, Ethylhexylglycerin, o-Cymen-5-ol, Sodium Benzoate, Potassium Sorbate, Hydroxyacetophenone, TocopherylAcetate, Tocopherol*, Sodium Hydroxide, Parfum (Fragrance), AcetylCedrene, Benzyl Benzoate, Citrus AurantiumBergamia Peel Oil*, Limonene*, Linalool*, LinalylAcetate, Terpineol, Hexadecanolactone, Geraniol, Citrus Aurantium Flower Oil*.&nbsp;<br/><br/>*ingrédient d’origine naturelle / natural-basedingredient</p>",
-        "product_metafield": "",
+        "content": "",
+        "product_metafield": "custom.liste-inci",
         "content_font_size": "14"
       }
     },
