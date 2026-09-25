@@ -620,7 +620,7 @@
             "content": "<p>Créé au sein de nos laboratoires à Baulieu, la Lotion Infusion d'Hydratation est exempt de tout ingrédient controversé. Zéro silicone, zéro PEG, zéro microplastique. &nbsp;<br/><br/>Une signature olfactive au parfum frais et enveloppant. &nbsp;<br/><br/>97% d'ingrédients d'origine naturelle.<br/>Note Excellent sur Yuka<br/>Fabriqué en France</p>",
             "link_url": "#",
             "link_text": "Voir la liste INCI",
-            "button_popup": "",
+            "button_popup": "liste-inci",
             "product": "",
             "show_price": true
           }
