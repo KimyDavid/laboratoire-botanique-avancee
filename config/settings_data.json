@@ -110,10 +110,10 @@
           "background": "#ffffff",
           "background_gradient": "",
           "text_color": "#3c626b",
-          "primary_button_background": "#1c1c1c",
+          "primary_button_background": "#3C626B",
           "primary_button_text_color": "#ffffff",
           "circle_button_background": "#ffffff",
-          "circle_button_icon": "#1c1c1c"
+          "circle_button_icon": "#3C626B"
         }
       },
       "scheme-2": {
