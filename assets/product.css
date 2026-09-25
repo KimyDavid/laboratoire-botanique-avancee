@@ -206,7 +206,7 @@ section .section-reviews .jdgm-review-content__body-content {
 @media (max-width: 768px) {
   section .section-reviews {
     margin-top: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 40px;
   }
 }
 
