@@ -617,7 +617,7 @@
             "image": "shopify://shop_images/Texture_serum.jpg",
             "title": "Prouesse de formulation",
             "heading_tag": "h3",
-            "content": "<p>Créé au sein de nos laboratoires à Baulieu, le Sérum en Crème Régénératif est exempt de tout ingrédient controversé. Zéro silicone, zéro PEG, zéro microplastique.&nbsp;<br/><br/>Une signature olfactive au parfum frais et enveloppant. &nbsp;<br/><br/>30% d'actifs<br/>96% d'ingrédients d'origine naturelle.<br/>Notée Excellent sur Yuka<br/>Fabriqué en France</p>",
+            "content": "<p>Créé au sein de <strong>nos laboratoires à Baulieu</strong>, le Sérum en Crème Régénératif est <strong>exempt de tout ingrédient controversé</strong>. Zéro silicone, zéro PEG, zéro microplastique.&nbsp;<br/><br/>30% d'actifs.<br/>96% d'ingrédients d'origine naturelle.<br/>Notée Excellent sur Yuka. Vegan.<br/>Délicat parfum frais et enveloppant.&nbsp;</p>",
             "link_url": "#",
             "link_text": "Voir la liste INCI",
             "button_popup": "liste-inci",
