@@ -567,7 +567,7 @@
         "image_position": "end",
         "eyebrow": "",
         "title": "",
-        "content": "<p>La recharge est logé dans son pot en verre pour une utilisation quotidienne.</p><p>Lors de vos déplacements, elle se déclipse et se referme avec son couvercle dédié, dissimulé dans le coffret, pour devenir un véritable format nomade. Système breveté.</p><p>La recharge est conçue 100% en aluminium. L’écrin est créé 100% avec des artisans français. Pot en verre, couvercle en bio-résine.&nbsp;</p>",
+        "content": "<p>La recharge est logée dans son pot en verre pour une utilisation quotidienne.</p><p>Lors de vos déplacements, elle se <strong>déclipse </strong>et se referme avec son <strong>couvercle dédié</strong>, dissimulé dans le coffret, pour devenir un véritable format <strong>nomade</strong>. Système breveté.</p><p>La recharge est conçue 100% en aluminium. L’écrin est créé avec des<strong> artisans français</strong>. Pot en verre, couvercle en bio-résine.&nbsp;</p>",
         "small_content": "",
         "button_label": "Acheter",
         "button_link": "shopify://products/recharge-creme-regenerative-visage",
@@ -642,7 +642,7 @@
         "image_with_text_4ggwCB": {
           "type": "image_with_text",
           "settings": {
-            "image": "shopify://shop_images/LBA_Serum_RVB.webp",
+            "image": "shopify://shop_images/a469b5a2-b5aa-4667-9566-3ae550be4841.jpg",
             "title": "Recharge et format voyage",
             "heading_tag": "h3",
             "content": "<p>La recharge est logée dans son pot en verre pour une utilisation quotidienne.</p><p>Lors de vos déplacements, elle se <strong>déclipse </strong>et se referme avec son <strong>couvercle dédié</strong>, dissimulé dans le coffret, pour devenir un <strong>véritable format nomade</strong>. Système breveté.</p><p>La recharge est conçue 100% en aluminium. L’écrin est créé avec des <strong>artisans français</strong>.&nbsp;<br/>Pot en verre, couvercle en bio-résine.&nbsp;</p>",
