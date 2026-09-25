@@ -130,7 +130,8 @@ section .section-reviews .jm-average-rating-display {
 section .section-reviews .jm-cluster > .jm-stack:first-child *,
 section .section-reviews .jm-review-item *,
 section .section-reviews .jm-star-rating__font-icon,
-section .section-reviews .jm-sort-filter {
+section .section-reviews .jm-sort-filter,
+section .section-reviews .jm-no-reviews-state__text {
   color: white !important;
 }
 
@@ -145,6 +146,27 @@ section .section-reviews .jm-carousel__viewport::after {
 
 section .section-reviews .jdgm-carousel-review-list {
   background: transparent;
+}
+
+section .section-reviews .jm-no-reviews-state {
+  margin-top: 0;
+}
+
+section .section-reviews .jm-no-reviews-state__action-buttons > .jm-stack {
+  justify-content: center !important;
+}
+
+section .section-reviews .jm-other-products-reviews-text {
+  padding-top: 0;
+  color: white;
+}
+
+section .section-reviews .jm-product-variant-card > .jm-cluster {
+  flex-wrap: nowrap !important;
+}
+
+section .section-reviews .jdgm-carousel-review-list__nav {
+  color: white;
 }
 
 section .section-reviews .jm-review-item {

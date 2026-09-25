@@ -9,9 +9,14 @@
     class="keywords-banner {% if section.settings.show_separators %}keywords-banner--separators{% endif %} {% if section.settings.show_border_bottom %}keywords-banner--border{% endif %} {% render 'responsive-visibility', visibility: section.settings.visibility %}"
   >
     <ul class="keywords-banner__list">
+      {%- assign has_previous_item = false -%}
       {%- for block in section.blocks -%}
         {%- if block.settings.text != blank -%}
+          {%- if has_previous_item and section.settings.show_separators -%}
+            <li class="keywords-banner__separator" aria-hidden="true"></li>
+          {%- endif -%}
           <li class="keywords-banner__item" {{ block.shopify_attributes }}>{{ block.settings.text }}</li>
+          {%- assign has_previous_item = true -%}
         {%- endif -%}
       {%- endfor -%}
     </ul>
