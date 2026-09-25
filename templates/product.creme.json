@@ -32,7 +32,7 @@
         "text_qa4MPD": {
           "type": "text",
           "settings": {
-            "text": "<h4>96% d’ingrédients d’origine naturelle. Végan.<br/>Sans ingrédient controversé.&nbsp;</h4>"
+            "text": "<h4>96% d’ingrédients d’origine naturelle.<br/>Sans ingrédient controversé. Végan.</h4>"
           }
         },
         "relative_products_JBLBDc": {
@@ -148,7 +148,7 @@
         "image_position": "start",
         "eyebrow": "",
         "title": "dr. jean-marc lemaître (INSERM)",
-        "content": "<p>Créé avec le Dr Lemaître<strong>, l'expert français </strong>de la longévité, notre<strong> actif exclusif NEO-REGEN</strong> est composé de millions de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.&nbsp;</p><ul><li>Il réactive<strong> 136 gènes</strong> impliqués dans la jeunesse de la peau.&nbsp;</li><li><strong>+71% de Collagène I </strong>dès 8 jours.</li><li>Il <strong>relance la régénération </strong>cellulaire, moléculaire et tissulaire.</li></ul>",
+        "content": "<p>Créé avec le Dr Lemaître<strong>, l'expert français </strong>de la longévité, notre<strong> actif exclusif NEO-REGEN</strong> est composé de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.&nbsp;</p><ul><li>Il réactive<strong> 136 gènes</strong> impliqués dans la jeunesse de la peau.&nbsp;</li><li><strong>+71% de Collagène I </strong>dès 8 jours.</li><li>Il <strong>relance la régénération </strong>cellulaire, moléculaire et tissulaire.</li></ul>",
         "small_content": "",
         "button_label": "En savoir plus",
         "button_link": "/pages/expertise#technologie-neoregen",
@@ -177,7 +177,7 @@
         "image_position": "start",
         "eyebrow": "136 gènes impliqués dans la jeunesse de la peau",
         "title": "Des actifs clés",
-        "content": "<p><strong>Niacinamide </strong>: Stimule la synthèse de collagène, unifie le teint et améliore visiblement la qualité de la peau.</p><p><strong>7 Céramides&nbsp;:</strong> Restaurent la barrière cutanée, renforcent l'hydratation et apportent confort à la peau.&nbsp;</p><p><strong>Ectoïne Biotech&nbsp;:</strong> Bouclier protecteur, antioxydant, hydratation long terme.</p><h4>96% d’ingrédients d’origine naturelle</h4>",
+        "content": "<p><strong>Niacinamide&nbsp;(Vitamine B3)</strong> : Stimule la synthèse de collagène, unifie le teint et améliore visiblement la qualité de la peau.<br/><strong>7 Céramides&nbsp;:</strong> Restaurent la barrière cutanée, renforcent l'hydratation et apportent confort à la peau.&nbsp;<br/><strong>Ectoïne Biotech&nbsp;:</strong> Protège la peau des agressions environnementales et préserve son équilibre face au stress oxydatif.</p><h4>96% d’ingrédients d’origine naturelle</h4>",
         "small_content": "",
         "button_label": "Voir la liste INCI",
         "button_link": "",
@@ -227,7 +227,7 @@
           "settings": {
             "eyebrow": "",
             "value": "+24%",
-            "label": "Uniformité teint¹"
+            "label": "Uniformité du teint¹"
           }
         },
         "stat_67Jbbd": {
@@ -342,7 +342,7 @@
         "item_tHqTnd": {
           "type": "item",
           "settings": {
-            "text": "Formulé en France"
+            "text": "produit en France"
           }
         },
         "item_9W6fTT": {
@@ -404,7 +404,7 @@
           "type": "image_with_text",
           "settings": {
             "image": "shopify://shop_images/niacinamide_2_copy.webp",
-            "title": "Niacinamide (Vitamine B3)",
+            "title": "Niacinamide&nbsp;",
             "heading_tag": "h3",
             "content": "<p><strong>Fermeté & homogénéité du teint</strong></p><ul><li>Stimule la synthèse de collagène.</li><li>Régulation de la mélanogénèse.</li><li>Amélioration de l'apparence des rides et ridules et de la qualité de la peau.</li></ul>",
             "link_url": "#",
@@ -486,7 +486,7 @@
         "image_position": "end",
         "eyebrow": "Collaboration avec dr. jean-marc lemaître",
         "title": "Technologie neo-regen",
-        "content": "<p>Créé avec le Dr Lemaître<strong>, l'expert français </strong>de la longévité, notre<strong> actif exclusif NEO-REGEN</strong> est composé de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.&nbsp;</p><ul><li>Il réactive<strong> 136 gènes</strong> impliqués dans la jeunesse de la peau.&nbsp;</li><li><strong>+71% de Collagène I </strong>dès 8 jours.</li><li>Il<strong> relance la régénération </strong>cellulaire, moléculaire et tissulaire.</li></ul>",
+        "content": "<p>Créé avec le Dr Lemaître<strong>, l'expert français </strong>de la longévité, notre<strong> actif exclusif NEO-REGEN</strong> est composé de millions de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.&nbsp;</p><ul><li>Il réactive<strong> 136 gènes</strong> impliqués dans la jeunesse de la peau.&nbsp;</li><li><strong>+71% de Collagène I </strong>dès 8 jours.</li><li>Il<strong> relance la régénération </strong>cellulaire, moléculaire et tissulaire.</li></ul>",
         "small_content": "",
         "button_label": "En savoir plus",
         "button_link": "shopify://pages/expertise",
