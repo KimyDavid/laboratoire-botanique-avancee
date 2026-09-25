@@ -32,7 +32,7 @@
         "text_qa4MPD": {
           "type": "text",
           "settings": {
-            "text": "<h4>Made in france. 96% d’ingrédients d’origine naturelle.<br/>Sans ingrédient controversé. Végan.</h4>"
+            "text": "<h4>96% d’ingrédients d’origine naturelle.<br/>Sans ingrédient controversé.<br/>produit en france.</h4>"
           }
         },
         "relative_products_JBLBDc": {
@@ -147,8 +147,8 @@
         "image_secondary_2_position": "bottom",
         "image_position": "start",
         "eyebrow": "",
-        "title": "Collaboration avec dr. jean marc lemaître",
-        "content": "<p>Notre technologie exclusive Neo Regen est composée de cellules souches de Lys, de Pivoine et d’Eau de Baulieu. </p><p>- 136 gènes impliqués dans la jeunesse de la peau modulés. <br/><br/>- +71% de Collagène I.<br/><br/>- Régénération cellulaire, moléculaire et tissulaire.</p>",
+        "title": "dr. jean-marc lemaître (INSERM)",
+        "content": "<p>Créé avec le Dr Lemaître<strong>, l'expert français </strong>de la longévité, notre<strong> actif exclusif NEO-REGEN</strong> est composé de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.&nbsp;</p><ul><li>Il réactive<strong> 136 gènes</strong> impliqués dans la jeunesse de la peau.&nbsp;</li><li><strong>+71% de Collagène I </strong>dès 8 jours.</li><li>Il<strong> relance la régénération </strong>cellulaire, moléculaire et tissulaire.</li></ul>",
         "small_content": "",
         "button_label": "En savoir plus",
         "button_link": "/pages/expertise#technologie-neoregen",
@@ -169,15 +169,15 @@
       "type": "image-collage-text-lba",
       "name": "Actifs clés (mobile)",
       "settings": {
-        "image_main": "shopify://shop_images/1950X1950_CERAMIDES.webp",
-        "image_secondary_1": "shopify://shop_images/niacinamide_2_copy.webp",
+        "image_main": "shopify://shop_images/BULLE_ONAGRE__1.jpg",
+        "image_secondary_1": "shopify://shop_images/pronad_plus_shopify_2000x2000_e2f21c25-c649-4036-a04e-2a63da3b67e7.jpg",
         "image_secondary_1_position": "top",
-        "image_secondary_2": "shopify://shop_images/1950X1950_ECTOINE.webp",
+        "image_secondary_2": "shopify://shop_images/ectoine_shopify_2000x2000_992ea019-3270-47c3-ab21-81c3abf5bfab.jpg",
         "image_secondary_2_position": "bottom",
         "image_position": "start",
         "eyebrow": "136 gènes impliqués dans la jeunesse de la peau",
         "title": "Des actifs clés",
-        "content": "<p><strong>Niacinamide&nbsp;(Vitamine B3)</strong> : Stimule la synthèse de collagène, unifie le teint et améliore visiblement la qualité de la peau.<br/><strong>7 Céramides&nbsp;:</strong> Restaurent la barrière cutanée, renforcent l'hydratation et apportent confort à la peau.&nbsp;<br/><strong>Ectoïne Biotech&nbsp;:</strong> Protège la peau des agressions environnementales et préserve son équilibre face au stress oxydatif.</p><h4>96% d’ingrédients d’origine naturelle</h4>",
+        "content": "<p><strong>Cellules souches d'onagre</strong> : Préservent l’équilibre de la peau et la renforce face aux agressions extérieures. Soutient la barrière cutanée.<br/><br/><strong>Complexe PRO NAD+</strong>&nbsp;: Soutient la production d’énergie cellulaire et favorise les mécanismes de réparation.&nbsp;<br/><br/><strong>Ectoïne Biotech&nbsp;:</strong> Bouclier protecteur, antioxydant, protège des agressions extérieures, hydratation long terme.</p><h4>96% d’ingrédients d’origine naturelle</h4>",
         "small_content": "",
         "button_label": "Voir la liste INCI",
         "button_link": "",
@@ -218,32 +218,32 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+53%",
-            "label": "Fermeté²"
+            "value": "100%",
+            "label": "peau plus lisse¹"
           }
         },
         "stat_Enqmq6": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+24%",
-            "label": "Uniformité du teint¹"
+            "value": "92%",
+            "label": "éclat²"
           }
         },
         "stat_67Jbbd": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "-20%",
-            "label": "Rides²"
+            "value": "91%",
+            "label": "confort¹"
           }
         },
         "stat_LnK8Bh": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+92%",
-            "label": "Confort²"
+            "value": "87%",
+            "label": "Peau plus dense¹"
           }
         }
       },
@@ -257,7 +257,7 @@
       "settings": {
         "title": "Efficacité prouvée cliniquement",
         "content": "",
-        "small_content": "<p>1. Test clinique par mesure instrumentale, 39 femmes caucasiennes, 2 applications par jour pendant 3 mois. / 2. Test clinique par auto-scorage, 39 femmes caucasiennes, 2 applications par jour pendant 3 mois.</p>",
+        "small_content": "<p>¹ Étude d’auto-évaluation réalisée sur 23<br/>volontaires à J+56, sous contrôle dermatologique.<br/>² Score clinicien réalisé sur 23 volontaires à J+56.</p>",
         "content_visibility": "desktop",
         "button_label": "Voir tous les résultats",
         "button_link": "#",
@@ -280,32 +280,32 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+53%",
-            "label": "Fermeté²"
+            "value": "100%",
+            "label": "peau plus lisse¹"
           }
         },
         "stat_LLK6wN": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+24%",
-            "label": "Uniformité du teint¹"
+            "value": "+92%",
+            "label": "éclat²"
           }
         },
         "stat_NcfrmY": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "-20%",
-            "label": "Rides²"
+            "value": "91%",
+            "label": "Confort¹"
           }
         },
         "stat_j8dGVF": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+92%",
-            "label": "Confort²"
+            "value": "87%",
+            "label": "Douceur¹"
           }
         }
       },
@@ -342,7 +342,7 @@
         "item_tHqTnd": {
           "type": "item",
           "settings": {
-            "text": "Formulé en France"
+            "text": "produit en France"
           }
         },
         "item_9W6fTT": {
@@ -403,12 +403,13 @@
         "image_with_text_9H8rP4": {
           "type": "image_with_text",
           "settings": {
-            "image": "shopify://shop_images/niacinamide_2_copy.webp",
-            "title": "Niacinamide (Vitamine B3)",
+            "image": "shopify://shop_images/BULLE_ONAGRE__1.jpg",
+            "title": "<strong>CELLULES SOUCHES D’ONAGRE</strong>&nbsp;",
             "heading_tag": "h3",
-            "content": "<p><strong>Fermeté & homogénéité du teint</strong></p><ul><li>Stimule la synthèse de collagène.</li><li>Régulation de la mélanogénèse.</li><li>Amélioration de l'apparence des rides et ridules et de la qualité de la peau.</li></ul>",
+            "content": "<p>Préservent l’équilibre de la peau et la renforce face aux agressions extérieures. Soutient la barrière cutanée.</p>",
             "link_url": "#",
             "link_text": "",
+            "button_popup": "",
             "product": "",
             "show_price": true
           }
@@ -416,12 +417,13 @@
         "image_with_text_WHTMAF": {
           "type": "image_with_text",
           "settings": {
-            "image": "shopify://shop_images/1950X1950_CERAMIDES.webp",
-            "title": "7 Céramides",
+            "image": "shopify://shop_images/pronad_plus_shopify_2000x2000_e2f21c25-c649-4036-a04e-2a63da3b67e7.jpg",
+            "title": "COMPLEXE PRO NAD+&nbsp;",
             "heading_tag": "h3",
-            "content": "<p><strong>Réparation & confort</strong></p><ul><li>Amélioration de la structure de l'épiderme.</li><li>Renouvellement des cellules de l'épiderme (Kératinocytes).</li><li>Stimulation de la production de facteur d'hydratation naturelle (NMF)</li><li>Renforcement de la barrière cutanée.</li></ul>",
+            "content": "<p>Soutient la production d’énergie cellulaire et favorise les mécanismes de réparation.</p>",
             "link_url": "",
             "link_text": "",
+            "button_popup": "",
             "product": "",
             "show_price": true
           }
@@ -429,12 +431,13 @@
         "image_with_text_DwDqhj": {
           "type": "image_with_text",
           "settings": {
-            "image": "shopify://shop_images/1950X1950_ECTOINE.webp",
+            "image": "shopify://shop_images/ectoine_shopify_2000x2000_992ea019-3270-47c3-ab21-81c3abf5bfab.jpg",
             "title": "ECTOÏNE BIOTECH",
             "heading_tag": "h3",
-            "content": "<p><strong>Bouclier protecteur & antioxidation</strong></p><ul><li>Prévient les dommages des UV, lumière bleu et infra-rouge.</li><li>Protège la peau des polluants atmosphériques.</li><li>Protège la peau face aux changements de température.</li></ul>",
+            "content": "<p>Bouclier protecteur, antioxydant, protège des agressions extérieures, hydratation long terme.</p>",
             "link_url": "",
             "link_text": "",
+            "button_popup": "",
             "product": "",
             "show_price": false
           }
@@ -481,9 +484,9 @@
         "image_secondary_2": "shopify://shop_images/IMG_9122_2_copy.png",
         "image_secondary_2_position": "middle",
         "image_position": "end",
-        "eyebrow": "Collaboration avec dr. jean marc lemaître",
+        "eyebrow": "Collaboration avec dr. jean-marc lemaître",
         "title": "Technologie neo-regen",
-        "content": "<p>Notre technologie exclusive Neo Regen est composée de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.</p><ul><li>136 gènes impliqués dans la jeunesse de la peau modulés. </li><li>+71% de Collagène I.</li><li>Régénération cellulaire, moléculaire et tissulaire.</li></ul>",
+        "content": "<p>Créé avec le Dr Lemaître<strong>, l'expert français </strong>de la longévité, notre<strong> actif exclusif NEO-REGEN</strong> est concentré dans tous nos soins. Composé de millions de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.&nbsp;</p><ul><li>Il réactive<strong> 136 gènes</strong> impliqués dans la jeunesse de la peau.&nbsp;</li><li><strong>+71% de Collagène I </strong>dès 8 jours.</li><li>Il<strong> relance la régénération </strong>cellulaire, moléculaire et tissulaire.</li></ul>",
         "small_content": "",
         "button_label": "En savoir plus",
         "button_link": "/pages/expertise#technologie-neoregen",
@@ -509,7 +512,7 @@
         "image_position": "end",
         "eyebrow": "",
         "title": "",
-        "content": "<p>Pensée comme un objet autonome, la recharge est dotée de son propre couvercle pour se transformer en format voyage.</p><p>Ainsi, votre produit peut s'utiliser sous deux formats différents :&nbsp;</p><ul><li><strong>le format deluxe</strong> pour la salle de bain, avec le pot en verre et le couvercle en résigne, réalisés par des entreprises du Patrimoine Vivant française.</li><li><strong>le format voyage</strong> : à l'ouverture de votre boite, récupérez le couvercle de voyage de votre recharge sous la première cale. Une fois déclipsée, la recharge se ferme avec ce couvercle et se transforme en format voyage, pour accompagner tous vos déplacements.</li></ul><p>Conçue en aluminium et protégée par deux dépôts de brevets, notre recharge incarne une nouvelle vision du soin de luxe, engagé et nomade.</p>",
+        "content": "<p>1. Prélevez une noisette de crème à l'aide de la spatule, puis réchauffer au creux des mains.&nbsp;<br/><br/>2. A l'aide des paumes de mains, masser de bas en haut puis du centre vers les extrémités.</p>",
         "small_content": "",
         "button_label": "",
         "button_link": "",
@@ -532,12 +535,12 @@
       "settings": {
         "image_main": "shopify://shop_images/NEW_GAMME_LOTION2_3_1.jpg",
         "image_secondary_1_position": "top",
-        "image_secondary_2": "shopify://shop_images/1950X1950_TEXTURE_FRETTE_CREME.webp",
+        "image_secondary_2": "shopify://shop_images/BAGUE_BAUME_86c8e914-7dcc-45ab-bcca-b99e3f035970.jpg",
         "image_secondary_2_position": "bottom",
         "image_position": "start",
         "eyebrow": "",
         "title": "Prouesse de formulation",
-        "content": "<p>Créés au sein de nos Laboratoires à Baulieu, nos formules sont exempts de tout ingrédient controversé. Zéro silicone, zéro PEG, zéro microplastique.</p><p>30% d’actifs.<br/>96% d'ingrédients naturels.<br/>Noté excellent sur Yuka.<br/>Délicat parfum frais et réconfortant.</p>",
+        "content": "<p>Créé au sein de <strong>nos laboratoires à Baulieu,</strong> le Baume Onctueux Régénératif est <strong>exempt de tout ingrédient controversé</strong>. Zéro silicone, zéro PEG, zéro microplastique.&nbsp;<br/><br/>30% d'actifs.&nbsp;<br/>20 millions de cellules souches végétales.<br/>96% d'ingrédients d'origine naturelle.<br/>Notée Excellent sur Yuka. Végan.<br/>Délicat parfum frais et réconfortant.</p>",
         "small_content": "",
         "button_label": "En savoir plus",
         "button_link": "/pages/expertise#prouesse-formulation",
@@ -564,7 +567,7 @@
         "image_position": "end",
         "eyebrow": "",
         "title": "",
-        "content": "<p>La recharge est logé dans son pot en verre pour une utilisation quotidienne.</p><p>Lors de vos déplacements, elle se déclipse et se referme avec son couvercle dédié, dissimulé dans le coffret, pour devenir un véritable format nomade. Système breveté.</p><p>La recharge est conçue 100% en aluminium. L’écrin est créé 100% avec des artisans français. Pot en verre, couvercle en bio-résine.&nbsp;</p>",
+        "content": "<p>La recharge est logée dans son pot en verre pour une utilisation quotidienne.</p><p>Lors de vos déplacements, elle se <strong>déclipse </strong>et se referme avec son <strong>couvercle dédié</strong>, dissimulé dans le coffret, pour devenir un <strong>format nomade</strong>. Système breveté.</p><p>La recharge est conçue 100% en aluminium. L’écrin est créé avec des <strong>artisans français</strong>.&nbsp;<br/>Pot en verre, couvercle en bio-résine.&nbsp;</p>",
         "small_content": "",
         "button_label": "Acheter",
         "button_link": "shopify://products/recharge-creme-regenerative-visage",
@@ -611,10 +614,10 @@
         "image_with_text_zVYNDC": {
           "type": "image_with_text",
           "settings": {
-            "image": "shopify://shop_images/1950X1950_TEXTURE_FRETTE_CREME.webp",
+            "image": "shopify://shop_images/BAGUE_BAUME_86c8e914-7dcc-45ab-bcca-b99e3f035970.jpg",
             "title": "Prouesse de formulation",
             "heading_tag": "h3",
-            "content": "<p>Créée au sein de nos Laboratoires à Baulieu, la Crème Fondante Régénérative est <strong>exempt de tout ingrédient controversé</strong>. Zéro silicone, zéro PEG, zéro microplastique.</p><p>30% d’actifs.<br/>96% d'ingrédients d’origine naturelle.<br/>Notée Excellent sur Yuka.<br/>Délicat parfum frais et réconfortant.</p>",
+            "content": "<p>Créé au sein de <strong>nos laboratoires à Baulieu,</strong> le Baume Onctueux Régénératif est <strong>exempt de tout ingrédient controversé</strong>. Zéro silicone, zéro PEG, zéro microplastique.&nbsp;<br/><br/>30% d'actifs<br/>97% d'ingrédients d'origine naturelle.<br/>Notée Excellent sur Yuka. Végan.<br/>Délicat parfum frais et réconfortant.</p>",
             "link_url": "#",
             "link_text": "Voir la liste INCI",
             "button_popup": "liste-inci",
@@ -628,9 +631,10 @@
             "image": "shopify://shop_images/Rectangle_6003.png",
             "title": "Conseils d’utilisation",
             "heading_tag": "h3",
-            "content": "<p>1. Prélevez une noisette de crème à l’aide de la spatule, puis le réchauffer au creux des mains.</p><p>2. à l’aide des paumes de mains, masser de bas en haut puis du centre vers les extrémités.</p>",
+            "content": "<p>1. Prélevez une noisette de crème à l'aide de la spatule, puis réchauffer au creux des mains.&nbsp;<br/><br/>2. A l'aide des paumes de mains, masser de bas en haut puis du centre vers les extrémités.</p>",
             "link_url": "",
             "link_text": "",
+            "button_popup": "",
             "product": "",
             "show_price": true
           }
@@ -641,9 +645,10 @@
             "image": "shopify://shop_images/Rectangle_6002.png",
             "title": "Recharge et format voyage",
             "heading_tag": "h3",
-            "content": "<p>La recharge est logée dans son pot en verre pour une utilisation quotidienne.<br/>Lors de vos déplacements, elle se déclipse et se referme avec son couvercle dédié, dissimulé dans le coffret, pour devenir un <strong>véritable format nomade</strong>. Système breveté.La recharge est conçue 100% en aluminium.</p><p>L’écrin est créé 100% avec des <strong>artisans français</strong>. Pot en verre, couvercle en bio-résine. </p>",
+            "content": "<p>La recharge est logée dans son pot en verre pour une utilisation quotidienne.</p><p>Lors de vos déplacements, elle se <strong>déclipse </strong>et se referme avec son<strong> couvercle dédié,</strong> dissimulé dans le coffret, pour devenir un <strong>&nbsp;format nomade</strong>. Système breveté.</p><p>La recharge est conçue 100% en aluminium.<br/>L’écrin est créé avec des <strong>artisans français</strong>.&nbsp;<br/>Pot en verre, couvercle en bio-résine.&nbsp;</p>",
             "link_url": "",
             "link_text": "Acheter",
+            "button_popup": "",
             "product": "recharge-creme-regenerative-visage",
             "show_price": true
           }
@@ -702,7 +707,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "separate_section_with_border": false,
-        "visibility": "desktop",
+        "visibility": "all",
         "hide_product_information": false,
         "show_buy_button": false,
         "show_product_secondary_image": false,
