@@ -32,7 +32,7 @@
         "text_qa4MPD": {
           "type": "text",
           "settings": {
-            "text": "<h4>Made in france. 96% d’ingrédients d’origine naturelle.<br/>Sans ingrédient controversé.</h4>"
+            "text": "<h4>96% d’ingrédients d’origine naturelle.<br/>Sans ingrédient controversé.<br/>produit en france.</h4>"
           }
         },
         "relative_products_JBLBDc": {
@@ -434,7 +434,7 @@
             "image": "shopify://shop_images/ectoine_shopify_2000x2000_992ea019-3270-47c3-ab21-81c3abf5bfab.jpg",
             "title": "ECTOÏNE BIOTECH",
             "heading_tag": "h3",
-            "content": "<p>Protège la peau des agressions environnementales et renforce la barrière cutanée.</p>",
+            "content": "<p>Bouclier protecteur, antioxydant, protège des agressions extérieures, hydratation long terme.</p>",
             "link_url": "",
             "link_text": "",
             "button_popup": "",
