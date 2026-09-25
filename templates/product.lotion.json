@@ -37,7 +37,6 @@
         },
         "relative_products_JBLBDc": {
           "type": "relative_products",
-          "disabled": true,
           "settings": {}
         },
         "recharge_subscriptions_subscription_widget_v2_zxAiiW": {
@@ -94,8 +93,7 @@
         "product_upsell_A8RkbM"
       ],
       "custom_css": [
-        ".accordion img {max-width: 350px; width: 100%; height: auto;}",
-        "@media (max-width: 768px) {.product-info__block-list [data-block-id*=\"judge_me\"] {margin-bottom: -10px; }}"
+        ".accordion img {max-width: 350px; width: 100%; height: auto;}"
       ],
       "settings": {
         "color_scheme": "scheme-2",
@@ -645,9 +643,9 @@
           "type": "image_with_text",
           "settings": {
             "image": "shopify://shop_images/Rectangle_6002.png",
-            "title": "Recharge et format voyage",
+            "title": "produit en france",
             "heading_tag": "h3",
-            "content": "<p>La recharge est logée dans son pot en verre pour une utilisation quotidienne.<br/>Lors de vos déplacements, elle se déclipse et se referme avec son couvercle dédié, dissimulé dans le coffret, pour devenir un <strong>véritable format nomade</strong>. Système breveté.La recharge est conçue 100% en aluminium.</p><p>L’écrin est créé 100% avec des <strong>artisans français</strong>. Pot en verre, couvercle en bio-résine. </p>",
+            "content": "<p>Nos packagings sont créés avec des <strong>artisans d'excellence français</strong> (label EPV - Entreprises du Patrimoine Vivant).&nbsp;</p><p>Le flacon en verre est fabriqué en Normandie.&nbsp;<br/>Le capuchon en bio-résine vient du Jura et nécessite 15 jours de production.&nbsp;<br/>La formule est produite en France.</p>",
             "link_url": "",
             "link_text": "Acheter",
             "button_popup": "",
