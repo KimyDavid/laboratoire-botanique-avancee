@@ -37,6 +37,7 @@
         },
         "relative_products_JBLBDc": {
           "type": "relative_products",
+          "disabled": true,
           "settings": {}
         },
         "recharge_subscriptions_subscription_widget_v2_zxAiiW": {
