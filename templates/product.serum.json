@@ -561,7 +561,7 @@
       "type": "image-collage-text-lba",
       "name": "Recharge format voyage (mobile)",
       "settings": {
-        "image_main": "shopify://shop_images/Rectangle_5938_1.jpg",
+        "image_main": "shopify://shop_images/LBA_Serum_RVB.webp",
         "image_secondary_1_position": "top",
         "image_secondary_2_position": "bottom",
         "image_position": "end",
@@ -614,7 +614,7 @@
         "image_with_text_zVYNDC": {
           "type": "image_with_text",
           "settings": {
-            "image": "shopify://shop_images/1950X1950_TEXTURE_FRETTE_CREME.webp",
+            "image": "shopify://shop_images/Texture_serum.jpg",
             "title": "Prouesse de formulation",
             "heading_tag": "h3",
             "content": "<p>Créé au sein de nos laboratoires à Baulieu, le Sérum en Crème Régénératif est exempt de tout ingrédient controversé. Zéro silicone, zéro PEG, zéro microplastique.&nbsp;<br/><br/>Une signature olfactive au parfum frais et enveloppant. &nbsp;<br/><br/>30% d'actifs<br/>96% d'ingrédients d'origine naturelle.<br/>Notée Excellent sur Yuka<br/>Fabriqué en France</p>",
@@ -642,10 +642,10 @@
         "image_with_text_4ggwCB": {
           "type": "image_with_text",
           "settings": {
-            "image": "shopify://shop_images/Rectangle_6002.png",
+            "image": "shopify://shop_images/LBA_Serum_RVB.webp",
             "title": "Recharge et format voyage",
             "heading_tag": "h3",
-            "content": "<p>La recharge est logée dans son pot en verre pour une utilisation quotidienne.<br/>Lors de vos déplacements, elle se déclipse et se referme avec son couvercle dédié, dissimulé dans le coffret, pour devenir un <strong>véritable format nomade</strong>. Système breveté.La recharge est conçue 100% en aluminium.</p><p>L’écrin est créé 100% avec des <strong>artisans français</strong>. Pot en verre, couvercle en bio-résine. </p>",
+            "content": "<p>La recharge est logée dans son pot en verre pour une utilisation quotidienne.<br/>Lors de vos déplacements, elle se déclipse et se referme avec son couvercle dédié, dissimulé dans le coffret, pour devenir un <strong>véritable format nomade</strong>. Système breveté.La recharge est conçue 100% en aluminium.</p><p>L’écrin est créé 100% avec des <strong>artisans français</strong>. Pot en verre, couvercle en bio-résine.&nbsp;</p>",
             "link_url": "",
             "link_text": "Acheter",
             "button_popup": "",
