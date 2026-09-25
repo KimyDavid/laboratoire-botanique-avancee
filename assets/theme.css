@@ -11015,12 +11015,15 @@ body .container_header_contact .contact_reference {
 
 .h3.relative-product__label.h3 {
   font-weight: 400;
-  letter-spacing: 1px;
   font-size: 16px;
   font-family: 'Neutraface Text Book';
 }
 
 @media (max-width: 1000px) {
+  .h3.relative-product__label.h3 {
+    letter-spacing: 1px;
+  }
+
   .relative-product {
     padding: 10px;
   }
