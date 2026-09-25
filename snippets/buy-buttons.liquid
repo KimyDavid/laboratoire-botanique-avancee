@@ -95,7 +95,7 @@ Supported variables
             {%- assign atc_button_style = 'solid' -%}
           {%- endif -%}
 
-          {%- render 'button', content: button_content, type: 'submit', disabled: button_disabled, style: atc_button_style, background: atc_button_background, text_color: atc_button_text_color, stretch: true, icon: "arrow-right-lba" -%}
+          {%- render 'button', content: button_content, type: 'submit', disabled: button_disabled, style: atc_button_style, background: atc_button_background, text_color: atc_button_text_color, stretch: true -%}
 
           {%- if show_payment_button -%}
             {{- form | payment_button -}}

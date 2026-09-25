@@ -1,0 +1,332 @@
+{%- comment -%}
+  Collage of up to 3 images (1 main + 2 secondary) next to a text content.
+  Secondary image 1 is on the right (top or middle), secondary image 2 is on the left (bottom or middle).
+  Desktop: displayed as is. Mobile (< 1000px): the whole section is folded into an accordion (can be disabled with a setting).
+  Options: collage on the left or right, top and bottom borders around the text (the media is then at least as tall as the text),
+  optional product whose price is displayed next to the button.
+  The button can also add that product to the cart (a single-variant product is added directly as a one-time purchase, otherwise the quick buy modal opens).
+{%- endcomment -%}
+
+{%- assign main_image = section.settings.image_main -%}
+{%- assign image_1 = section.settings.image_secondary_1 -%}
+{%- assign image_2 = section.settings.image_secondary_2 -%}
+{%- assign has_media = false -%}
+{%- if main_image != blank or image_1 != blank or image_2 != blank -%}
+  {%- assign has_media = true -%}
+{%- endif -%}
+{%- comment -%}Mobile variant: no top right image, so the main image goes full width and the title moves next to the bottom left image{%- endcomment -%}
+{%- assign is_bottom_left_only = false -%}
+{%- if image_1 == blank and image_2 != blank and section.settings.image_secondary_2_position != 'middle' -%}
+  {%- assign is_bottom_left_only = true -%}
+{%- endif -%}
+{%- comment -%}Only a main image: it fills the whole media area instead of being inset like in the collage{%- endcomment -%}
+{%- assign is_main_only = false -%}
+{%- if main_image != blank and image_1 == blank and image_2 == blank -%}
+  {%- assign is_main_only = true -%}
+{%- endif -%}
+{%- comment -%}Secondary image 1 can be placed in the middle right instead of the top right{%- endcomment -%}
+{%- assign is_middle_right = false -%}
+{%- if image_1 != blank and section.settings.image_secondary_1_position == 'middle' -%}
+  {%- assign is_middle_right = true -%}
+{%- endif -%}
+{%- comment -%}Secondary image 2 can be placed in the middle left instead of the bottom left{%- endcomment -%}
+{%- assign is_middle_left = false -%}
+{%- if image_2 != blank and section.settings.image_secondary_2_position == 'middle' -%}
+  {%- assign is_middle_left = true -%}
+{%- endif -%}
+{%- assign use_accordion = section.settings.mobile_accordion -%}
+{%- assign button_product = section.settings.button_product -%}
+{%- assign button_url = section.settings.button_link | default: button_product.url -%}
+{%- assign is_add_to_cart = false -%}
+{%- if section.settings.button_add_to_cart and button_product != blank -%}
+  {%- assign is_add_to_cart = true -%}
+  {%- assign button_variant = button_product.selected_or_first_available_variant -%}
+  {%- assign sold_out_label = 'product.general.sold_out_button' | t -%}
+{%- endif -%}
+{%- assign panel_id = 'collage-panel-' | append: section.id -%}
+{%- assign popup_handle = section.settings.button_popup | handleize -%}
+
+<section id="{{ section.id }}-collage" style="background: {{ section.settings.background_color }};" class="collage-text {% if section.settings.spacing_top %}collage-text--pad-top{% endif %} {% if section.settings.spacing_bottom %}collage-text--pad-bottom{% endif %} {% unless use_accordion %}collage-text--static{% if is_bottom_left_only == false %} collage-text--titled{% endif %}{% endunless %} {% render 'responsive-visibility', visibility: section.settings.visibility %}">
+  <collage-text class="container">
+    <div class="collage-text__wrapper">
+      {%- if use_accordion -%}
+        <button
+          type="button"
+          class="collage-text__toggle group"
+          aria-expanded="{% if section.settings.mobile_accordion_open %}true{% else %}false{% endif %}"
+          aria-controls="{{ panel_id }}"
+        >
+          <span class="h3">{{ section.settings.mobile_accordion_label }}</span>
+          <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+        </button>
+      {%- endif -%}
+
+      <div id="{{ panel_id }}" class="collage-text__panel {% if use_accordion == false or section.settings.mobile_accordion_open %}is-open{% endif %}">
+        <div class="collage-text__panel-inner">
+          <div class="collage-text__inner {% unless has_media %}collage-text__inner--no-media{% endunless %} {% if section.settings.image_position == 'end' %}collage-text__inner--media-end{% endif %} {% if section.settings.bordered_content %}collage-text__inner--bordered{% endif %}">
+            {%- if has_media -%}
+              <div class="collage-text__media {% if is_bottom_left_only %}collage-text__media--bottom-left-only{% endif %} {% if is_main_only %}collage-text__media--main-only{% endif %} {% if is_middle_right %}collage-text__media--middle-right{% endif %} {% if is_middle_left %}collage-text__media--middle-left{% endif %} {% if main_image != blank %}collage-text__media--has-main{% endif %}">
+                {%- if main_image != blank -%}
+                  {{- main_image | image_url: width: 1200 | image_tag: class: 'collage-text__image collage-text__image--main', loading: 'lazy', widths: '400,600,800,1200', sizes: '(min-width: 1000px) 40vw, 80vw' -}}
+                {%- endif -%}
+                {%- if image_1 != blank -%}
+                  {{- image_1 | image_url: width: 600 | image_tag: class: 'collage-text__image collage-text__image--secondary-1', loading: 'lazy', widths: '200,300,450,600', sizes: '(min-width: 1000px) 20vw, 40vw' -}}
+                {%- endif -%}
+                {%- if image_2 != blank -%}
+                  {{- image_2 | image_url: width: 600 | image_tag: class: 'collage-text__image collage-text__image--secondary-2', loading: 'lazy', widths: '200,300,450,600', sizes: '(min-width: 1000px) 20vw, 40vw' -}}
+                {%- endif -%}
+                {%- if is_bottom_left_only and section.settings.title != blank -%}
+                  <p class="collage-text__media-title h4">{{ section.settings.title | newline_to_br }}</p>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+
+            <div class="collage-text__text">
+              {%- if section.settings.title != blank -%}
+                <h2 class="collage-text__title h2">{{ section.settings.title | newline_to_br }}</h2>
+              {%- endif -%}
+
+              {%- if section.settings.eyebrow != blank -%}
+                <p class="collage-text__eyebrow h4">{{ section.settings.eyebrow }}</p>
+              {%- endif -%}
+
+              {%- if section.settings.content != blank -%}
+                <div class="collage-text__content prose">{{ section.settings.content }}</div>
+              {%- endif -%}
+
+              {%- if section.settings.small_content != blank -%}
+                <div class="collage-text__small prose">{{ section.settings.small_content }}</div>
+              {%- endif -%}
+
+              {%- if section.settings.button_label != blank and button_url != blank or section.settings.button_label != blank and popup_handle != blank -%}
+                <div class="collage-text__button">
+                  {%- if popup_handle != blank -%}
+                    {%- assign popup_id = 'side-popup-' | append: popup_handle -%}
+                    {%- render 'button', type: 'button', style: 'primary', content: section.settings.button_label, aria_controls: popup_id -%}
+                  {%- elsif is_add_to_cart -%}
+                    {%- comment -%}Without a selling_plan field, the variant is added as a one-time purchase, even if the product offers subscriptions{%- endcomment -%}
+                    {%- if button_product.variants.size == 1 and button_variant.requires_selling_plan == false -%}
+                      <product-form>
+                        {%- form 'product', button_product -%}
+                          <input type="hidden" name="on_success" value="force_open_drawer">
+                          <input type="hidden" name="quantity" value="1">
+                          <input type="hidden" name="id" value="{{ button_variant.id }}">
+                          {%- if button_variant.available -%}
+                            {%- render 'button', type: 'submit', style: 'primary', content: section.settings.button_label -%}
+                          {%- else -%}
+                            {%- render 'button', type: 'submit', style: 'primary', content: sold_out_label, disabled: true -%}
+                          {%- endif -%}
+                        {%- endform -%}
+                      </product-form>
+                    {%- else -%}
+                      {%- assign quick_buy_id = 'product-quick-buy-' | append: section.id | append: '-' | append: button_product.id -%}
+
+                      {%- render 'button', type: 'button', style: 'primary', content: section.settings.button_label, aria_controls: quick_buy_id -%}
+
+                      <quick-buy-modal handle="{{ button_product.handle }}?variant={{ button_variant.id }}" class="quick-buy-modal modal" id="{{ quick_buy_id }}">
+                      </quick-buy-modal>
+                    {%- endif -%}
+                  {%- else -%}
+                    {%- render 'button', href: button_url, style: 'primary', content: section.settings.button_label -%}
+                  {%- endif -%}
+
+                  {%- if button_product != blank -%}
+                    <span class="collage-text__price h3">{{ button_product.price | money }}</span>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </collage-text>
+</section>
+
+{% schema %}
+{
+  "name": "Collage images + text",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_main",
+      "label": "Image principale"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_secondary_1",
+      "label": "Image secondaire 1 (droite)"
+    },
+    {
+      "type": "select",
+      "id": "image_secondary_1_position",
+      "label": "Position de l'image secondaire 1",
+      "options": [
+        { "value": "top", "label": "Haut droite" },
+        { "value": "middle", "label": "Milieu droite" }
+      ],
+      "default": "top"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_secondary_2",
+      "label": "Image secondaire 2 (gauche)"
+    },
+    {
+      "type": "select",
+      "id": "image_secondary_2_position",
+      "label": "Position de l'image secondaire 2",
+      "options": [
+        { "value": "bottom", "label": "Bas gauche" },
+        { "value": "middle", "label": "Milieu gauche" }
+      ],
+      "default": "bottom"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Position des images",
+      "options": [
+        { "value": "start", "label": "Gauche" },
+        { "value": "end", "label": "Droite" }
+      ],
+      "default": "start"
+    },
+    {
+      "type": "header",
+      "content": "Contenu"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Surtitre"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Titre",
+      "info": "Un retour à la ligne est conservé à l'affichage."
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Contenu"
+    },
+    {
+      "type": "richtext",
+      "id": "small_content",
+      "label": "Contenu small",
+      "info": "Affiché en petit (ex : liste des ingrédients)."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Texte du bouton",
+      "default": "En savoir plus"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Lien du bouton",
+      "info": "Facultatif si un produit est choisi : le bouton pointe alors vers sa page."
+    },
+    {
+      "type": "text",
+      "id": "button_popup",
+      "label": "Identifiant de la popup à ouvrir",
+      "info": "Facultatif. Si renseigné, le bouton ouvre la popup latérale ayant cet identifiant (sections « Popup latérale » du Header Group), à la place du lien ou de l'ajout au panier."
+    },
+    {
+      "type": "product",
+      "id": "button_product",
+      "label": "Produit du bouton",
+      "info": "Facultatif. Son prix est affiché à droite du bouton."
+    },
+    {
+      "type": "checkbox",
+      "id": "button_add_to_cart",
+      "label": "Le bouton ajoute le produit au panier",
+      "info": "Nécessite un produit. Un produit à variante unique est ajouté directement en achat unique (même s'il propose un abonnement), sinon la fenêtre de choix des options s'ouvre. Le lien du bouton est ignoré.",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bordered_content",
+      "label": "Bordures haut et bas du contenu",
+      "info": "Ajoute une ligne au-dessus et en dessous du texte, sur desktop. Les images font alors au moins la hauteur du texte.",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_accordion",
+      "label": "Section repliable en accordéon",
+      "info": "Si décoché, le contenu est toujours affiché en mobile (avec le titre et le surtitre).",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "mobile_accordion_label",
+      "label": "Libellé du bouton accordéon",
+      "info": "Utilisé uniquement si l'accordéon est activé.",
+      "default": "Voir plus"
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_accordion_open",
+      "label": "Accordéon ouvert par défaut",
+      "info": "Utilisé uniquement si l'accordéon est activé.",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Affichage"
+    },
+    {
+      "type": "select",
+      "id": "visibility",
+      "label": "t:global.visibility.label",
+      "options": [
+        { "value": "all", "label": "t:global.visibility.options.all" },
+        { "value": "mobile", "label": "t:global.visibility.options.mobile" },
+        { "value": "desktop", "label": "t:global.visibility.options.desktop" }
+      ],
+      "default": "all"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "checkbox",
+      "id": "spacing_top",
+      "label": "Espace en haut",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "spacing_bottom",
+      "label": "Espace en bas",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Couleur de fond",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collage images + text"
+    }
+  ]
+}
+{% endschema %}

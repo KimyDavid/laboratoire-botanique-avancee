@@ -421,6 +421,53 @@ quick buy information in a template, that will be extracted in JS, which ensures
       ]
     },
     {
+      "type": "product_upsell",
+      "name": "Produit upsell",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Surtitre",
+          "default": "Pour commencer"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titre",
+          "default": "Coffret découverte"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "<p>Nos deux soins emblématiques pour une semaine de régénération cutanée.</p>"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Produit cible"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Libellé du bouton",
+          "default": "Acheter"
+        },
+        {
+          "type": "select",
+          "id": "visibility",
+          "label": "t:global.visibility.label",
+          "options": [
+            { "value": "all", "label": "t:global.visibility.options.all" },
+            { "value": "mobile", "label": "t:global.visibility.options.mobile" },
+            { "value": "desktop", "label": "t:global.visibility.options.desktop" }
+          ],
+          "default": "all"
+        }
+      ]
+    },
+    {
       "type": "relative_products",
       "name": "Produits relatifs",
       "limit": 1
@@ -1818,6 +1865,10 @@ quick buy information in a template, that will be extracted in JS, which ensures
           "label": "t:sections.main_product.blocks.button.stretch"
         },
         {
+          "type": "header",
+          "content": "Couleurs desktop"
+        },
+        {
           "type": "color",
           "id": "background",
           "label": "t:global.colors.background"
@@ -1826,6 +1877,44 @@ quick buy information in a template, that will be extracted in JS, which ensures
           "type": "color",
           "id": "text_color",
           "label": "t:global.colors.text"
+        },
+        {
+          "type": "color",
+          "id": "border_color",
+          "label": "Bordure"
+        },
+        {
+          "type": "header",
+          "content": "Couleurs mobile"
+        },
+        {
+          "type": "color",
+          "id": "background_mobile",
+          "label": "t:global.colors.background",
+          "info": "Laisser vide pour reprendre la couleur desktop"
+        },
+        {
+          "type": "color",
+          "id": "text_color_mobile",
+          "label": "t:global.colors.text",
+          "info": "Laisser vide pour reprendre la couleur desktop"
+        },
+        {
+          "type": "color",
+          "id": "border_color_mobile",
+          "label": "Bordure",
+          "info": "Laisser vide pour reprendre la couleur desktop"
+        },
+        {
+          "type": "select",
+          "id": "visibility",
+          "label": "t:global.visibility.label",
+          "options": [
+            { "value": "all", "label": "t:global.visibility.options.all" },
+            { "value": "mobile", "label": "t:global.visibility.options.mobile" },
+            { "value": "desktop", "label": "t:global.visibility.options.desktop" }
+          ],
+          "default": "all"
         }
       ]
     },

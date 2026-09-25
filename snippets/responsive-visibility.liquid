@@ -1,0 +1,27 @@
+{%- comment -%}
+  Outputs the utility class that restricts an element to mobile or desktop.
+
+  Accepts:
+  - visibility: {String} 'all' (default), 'mobile' or 'desktop'. Usually the value of a `visibility` select setting.
+
+  Usage:
+  <div class="{% render 'responsive-visibility', visibility: block.settings.visibility %}">
+
+  To make a block administrable, add this setting to its schema (labels in locales/*.schema.json under global.visibility):
+  {
+    "type": "select",
+    "id": "visibility",
+    "label": "t:global.visibility.label",
+    "options": [
+      { "value": "all", "label": "t:global.visibility.options.all" },
+      { "value": "mobile", "label": "t:global.visibility.options.mobile" },
+      { "value": "desktop", "label": "t:global.visibility.options.desktop" }
+    ],
+    "default": "all"
+  }
+{%- endcomment -%}
+
+{%- case visibility -%}
+  {%- when 'mobile' -%}md:hidden
+  {%- when 'desktop' -%}md-max:hidden
+{%- endcase -%}

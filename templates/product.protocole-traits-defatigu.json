@@ -54,7 +54,7 @@
           "settings": {
             "show_payment_button": false,
             "show_gift_card_recipient": false,
-            "atc_button_background": "#2d464b",
+            "atc_button_background": "#3C626B",
             "atc_button_text_color": "#ffffff",
             "payment_button_background": "",
             "payment_button_text_color": ""
@@ -91,7 +91,7 @@
             "link": "shopify://pages/diagnostic",
             "text": "Faire un diagnostic",
             "stretch": false,
-            "background": "#2D464B",
+            "background": "#3C626B",
             "text_color": "#FFFFFF"
           }
         },
@@ -387,7 +387,6 @@
         "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "hide_product_information": false,
-        "show_product_subtitle": false,
         "show_product_secondary_image": false,
         "carousel_design": "default",
         "stack_products": false,

@@ -1,0 +1,18 @@
+{%- comment -%}
+  Button of a multi-column block (sections/multi-column.liquid).
+
+  * style: "link" (classic underlined link), "solid" or "outline"
+  * size: "sm" or "base", ignored for the "link" style
+  * href: renders a link; otherwise a button of the given type
+  * type, content, disabled, aria_controls: same as the "button" snippet
+{%- endcomment -%}
+
+{%- if style == 'link' -%}
+  {%- if href != blank -%}
+    <a href="{{ href }}" class="cta_link_lba link">{{ content | escape }}</a>
+  {%- else -%}
+    <button type="{{ type | default: 'button' }}" class="cta_link_lba link" {% if aria_controls %}aria-controls="{{ aria_controls }}"{% endif %} {% if disabled %}disabled{% endif %}>{{ content | escape }}</button>
+  {%- endif -%}
+{%- else -%}
+  {%- render 'button', href: href, type: type, style: style, size: size, content: content, disabled: disabled, aria_controls: aria_controls -%}
+{%- endif -%}

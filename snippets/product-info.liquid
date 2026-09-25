@@ -228,11 +228,62 @@ Supported variables
                 {%- endif -%}
               {%- endif -%}
 
+            {%- when 'product_upsell' -%}
+              {%- assign upsell_product = block.settings.product -%}
+
+              {%- if upsell_product != blank -%}
+                <div class="product-upsell">
+                  {%- assign upsell_image = upsell_product.featured_image -%}
+
+                  {%- if upsell_image != blank -%}
+                    <div class="product-upsell__image-wrap">
+                      <a href="{{ upsell_product.url }}" class="product-upsell__image-link">
+                        {{ upsell_image | image_url: width: upsell_image.width | image_tag: class: 'product-upsell__image', loading: 'lazy', widths: '200,300,400,600', sizes: '(max-width: 768px) 100vw, 40vw' }}
+                      </a>
+                    </div>
+                  {%- endif -%}
+
+                  <div class="product-upsell__content">
+                    {%- if block.settings.eyebrow != blank -%}
+                      <p class="product-upsell__eyebrow">{{ block.settings.eyebrow }}</p>
+                    {%- endif -%}
+
+                    {%- if block.settings.title != blank -%}
+                      <h3 class="product-upsell__title h3">{{ block.settings.title }}</h3>
+                    {%- endif -%}
+
+                    {%- if block.settings.description != blank -%}
+                      <div class="product-upsell__description prose">
+                        {{- block.settings.description -}}
+                      </div>
+                    {%- endif -%}
+
+                    <div class="product-upsell__cta">
+                      <a class="product-upsell__button button--sm button button--secondary" href="{{ upsell_product.url }}">
+                        {{ block.settings.button_label | default: 'Acheter' }}
+                      </a>
+
+                      <span class="product-upsell__price h3">{{ upsell_product.price | money }}</span>
+                    </div>
+                  </div>
+                </div>
+              {%- endif -%}
+
             {% when 'relative_products' %}
-              {% if product.metafields.custom.selecteur_produits_relatifs != blank %}
-                <div class="variant-picker__option-values variant-picker__option-values--grid">
-                  {% for sub_product in product.metafields.custom.selecteur_produits_relatifs.value %}
-                    <a href="{{ sub_product.url }}" class="block-swatch {% if sub_product.id == product.id %}is-selected{% endif %}"><span>{{ sub_product.metafields.custom.produits_relatifs_label | default: sub_product.title }}</span>
+              {% assign related_products = product.metafields.custom.selecteur_produits_relatifs.value %}
+
+              {% if related_products != blank %}
+                <div class="relative-products">
+                  {% for sub_product in related_products %}
+                    {% assign item_label = sub_product.metafields.custom.produits_relatifs_label | default: sub_product.title %}
+
+                    <a href="{{ sub_product.url }}" class="relative-product{% if sub_product.id == product.id %} is-current{% endif %}">
+                      <div class="relative-product__content">
+                        <div class="relative-product__header">
+                          <span class="relative-product__label h3">{{ item_label }}</span>
+                          <span class="relative-product__price h3">{{ sub_product.price | money }}</span>
+                        </div>
+                      </div>
                     </a>
                   {% endfor %}
                 </div>
@@ -555,13 +606,88 @@ Supported variables
 
             {%- when 'button' -%}
               {%- if block.settings.text != blank -%}
-                {% if block.settings.background != '' %}
-                  {% assign button_style = 'primary' %}
-                {% else %}
-                  {% assign button_style = 'link' %}
-                {% endif %}
-                <script>console.log({{block.settings.background}});</script>
-                {%- render 'button', href: block.settings.link, style: button_style, content: block.settings.text, stretch: block.settings.stretch, background: block.settings.background, text_color: block.settings.text_color -%}
+                {%- liquid
+                  assign transparent = 'rgba(0,0,0,0)'
+                  assign bg_desktop = block.settings.background
+                  assign text_desktop = block.settings.text_color
+                  assign border_desktop = block.settings.border_color
+                  if bg_desktop == transparent
+                    assign bg_desktop = blank
+                  endif
+                  if text_desktop == transparent
+                    assign text_desktop = blank
+                  endif
+                  if border_desktop == transparent
+                    assign border_desktop = blank
+                  endif
+
+                  assign bg_mobile = block.settings.background_mobile
+                  assign text_mobile = block.settings.text_color_mobile
+                  assign border_mobile = block.settings.border_color_mobile
+                  if bg_mobile == blank
+                    assign bg_mobile = bg_desktop
+                  elsif bg_mobile == transparent
+                    assign bg_mobile = blank
+                  endif
+                  if text_mobile == blank
+                    assign text_mobile = text_desktop
+                  elsif text_mobile == transparent
+                    assign text_mobile = blank
+                  endif
+                  if border_mobile == blank
+                    assign border_mobile = border_desktop
+                  elsif border_mobile == transparent
+                    assign border_mobile = blank
+                  endif
+
+                  if bg_desktop != blank or border_desktop != blank or bg_mobile != blank or border_mobile != blank
+                    assign button_style = 'primary'
+                  else
+                    assign button_style = 'link'
+                  endif
+                -%}
+
+                {%- if button_style == 'primary' -%}
+                  {%- assign button_selector = '.product-info__block-item[data-block-id="' | append: block.id | append: '"] .button.button--primary' -%}
+                  <style>
+                    {%- for breakpoint in (1..2) -%}
+                      {%- if forloop.first -%}
+                        {%- assign media = 'screen and (min-width: 1000px)' -%}
+                        {%- assign bg = bg_desktop -%}
+                        {%- assign fg = text_desktop -%}
+                        {%- assign bd = border_desktop -%}
+                      {%- else -%}
+                        {%- assign media = 'screen and (max-width: 999px)' -%}
+                        {%- assign bg = bg_mobile -%}
+                        {%- assign fg = text_mobile -%}
+                        {%- assign bd = border_mobile -%}
+                      {%- endif -%}
+
+                      {%- assign bg_value = bg | default: 'transparent' -%}
+                      {%- assign fg_fallback = 'rgb(var(--text-color))' -%}
+                      {%- if bg != blank -%}{%- assign fg_fallback = '#ffffff' -%}{%- endif -%}
+                      {%- assign fg_value = fg | default: fg_fallback -%}
+                      {%- assign bd_value = bd | default: bg_value -%}
+                      {%- assign hover_bg = fg_value -%}
+                      {%- assign hover_fg = bg | default: '#ffffff' -%}
+
+                      @media {{ media }} {
+                        {{ button_selector }} {
+                          background: {{ bg_value }};
+                          color: {{ fg_value }};
+                          border-color: {{ bd_value }};
+                        }
+                        {{ button_selector }}:hover {
+                          background: {{ hover_bg }} !important;
+                          color: {{ hover_fg }} !important;
+                          border-color: {{ bd | default: hover_bg }} !important;
+                        }
+                      }
+                    {%- endfor -%}
+                  </style>
+                {%- endif -%}
+
+                {%- render 'button', href: block.settings.link, style: button_style, content: block.settings.text, stretch: block.settings.stretch -%}
               {%- endif -%}
 
             {%- when 'share_buttons' -%}
@@ -593,7 +719,7 @@ Supported variables
           <div class="product-info__block-group {{ block_group_class }}" data-group-type="{{ block_group_name }}">
         {%- endif -%}
 
-        <div class="product-info__block-item" data-block-id="{{ block.id }}" data-block-type="{{ block.type | replace: '_', '-' }}" {% unless block.type == '@app' or block.type == 'accordion' %}{{ block.shopify_attributes }}{% endunless %}>
+        <div class="product-info__block-item {% render 'responsive-visibility', visibility: block.settings.visibility %}" data-block-id="{{ block.id }}" data-block-type="{{ block.type | replace: '_', '-' }}" {% unless block.type == '@app' or block.type == 'accordion' %}{{ block.shopify_attributes }}{% endunless %}>
           {{- block_content -}}
         </div>
 

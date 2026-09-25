@@ -32,7 +32,7 @@
         "text_qa4MPD": {
           "type": "text",
           "settings": {
-            "text": "<h4>97% d’ingrédients d’origine naturelle. Végan.&nbsp;<br/>Sans ingrédient controversé. Made in france.&nbsp;</h4>"
+            "text": "<h4>Made in france. 96% d’ingrédients d’origine naturelle.<br/>Sans ingrédient controversé. Végan.</h4>"
           }
         },
         "relative_products_JBLBDc": {
@@ -147,8 +147,8 @@
         "image_secondary_2_position": "bottom",
         "image_position": "start",
         "eyebrow": "",
-        "title": "collaboration dr. jean-marc lemaître",
-        "content": "<p>Créé avec le Dr Lemaître<strong>, l'expert français </strong>de la longévité, notre<strong> actif exclusif NEO-REGEN</strong> est composé de millions de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.&nbsp;</p><ul><li>Il réactive<strong> 136 gènes</strong> impliqués dans la jeunesse de la peau.&nbsp;</li><li><strong>+71% de Collagène I </strong>dès 8 jours.</li><li>Il<strong> relance la régénération </strong>cellulaire, moléculaire et tissulaire.</li></ul>",
+        "title": "Collaboration avec dr. jean marc lemaître",
+        "content": "<p>Notre technologie exclusive Neo Regen est composée de cellules souches de Lys, de Pivoine et d’Eau de Baulieu. </p><p>- 136 gènes impliqués dans la jeunesse de la peau modulés. <br/><br/>- +71% de Collagène I.<br/><br/>- Régénération cellulaire, moléculaire et tissulaire.</p>",
         "small_content": "",
         "button_label": "En savoir plus",
         "button_link": "/pages/expertise#technologie-neoregen",
@@ -169,15 +169,15 @@
       "type": "image-collage-text-lba",
       "name": "Actifs clés (mobile)",
       "settings": {
-        "image_main": "shopify://shop_images/1950X1950_INGREDIENTS_MOUSSE.webp",
-        "image_secondary_1": "shopify://shop_images/1950X1950_INGREDIENTS_ACIDE_GLYCOLIQUE.webp",
+        "image_main": "shopify://shop_images/1950X1950_INGREDIENTS_CELLULE_TUBEREUSE.webp",
+        "image_secondary_1": "shopify://shop_images/1950X1950_INGREDIENTS_TETRAPEPTIDES.webp",
         "image_secondary_1_position": "top",
         "image_secondary_2": "shopify://shop_images/1950X1950_ECTOINE.webp",
         "image_secondary_2_position": "bottom",
         "image_position": "start",
         "eyebrow": "136 gènes impliqués dans la jeunesse de la peau",
         "title": "Des actifs clés",
-        "content": "<p><strong>Cellules souches de Mousse Biotech</strong> : Renforcent la fonction barrière de la peau et hydratent en profondeur.<br/><br/><strong>Acide Glycolique</strong> : Exfolie en douceur, stimule le renouvellement cellulaire et affine visiblement le grain de peau.&nbsp;<br/><br/><strong>Ectoïne Biotech </strong>: Bouclier protecteur, antioxydant, protège la peau des agressions extérieures.</p><h4>97% d’ingrédients d’origine naturelle</h4>",
+        "content": "<p><strong>Cellules Souches de Tubéreuse Biotech</strong> : Stimulent la production de collagène et d'élastine pour une peau plus ferme et redensifiée.&nbsp;<strong><br/><br/>Tétrapeptides + Caféine</strong> : Activent la microcirculation pour réduire visiblement les poches et les cernes.<br/><br/><strong>Ectoïne Biotech</strong> : Protège la peau des agressions environnementales et préserve son équilibre face au stress oxydatif.</p><h4>97% d’ingrédients d’origine naturelle</h4>",
         "small_content": "",
         "button_label": "Voir la liste INCI",
         "button_link": "",
@@ -218,32 +218,32 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "95%",
-            "label": "grain de peau affiné¹"
+            "value": "+97%",
+            "label": "Fermeté¹"
           }
         },
         "stat_Enqmq6": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "100%",
-            "label": "CONFORT ET DOUCEUR¹"
+            "value": "-80%",
+            "label": "rides¹"
           }
         },
         "stat_67Jbbd": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "100%",
-            "label": "éclat¹"
+            "value": "+90%",
+            "label": "contour des yeux nourri¹"
           }
         },
         "stat_LnK8Bh": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "95%",
-            "label": "HYDRATATION¹"
+            "value": "+95%",
+            "label": "hydratation¹"
           }
         }
       },
@@ -280,32 +280,32 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "95%",
-            "label": "grain de peau affiné¹"
+            "value": "+97%",
+            "label": "Fermeté¹"
           }
         },
         "stat_LLK6wN": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "95%",
-            "label": "hydratation¹"
+            "value": "-80%",
+            "label": "Rides¹"
           }
         },
         "stat_NcfrmY": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "100%",
-            "label": "éclat¹"
+            "value": "+90%",
+            "label": "contour des yeux nourri¹"
           }
         },
         "stat_j8dGVF": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "100%",
-            "label": "confort et douceur¹"
+            "value": "+95%",
+            "label": "hydratation¹"
           }
         }
       },
@@ -342,7 +342,7 @@
         "item_tHqTnd": {
           "type": "item",
           "settings": {
-            "text": "produit en France"
+            "text": "Formulé en France"
           }
         },
         "item_9W6fTT": {
@@ -403,10 +403,10 @@
         "image_with_text_9H8rP4": {
           "type": "image_with_text",
           "settings": {
-            "image": "shopify://shop_images/1950X1950_INGREDIENTS_MOUSSE.webp",
-            "title": "<strong>Cellules souches de Mousse</strong>",
+            "image": "shopify://shop_images/1950X1950_INGREDIENTS_CELLULE_TUBEREUSE.webp",
+            "title": "<strong>Cellules Souches de Tubéreuse Biotech</strong>&nbsp;",
             "heading_tag": "h3",
-            "content": "<p>Optimisent les mécanismes naturels d'hydratation et renforcent la fonction barrière pour une peau durablement hydratée.</p>",
+            "content": "<p>Stimulent la production de collagène et d'élastine pour une peau plus ferme et redensifiée.</p>",
             "link_url": "#",
             "link_text": "",
             "button_popup": "",
@@ -417,10 +417,10 @@
         "image_with_text_WHTMAF": {
           "type": "image_with_text",
           "settings": {
-            "image": "shopify://shop_images/1950X1950_INGREDIENTS_ACIDE_GLYCOLIQUE.webp",
-            "title": "<strong>Acide Glycolique</strong>&nbsp;",
+            "image": "shopify://shop_images/1950X1950_INGREDIENTS_TETRAPEPTIDES.webp",
+            "title": "<strong>Tétrapeptides + Caféine</strong>&nbsp;",
             "heading_tag": "h3",
-            "content": "<p>Exfolie en douceur, stimule le renouvellement cellulaire et affine visiblement le grain de peau.</p>",
+            "content": "<p>Activent la microcirculation pour réduire visiblement les poches et les cernes.</p>",
             "link_url": "",
             "link_text": "",
             "button_popup": "",
@@ -484,9 +484,9 @@
         "image_secondary_2": "shopify://shop_images/IMG_9122_2_copy.png",
         "image_secondary_2_position": "middle",
         "image_position": "end",
-        "eyebrow": "Collaboration avec dr. jean-marc lemaître",
+        "eyebrow": "Collaboration avec dr. jean marc lemaître",
         "title": "Technologie neo-regen",
-        "content": "<p>Créé avec le Dr Lemaître<strong>, l'expert français </strong>de la longévité, notre<strong> actif exclusif NEO-REGEN</strong> est composé de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.&nbsp;</p><ul><li>Il réactive<strong> 136 gènes</strong> impliqués dans la jeunesse de la peau.&nbsp;</li><li><strong>+71% de Collagène I </strong>dès 8 jours.</li><li>Il<strong> relance la régénération </strong>cellulaire, moléculaire et tissulaire.</li></ul>",
+        "content": "<p>Notre technologie exclusive Neo Regen est composée de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.</p><ul><li>136 gènes impliqués dans la jeunesse de la peau modulés.&nbsp;</li><li>+71% de Collagène I.</li><li>Régénération cellulaire, moléculaire et tissulaire.</li></ul>",
         "small_content": "",
         "button_label": "En savoir plus",
         "button_link": "shopify://pages/expertise",
@@ -512,7 +512,7 @@
         "image_position": "end",
         "eyebrow": "",
         "title": "",
-        "content": "<p>1. <strong>Agiter </strong>le flacon afin de mélanger les phases huileuse et aqueuse.<br/><br/>2. Appliquer 3 pompes au creux de la main. Appliquer sur une <strong>peau propre</strong>, comme premier geste de votre rituel.<br/><br/>3. À l’aide du bout des doigts, <strong>tapoter </strong>délicatement le visage afin d’activer la microcirculation.</p>",
+        "content": "<p>1. Appliquer une quantité de crème équivalente à un grain de riz sur le contour de l'oeil à l’aide de l’outil ou de votre index.</p><p>&nbsp;2. Effectuer des mouvements circulaires de l’intérieur vers l’extérieur afin de décongestionner et lisser le contour des yeux.</p>",
         "small_content": "",
         "button_label": "",
         "button_link": "",
@@ -540,7 +540,7 @@
         "image_position": "start",
         "eyebrow": "",
         "title": "Prouesse de formulation",
-        "content": "<p>Créé au sein de <strong>nos laboratoires à Baulieu, </strong>la Lotion Infusion d'Hydratation est<strong> exempt de tout ingrédient controversé</strong>. Zéro silicone, zéro PEG, zéro microplastique. Sans alcool.<br/><br/>Signature olfactive : un parfum frais et enveloppant. &nbsp;<br/>97% d'ingrédients d'origine naturelle.<br/>Notée Excellent sur Yuka.</p>",
+        "content": "<p>Créé au sein de nos laboratoires à Baulieu, la Crème Yeux Soyeuse Régénérative est exempt de tout ingrédient controversé. Zéro silicone, zéro PEG, zéro microplastique.&nbsp;<br/><br/>Une signature olfactive au parfum frais et enveloppant. &nbsp;</p><p>32% d'actifs<br/>96% d'ingrédients d'origine naturelle.<br/>Notée 90/100 sur Yuka<br/>Fabriqué en France</p>",
         "small_content": "",
         "button_label": "En savoir plus",
         "button_link": "/pages/expertise#prouesse-formulation",
@@ -567,7 +567,7 @@
         "image_position": "end",
         "eyebrow": "",
         "title": "",
-        "content": "<p>La recharge est logée dans son pot en verre pour une utilisation quotidienne.</p><p>Lors de vos déplacements, elle se <strong>déclipse</strong> et se referme avec son <strong>couvercle dédié,</strong> dissimulé dans le coffret, pour devenir un <strong>format nomade</strong>. Système breveté.</p><p>La recharge est conçue 100% en <strong>aluminium</strong>. L’écrin est créé avec des <strong>artisans français</strong>.&nbsp;<br/>Pot en verre, couvercle en bio-résine.&nbsp;</p>",
+        "content": "<p>La recharge est logé dans son pot en verre pour une utilisation quotidienne.</p><p>Lors de vos déplacements, elle se déclipse et se referme avec son couvercle dédié, dissimulé dans le coffret, pour devenir un véritable format nomade. Système breveté.</p><p>La recharge est conçue 100% en aluminium. L’écrin est créé 100% avec des artisans français. Pot en verre, couvercle en bio-résine.&nbsp;</p>",
         "small_content": "",
         "button_label": "Acheter",
         "button_link": "shopify://products/recharge-creme-regenerative-visage",
@@ -614,10 +614,10 @@
         "image_with_text_zVYNDC": {
           "type": "image_with_text",
           "settings": {
-            "image": "shopify://shop_images/Texture_lotion_1.webp",
+            "image": "shopify://shop_images/1950X1950_TEXTURE_FRETTE_CREME.webp",
             "title": "Prouesse de formulation",
             "heading_tag": "h3",
-            "content": "<p>Créé au sein de nos laboratoires à Baulieu, la Lotion Infusion d'Hydratation est exempt de tout ingrédient controversé. Zéro silicone, zéro PEG, zéro microplastique. &nbsp;<br/><br/>Une signature olfactive au parfum frais et enveloppant. &nbsp;<br/><br/>97% d'ingrédients d'origine naturelle.<br/>Note Excellent sur Yuka<br/>Fabriqué en France</p>",
+            "content": "<p>Créé au sein de nos laboratoires à Baulieu, la Crème Yeux Soyeuse Régénérative est exempt de tout ingrédient controversé. Zéro silicone, zéro PEG, zéro microplastique.&nbsp;<br/><br/>Une signature olfactive au parfum frais et enveloppant. &nbsp;<br/><br/>32% d'actifs<br/>96% d'ingrédients d'origine naturelle.<br/>Notée 90/100 sur Yuka<br/>Fabriqué en France</p>",
             "link_url": "#",
             "link_text": "Voir la liste INCI",
             "button_popup": "",
@@ -631,7 +631,7 @@
             "image": "shopify://shop_images/Rectangle_6003.png",
             "title": "Conseils d’utilisation",
             "heading_tag": "h3",
-            "content": "<p>1. Agiter le flacon afin de révéler de microgouttelettes d’huile et d’activer tout son potentiel.<br/><br/>2. Appliquer délicatement sur une peau propre, comme premier geste de votre rituel.<br/><br/>3. À l’aide du bout des doigts, tapoter délicatement le visage afin d’activer la microcirculation.</p>",
+            "content": "<p>1. Appliquer une quantité de crème équivalente à un grain de riz sur le contour de l'oeil à l’aide de l’outil ou de votre index.<br/><br/>&nbsp;2. Effectuer des mouvements circulaires de l’intérieur vers l’extérieur afin de décongestionner et lisser le contour des yeux.</p>",
             "link_url": "",
             "link_text": "",
             "button_popup": "",

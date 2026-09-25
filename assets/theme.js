@@ -2012,7 +2012,7 @@ var Drawer = class extends Modal {
   }
   createEnterAnimationControls() {
     let translateOrigin = `${this.openFrom === "right" ? "translateX(20px)" : "translateX(-20px)"}`;
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 768 && !this.hasAttribute("horizontal-on-mobile")) {
       translateOrigin = `${this.openFrom === "right" ? "translateY(20px)" : "translateY(-20px)"}`;
     }
     this.getShadowPartByName("content").style.marginInlineStart = this.openFrom === "right" ? "auto" : 0;
@@ -2024,7 +2024,7 @@ var Drawer = class extends Modal {
   }
   createLeaveAnimationControls() {
     let translateOrigin = `${this.openFrom === "right" ? "translateX(20px)" : "translateX(-20px)"}`;
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 768 && !this.hasAttribute("horizontal-on-mobile")) {
       translateOrigin = `${this.openFrom === "right" ? "translateY(20px)" : "translateY(-20px)"}`;
     }
     return timeline3([
@@ -4331,6 +4331,44 @@ if (!window.customElements.get("cart-note-dialog")) {
   window.customElements.define("cart-note-dialog", CartNoteDialog);
 }
 
+// js/sections/collage-text.js
+var CollageText = class extends HTMLElement {
+  constructor() {
+    super();
+    this.addEventListener("click", (event) => {
+      const toggleButton = event.target.closest(".collage-text__toggle");
+      if (!toggleButton) {
+        return;
+      }
+      const isOpen = toggleButton.getAttribute("aria-expanded") === "true";
+      toggleButton.setAttribute("aria-expanded", isOpen ? "false" : "true");
+      this.querySelector(".collage-text__panel").classList.toggle("is-open", !isOpen);
+    });
+  }
+};
+if (!window.customElements.get("collage-text")) {
+  window.customElements.define("collage-text", CollageText);
+}
+
+// js/sections/multi-column-accordion.js
+var MultiColumnAccordion = class extends HTMLElement {
+  constructor() {
+    super();
+    this.addEventListener("click", (event) => {
+      const toggleButton = event.target.closest(".multi-column-accordion__toggle");
+      if (!toggleButton) {
+        return;
+      }
+      const isOpen = toggleButton.getAttribute("aria-expanded") === "true";
+      toggleButton.setAttribute("aria-expanded", isOpen ? "false" : "true");
+      this.querySelector(".multi-column-accordion__panel").classList.toggle("is-open", !isOpen);
+    });
+  }
+};
+if (!window.customElements.get("multi-column-accordion")) {
+  window.customElements.define("multi-column-accordion", MultiColumnAccordion);
+}
+
 // js/sections/collection.js
 import { timeline as timeline8, inView as inView11, Delegate as Delegate7 } from "vendor";
 var _CollectionBanner_instances, reveal_fn2;
@@ -6293,6 +6331,7 @@ export {
   CartDot,
   CartDrawer,
   CartNote,
+  CollageText,
   CollectionBanner,
   CollectionLayoutSwitch,
   ConfirmButton,

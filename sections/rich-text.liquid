@@ -18,9 +18,9 @@
 {%- if section.blocks.size > 0 and has_content -%}
   {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
 
-  <div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% unless section.settings.remove_vertical_spacing %}section-spacing{% endunless %} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+  <div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% unless section.settings.remove_vertical_spacing %}section-spacing{% endunless %} {% if section.settings.separate_section_with_border %}bordered-section{% endif %} {% render 'responsive-visibility', visibility: section.settings.visibility %}">
     <div class="container container--{{ section.settings.content_width }}">
-      <div class="prose text-{{ section.settings.text_position }}">
+      <div class="prose text-{{ section.settings.text_position }} {% if section.settings.bordered_content %}rich-text--bordered{% endif %}">
         {%- assign is_inside_button_group_context = false -%}
 
         {%- for block in section.blocks -%}
@@ -126,6 +126,17 @@
     },
     {
       "type": "select",
+      "id": "visibility",
+      "label": "t:global.visibility.label",
+      "options": [
+        { "value": "all", "label": "t:global.visibility.options.all" },
+        { "value": "mobile", "label": "t:global.visibility.options.mobile" },
+        { "value": "desktop", "label": "t:global.visibility.options.desktop" }
+      ],
+      "default": "all"
+    },
+    {
+      "type": "select",
       "id": "content_width",
       "label": "t:global.sizes.content_width",
       "options": [
@@ -172,6 +183,13 @@
       "type": "checkbox",
       "id": "remove_vertical_spacing",
       "label": "t:global.spacing.remove_vertical_spacing",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bordered_content",
+      "label": "Bordures haut et bas du contenu",
+      "info": "Ajoute une ligne au-dessus et en dessous du texte, sur desktop. Différent du trait de séparation de la section.",
       "default": false
     }
   ],

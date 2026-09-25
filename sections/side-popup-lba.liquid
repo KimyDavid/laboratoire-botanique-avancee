@@ -1,0 +1,154 @@
+{%- comment -%}
+  Side popup (drawer) configured in the header group, one section per popup.
+  It is opened by any button whose "Identifiant de la popup à ouvrir" setting matches its identifier
+  (the button gets aria-controls="side-popup-<identifier>", handled by the theme's x-drawer component).
+  In the theme editor, the popup opens when its section is selected.
+  On a product page, the content can come from a product metafield ("namespace.key" setting): when that metafield is filled,
+  it replaces the content and the sub-parts of the section, otherwise the section content is displayed.
+{%- endcomment -%}
+
+{%- assign popup_handle = section.settings.popup_id | handleize -%}
+
+{%- liquid
+  assign product_content = blank
+  assign metafield_parts = section.settings.product_metafield | strip | split: '.'
+
+  if product and metafield_parts.size == 2
+    assign metafield_namespace = metafield_parts | first
+    assign metafield_key = metafield_parts | last
+    assign product_content = product.metafields[metafield_namespace][metafield_key]
+  endif
+-%}
+
+{%- if popup_handle != blank -%}
+  <x-drawer id="side-popup-{{ popup_handle }}" class="drawer side-popup color-scheme color-scheme--dialog" horizontal-on-mobile>
+    {%- if section.settings.title != blank -%}
+      <p class="side-popup__title h3" slot="header">{{ section.settings.title }}</p>
+    {%- endif -%}
+
+    <div class="side-popup__body" {% if section.settings.content_font_size != 'default' %}style="--side-popup-font-size: {{ section.settings.content_font_size }}px;"{% endif %}>
+      {%- if request.design_mode and section.settings.product_metafield != blank and product_content == blank -%}
+        {%- comment -%}Theme editor only: explains why the product metafield is not displayed{%- endcomment -%}
+        <p class="side-popup__notice">
+          {%- if metafield_parts.size != 2 -%}
+            Éditeur uniquement : « {{ section.settings.product_metafield }} » n'est pas au format espace.clé (ex : custom.resultats).
+          {%- elsif product == blank -%}
+            Éditeur uniquement : cette page n'est pas une fiche produit, le contenu de la section est affiché.
+          {%- else -%}
+            Éditeur uniquement : le métachamp {{ section.settings.product_metafield }} est vide pour « {{ product.title }} », le contenu de la section est affiché.
+          {%- endif -%}
+        </p>
+      {%- endif -%}
+
+      {%- if product_content != blank -%}
+        <div class="side-popup__content prose">{{ product_content | metafield_tag }}</div>
+      {%- else -%}
+        {%- if section.settings.content != blank -%}
+          <div class="side-popup__content prose">{{ section.settings.content }}</div>
+        {%- endif -%}
+
+        {%- for block in section.blocks -%}
+          <div class="side-popup__group" {{ block.shopify_attributes }}>
+            {%- if block.settings.title != blank -%}
+              <p class="side-popup__subtitle h6">{{ block.settings.title }}</p>
+            {%- endif -%}
+
+            {%- if block.settings.content != blank -%}
+              <div class="side-popup__content prose">{{ block.settings.content }}</div>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+  </x-drawer>
+
+  {%- if request.design_mode -%}
+    <script>
+      // Theme editor only: open the popup while its section is selected.
+      if (!window.sidePopupEditorListeners) {
+        window.sidePopupEditorListeners = true;
+
+        const getPopup = (event) => document.querySelector(`#shopify-section-${event.detail.sectionId} x-drawer.side-popup`);
+
+        document.addEventListener('shopify:section:select', (event) => getPopup(event)?.show());
+        document.addEventListener('shopify:section:deselect', (event) => getPopup(event)?.hide());
+      }
+    </script>
+  {%- endif -%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Popup latérale",
+  "enabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "popup_id",
+      "label": "Identifiant",
+      "info": "Ex : essais-cliniques. À renseigner dans le champ « Identifiant de la popup à ouvrir » d'un bouton. Chaque popup doit avoir un identifiant différent."
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre",
+      "default": "Essais cliniques"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Contenu",
+      "info": "Affiché en haut de la popup, avant les sous-parties."
+    },
+    {
+      "type": "text",
+      "id": "product_metafield",
+      "label": "Contenu produit : métachamp"
+    },
+    {
+      "type": "select",
+      "id": "content_font_size",
+      "label": "Taille du texte des contenus",
+      "info": "S'applique au contenu et aux sous-parties (hors titres), sur mobile et desktop.",
+      "options": [
+        { "value": "default", "label": "Taille du thème" },
+        { "value": "11", "label": "11 px" },
+        { "value": "12", "label": "12 px" },
+        { "value": "13", "label": "13 px" },
+        { "value": "14", "label": "14 px" },
+        { "value": "15", "label": "15 px" },
+        { "value": "16", "label": "16 px" },
+        { "value": "18", "label": "18 px" }
+      ],
+      "default": "default"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "group",
+      "name": "Sous-partie",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Sous-titre",
+          "default": "Sous-titre"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Contenu",
+          "default": "<ul><li>88% ont constaté une peau visiblement restaurée au réveil</li></ul>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Popup latérale"
+    }
+  ]
+}
+{% endschema %}

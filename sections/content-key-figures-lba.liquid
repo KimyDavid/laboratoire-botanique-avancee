@@ -1,0 +1,314 @@
+{%- comment -%}
+  Content on the left, table of key figures on the right (2 columns).
+  On mobile everything is stacked in this order: title, table, description, small content, button.
+  The same section produces 2 renderings depending on its settings:
+  - light: background/text colors + "Afficher les séparateurs" + a small eyebrow in each figure
+  - dark: light text on colored background, no separators, a title above the table, no eyebrow in figures
+  The "Pleine largeur" layout centers everything in a single column on desktop (title, table on one row, content,
+  button, small content) and can show a background image on desktop only.
+{%- endcomment -%}
+
+{%- assign stats = section.blocks | where: 'type', 'stat' -%}
+{%- assign stats_rows = stats.size | plus: 1 | divided_by: 2 -%}
+{%- assign last_row_start = stats_rows | minus: 1 | times: 2 -%}
+{%- assign stats_columns = stats.size | at_most: 4 | at_least: 1 -%}
+{%- assign popup_handle = section.settings.button_popup | handleize -%}
+
+<section style="background: {{ section.settings.background_color }}; color: {{ section.settings.text_color }}; --key-figures-row-gap: {{ section.settings.row_gap }}px; --key-figures-columns: {{ stats_columns }};" class="key-figures section-spacing {% if section.settings.layout == 'full' %}key-figures--full{% endif %} {% if section.settings.show_dividers %}key-figures--dividers{% endif %} {% render 'responsive-visibility', visibility: section.settings.visibility %}">
+  {%- if section.settings.background_image != blank -%}
+    {{- section.settings.background_image | image_url: width: 3000 | image_tag: class: 'key-figures__background md-max:hidden', loading: 'lazy', sizes: '100vw', widths: '1000,1400,1800,2200,2600,3000', alt: '' -}}
+  {%- endif -%}
+
+  <div class="container">
+    <div class="key-figures__inner">
+      <div class="key-figures__text">
+        {%- if section.settings.title != blank -%}
+          <h2 class="key-figures__title h2">{{ section.settings.title | newline_to_br }}</h2>
+        {%- endif -%}
+
+        {%- if section.settings.content != blank -%}
+          <div class="key-figures__content prose {% render 'responsive-visibility', visibility: section.settings.content_visibility %}">{{ section.settings.content }}</div>
+        {%- endif -%}
+
+        {%- if section.settings.small_content != blank -%}
+          <div class="key-figures__small prose">{{ section.settings.small_content }}</div>
+        {%- endif -%}
+
+        {%- if section.settings.button_label != blank and section.settings.button_link != blank or section.settings.button_label != blank and popup_handle != blank -%}
+          <div class="key-figures__button {% render 'responsive-visibility', visibility: section.settings.button_visibility %}">
+            {%- if popup_handle != blank -%}
+              {%- assign popup_id = 'side-popup-' | append: popup_handle -%}
+              {%- render 'button', type: 'button', aria_controls: popup_id, style: section.settings.button_style, content: section.settings.button_label, background: section.settings.text_color, text_color: section.settings.background_color -%}
+            {%- else -%}
+              {%- render 'button', href: section.settings.button_link, style: section.settings.button_style, content: section.settings.button_label, background: section.settings.text_color, text_color: section.settings.background_color -%}
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- if stats.size > 0 or section.settings.table_title != blank -%}
+        <div class="key-figures__table">
+          {%- if section.settings.table_title != blank -%}
+            <p class="key-figures__table-title h4">{{ section.settings.table_title }}</p>
+          {%- endif -%}
+
+          <div class="key-figures__grid">
+            {%- for block in stats -%}
+              {%- liquid
+                assign item_classes = ''
+
+                if forloop.index0 < last_row_start
+                  assign item_classes = item_classes | append: ' key-figures__item--divider-bottom'
+                endif
+
+                assign is_odd = forloop.index | modulo: 2
+                if is_odd == 1 and forloop.last == false
+                  assign item_classes = item_classes | append: ' key-figures__item--divider-end'
+                endif
+              -%}
+
+              <div class="key-figures__item{{ item_classes }}" {{ block.shopify_attributes }}>
+                {%- if block.settings.eyebrow != blank -%}
+                  <p class="key-figures__eyebrow">{{ block.settings.eyebrow }}</p>
+                {%- endif -%}
+
+                {%- if block.settings.value != blank -%}
+                  <span class="key-figures__value">{{ block.settings.value }}</span>
+                {%- endif -%}
+
+                {%- if block.settings.label != blank -%}
+                  <span class="key-figures__label">{{ block.settings.label }}</span>
+                {%- endif -%}
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Contenu + chiffres clés",
+  "tag": "div",
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Contenu"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Titre",
+      "info": "Un retour à la ligne est conservé à l'affichage.",
+      "default": "Le premier laboratoire au coeur d'un domaine de 300 hectares"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Contenu"
+    },
+    {
+      "type": "richtext",
+      "id": "small_content",
+      "label": "Contenu small",
+      "info": "Affiché en petit (ex : notes de bas de tableau)."
+    },
+    {
+      "type": "select",
+      "id": "content_visibility",
+      "label": "Affichage du contenu (hors small)",
+      "options": [
+        { "value": "all", "label": "t:global.visibility.options.all" },
+        { "value": "mobile", "label": "t:global.visibility.options.mobile" },
+        { "value": "desktop", "label": "t:global.visibility.options.desktop" }
+      ],
+      "default": "all"
+    },
+    {
+      "type": "header",
+      "content": "Bouton"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Texte du bouton"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Lien du bouton"
+    },
+    {
+      "type": "text",
+      "id": "button_popup",
+      "label": "Identifiant de la popup à ouvrir",
+      "info": "Facultatif. Si renseigné, le bouton ouvre la popup latérale ayant cet identifiant (sections « Popup latérale » du Header Group), à la place du lien."
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Style du bouton",
+      "options": [
+        { "value": "outline", "label": "Avec contour" },
+        { "value": "solid", "label": "Plein" }
+      ],
+      "default": "outline"
+    },
+    {
+      "type": "select",
+      "id": "button_visibility",
+      "label": "Affichage du bouton",
+      "options": [
+        { "value": "all", "label": "t:global.visibility.options.all" },
+        { "value": "mobile", "label": "t:global.visibility.options.mobile" },
+        { "value": "desktop", "label": "t:global.visibility.options.desktop" }
+      ],
+      "default": "all"
+    },
+    {
+      "type": "header",
+      "content": "Tableau de chiffres"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Mise en page (desktop)",
+      "options": [
+        { "value": "split", "label": "Contenu à gauche, tableau à droite" },
+        { "value": "full", "label": "Pleine largeur (tableau sur une ligne)" }
+      ],
+      "default": "split",
+      "info": "En pleine largeur, le contenu small s'affiche sous le bouton (desktop et mobile)."
+    },
+    {
+      "type": "text",
+      "id": "table_title",
+      "label": "Titre du tableau",
+      "info": "Affiché au-dessus des chiffres, ex : « Après 3 mois d'utilisation : »."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dividers",
+      "label": "Afficher les séparateurs",
+      "info": "Croix de lignes entre les chiffres.",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "row_gap",
+      "label": "Espacement entre les lignes",
+      "info": "Utilisé uniquement sans séparateurs.",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "Affichage"
+    },
+    {
+      "type": "select",
+      "id": "visibility",
+      "label": "t:global.visibility.label",
+      "options": [
+        { "value": "all", "label": "t:global.visibility.options.all" },
+        { "value": "mobile", "label": "t:global.visibility.options.mobile" },
+        { "value": "desktop", "label": "t:global.visibility.options.desktop" }
+      ],
+      "default": "all"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Couleur de fond",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Couleur du texte",
+      "default": "#3C626B"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Image de fond (desktop)",
+      "info": "Non affichée sur mobile : la couleur de fond est utilisée."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Chiffre clé",
+      "settings": [
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Surtitre",
+          "info": "Facultatif."
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Chiffre",
+          "default": "30%"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Libellé",
+          "default": "D'actifs"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contenu + chiffres clés",
+      "blocks": [
+        {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "Prouesse de formulation",
+            "value": "30%",
+            "label": "D'actifs"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "Composition exemplaire",
+            "value": "96%",
+            "label": "D'ingrédients naturels"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "Le domaine de Baulieu",
+            "value": "300",
+            "label": "Hectares"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "Cliniquement prouvée",
+            "value": "3 mois",
+            "label": "Avant résultats"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

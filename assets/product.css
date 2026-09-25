@@ -79,6 +79,137 @@
 
 @media (min-width: 1000px) {
   .product-gallery {
-    padding-top: 89px;
+    position: sticky;
+    top: 72px;
+  }
+}
+
+section .section-reviews {
+  background-image: url(https://cdn.shopify.com/s/files/1/0948/7073/3145/files/reviews-mobile.jpg?v=1789991045);
+  margin-top: 64px;
+  background-size: cover;
+  background-position: center;
+}
+
+section .section-reviews .jm-review-widget {
+  padding-top: 0;
+}
+
+section .section-reviews .jm-review-widget__header > .jm-cluster {
+  --cluster-space: 24px !important;
+}
+
+section .section-reviews .jm-cluster > .jm-stack:first-child {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 1000px) {
+  section .section-reviews .jm-cluster > .jm-stack:first-child {
+    flex-direction: column;
+  }
+
+  section .section-reviews .jm-review-widget-minimal-header__button-and-filters {
+    justify-content: center;
+  }
+}
+
+section .section-reviews .jm-button--secondary,
+section .section-reviews .jdgm-sort-dropdown {
+  --jm-widget-border-radius: 0px;
+  --jm-review-widget-text-color: white;
+}
+
+section .section-reviews .jm-filters__buttons,
+section .section-reviews .jm-average-rating-display {
+  --cluster-space: 8px !important;
+}
+
+section .section-reviews .jm-cluster > .jm-stack:first-child *,
+section .section-reviews .jm-review-item *,
+section .section-reviews .jm-star-rating__font-icon,
+section .section-reviews .jm-sort-filter,
+section .section-reviews .jm-no-reviews-state__text {
+  color: white !important;
+}
+
+section .section-reviews .jm-review-widget__header-and-body {
+  gap: 32px;
+}
+
+section .section-reviews .jm-carousel__viewport::before,
+section .section-reviews .jm-carousel__viewport::after {
+  display: none;
+}
+
+section .section-reviews .jdgm-carousel-review-list {
+  background: transparent;
+}
+
+section .section-reviews .jm-no-reviews-state {
+  margin-top: 0;
+}
+
+section .section-reviews .jm-no-reviews-state__action-buttons > .jm-stack {
+  justify-content: center !important;
+}
+
+section .section-reviews .jm-other-products-reviews-text {
+  padding-top: 0;
+  color: white;
+}
+
+section .section-reviews .jm-product-variant-card > .jm-cluster {
+  flex-wrap: nowrap !important;
+}
+
+section .section-reviews .jdgm-carousel-review-list__nav {
+  color: white;
+}
+
+section .section-reviews .jm-review-item {
+  box-shadow: none;
+  border: 0;
+  border-radius: 0px;
+  background: transparent;
+}
+
+section .section-reviews .jm-review-item > .jm-stack {
+  padding: 0;
+}
+
+section .section-reviews .jdgm-carousel-review-list {
+  margin-left: -24px;
+  margin-right: -24px;
+}
+
+section .section-reviews .jm-average-rating-display .jm-text:last-child {
+  font-family: CormorantGaramond Regular;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+section .section-reviews .jm-verified-buyer-badge__text {
+  border-color: white;
+}
+
+section .section-reviews .jdgm-review-content__body-content {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  section .section-reviews {
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  section .section-reviews .jm-carousel-review-item__body > .jm-cluster:first-child {
+    justify-content: center;
   }
 }
