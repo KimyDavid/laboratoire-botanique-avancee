@@ -32,7 +32,7 @@
         "text_qa4MPD": {
           "type": "text",
           "settings": {
-            "text": "<h4>produit en france.&nbsp;<br/>96% d’ingrédients d’origine naturelle.<br/>Sans ingrédient controversé.</h4>"
+            "text": "<h4>Made in france. 96% d’ingrédients d’origine naturelle.<br/>Sans ingrédient controversé.</h4>"
           }
         },
         "relative_products_JBLBDc": {
@@ -289,7 +289,7 @@
           "settings": {
             "eyebrow": "",
             "value": "+92%",
-            "label": "éclat¹"
+            "label": "éclat²"
           }
         },
         "stat_NcfrmY": {
@@ -297,7 +297,7 @@
           "settings": {
             "eyebrow": "",
             "value": "91%",
-            "label": "Confort²"
+            "label": "Confort¹"
           }
         },
         "stat_j8dGVF": {
@@ -707,7 +707,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "separate_section_with_border": false,
-        "visibility": "desktop",
+        "visibility": "all",
         "hide_product_information": false,
         "show_buy_button": false,
         "show_product_secondary_image": false,
