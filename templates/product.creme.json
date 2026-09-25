@@ -32,7 +32,7 @@
         "text_qa4MPD": {
           "type": "text",
           "settings": {
-            "text": "<h4>96% d’ingrédients d’origine naturelle.<br/>Sans ingrédient controversé. Végan.</h4>"
+            "text": "<h4>96% d’ingrédients d’origine naturelle.<br/>Sans ingrédient controversé.</h4>"
           }
         },
         "relative_products_JBLBDc": {
@@ -617,7 +617,7 @@
             "image": "shopify://shop_images/1950X1950_TEXTURE_FRETTE_CREME.webp",
             "title": "Prouesse de formulation",
             "heading_tag": "h3",
-            "content": "<p>Créée au sein de <strong>nos Laboratoires à Baulieu, </strong>la Crème Fondante Régénérative est <strong>exempt de tout ingrédient controversé</strong>. Zéro silicone, zéro PEG, zéro microplastique.</p><p>30% d’actifs.<br/>96% d'ingrédients d’origine naturelle.<br/>Notée Excellent sur Yuka.<br/>Délicat parfum frais et réconfortant.</p>",
+            "content": "<p>Créée au sein de <strong>nos Laboratoires à Baulieu, </strong>la Crème Fondante Régénérative est <strong>exempt de tout ingrédient controversé</strong>. Zéro silicone, zéro PEG, zéro microplastique.</p><p>30% d’actifs.<br/>96% d'ingrédients d’origine naturelle.<br/>Notée Excellent sur Yuka. Végan.<br/>Délicat parfum frais et réconfortant.</p>",
             "link_url": "#",
             "link_text": "Voir la liste INCI",
             "button_popup": "liste-inci",
