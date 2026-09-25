@@ -620,7 +620,7 @@
             "content": "<p>Créée au sein de nos Laboratoires à Baulieu, la Crème Fondante Régénérative est <strong>exempt de tout ingrédient controversé</strong>. Zéro silicone, zéro PEG, zéro microplastique.</p><p>30% d’actifs.<br/>96% d'ingrédients d’origine naturelle.<br/>Notée Excellent sur Yuka.<br/>Délicat parfum frais et réconfortant.</p>",
             "link_url": "#",
             "link_text": "Voir la liste INCI",
-            "button_popup": "",
+            "button_popup": "liste-inci",
             "product": "",
             "show_price": true
           }
