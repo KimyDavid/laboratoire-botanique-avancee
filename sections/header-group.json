@@ -170,46 +170,24 @@
     },
     "side_popup_lba_gaAJEb": {
       "type": "side-popup-lba",
-      "blocks": {
-        "group_nkUy9B": {
-          "type": "group",
-          "disabled": true,
-          "settings": {
-            "title": "Sous-titre",
-            "content": "<ul><li>88% ont constaté une peau visiblement restaurée au réveil</li></ul>"
-          }
-        }
-      },
-      "block_order": [
-        "group_nkUy9B"
-      ],
       "name": "Popup latérale",
       "settings": {
         "popup_id": "liste-inci",
         "title": "Liste INCI",
-        "content": "<p>INGRÉDIENTS : Aqua (Water)*, Glycerin*, Coco-Caprylate/Caprate*, Niacinamide*, Glyceryl Stearate Citrate*, Isoamyl Laurate*, Butylene Glycol*, Polyglyceryl-3 Stearate*, Cetearyl Alcohol*, Camellia Oleifera Seed Oil*,Ectoin*, SilybumMarianumSeedOil*, Lilium Candidum Flower Extract*, PaeoniaLactiflora Root Extract*, Iris Pallida Root Extract*, Iris Florentina Root Extract*, Centella Asiatica Leaf Extract*, Adenosine*, Bacillus Ferment, Sodium Hyaluronate*, ButyrospermumParkii (Shea) Butter*,HydrogenatedLecithin*, Hydrolyzed Soy Flour*, Lecithin*, Hydrogenated Starch Hydrolysate*, Pentylene Glycol*, Sodium Stearoyl Glutamate*, Carbomer, XanthanGum, Caprylyl Glycol*, 1,2-Hexanediol*, Ethylhexylglycerin, o-Cymen-5-ol, Sodium Benzoate, Potassium Sorbate, Hydroxyacetophenone, TocopherylAcetate, Tocopherol*, Sodium Hydroxide, Parfum (Fragrance), AcetylCedrene, Benzyl Benzoate, Citrus AurantiumBergamia Peel Oil*, Limonene*, Linalool*, LinalylAcetate, Terpineol, Hexadecanolactone, Geraniol, Citrus Aurantium Flower Oil*.&nbsp;<br/><br/>*ingrédient d’origine naturelle / natural-basedingredient</p>"
+        "content": "<p>INGRÉDIENTS : Aqua (Water)*, Glycerin*, Coco-Caprylate/Caprate*, Niacinamide*, Glyceryl Stearate Citrate*, Isoamyl Laurate*, Butylene Glycol*, Polyglyceryl-3 Stearate*, Cetearyl Alcohol*, Camellia Oleifera Seed Oil*,Ectoin*, SilybumMarianumSeedOil*, Lilium Candidum Flower Extract*, PaeoniaLactiflora Root Extract*, Iris Pallida Root Extract*, Iris Florentina Root Extract*, Centella Asiatica Leaf Extract*, Adenosine*, Bacillus Ferment, Sodium Hyaluronate*, ButyrospermumParkii (Shea) Butter*,HydrogenatedLecithin*, Hydrolyzed Soy Flour*, Lecithin*, Hydrogenated Starch Hydrolysate*, Pentylene Glycol*, Sodium Stearoyl Glutamate*, Carbomer, XanthanGum, Caprylyl Glycol*, 1,2-Hexanediol*, Ethylhexylglycerin, o-Cymen-5-ol, Sodium Benzoate, Potassium Sorbate, Hydroxyacetophenone, TocopherylAcetate, Tocopherol*, Sodium Hydroxide, Parfum (Fragrance), AcetylCedrene, Benzyl Benzoate, Citrus AurantiumBergamia Peel Oil*, Limonene*, Linalool*, LinalylAcetate, Terpineol, Hexadecanolactone, Geraniol, Citrus Aurantium Flower Oil*.&nbsp;<br/><br/>*ingrédient d’origine naturelle / natural-basedingredient</p>",
+        "product_metafield": "",
+        "content_font_size": "default"
       }
     },
     "side_popup_lba_EPerJT": {
       "type": "side-popup-lba",
-      "blocks": {
-        "group_bfcgnJ": {
-          "type": "group",
-          "disabled": true,
-          "settings": {
-            "title": "Sous-titre",
-            "content": "<ul><li>88% ont constaté une peau visiblement restaurée au réveil</li></ul>"
-          }
-        }
-      },
-      "block_order": [
-        "group_bfcgnJ"
-      ],
       "name": "Popup latérale",
       "settings": {
         "popup_id": "results",
         "title": "Les résultats après 1 mois",
-        "content": "<p>Mesure instrumentale<br/><br/>Éclat : +41 % immédiatement après l'application (mesure Gloss DSC)<br/>Hydratation : +34% après 3 mois (mesure Cornéomètre)<br/>Fonction barrière : La Perte Insensible en Eau (PIE) réduit de 24% après 3 mois (mesure Vapomètre)<br/>Homogénéité du teint : +24% après 3 mois (VISIA)<br/>+21% de régénération et -22% d'inflammation mesurée après 3 mois (D-Squame)<br/><br/>Scorage clinicien<br/>-49% de teint terne après 3 mois<br/>+42% de luminosité après 3 mois<br/><br/>Scorage consommateur<br/>Confort +92 % après 3 mois<br/>Fermeté +53 % après 3 mois<br/>Eclat +52 % après 3 mois<br/>-20 % de rides après 3 mois<br/><br/>Auto-évaluation<br/>Dès 7 jours, 87% considèrent leur peau plus confortable tout au long de la journée&nbsp;<br/>Dès 28 jours:<br/>98 % considèrent leur peau plus douce<br/>92 % considèrent leur peau apaisée et nourrie<br/>90 % considèrent leur peau plus lisse, plus ferme<br/>80 % considèrent leur peau plus rebondie, plus dense<br/><br/>À 3 mois:&nbsp;<br/>95 % considèrent leur peau plus ferme<br/>Les volumes de mon visage paraissent plus harmonieux 80%<br/>87 % considèrent leur peau repulpée, plus rebondie&nbsp;<br/>85 % considèrent leur teint plus lumineux, plus éclatant<br/>82 % considèrent leur teint plus uniforme<br/></p>"
+        "content": "",
+        "product_metafield": "custom.resultats",
+        "content_font_size": "default"
       }
     }
   },
