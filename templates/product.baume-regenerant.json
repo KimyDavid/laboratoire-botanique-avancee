@@ -257,7 +257,7 @@
       "settings": {
         "title": "Efficacité prouvée cliniquement",
         "content": "",
-        "small_content": "<p>¹ Étude d’auto-évaluation réalisée sur 23<br/>volontaires à J+56, sous contrôle dermatologique.<br/><br/>² Étude Clinique réalisé sur 23 volontaires à J+56.</p>",
+        "small_content": "<p>¹ Étude d’auto-évaluation réalisée sur 23<br/>volontaires à J+56, sous contrôle dermatologique.<br/>² Score clinicien réalisé sur 23 volontaires à J+56.</p>",
         "content_visibility": "desktop",
         "button_label": "Voir tous les résultats",
         "button_link": "#",
