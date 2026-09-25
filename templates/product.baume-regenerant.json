@@ -93,8 +93,7 @@
         "product_upsell_A8RkbM"
       ],
       "custom_css": [
-        ".accordion img {max-width: 350px; width: 100%; height: auto;}",
-        "@media (max-width: 768px) {.product-info__block-list [data-block-id*=\"judge_me\"] {margin-bottom: 0; }}"
+        ".accordion img {max-width: 350px; width: 100%; height: auto;}"
       ],
       "settings": {
         "color_scheme": "scheme-2",
