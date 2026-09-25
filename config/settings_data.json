@@ -43,7 +43,7 @@
     "cart_icon": "tote_bag",
     "free_gift_enabled": true,
     "free_gift_product": "baume-onctueux-regenerant",
-    "free_gift_description": "En cadeau : découvrez en avant-première notre nouveau Baume Onctueux Régénératif en format découverte.",
+    "free_gift_description": "En cadeau : découvrez notre nouveau Baume Onctueux Régénératif en format découverte.",
     "favicon": "shopify://shop_images/Frame_845084417.png",
     "sections": {
       "main-gift-card": {
@@ -110,10 +110,10 @@
           "background": "#ffffff",
           "background_gradient": "",
           "text_color": "#3c626b",
-          "primary_button_background": "#3C626B",
+          "primary_button_background": "#3c626b",
           "primary_button_text_color": "#ffffff",
           "circle_button_background": "#ffffff",
-          "circle_button_icon": "#3C626B"
+          "circle_button_icon": "#3c626b"
         }
       },
       "scheme-2": {
