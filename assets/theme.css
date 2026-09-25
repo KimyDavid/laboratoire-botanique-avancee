@@ -2522,6 +2522,10 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
 }
 
 @media (max-width: 768px) {
+  .product-card__info .product-title.h2 {
+    font-size: h1;
+  }
+
   .product-card__info .product-title {
     line-height: 1;
     margin-bottom: 8px;
