@@ -32,7 +32,7 @@
         "text_qa4MPD": {
           "type": "text",
           "settings": {
-            "text": "<h4>Made in france. 96% d’ingrédients d’origine naturelle.<br/>Sans ingrédient controversé. Végan.</h4>"
+            "text": "<h4>produit en france.&nbsp;<br/>96% d’ingrédients d’origine naturelle.&nbsp;<br/>Sans ingrédient controversé.&nbsp;</h4>"
           }
         },
         "relative_products_JBLBDc": {
