@@ -22,6 +22,8 @@ Supported variables
 * hide_product_information: if set to true, all content (vendor, badge, title...) are not rendered, to create image-based grid
 * quick_buy_context: a unique text to dissociate quick buy if the same product is embedded multiple times
 * show_buy_button: show or not the "Acheter" link next to the price (default to true if nothing is set)
+* show_short_description: if set to true, displays the "custom.vignette_courte_description" metafield under the subtitle (only when it is filled)
+* show_rating_on_image: if set to true, displays the Judge.me rating (ex : ★ 4,5) at the bottom right of the image (only when the product has a rating)
 {%- endcomment -%}
 
 {%- liquid
@@ -97,6 +99,29 @@ Supported variables
         -%}
       </a>
 
+      {%- if show_rating_on_image -%}
+        {%- comment -%}Judge.me rating: read from its badge metafield, or from the Shopify reviews metafield that Judge.me can also fill{%- endcomment -%}
+        {%- liquid
+          assign card_rating = 0
+          assign judgeme_badge = product.metafields.judgeme.badge | replace: '"', "'"
+
+          if judgeme_badge contains "data-average-rating='"
+            assign card_rating = judgeme_badge | split: "data-average-rating='" | last | split: "'" | first | plus: 0
+          elsif product.metafields.reviews.rating.value != blank
+            assign card_rating = product.metafields.reviews.rating.value.rating | plus: 0
+          endif
+        -%}
+
+        {%- if card_rating > 0 -%}
+          {%- assign card_rating_text = card_rating | round: 1 | append: '' | replace: '.', ',' -%}
+          <span class="product-card__rating">
+            <svg aria-hidden="true" focusable="false" width="12" height="12" viewBox="0 0 12 11"><path d="M6 0l1.557 4.015L12 4.202 8.52 6.87 9.708 11 6 8.635 2.292 11 3.48 6.87 0 4.202l4.443-.187L6 0Z" fill="currentColor"/></svg>
+            <span class="sr-only">{{ 'general.rating.info' | t: rating_value: card_rating_text, rating_max: 5 }}</span>
+            <span aria-hidden="true">{{ card_rating_text }}</span>
+          </span>
+        {%- endif -%}
+      {%- endif -%}
+
       {%- if show_quick_buy and product.available -%}
         {%- if product.variants.size == 1 and product.selling_plan_groups.size == 0 -%}
           <product-form>
@@ -158,10 +183,18 @@ Supported variables
               </div>
             {% else %}
             {% endif %}
+            {%- assign short_description = product.metafields.custom.vignette_courte_description -%}
+            {%- if show_short_description and short_description != blank -%}
+              {%- if short_description.type == 'rich_text_field' -%}
+                <div class="product-description">{{ short_description | metafield_tag }}</div>
+              {%- else -%}
+                <p class="product-description">{{ short_description.value | escape | newline_to_br }}</p>
+              {%- endif -%}
+            {%- endif -%}
             <div class="container_cta_price">
               {%- if show_prices -%}
                 {%- if product.tags contains 'has-recharge' and collection.handle != 'les-recharges' -%}
-                  <span class="price-list">À partir de {{ product.metafields.custom.prix_inital_recharge }} €</span>
+                  <span class="price-list price-list--from">À partir de <span class="price-list__amount">{{ product.metafields.custom.prix_inital_recharge }} €</span></span>
                 {%- else -%}
                   {%- render 'price-list', product: product, context: 'card' -%}
                 {%- endif -%}

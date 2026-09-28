@@ -39,6 +39,114 @@
       {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content, text_alignment: section.settings.text_alignment -%}
     </div>
 
+    {%- if section.settings.layout == 'grid' -%}
+      {%- comment -%}Multi layout (ex : press): 3 testimonials visible on desktop (1 on mobile), auto scrolling one by one in a loop, without navigation{%- endcomment -%}
+      <div class="container container--xl">
+        <testimonial-autoplay class="testimonial-grid" data-autoplay="{{ section.settings.auto_rotate_between_testimonials }}" data-speed="{{ cycle_speed }}">
+          <div class="testimonial-grid__track">
+          {%- for block in section.blocks -%}
+            <div class="testimonial-grid__item" {{ block.shopify_attributes }}>
+              {%- if block.settings.image != blank -%}
+                <div class="testimonial-grid__logo">
+                  {%- capture logo_style -%}--image-max-width: {{ block.settings.logo_max_width }}px; --image-mobile-max-width: {{ block.settings.logo_mobile_max_width }}px;{%- endcapture -%}
+                  {{- block.settings.image | image_url: width: 600 | image_tag: loading: 'lazy', widths: '200,300,400,600', sizes: '300px', style: logo_style -}}
+                </div>
+              {%- endif -%}
+
+              {%- assign content_stripped = block.settings.content | strip_html | strip -%}
+              {%- if content_stripped != blank -%}
+                <div class="testimonial-grid__quote prose">{{ block.settings.content }}</div>
+              {%- endif -%}
+
+              {%- if block.settings.author != blank -%}
+                <p class="testimonial-grid__author">{{ block.settings.author }}</p>
+              {%- endif -%}
+
+              {%- if block.settings.date != blank or block.settings.category != blank -%}
+                <p class="testimonial-grid__meta">
+                  {%- if block.settings.date != blank -%}
+                    <span class="testimonial-grid__date">{{ block.settings.date }}</span>
+                  {%- endif -%}
+                  {%- if block.settings.date != blank and block.settings.category != blank %} - {% endif -%}
+                  {%- if block.settings.category != blank -%}
+                    <span class="testimonial-grid__category">{{ block.settings.category }}</span>
+                  {%- endif -%}
+                </p>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+          </div>
+        </testimonial-autoplay>
+      </div>
+
+      <script>
+        if (!window.customElements.get('testimonial-autoplay')) {
+          class TestimonialAutoplay extends HTMLElement {
+            connectedCallback() {
+              this.track = this.querySelector('.testimonial-grid__track');
+              this.count = this.track.children.length;
+              this.index = 0;
+
+              if (this.count < 2 || this.dataset.autoplay !== 'true') return;
+
+              // The first items are cloned at the end so that the loop never shows an empty space
+              Array.from(this.track.children).slice(0, 3).forEach((item) => {
+                const clone = item.cloneNode(true);
+                clone.setAttribute('aria-hidden', 'true');
+                clone.removeAttribute('data-shopify-editor-block');
+                this.track.appendChild(clone);
+              });
+
+              this.timer = setInterval(() => this.next(), parseInt(this.dataset.speed) || 5000);
+              this.addEventListener('mouseenter', () => this.paused = true);
+              this.addEventListener('mouseleave', () => this.paused = false);
+              this.onResize = () => this.move(false);
+              window.addEventListener('resize', this.onResize);
+            }
+
+            disconnectedCallback() {
+              clearInterval(this.timer);
+              window.removeEventListener('resize', this.onResize);
+            }
+
+            get perView() {
+              return parseInt(getComputedStyle(this).getPropertyValue('--testimonial-per-view')) || 1;
+            }
+
+            next() {
+              if (this.paused || this.count <= this.perView) return;
+
+              this.index++;
+              this.move(true);
+
+              // After the last real item, jump back to the first one (identical to its clone) without animation
+              if (this.index === this.count) {
+                setTimeout(() => {
+                  this.index = 0;
+                  this.move(false);
+                }, 800);
+              }
+            }
+
+            move(animate) {
+              const item = this.track.children[0];
+              const gap = parseFloat(getComputedStyle(this.track).columnGap) || 0;
+              const offset = (item.getBoundingClientRect().width + gap) * this.index;
+
+              this.track.style.transition = animate ? '' : 'none';
+              this.track.style.transform = `translateX(${-offset}px)`;
+
+              if (!animate) {
+                this.track.getBoundingClientRect();
+                this.track.style.transition = '';
+              }
+            }
+          }
+
+          window.customElements.define('testimonial-autoplay', TestimonialAutoplay);
+        }
+      </script>
+    {%- else -%}
         <div class="testimonial-carousel-wrapper testimonial-carousel-wrapper--{{ section.settings.text_alignment }}" id="{{ carousel_id }}" data-autoplay="{{ section.settings.auto_rotate_between_testimonials }}" data-speed="{{ cycle_speed }}">
           {%- for block in section.blocks -%}
             <div class="testimonial-item {% if forloop.first %}is-selected{% endif %}" {{ block.shopify_attributes }}>
@@ -91,8 +199,10 @@
             {%- endfor -%}
           </div>
         {%- endif -%}
+    {%- endif -%}
   </div>
 
+  {%- if section.settings.layout != 'grid' -%}
   <script>
     (function() {
       const carousel = document.getElementById('{{ carousel_id }}');
@@ -170,6 +280,7 @@
       }, { passive: true });
     })();
   </script>
+  {%- endif -%}
 
 {%- endif -%}
 
@@ -178,11 +289,21 @@
   "name": "t:sections.testimonials.name",
   "class": "shopify-section--testimonials",
   "tag": "section",
-  "max_blocks": 5,
+  "max_blocks": 8,
   "disabled_on": {
     "groups": ["header", "custom.overlay"]
   },
   "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Mise en page",
+      "options": [
+        { "value": "carousel", "label": "Carrousel (un témoignage à la fois)" },
+        { "value": "grid", "label": "Carrousel 3 par 3 (défilement automatique)" }
+      ],
+      "default": "carousel"
+    },
     {
       "type": "color_scheme",
       "id": "color_scheme",
@@ -311,6 +432,18 @@
           "type": "inline_richtext",
           "id": "author",
           "label": "t:sections.testimonials.blocks.testimonial.author"
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Date",
+          "info": "Mise en page « Carrousel 3 par 3 » uniquement. Ex : Mai 2025"
+        },
+        {
+          "type": "text",
+          "id": "category",
+          "label": "Catégorie",
+          "info": "Mise en page « Carrousel 3 par 3 » uniquement. Ex : Innovation"
         }
       ]
     }

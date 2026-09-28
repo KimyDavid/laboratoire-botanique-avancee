@@ -12,14 +12,6 @@
 .underline-text{
   text-decoration: underline;
 }
-body.template-index height-observer .header__logo, 
-body.template-index height-observer .header__logo-image{
-  display: none;
-}
-body.template-index height-observer .header.is-solid .header__logo, 
-body.template-index height-observer .header.is-solid .header__logo img {
-  display: block;
-}
 .underline{
   text-decoration:underline;
 }
@@ -498,7 +490,7 @@ div[slot="footer"] .contents .button--outline:hover {
 
 @media (min-width: 1000px) {
   .featured-collections__wrapper--large .product-list {
-    column-gap: 40px;
+    column-gap: 16px;
     margin-left: 24px;
     --product-list-horizontal-spacing-factor: 2.7;
     --product-list-max-items-per-row-allowed: 2;
@@ -513,6 +505,58 @@ div[slot="footer"] .contents .button--outline:hover {
   justify-content: space-between;
   align-items: flex-end;
 }
+
+/* Cards of a same row have the same height, the price is always at the bottom of the card */
+.product-list {
+  align-items: stretch;
+}
+
+.product-card {
+  grid-template-rows: auto minmax(0, 1fr);
+}
+
+.product-card__info,
+.product-card__info > .v-stack,
+.product-card__info > .v-stack > .v-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.product-card__info > .v-stack,
+.product-card__info > .v-stack > .v-stack {
+  flex-grow: 1;
+}
+
+.product-card__info .container_cta_price {
+  margin-top: auto;
+}
+
+/* Card prices: "From" in the text font, the amount in bold "Book" */
+.product-card__info .price-list :is(sale-price, .price-list__amount),
+.product-card__info .price-list.price-list--from {
+  font-family: 'Neutraface Text Book';
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.product-card__info .price-list .price-list--from,
+.product-card__info .price-list.price-list--from {
+  font-family: var(--text-font-family);
+  font-weight: 400;
+  font-size: 16px;
+  font-variant: normal;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.product-card__info .price-list--from .price-list__amount {
+  font-family: 'Neutraface Text Book';
+  font-weight: 700;
+  font-size: 18px;
+  font-variant: all-small-caps;
+  letter-spacing: 1.92px;
+}
 .v-stack.justify-items-start .metafield-rich_text_field {
   text-align: left;  
   margin: 0 0 8px;
@@ -524,7 +568,7 @@ div[slot="footer"] .contents .button--outline:hover {
   gap: 0;
 }
 .product-card__info.empty\:hidden {
-  padding: 24px;
+  padding: 24px 24px 24px 0;
 }
 .product-list {
   --product-list-default-row-gap: 128px;
@@ -1146,8 +1190,6 @@ div[slot="footer"] .contents .button--outline:hover {
   .slideshow__slide-subtitle.slideshow__slide-content p {
     font-variant: none;
     font-family: 'CormorantGaramond Regular';
-    line-height: 1.2;
-    font-size: 28px;
   }
 }
 
@@ -1164,8 +1206,12 @@ div[slot="footer"] .contents .button--outline:hover {
 
   .slideshow__slide-content .button {
     min-height: 36px;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .slideshow__slide-content .button-group {
+    flex-wrap: nowrap;
   }
 
   .slideshow__slide-content .button .text-with-icon {
@@ -1179,14 +1225,7 @@ div[slot="footer"] .contents .button--outline:hover {
   font-size: 56px;
   line-height: 1.2;
   letter-spacing: 0px;
-}
-
-.slideshow__slide-content .button {
-  background: none !important;
-}
-
-.slideshow__slide-content .button:hover {
-  color: rgb(var(--button-background, var(--text-color))) !important;
+  font-variant: unset;
 }
 
 @media (min-width: 1024px) {
@@ -1198,26 +1237,37 @@ div[slot="footer"] .contents .button--outline:hover {
     margin-top: 12px;
     font-family: 'CormorantGaramond Light';
   }
+}
 
-  .slideshow__slide-title.h1 {
-    font-variant: unset;
+/* Video block of the slideshow: title and subtitle sizes come from the block settings */
+.slideshow__slide-title.h1.slideshow__slide-title--video {
+  font-size: var(--title-size-mobile);
+  line-height: 1.2;
+  text-transform: none;
+}
+
+@media (min-width: 1024px) {
+  .slideshow__slide-title.h1.slideshow__slide-title--video {
+    font-size: var(--title-size-desktop);
+  }
+
+  .slideshow__slide-subtitle.slideshow__slide-subtitle--video {
+    font-size: var(--subtitle-size-desktop);
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1280px) {
-  .slideshow__slide-title.h1 {
-    font-size: 48px;
-  }
-
-  .slideshow__slide-subtitle {
-    font-size: 36px;
-  }
+/* Video block: different mobile and desktop titles */
+.slideshow__slide-title-desktop {
+  display: none;
 }
 
-@media (max-width: 1024px) {
-  .slideshow__slide-title.h1 {
-    font-size: 50px;
-    line-height: 42px;
+@media (min-width: 1024px) {
+  .slideshow__slide-title-mobile {
+    display: none;
+  }
+
+  .slideshow__slide-title-desktop {
+    display: inline;
   }
 }
 

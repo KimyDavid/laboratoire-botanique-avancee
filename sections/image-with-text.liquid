@@ -36,7 +36,7 @@
 
   {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
 
-  <div id="{{ section.settings.id }}" class="{% unless section.settings.remove_vertical_spacing %}{% unless section.settings.image_fullsize %}section-spacing{% endunless %}{% endunless %} color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+  <div id="{{ section.settings.id }}" class="{% unless section.settings.remove_vertical_spacing %}{% unless section.settings.image_fullsize %}section-spacing{% endunless %}{% endunless %} color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %} {% render 'responsive-visibility', visibility: section.settings.visibility %}">
     <image-with-text class="image-with-text {% if section.settings.image_fullsize %}image-with-text--image-fullsize{% else %}container container--{{ section.settings.content_width}}{% endif %} {% if section.settings.image_position == 'end' %}image-with-text--reverse{% endif %}">
       {%- if section.settings.image != blank -%}
         {% comment %} <image-parallax> {% endcomment %}
@@ -211,6 +211,21 @@
       "id": "id",
       "label": "Identifiant de la section",
       "info": "Permet de faire une ancre vers la section"
+    },
+    {
+      "type": "header",
+      "content": "Affichage"
+    },
+    {
+      "type": "select",
+      "id": "visibility",
+      "label": "t:global.visibility.label",
+      "options": [
+        { "value": "all", "label": "t:global.visibility.options.all" },
+        { "value": "mobile", "label": "t:global.visibility.options.mobile" },
+        { "value": "desktop", "label": "t:global.visibility.options.desktop" }
+      ],
+      "default": "all"
     }
   ],
   "blocks": [

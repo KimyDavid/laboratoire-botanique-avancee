@@ -73,7 +73,31 @@
                 {%- endif -%}
 
                 {%- if block.settings.value != blank -%}
-                  <span class="key-figures__value">{{ block.settings.value }}</span>
+                  {%- comment -%}Text that is not a number or a +/-/% sign (ex : "jours" in "7 jours") is displayed a bit smaller{%- endcomment -%}
+                  {%- liquid
+                    assign number_chars = '0123456789+-−%.,  '
+                    assign value_chars = block.settings.value | split: ''
+                    assign value_html = ''
+                    assign in_text = false
+
+                    for char in value_chars
+                      if number_chars contains char
+                        if in_text
+                          assign value_html = value_html | append: '</span>'
+                          assign in_text = false
+                        endif
+                      elsif in_text == false
+                        assign value_html = value_html | append: '<span class="key-figures__value-text">'
+                        assign in_text = true
+                      endif
+                      assign value_html = value_html | append: char
+                    endfor
+
+                    if in_text
+                      assign value_html = value_html | append: '</span>'
+                    endif
+                  -%}
+                  <span class="key-figures__value">{{ value_html }}</span>
                 {%- endif -%}
 
                 {%- if block.settings.label != blank -%}

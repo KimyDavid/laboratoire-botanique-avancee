@@ -63,7 +63,7 @@
 
       <div id="{{ panel_id }}" class="collage-text__panel {% if use_accordion == false or section.settings.mobile_accordion_open %}is-open{% endif %}">
         <div class="collage-text__panel-inner">
-          <div class="collage-text__inner {% unless has_media %}collage-text__inner--no-media{% endunless %} {% if section.settings.image_position == 'end' %}collage-text__inner--media-end{% endif %} {% if section.settings.bordered_content %}collage-text__inner--bordered{% endif %}">
+          <div class="collage-text__inner {% unless has_media %}collage-text__inner--no-media{% endunless %} {% if is_main_only %}collage-text__inner--main-only{% endif %} {% if section.settings.image_position == 'end' %}collage-text__inner--media-end{% endif %} {% if section.settings.bordered_content %}collage-text__inner--bordered{% endif %} {% if section.settings.align_media_to_text %}collage-text__inner--aligned{% endif %}">
             {%- if has_media -%}
               <div class="collage-text__media {% if is_bottom_left_only %}collage-text__media--bottom-left-only{% endif %} {% if is_main_only %}collage-text__media--main-only{% endif %} {% if is_middle_right %}collage-text__media--middle-right{% endif %} {% if is_middle_left %}collage-text__media--middle-left{% endif %} {% if main_image != blank %}collage-text__media--has-main{% endif %}">
                 {%- if main_image != blank -%}
@@ -81,12 +81,16 @@
               </div>
             {%- endif -%}
 
-            <div class="collage-text__text">
+            <div class="collage-text__text {% if section.settings.eyebrow_position == 'above' %}collage-text__text--eyebrow-first{% endif %}">
+              {%- if section.settings.eyebrow != blank and section.settings.eyebrow_position == 'above' -%}
+                <p class="collage-text__eyebrow h4">{{ section.settings.eyebrow }}</p>
+              {%- endif -%}
+
               {%- if section.settings.title != blank -%}
                 <h2 class="collage-text__title h2">{{ section.settings.title | newline_to_br }}</h2>
               {%- endif -%}
 
-              {%- if section.settings.eyebrow != blank -%}
+              {%- if section.settings.eyebrow != blank and section.settings.eyebrow_position != 'above' -%}
                 <p class="collage-text__eyebrow h4">{{ section.settings.eyebrow }}</p>
               {%- endif -%}
 
@@ -94,13 +98,68 @@
                 <div class="collage-text__content prose">{{ section.settings.content }}</div>
               {%- endif -%}
 
+              {%- comment -%}Blocks: paragraphs and key figures. Consecutive key figures are grouped in rows of 3{%- endcomment -%}
+              {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                  {%- when 'paragraph' -%}
+                    {%- if block.settings.content != blank -%}
+                      <div class="collage-text__content collage-text__block prose" {{ block.shopify_attributes }}>{{ block.settings.content }}</div>
+                    {%- endif -%}
+
+                  {%- when 'stat' -%}
+                    {%- assign previous_index = forloop.index0 | minus: 1 -%}
+                    {%- if forloop.first or section.blocks[previous_index].type != 'stat' -%}
+                      <div class="collage-text__stats collage-text__block">
+                    {%- endif -%}
+
+                    <div class="collage-text__stat" {{ block.shopify_attributes }}>
+                      {%- if block.settings.eyebrow != blank -%}
+                        <p class="collage-text__stat-eyebrow">{{ block.settings.eyebrow }}</p>
+                      {%- endif -%}
+
+                      {%- if block.settings.value != blank or block.settings.value_suffix != blank -%}
+                        <p class="collage-text__stat-value">
+                          {{- block.settings.value -}}
+                          {%- if block.settings.value_suffix != blank %} <span class="collage-text__stat-suffix">{{ block.settings.value_suffix }}</span>{% endif -%}
+                        </p>
+                      {%- endif -%}
+
+                      {%- if block.settings.value_detail != blank -%}
+                        <p class="collage-text__stat-detail">{{ block.settings.value_detail }}</p>
+                      {%- endif -%}
+
+                      {%- if block.settings.label != blank -%}
+                        <p class="collage-text__stat-label">{{ block.settings.label }}</p>
+                      {%- endif -%}
+
+                      {%- if block.settings.label_detail != blank -%}
+                        <p class="collage-text__stat-detail">{{ block.settings.label_detail }}</p>
+                      {%- endif -%}
+                    </div>
+
+                    {%- assign next_index = forloop.index0 | plus: 1 -%}
+                    {%- if forloop.last or section.blocks[next_index].type != 'stat' -%}
+                      </div>
+                    {%- endif -%}
+                {%- endcase -%}
+              {%- endfor -%}
+
               {%- if section.settings.small_content != blank -%}
                 <div class="collage-text__small prose">{{ section.settings.small_content }}</div>
               {%- endif -%}
 
-              {%- if section.settings.button_label != blank and button_url != blank or section.settings.button_label != blank and popup_handle != blank -%}
+              {%- liquid
+                assign has_main_button = false
+                if section.settings.button_label != blank and button_url != blank or section.settings.button_label != blank and popup_handle != blank
+                  assign has_main_button = true
+                endif
+                assign button_blocks = section.blocks | where: 'type', 'button'
+              -%}
+
+              {%- if has_main_button or button_blocks.size > 0 -%}
                 <div class="collage-text__button">
-                  {%- if popup_handle != blank -%}
+                  {%- if has_main_button == false -%}
+                  {%- elsif popup_handle != blank -%}
                     {%- assign popup_id = 'side-popup-' | append: popup_handle -%}
                     {%- render 'button', type: 'button', style: 'primary', content: section.settings.button_label, aria_controls: popup_id -%}
                   {%- elsif is_add_to_cart -%}
@@ -130,9 +189,26 @@
                     {%- render 'button', href: button_url, style: 'primary', content: section.settings.button_label -%}
                   {%- endif -%}
 
-                  {%- if button_product != blank -%}
-                    <span class="collage-text__price h3">{{ button_product.price | money }}</span>
+                  {%- if has_main_button and button_product != blank -%}
+                    {%- if section.settings.price_prefix != blank -%}
+                      <span class="collage-text__price collage-text__price--prefixed h3"><span class="collage-text__price-prefix">{{ section.settings.price_prefix }} - </span>{{ button_product.price | money }}</span>
+                    {%- else -%}
+                      <span class="collage-text__price h3">{{ button_product.price | money }}</span>
+                    {%- endif -%}
                   {%- endif -%}
+
+                  {%- comment -%}"Bouton" blocks: extra buttons on the same row, after the main button{%- endcomment -%}
+                  {%- for block in button_blocks -%}
+                    {%- assign block_popup_handle = block.settings.popup | handleize -%}
+                    {%- if block.settings.label == blank -%}
+                      {%- continue -%}
+                    {%- elsif block_popup_handle != blank -%}
+                      {%- assign block_popup_id = 'side-popup-' | append: block_popup_handle -%}
+                      {%- render 'button', type: 'button', style: block.settings.style, content: block.settings.label, aria_controls: block_popup_id, block: block -%}
+                    {%- elsif block.settings.link != blank -%}
+                      {%- render 'button', href: block.settings.link, style: block.settings.style, content: block.settings.label, block: block -%}
+                    {%- endif -%}
+                  {%- endfor -%}
                 </div>
               {%- endif -%}
             </div>
@@ -206,6 +282,16 @@
       "label": "Surtitre"
     },
     {
+      "type": "select",
+      "id": "eyebrow_position",
+      "label": "Position du surtitre",
+      "options": [
+        { "value": "below", "label": "En dessous du titre" },
+        { "value": "above", "label": "Au-dessus du titre" }
+      ],
+      "default": "below"
+    },
+    {
       "type": "textarea",
       "id": "title",
       "label": "Titre",
@@ -254,10 +340,23 @@
       "default": false
     },
     {
+      "type": "text",
+      "id": "price_prefix",
+      "label": "Texte avant le prix",
+      "info": "Facultatif. Ex : « Édition limitée » affiche « Édition limitée - 518,00€ »."
+    },
+    {
       "type": "checkbox",
       "id": "bordered_content",
       "label": "Bordures haut et bas du contenu",
-      "info": "Ajoute une ligne au-dessus et en dessous du texte, sur desktop. Les images font alors au moins la hauteur du texte.",
+      "info": "Ajoute une ligne au-dessus et en dessous du texte sur desktop (les images font alors au moins la hauteur du texte), et au-dessus et en dessous de toute la section sur mobile sans accordéon.",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "align_media_to_text",
+      "label": "Aligner l'image principale sur le texte",
+      "info": "Sur desktop, l'image principale est alignée en haut et en bas du texte (elle est recadrée pour suivre sa hauteur).",
       "default": false
     },
     {
@@ -321,6 +420,103 @@
       "id": "background_color",
       "label": "Couleur de fond",
       "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "name": "Paragraphe",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Contenu"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Bouton",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Affiché sur la même ligne que le bouton de la section, après lui."
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Texte du bouton",
+          "default": "Où nous trouver"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Lien du bouton"
+        },
+        {
+          "type": "text",
+          "id": "popup",
+          "label": "Identifiant de la popup à ouvrir",
+          "info": "Facultatif. Si renseigné, le bouton ouvre la popup latérale ayant cet identifiant, à la place du lien."
+        },
+        {
+          "type": "select",
+          "id": "style",
+          "label": "Style",
+          "options": [
+            { "value": "primary", "label": "Plein" },
+            { "value": "outline", "label": "Bordure" }
+          ],
+          "default": "outline"
+        }
+      ]
+    },
+    {
+      "type": "stat",
+      "name": "Chiffre clé",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Les chiffres clés qui se suivent sont affichés côte à côte, 3 par ligne maximum."
+        },
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Surtitre",
+          "info": "Ex : Dès 8 jours :"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Chiffre",
+          "default": "+71%"
+        },
+        {
+          "type": "text",
+          "id": "value_suffix",
+          "label": "Complément à côté du chiffre",
+          "info": "Ex : gènes (pour « 136 GÈNES »)."
+        },
+        {
+          "type": "text",
+          "id": "value_detail",
+          "label": "Précision sous le chiffre",
+          "info": "Ex : liés à la jeunesse de la peau"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Libellé",
+          "info": "Les caractères ¹ ² ³ peuvent être utilisés pour les renvois.",
+          "default": "De collagène I"
+        },
+        {
+          "type": "text",
+          "id": "label_detail",
+          "label": "Précision sous le libellé",
+          "info": "Ex : (Matrice extra-cellulaire)"
+        }
+      ]
     }
   ],
   "presets": [

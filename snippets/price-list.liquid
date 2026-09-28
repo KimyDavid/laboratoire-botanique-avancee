@@ -123,9 +123,11 @@ Supported variables
       {%- endif -%}
 
       {%- if settings.product_price_strategy == 'from_price' -%}
-        <sale-price class="{% if is_variant_on_sale %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
+        {%- comment -%}The amount is wrapped so that "From" and the amount can be styled differently{%- endcomment -%}
+        {%- capture variant_price_html -%}<span class="price-list__amount">{{ variant_price }}</span>{%- endcapture -%}
+        <sale-price class="price-list--from {% if is_variant_on_sale %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
           <span class="sr-only">{{ 'product.price.sale_price' | t }}</span>
-          {{- 'product.price.from_price_html' | t: price_min: variant_price -}}
+          {{- 'product.price.from_price_html' | t: price_min: variant_price_html -}}
         </sale-price>
       {%- else -%}
         <sale-price class="{{ on_sale_price_classes }}">  

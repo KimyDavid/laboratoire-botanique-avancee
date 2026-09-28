@@ -47,7 +47,7 @@
   ------------------------------------------------------------------------------------------------------------------------
   {%- endcomment -%}
 
-  <div id="{{ section.settings.id }}" class="{% unless section.settings.remove_vertical_spacing %}section-spacing{% endunless %} color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--with-image-overlay" {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %}>
+  <div id="{{ section.settings.id }}" class="{% unless section.settings.remove_vertical_spacing %}section-spacing{% endunless %} color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--with-image-overlay {% render 'responsive-visibility', visibility: section.settings.visibility %}" {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %}>
     <image-with-text-overlay class="content-over-media content-over-media--{{ section.settings.image_size }}" reveal-on-scroll="{{ section.settings.reveal_on_scroll }}">
       {%- if section.settings.image != blank -%}
         {% comment %} <image-parallax class="contents"> {% endcomment %}
@@ -345,6 +345,21 @@
       "id": "id",
       "label": "Identifiant de la section",
       "info": "Permet de faire une ancre vers la section"
+    },
+    {
+      "type": "header",
+      "content": "Affichage"
+    },
+    {
+      "type": "select",
+      "id": "visibility",
+      "label": "t:global.visibility.label",
+      "options": [
+        { "value": "all", "label": "t:global.visibility.options.all" },
+        { "value": "mobile", "label": "t:global.visibility.options.mobile" },
+        { "value": "desktop", "label": "t:global.visibility.options.desktop" }
+      ],
+      "default": "all"
     }
   ],
   "blocks": [

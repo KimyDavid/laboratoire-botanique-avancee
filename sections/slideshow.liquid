@@ -194,11 +194,19 @@ may have important consequence on the section itself.
                     {{- section.settings.monogramme | image_url: width: block.settings.logo_size | image_tag: loading: 'lazy', class: 'slideshow__logo-img', style: logo_size -}}
                   </div>
                 {%- endif -%}
-                {%- if block.settings.title != blank -%}
-                  <h1 class="h1 slideshow__slide-title slideshow__slide-title--video" style="font-size: {{ block.settings.mobile_title_size }}px; --title-size-desktop: {{ block.settings.title_size }}px;">{{ block.settings.title }}</h1>
+                {%- if block.settings.title != blank or block.settings.mobile_title != blank -%}
+                  <h1 class="h1 slideshow__slide-title slideshow__slide-title--video" style="--title-size-mobile: {{ block.settings.mobile_title_size }}px; --title-size-desktop: {{ block.settings.title_size }}px;">
+                    {%- if block.settings.mobile_title != blank -%}
+                      {%- comment -%}Different titles: the mobile one below 1024px, the desktop one above{%- endcomment -%}
+                      <span class="slideshow__slide-title-mobile">{{ block.settings.mobile_title }}</span>
+                      <span class="slideshow__slide-title-desktop">{{ block.settings.title }}</span>
+                    {%- else -%}
+                      {{- block.settings.title -}}
+                    {%- endif -%}
+                  </h1>
                 {%- endif -%}
                 {%- if block.settings.subheading != blank -%}
-                  <p class="slideshow__slide-subtitle">{{ block.settings.subheading }}</p>
+                  <p class="slideshow__slide-subtitle slideshow__slide-subtitle--video" style="--subtitle-size-desktop: {{ block.settings.subtitle_size }}px;">{{ block.settings.subheading }}</p>
                 {%- endif -%}
                 {%- if block.settings.content != blank -%}
                   <div class="slideshow__slide-subtitle slideshow__slide-content">{{ block.settings.content }}</div>
@@ -209,7 +217,7 @@ may have important consequence on the section itself.
                   {%- if block.settings.button_1_style == 'link' or block.settings.button_2_style == 'link' or block.settings.button_1_text == blank or block.settings.button_2_text == blank -%}
                     {%- capture button_wrapper_class -%}button-group justify-{{ button_mobile_position }} sm:justify-{{ button_desktop_position }}{%- endcapture -%}
                   {%- else -%}
-                    {%- capture button_wrapper_class -%}button-group button-group--same-width justify-{{ button_mobile_position }} sm:justify-{{ button_desktop_position }}{%- endcapture -%}
+                    {%- capture button_wrapper_class -%}button-group justify-{{ button_mobile_position }} sm:justify-{{ button_desktop_position }}{%- endcapture -%}
                   {%- endif -%}
                   <div class="{{ button_wrapper_class }}">
                     {%- if block.settings.button_1_text != blank -%}
@@ -731,6 +739,12 @@ may have important consequence on the section itself.
           "default": "Video slide"
         },
         {
+          "type": "inline_richtext",
+          "id": "mobile_title",
+          "label": "Titre mobile",
+          "info": "Facultatif : remplace le titre sous 1024px de large."
+        },
+        {
           "type": "image_picker",
           "id": "title_svg",
           "label": "Titre SVG",
@@ -831,7 +845,7 @@ may have important consequence on the section itself.
         {
           "type": "range",
           "id": "subtitle_size",
-          "label": "Taille du sous-titre",
+          "label": "Taille du sous-titre desktop",
           "min": 12,
           "max": 38,
           "step": 2,

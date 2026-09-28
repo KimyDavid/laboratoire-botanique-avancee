@@ -2,8 +2,6 @@
   <style>
     #shopify-section-{{ section.id }} {
       --product-list-items-per-row: {{ section.settings.products_per_row_mobile | times: 1 }};
-      --product-list-horizontal-spacing-factor: {{ section.settings.horizontal_spacing_factor }};
-      --product-list-vertical-spacing-factor: {{ section.settings.vertical_spacing_factor }};
     }
     #shopify-section-{{ section.id }} .v-stack.justify-self-center.gap-4.text-center {
       padding: 0 32px;
@@ -19,6 +17,27 @@
         padding: 0 24px;
       }
     }
+    /* Product spacing (px), overrides the gaps fixed in custom_style.css */
+    #shopify-section-{{ section.id }} .product-list {
+      --product-list-calculated-column-gap: {{ section.settings.horizontal_spacing }}px;
+      --product-list-calculated-row-gap: {{ section.settings.vertical_spacing_mobile }}px;
+      column-gap: var(--product-list-calculated-column-gap);
+      row-gap: var(--product-list-calculated-row-gap);
+    }
+    @media screen and (min-width: 1000px) {
+      #shopify-section-{{ section.id }} .product-list {
+        --product-list-calculated-row-gap: {{ section.settings.vertical_spacing_desktop }}px;
+      }
+    }
+    {%- if section.settings.stack_products == false and section.settings.carousel_items_desktop != 'default' %}
+    /* Carousel: number of cards visible per slide on desktop (overrides the limits of custom_style.css) */
+    @media screen and (min-width: 1000px) {
+      #shopify-section-{{ section.id }} .featured-collections-carousel .product-list--carousel {
+        --product-list-items-per-row: {{ section.settings.carousel_items_desktop }};
+        --product-list-max-items-per-row-allowed: {{ section.settings.carousel_items_desktop }};
+      }
+    }
+    {%- endif %}
   </style>
 
   {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
@@ -35,7 +54,7 @@
           {%- endif -%}
         {%- endfor -%}
 
-        <div class="v-stack justify-self-center gap-4 text-center sm:gap-5 w-100 flex {% if has_visible_link %}space-between{% else %}justify-center{% endif %} wrap align-center">
+        <div class="v-stack justify-self-center gap-4 text-center sm:gap-5 w-100 flex md:justify-center wrap align-center">
           {%- if section.settings.subheading != blank -%}
             <p class="h6 text-center">{{- section.settings.subheading -}}</p>
           {%- endif -%}
@@ -74,7 +93,7 @@
                 {%- endif -%}
 
                 {%- for product in block.settings.collection.products limit: block.settings.products_count -%}
-                  {%- render 'product-card', product: product, reveal: should_reveal, position: forloop.index, hide_product_information: section.settings.hide_product_information, block: block, show_short_description: section.settings.show_product_description, show_buy_button: section.settings.show_buy_button, show_product_secondary_image: section.settings.show_product_secondary_image -%}
+                  {%- render 'product-card', product: product, reveal: should_reveal, position: forloop.index, hide_product_information: section.settings.hide_product_information, block: block, show_short_description: section.settings.show_product_description, show_rating_on_image: section.settings.show_rating_on_image, show_buy_button: section.settings.show_buy_button, show_product_secondary_image: section.settings.show_product_secondary_image -%}
                 {%- else -%}
                   {%- for i in (1..block.settings.products_count) -%}
                     {%- render 'product-card-placeholder', reveal: should_reveal, loop_index: forloop.index0, hide_product_information: section.settings.hide_product_information -%}
@@ -161,6 +180,20 @@
     },
     {
       "type": "checkbox",
+      "id": "show_rating_on_image",
+      "label": "Afficher la note sur l'image",
+      "info": "Note Judge.me du produit, en bas à droite de l'image (ex : ★ 4,5). Masquée si le produit n'a pas encore de note.",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_product_description",
+      "label": "Afficher la description courte du produit",
+      "info": "Champ méta \"custom.vignette_courte_description\", affiché sous le sous-titre.",
+      "default": false
+    },
+    {
+      "type": "checkbox",
       "id": "show_buy_button",
       "label": "Afficher le bouton \"Acheter\"",
       "default": true
@@ -200,6 +233,22 @@
     },
     {
       "type": "select",
+      "id": "carousel_items_desktop",
+      "label": "Vignettes par slide (desktop)",
+      "info": "Carrousel uniquement, à partir de 1000px de large.",
+      "options": [
+        { "value": "default", "label": "Par défaut (3 + aperçu, 2 en design Large)" },
+        { "value": "2", "label": "2" },
+        { "value": "3", "label": "3" },
+        { "value": "3.33", "label": "3 + aperçu de la suivante" },
+        { "value": "4", "label": "4" },
+        { "value": "4.33", "label": "4 + aperçu de la suivante" }
+      ],
+      "default": "default",
+      "visible_if": "{{ section.settings.stack_products == false }}"
+    },
+    {
+      "type": "select",
       "id": "products_per_row_mobile",
       "label": "t:global.product_list.products_per_row_mobile",
       "options": [
@@ -227,26 +276,39 @@
     },
     {
       "type": "header",
-      "content": "t:global.product_list.spacing_category",
-      "info": "t:global.product_list.spacing_category_info"
+      "content": "t:global.product_list.spacing_category"
     },
     {
       "type": "range",
-      "min": 0.2,
-      "max": 2,
-      "step": 0.1,
-      "id": "horizontal_spacing_factor",
-      "label": "Horizontal spacing factor",
-      "default": 1
+      "id": "horizontal_spacing",
+      "label": "Espacement horizontal",
+      "info": "Entre deux produits, sur mobile et desktop.",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 4
     },
     {
       "type": "range",
-      "min": 0.2,
-      "max": 2,
-      "step": 0.1,
-      "id": "vertical_spacing_factor",
-      "label": "Vertical spacing factor",
-      "default": 1
+      "id": "vertical_spacing_desktop",
+      "label": "Espacement vertical (desktop)",
+      "info": "Entre deux lignes de produits, quand ils sont empilés.",
+      "min": 0,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "default": 128
+    },
+    {
+      "type": "range",
+      "id": "vertical_spacing_mobile",
+      "label": "Espacement vertical (mobile)",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 48
     },
     {
       "type": "header",
