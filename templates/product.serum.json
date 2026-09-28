@@ -177,7 +177,7 @@
         "image_position": "start",
         "eyebrow": "136 gènes impliqués dans la jeunesse de la peau",
         "title": "Des actifs clés",
-        "content": "<p><strong>Cellules Souches d’iris Biotech </strong>: Stimulent les constituants essentiels du derme pour améliorer fermeté, élasticité et souplesse.&nbsp;<br/><br/><strong>Centalla Asiatica Biotech</strong> : Apaise la peau, favorise sa réparation et révèle un teint plus éclatant.&nbsp;<br/><br/><strong>Ectoïne Biotech</strong> : Bouclier protecteur, antioxydant, hydratation long terme.</p><h4>96% d’ingrédients d’origine naturelle</h4>",
+        "content": "<p><strong>Cellules Souches d’iris </strong>: Stimulent les constituants essentiels du derme pour améliorer fermeté, élasticité et souplesse.&nbsp;<br/><br/><strong>Centalla Asiatica Biotech</strong> : Apaise la peau, favorise sa réparation et révèle un teint plus éclatant.&nbsp;<br/><br/><strong>Ectoïne Biotech</strong> : Bouclier protecteur, antioxydant, protège des agressions extérieures, hydratation long terme.</p><h4>96% d’ingrédients d’origine naturelle</h4>",
         "small_content": "",
         "button_label": "Voir la liste INCI",
         "button_link": "",
@@ -219,7 +219,7 @@
           "settings": {
             "eyebrow": "",
             "value": "75%",
-            "label": "Fermeté³"
+            "label": "Peau plus souple et élastique³"
           }
         },
         "stat_Enqmq6": {
@@ -227,7 +227,7 @@
           "settings": {
             "eyebrow": "",
             "value": "+53%",
-            "label": "Uniformité du teint²"
+            "label": "Fermeté²"
           }
         },
         "stat_67Jbbd": {
@@ -243,7 +243,7 @@
           "settings": {
             "eyebrow": "",
             "value": "-18%",
-            "label": "Confort¹"
+            "label": "Perte d'eau¹"
           }
         }
       },
@@ -319,7 +319,7 @@
       "settings": {
         "title": "Efficacité prouvée cliniquement",
         "content": "",
-        "small_content": "<p>1. Mesure instrumentale, 40 femmes caucasiennes, 2 applications par jour pendant 3 mois.<br/>2. Test clinique par auto-scorage, 40 femmes caucasiennes, 2 applications par jour pendant 3 mois.<br/>3. Auto-évaluation, 40 femmes caucasiennes, 2 applications par jour pendant 3 mois.<br/><br/></p>",
+        "small_content": "<p>1. Mesure instrumentale, 40 femmes caucasiennes, 2 applications par jour pendant 3 mois. 2. Test clinique par auto-scorage, 40 femmes caucasiennes, 2 applications par jour pendant 3 mois. 3. Auto-évaluation, 40 femmes caucasiennes, 2 applications par jour pendant 3 mois.<br/><br/></p>",
         "content_visibility": "desktop",
         "button_label": "Voir tous les résultats",
         "button_link": "#",
@@ -342,7 +342,7 @@
         "item_tHqTnd": {
           "type": "item",
           "settings": {
-            "text": "Formulé en France"
+            "text": "produit en France"
           }
         },
         "item_9W6fTT": {
@@ -404,7 +404,7 @@
           "type": "image_with_text",
           "settings": {
             "image": "shopify://shop_images/1950X1950_INGREDIENTS_CELLULE_IRIS.webp",
-            "title": "Cellules Souches d’iris Biotech",
+            "title": "Cellules Souches d’iris",
             "heading_tag": "h3",
             "content": "<p>Stimulent les constituants essentiels du derme pour améliorer fermeté, élasticité et souplesse.</p>",
             "link_url": "#",
@@ -434,7 +434,7 @@
             "image": "shopify://shop_images/1950X1950_ECTOINE.webp",
             "title": "ECTOÏNE BIOTECH",
             "heading_tag": "h3",
-            "content": "<p>Bouclier protecteur, antioxydant, hydratation long terme.</p>",
+            "content": "<p>Bouclier protecteur, antioxydant, protège des agressions extérieures, hydratation long terme.</p>",
             "link_url": "",
             "link_text": "",
             "button_popup": "",
@@ -486,10 +486,10 @@
         "image_position": "end",
         "eyebrow": "Collaboration avec dr. jean-marc lemaître",
         "title": "Technologie neo-regen",
-        "content": "<p>Créé avec le Dr Lemaître<strong>, l'expert français </strong>de la longévité, notre<strong> actif exclusif NEO-REGEN</strong> est composé de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.&nbsp;</p><ul><li>Il réactive<strong> 136 gènes</strong> impliqués dans la jeunesse de la peau.&nbsp;</li><li><strong>+71% de Collagène I </strong>dès 8 jours.</li><li>Il<strong> relance la régénération </strong>cellulaire, moléculaire et tissulaire.</li></ul>",
+        "content": "<p>Créé avec le Dr Lemaître<strong>, l'expert français </strong>de la longévité, notre<strong> actif exclusif NEO-REGEN</strong> est concentré dans tous nos soins. Composé de millions de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.&nbsp;</p><ul><li>Il réactive<strong> 136 gènes</strong> impliqués dans la jeunesse de la peau.&nbsp;</li><li><strong>+71% de Collagène I </strong>dès 8 jours.</li><li>Il<strong> relance la régénération </strong>cellulaire, moléculaire et tissulaire.</li></ul>",
         "small_content": "",
         "button_label": "En savoir plus",
-        "button_link": "shopify://pages/expertise",
+        "button_link": "/pages/expertise#technologie-neoregen",
         "button_popup": "",
         "button_product": "",
         "button_add_to_cart": false,
@@ -512,7 +512,7 @@
         "image_position": "end",
         "eyebrow": "",
         "title": "",
-        "content": "<p>1. Déposer 2 à 3 pressions de Sérum en Crème Régénératif au bout des doigts.<br/><br/>2. Appliquer uniformément sur l’ensemble du visage, en lissant la peau de bas en haut par des mouvements dynamiques.</p>",
+        "content": "<p>1. Déposer 2 à 3 pressions de Sérum en Crème Régénératif au bout des doigts.<br/><br/>2. Appliquer uniformément sur l’ensemble du visage, en lissant la peau de bas en haut par des mouvements dynamiques.</p><p><strong>Pour les peaux mixtes à grasses:</strong> il remplace votre crème.<br/><strong>Pour les peaux sèches: </strong>continuer votre routine avec votre crème.</p>",
         "small_content": "",
         "button_label": "",
         "button_link": "",
@@ -535,12 +535,12 @@
       "settings": {
         "image_main": "shopify://shop_images/NEW_GAMME_LOTION2_3_1.jpg",
         "image_secondary_1_position": "top",
-        "image_secondary_2": "shopify://shop_images/1950X1950_TEXTURE_FRETTE_CREME.webp",
+        "image_secondary_2": "shopify://shop_images/Texture_serum.jpg",
         "image_secondary_2_position": "bottom",
         "image_position": "start",
         "eyebrow": "",
         "title": "Prouesse de formulation",
-        "content": "<p>Créé au sein de nos laboratoires à Baulieu, le Sérum en Crème Régénératif est exempt de tout ingrédient controversé. Zéro silicone, zéro PEG, zéro microplastique.&nbsp;<br/><br/>Une signature olfactive au parfum frais et enveloppant. &nbsp;<br/><br/>30% d'actifs<br/>96% d'ingrédients d'origine naturelle.<br/>Notée Excellent sur Yuka. Végan.<br/>Fabriqué en France</p>",
+        "content": "<p>Créé au sein de <strong>nos laboratoires à Baulieu</strong>, le Sérum en Crème Régénératif est <strong>exempt de tout ingrédient controversé</strong>. Zéro silicone, zéro PEG, zéro microplastique.&nbsp;<br/><br/>30% d'actifs.<br/>96% d'ingrédients d'origine naturelle.<br/>Notée Excellent sur Yuka. Vegan.<br/>Délicat parfum frais et réconfortant.</p>",
         "small_content": "",
         "button_label": "En savoir plus",
         "button_link": "/pages/expertise#prouesse-formulation",
@@ -561,13 +561,13 @@
       "type": "image-collage-text-lba",
       "name": "Recharge format voyage (mobile)",
       "settings": {
-        "image_main": "shopify://shop_images/Rectangle_5938_1.jpg",
+        "image_main": "shopify://shop_images/LBA_Serum_RVB.webp",
         "image_secondary_1_position": "top",
         "image_secondary_2_position": "bottom",
         "image_position": "end",
         "eyebrow": "",
         "title": "",
-        "content": "<p>La recharge est logé dans son pot en verre pour une utilisation quotidienne.</p><p>Lors de vos déplacements, elle se déclipse et se referme avec son couvercle dédié, dissimulé dans le coffret, pour devenir un véritable format nomade. Système breveté.</p><p>La recharge est conçue 100% en aluminium. L’écrin est créé 100% avec des artisans français. Pot en verre, couvercle en bio-résine.&nbsp;</p>",
+        "content": "<p>La recharge est logée dans son pot en verre pour une utilisation quotidienne.</p><p>Lors de vos déplacements, elle se <strong>déclipse </strong>et se referme avec son <strong>couvercle dédié</strong>, dissimulé dans le coffret, pour devenir un véritable format <strong>nomade</strong>. Système breveté.</p><p>La recharge est conçue 100% en aluminium. L’écrin est créé avec des<strong> artisans français</strong>. Pot en verre, couvercle en bio-résine.&nbsp;</p>",
         "small_content": "",
         "button_label": "Acheter",
         "button_link": "shopify://products/recharge-creme-regenerative-visage",
@@ -614,13 +614,13 @@
         "image_with_text_zVYNDC": {
           "type": "image_with_text",
           "settings": {
-            "image": "shopify://shop_images/1950X1950_TEXTURE_FRETTE_CREME.webp",
+            "image": "shopify://shop_images/Texture_serum.jpg",
             "title": "Prouesse de formulation",
             "heading_tag": "h3",
-            "content": "<p>Créé au sein de nos laboratoires à Baulieu, le Sérum en Crème Régénératif est exempt de tout ingrédient controversé. Zéro silicone, zéro PEG, zéro microplastique.&nbsp;<br/><br/>Une signature olfactive au parfum frais et enveloppant. &nbsp;<br/><br/>30% d'actifs<br/>96% d'ingrédients d'origine naturelle.<br/>Notée Excellent sur Yuka<br/>Fabriqué en France</p>",
+            "content": "<p>Créé au sein de <strong>nos laboratoires à Baulieu</strong>, le Sérum en Crème Régénératif est <strong>exempt de tout ingrédient controversé</strong>. Zéro silicone, zéro PEG, zéro microplastique.&nbsp;<br/><br/>30% d'actifs.<br/>96% d'ingrédients d'origine naturelle.<br/>Notée Excellent sur Yuka. Vegan.<br/>Délicat parfum frais et enveloppant.&nbsp;</p>",
             "link_url": "#",
             "link_text": "Voir la liste INCI",
-            "button_popup": "",
+            "button_popup": "liste-inci",
             "product": "",
             "show_price": true
           }
@@ -631,7 +631,7 @@
             "image": "shopify://shop_images/Rectangle_6003.png",
             "title": "Conseils d’utilisation",
             "heading_tag": "h3",
-            "content": "<p>1. Déposer 2 à 3 pressions de Sérum en Crème Régénératif au bout des doigts.<br/><br/>2. Appliquer uniformément sur l’ensemble du visage, en lissant la peau de bas en haut par des mouvements dynamiques.</p>",
+            "content": "<p>1. Déposer 2 à 3 pressions de Sérum en Crème Régénératif au bout des doigts.<br/><br/>2. Appliquer uniformément sur l’ensemble du visage, en lissant la peau de bas en haut par des mouvements dynamiques.</p><p><strong>Pour les peaux mixtes à grasses</strong>: il remplace votre crème.<br/><strong>Pour les peaux sèches: </strong>continuer votre routine avec votre crème.</p>",
             "link_url": "",
             "link_text": "",
             "button_popup": "",
@@ -642,10 +642,10 @@
         "image_with_text_4ggwCB": {
           "type": "image_with_text",
           "settings": {
-            "image": "shopify://shop_images/Rectangle_6002.png",
+            "image": "shopify://shop_images/a469b5a2-b5aa-4667-9566-3ae550be4841.jpg",
             "title": "Recharge et format voyage",
             "heading_tag": "h3",
-            "content": "<p>La recharge est logée dans son pot en verre pour une utilisation quotidienne.<br/>Lors de vos déplacements, elle se déclipse et se referme avec son couvercle dédié, dissimulé dans le coffret, pour devenir un <strong>véritable format nomade</strong>. Système breveté.La recharge est conçue 100% en aluminium.</p><p>L’écrin est créé 100% avec des <strong>artisans français</strong>. Pot en verre, couvercle en bio-résine. </p>",
+            "content": "<p>La recharge est logée dans son pot en verre pour une utilisation quotidienne.</p><p>Lors de vos déplacements, elle se <strong>déclipse </strong>et se referme avec son <strong>couvercle dédié</strong>, dissimulé dans le coffret, pour devenir un <strong>véritable format nomade</strong>. Système breveté.</p><p>La recharge est conçue 100% en aluminium. L’écrin est créé avec des <strong>artisans français</strong>.&nbsp;<br/>Pot en verre, couvercle en bio-résine.&nbsp;</p>",
             "link_url": "",
             "link_text": "Acheter",
             "button_popup": "",

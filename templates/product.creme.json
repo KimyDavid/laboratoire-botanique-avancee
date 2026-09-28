@@ -32,7 +32,7 @@
         "text_qa4MPD": {
           "type": "text",
           "settings": {
-            "text": "<h4>96% d’ingrédients d’origine naturelle.<br/>Sans ingrédient controversé.</h4>"
+            "text": "<h4>produite en france.<br/>96% d’ingrédients d’origine naturelle.<br/>Sans ingrédient controversé.</h4>"
           }
         },
         "relative_products_JBLBDc": {
@@ -177,7 +177,7 @@
         "image_position": "start",
         "eyebrow": "136 gènes impliqués dans la jeunesse de la peau",
         "title": "Des actifs clés",
-        "content": "<p><strong>Niacinamide</strong> : Stimule la synthèse de collagène, unifie le teint et améliore visiblement la qualité de la peau.<br/><strong><br/>7 Céramides&nbsp;:</strong> Restaurent la barrière cutanée, renforcent l'hydratation et apportent confort à la peau.&nbsp;<br/><strong><br/>Ectoïne Biotech&nbsp;:</strong> Bouclier protecteur, antioxydant, hydratation long terme.</p><h4>96% d’ingrédients d’origine naturelle</h4>",
+        "content": "<p><strong>Niacinamide</strong> : Stimule la synthèse de collagène, unifie le teint et améliore visiblement la qualité de la peau.<br/><strong><br/>7 Céramides&nbsp;:</strong> Restaurent la barrière cutanée, renforcent l'hydratation et apportent confort à la peau.&nbsp;<br/><strong><br/>Ectoïne Biotech&nbsp;:</strong> Bouclier protecteur, antioxydant, protège des agressions extérieures, hydratation long terme.</p><h4>96% d’ingrédients d’origine naturelle</h4>",
         "small_content": "",
         "button_label": "Voir la liste INCI",
         "button_link": "",
@@ -434,7 +434,7 @@
             "image": "shopify://shop_images/1950X1950_ECTOINE.webp",
             "title": "ECTOÏNE BIOTECH",
             "heading_tag": "h3",
-            "content": "<p>Bouclier protecteur, antioxydant, hydratation long terme.</p>",
+            "content": "<p>Bouclier protecteur, antioxydant, protège des agressions extérieures, hydratation long terme.</p>",
             "link_url": "",
             "link_text": "",
             "button_popup": "",
@@ -486,10 +486,10 @@
         "image_position": "end",
         "eyebrow": "Collaboration avec dr. jean-marc lemaître",
         "title": "Technologie neo-regen",
-        "content": "<p>Créé avec le Dr Lemaître<strong>, l'expert français </strong>de la longévité, notre<strong> actif exclusif NEO-REGEN</strong> est composé de millions de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.&nbsp;</p><ul><li>Il réactive<strong> 136 gènes</strong> impliqués dans la jeunesse de la peau.&nbsp;</li><li><strong>+71% de Collagène I </strong>dès 8 jours.</li><li>Il<strong> relance la régénération </strong>cellulaire, moléculaire et tissulaire.</li></ul>",
+        "content": "<p>Créé avec le Dr Lemaître<strong>, l'expert français </strong>de la longévité, notre<strong> actif exclusif NEO-REGEN</strong> est concentré dans tous nos soins. Composé de millions de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.&nbsp;</p><ul><li>Il réactive<strong> 136 gènes</strong> impliqués dans la jeunesse de la peau.&nbsp;</li><li><strong>+71% de Collagène I </strong>dès 8 jours.</li><li>Il<strong> relance la régénération </strong>cellulaire, moléculaire et tissulaire.</li></ul>",
         "small_content": "",
         "button_label": "En savoir plus",
-        "button_link": "shopify://pages/expertise",
+        "button_link": "/pages/expertise#technologie-neoregen",
         "button_popup": "",
         "button_product": "",
         "button_add_to_cart": false,
@@ -540,7 +540,7 @@
         "image_position": "start",
         "eyebrow": "",
         "title": "Prouesse de formulation",
-        "content": "<p>Créés au sein de nos Laboratoires à Baulieu, nos formules sont exempts de tout ingrédient controversé. Zéro silicone, zéro PEG, zéro microplastique.</p><p>30% d’actifs.<br/>96% d'ingrédients naturels.<br/>Noté excellent sur Yuka. Végan.<br/>Délicat parfum frais et réconfortant.</p>",
+        "content": "<p>Créée au sein de <strong>nos Laboratoires à Baulieu, </strong>la Crème Fondante Régénérative est <strong>exempt de tout ingrédient controversé</strong>. Zéro silicone, zéro PEG, zéro microplastique.</p><p>30% d’actifs.<br/>96% d'ingrédients d’origine naturelle.<br/>Notée Excellent sur Yuka. Végan.<br/>Délicat parfum frais et réconfortant.</p>",
         "small_content": "",
         "button_label": "En savoir plus",
         "button_link": "/pages/expertise#prouesse-formulation",
@@ -567,7 +567,7 @@
         "image_position": "end",
         "eyebrow": "",
         "title": "",
-        "content": "<p>La recharge est logé dans son pot en verre pour une utilisation quotidienne.</p><p>Lors de vos déplacements, elle se déclipse et se referme avec son couvercle dédié, dissimulé dans le coffret, pour devenir un véritable format nomade. Système breveté.</p><p>La recharge est conçue 100% en aluminium. L’écrin est créé 100% avec des artisans français. Pot en verre, couvercle en bio-résine.&nbsp;</p>",
+        "content": "<p>La recharge est logée dans son pot en verre pour une utilisation quotidienne.</p><p>Lors de vos déplacements, elle se <strong>déclipse </strong>et se referme avec son <strong>couvercle dédié</strong>, dissimulé dans le coffret, pour devenir un véritable<strong> format nomade.</strong> Système breveté.</p><p>La recharge est conçue 100% en aluminium. L’écrin est créé avec des<strong> artisans français</strong>. Pot en verre, couvercle en bio-résine.&nbsp;</p>",
         "small_content": "",
         "button_label": "Acheter",
         "button_link": "shopify://products/recharge-creme-regenerative-visage",
@@ -620,7 +620,7 @@
             "content": "<p>Créée au sein de <strong>nos Laboratoires à Baulieu, </strong>la Crème Fondante Régénérative est <strong>exempt de tout ingrédient controversé</strong>. Zéro silicone, zéro PEG, zéro microplastique.</p><p>30% d’actifs.<br/>96% d'ingrédients d’origine naturelle.<br/>Notée Excellent sur Yuka. Végan.<br/>Délicat parfum frais et réconfortant.</p>",
             "link_url": "#",
             "link_text": "Voir la liste INCI",
-            "button_popup": "",
+            "button_popup": "liste-inci",
             "product": "",
             "show_price": true
           }
