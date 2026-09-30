@@ -296,21 +296,10 @@
             "label_detail": ""
           }
         },
-        "stat_HPCFxU": {
-          "type": "stat",
-          "settings": {
-            "eyebrow": "dès 8 jours :",
-            "value": "+58%",
-            "value_suffix": "",
-            "value_detail": "",
-            "label": "FIBRONECTINE²",
-            "label_detail": "(Matrice extra-cellulaire)"
-          }
-        },
         "stat_UXTBtL": {
           "type": "stat",
           "settings": {
-            "eyebrow": "dès 8 jours :",
+            "eyebrow": "En 25 jours :",
             "value": "136",
             "value_suffix": "gènes",
             "value_detail": "liés à la jeunesse de la peau",
@@ -328,7 +317,6 @@
       "block_order": [
         "paragraph_9j6hgL",
         "stat_VFiHRD",
-        "stat_HPCFxU",
         "stat_UXTBtL",
         "paragraph_t6KtHm"
       ],
