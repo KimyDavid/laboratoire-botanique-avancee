@@ -19,7 +19,7 @@
             "mobile_video": "shopify://files/videos/LBA_CD_18s_BAULIEU-SCIENCE_9_16.mp4",
             "allow_sound": true,
             "subheading": "",
-            "title": "Soins français d'exception créés au Domaine de Baulieu.&nbsp;30% d'actifs pour réactiver la jeunesse de la peau. Efficacité prouvée cliniquement dès 7 jours.",
+            "title": "Soins français d'exception créés au Domaine de Baulieu. 30% d'actifs pour réactiver la jeunesse de la peau. Efficacité prouvée cliniquement dès 7 jours.",
             "mobile_title": "Soins français créés au Domaine  de Baulieu. 30% d’actifs pour réactiver  la jeunesse de la peau.",
             "content": "",
             "show_logo": true,
@@ -187,7 +187,7 @@
       "name": "Contenu + chiffres clés",
       "settings": {
         "title": "Soins à l’efficacité cliniquement prouvée",
-        "content": "<p>Nos laboratoires sont installés sur le Domaine de Baulieu : 300 hectares de terroir botanique situé sur le seul volcan de Provence, irrigué par l'Eau de Baulieu.<br/>C'est ici que nous collaborons avec le Dr Lemaître, l'expert français de la longévité, pour créer des soins d'exception, qui régénèrent la peau.</p>",
+        "content": "<p>Nos laboratoires sont installés sur le <strong>Domaine de Baulieu</strong> : 300 hectares de terroir botanique situé sur le seul volcan de Provence, irrigué par l'Eau de Baulieu.<br/>C'est ici que nous collaborons avec le <strong>Dr Lemaître</strong>, l'expert français de la longévité, pour créer des soins d'exception, qui régénèrent la peau.</p>",
         "small_content": "",
         "content_visibility": "desktop",
         "button_label": "",
