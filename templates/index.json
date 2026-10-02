@@ -473,7 +473,7 @@
       "name": "t:sections.testimonials.presets.testimonials.name",
       "settings": {
         "layout": "grid",
-        "color_scheme": "scheme-fbbccd81-c94d-4e6f-a2e0-fefca321b904",
+        "color_scheme": "scheme-3",
         "separate_section_with_border": false,
         "auto_rotate_between_testimonials": true,
         "cycle_speed": 5,
