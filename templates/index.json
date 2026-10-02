@@ -604,7 +604,7 @@
         "richtext_QcJGmM": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Baulieu est un domaine de 300 hectares, situé sur&nbsp;le seul volcan de Provence et irrigué par deux sources d'eau régénérantes. C'est en ce lieu unique que les laboratoires LBA se sont installés.</p>",
+            "content": "<p>Baulieu est un domaine de <strong>300 hectares</strong>, situé sur&nbsp;le seul volcan de Provence et irrigué par <strong>deux sources d'eau régénérantes</strong>. C'est en ce lieu unique que les laboratoires LBA se sont installés.</p>",
             "font_size": "base"
           }
         },
