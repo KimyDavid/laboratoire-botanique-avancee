@@ -20,10 +20,11 @@
             "allow_sound": true,
             "subheading": "",
             "title": "Soins français d'exception créés au Domaine de Baulieu. 30% d'actifs pour réactiver la jeunesse de la peau. Efficacité prouvée cliniquement dès 7 jours.",
-            "mobile_title": "Soins français créés au Domaine  de Baulieu. 30% d’actifs pour réactiver  la jeunesse de la peau.",
+            "mobile_title": "Soins français créés au Domaine de Baulieu. 30% d’actifs pour réactiver la jeunesse de la peau.",
             "content": "",
             "show_logo": true,
-            "logo_size": 140,
+            "logo_size": 160,
+            "logo_size_mobile": 140,
             "mobile_text_position": "place-self-end-center text-center",
             "desktop_text_position": "sm:place-self-end-center sm:text-center",
             "content_max_width": 1000,
@@ -358,7 +359,7 @@
         "image_position": "start",
         "eyebrow": "",
         "eyebrow_position": "below",
-        "title": "Duo régénératif hydratation  et lumière",
+        "title": "Duo régénératif hydratation et lumière",
         "content": "<p>Dès un mois,&nbsp;la peau est lissée, hydratée en profondeur et éclatante.&nbsp;Efficacité cliniquement prouvée.</p><p><em>“J’ai pris le rituel complet et je ne reviens pas en arrière : la peau est plus dense, le teint plus net.” &nbsp;— Claire M.&nbsp;</em></p><h6>Avis Vérifié</h6>",
         "small_content": "",
         "button_label": "Acheter",
@@ -378,20 +379,62 @@
         "background_color": "#ffffff"
       }
     },
-    "image_collage_text_lba_iGQfbt": {
+    "image_collage_text_lba_XXGgpm": {
       "type": "image-collage-text-lba",
+      "blocks": {
+        "paragraph_KJKQpa": {
+          "type": "paragraph",
+          "settings": {
+            "content": "<p>Créée en collaboration avec le <strong>Dr Jean-Marc Lemaître</strong>, l'expert français de la longévité, <strong>notre technologie brevetée NEO-REGEN</strong> est concentrée dans tous nos soins.</p>"
+          }
+        },
+        "stat_T9HaQn": {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "dès 8 jours :",
+            "value": "+71%",
+            "value_suffix": "",
+            "value_detail": "",
+            "label": "De collagène I¹",
+            "label_detail": ""
+          }
+        },
+        "stat_7CUHww": {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "En 25 jours :",
+            "value": "136",
+            "value_suffix": "gènes",
+            "value_detail": "liés à la jeunesse de la peau",
+            "label": "sont réactivés",
+            "label_detail": ""
+          }
+        },
+        "paragraph_wC4gyJ": {
+          "type": "paragraph",
+          "settings": {
+            "content": "<p>NEO-REGEN relance la régénération de la peau aux niveaux cellulaire, moléculaire et tissulaire. Pour relancer ses mécanismes de jeunesse.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "paragraph_KJKQpa",
+        "stat_T9HaQn",
+        "stat_7CUHww",
+        "paragraph_wC4gyJ"
+      ],
       "name": "Technologie exclusive (mobile)",
       "settings": {
         "image_main": "shopify://shop_images/NEW_GAMME_LOTION2_1.jpg",
-        "image_secondary_1_position": "top",
+        "image_secondary_1_position": "middle",
         "image_secondary_2": "shopify://shop_images/IMG_9122_2_copy.png",
         "image_secondary_2_position": "bottom",
         "image_position": "start",
         "eyebrow": "",
         "eyebrow_position": "above",
         "title": "Collaboration avec dr. jean marc lemaître",
-        "content": "<h2>TECHNOLOGIE EXCLUSIVE : CREATION DU NEO-REGEN</h2><p>Développée avec le Dr Jean-Marc Lemaître, l'expert français de la longévité, NEO-REGEN est concentrée dans tous nos soins.</p><ul><li>Elle réactive 136 gènes impliqués dans la jeunesse de la peau.&nbsp;</li><li>+71% de Collagène I dès 8 jours.&nbsp;</li><li>Elle relance la régénération de la peau aux niveaux cellulaire, moléculaire et tissulaire.&nbsp;</li></ul><p>Composée de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.</p>",
-        "small_content": "",
+        "content": "<h2>Technologie exclusive :&nbsp;<br/>création du neo-regen</h2>",
+        "small_content": "<p>1. Test&nbsp;ex vivo&nbsp;sur explant de peau humaine. Immunomarquage et analyse d'image après 8 jours d'application quotidienne de NEO-REGEN.&nbsp;</p>",
         "button_label": "En savoir plus",
         "button_link": "/pages/expertise/#technologie-neoregen",
         "button_popup": "",
@@ -399,7 +442,7 @@
         "button_add_to_cart": false,
         "price_prefix": "",
         "bordered_content": false,
-        "align_media_to_text": false,
+        "align_media_to_text": true,
         "mobile_accordion": false,
         "mobile_accordion_label": "Voir plus",
         "mobile_accordion_open": false,
@@ -420,8 +463,7 @@
             "logo_max_width": 75,
             "logo_mobile_max_width": 65,
             "author": "",
-            "date": "Mai 2025",
-            "category": "Innovation"
+            "date": "Mai 2025"
           }
         },
         "testimonial_EHmdfk": {
@@ -432,8 +474,7 @@
             "logo_max_width": 190,
             "logo_mobile_max_width": 180,
             "author": "",
-            "date": "Mai 2025",
-            "category": "Innovation"
+            "date": "Mai 2025"
           }
         },
         "testimonial_4n9Mca": {
@@ -444,8 +485,7 @@
             "logo_max_width": 170,
             "logo_mobile_max_width": 160,
             "author": "",
-            "date": "Mai 2026",
-            "category": "Innovation"
+            "date": "Mai 2026"
           }
         },
         "testimonial_8DcqWz": {
@@ -456,8 +496,7 @@
             "logo_max_width": 130,
             "logo_mobile_max_width": 130,
             "author": "",
-            "date": "",
-            "category": ""
+            "date": ""
           }
         }
       },
@@ -498,7 +537,7 @@
         "heading_ijgziA": {
           "type": "heading",
           "settings": {
-            "text": "&nbsp;Le domaine de baulieu&nbsp;",
+            "text": "Le domaine de baulieu",
             "heading_tag": "h2",
             "tag": "h2"
           }
@@ -753,7 +792,7 @@
     "featured_collections_7b9Vyg",
     "image_collage_text_lba_6AmHtN",
     "image_collage_text_lba_G3BiCk",
-    "image_collage_text_lba_iGQfbt",
+    "image_collage_text_lba_XXGgpm",
     "testimonials_bF9n9E",
     "image_with_text_overlay_wX6kPw",
     "image_with_text_byehHd",

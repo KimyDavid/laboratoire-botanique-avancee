@@ -11370,6 +11370,12 @@ collage-text {
   max-width: 720px;
 }
 
+@media (max-width: 768px) {
+  .collage-text__stats {
+    gap: 16px;
+  }
+}
+
 .collage-text__stat > * {
   margin: 0;
 }

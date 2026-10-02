@@ -67,7 +67,6 @@
                   {%- if block.settings.date != blank -%}
                     <span class="testimonial-grid__date">{{ block.settings.date }}</span>
                   {%- endif -%}
-                  {%- if block.settings.date != blank and block.settings.category != blank %} - {% endif -%}
                   {%- if block.settings.category != blank -%}
                     <span class="testimonial-grid__category">{{ block.settings.category }}</span>
                   {%- endif -%}
@@ -438,12 +437,6 @@
           "id": "date",
           "label": "Date",
           "info": "Mise en page « Carrousel 3 par 3 » uniquement. Ex : Mai 2025"
-        },
-        {
-          "type": "text",
-          "id": "category",
-          "label": "Catégorie",
-          "info": "Mise en page « Carrousel 3 par 3 » uniquement. Ex : Innovation"
         }
       ]
     }

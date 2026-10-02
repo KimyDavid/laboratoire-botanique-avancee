@@ -1256,6 +1256,17 @@ div[slot="footer"] .contents .button--outline:hover {
   }
 }
 
+/* Video block: logo width from the block settings (mobile / desktop) */
+.slideshow__logo-img {
+  width: var(--logo-size-mobile);
+}
+
+@media (min-width: 1024px) {
+  .slideshow__logo-img {
+    width: var(--logo-size-desktop);
+  }
+}
+
 /* Video block: different mobile and desktop titles */
 .slideshow__slide-title-desktop {
   display: none;

@@ -190,8 +190,9 @@ may have important consequence on the section itself.
               <div class="prose">
                 {%- if block.settings.show_logo and section.settings.monogramme != blank -%}
                   <div class="slideshow__slide-logo">
-                    {% assign logo_size = 'width: ' | append: block.settings.logo_size | append: 'px' %}
-                    {{- section.settings.monogramme | image_url: width: block.settings.logo_size | image_tag: loading: 'lazy', class: 'slideshow__logo-img', style: logo_size -}}
+                    {%- capture logo_size -%}--logo-size-mobile: {{ block.settings.logo_size_mobile }}px; --logo-size-desktop: {{ block.settings.logo_size }}px;{%- endcapture -%}
+                    {%- assign logo_image_width = block.settings.logo_size | at_least: block.settings.logo_size_mobile | times: 2 -%}
+                    {{- section.settings.monogramme | image_url: width: logo_image_width | image_tag: loading: 'lazy', class: 'slideshow__logo-img', style: logo_size -}}
                   </div>
                 {%- endif -%}
                 {%- if block.settings.title != blank or block.settings.mobile_title != blank -%}
@@ -770,7 +771,18 @@ may have important consequence on the section itself.
         {
           "type": "range",
           "id": "logo_size",
-          "label": "Taille du logo",
+          "label": "Taille du logo desktop",
+          "min": 40,
+          "max": 300,
+          "step": 10,
+          "unit": "px",
+          "default": 120
+        },
+        {
+          "type": "range",
+          "id": "logo_size_mobile",
+          "label": "Taille du logo mobile",
+          "info": "Sous 1024px de large.",
           "min": 40,
           "max": 300,
           "step": 10,
