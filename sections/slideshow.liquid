@@ -198,8 +198,8 @@ may have important consequence on the section itself.
                   <h1 class="h1 slideshow__slide-title slideshow__slide-title--video" style="--title-size-mobile: {{ block.settings.mobile_title_size }}px; --title-size-desktop: {{ block.settings.title_size }}px;">
                     {%- if block.settings.mobile_title != blank -%}
                       {%- comment -%}Different titles: the mobile one below 1024px, the desktop one above{%- endcomment -%}
-                      <span class="slideshow__slide-title-mobile">{{ block.settings.mobile_title }}</span>
-                      <span class="slideshow__slide-title-desktop">{{ block.settings.title }}</span>
+                      <span class="slideshow__slide-title-mobile">{{ block.settings.mobile_title | newline_to_br }}</span>
+                      <span class="slideshow__slide-title-desktop">{{ block.settings.title | newline_to_br }}</span>
                     {%- else -%}
                       {{- block.settings.title | newline_to_br -}}
                     {%- endif -%}
