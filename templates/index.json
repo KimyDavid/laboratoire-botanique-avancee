@@ -26,7 +26,7 @@
             "logo_size": 140,
             "mobile_text_position": "place-self-end-center text-center",
             "desktop_text_position": "sm:place-self-end-center sm:text-center",
-            "content_max_width": 920,
+            "content_max_width": 1000,
             "title_size": 28,
             "mobile_title_size": 24,
             "subtitle_size": 24,
