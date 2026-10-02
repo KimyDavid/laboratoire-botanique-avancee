@@ -418,7 +418,7 @@
           "type": "image_with_text",
           "settings": {
             "image": "shopify://shop_images/1950X1950_INGREDIENTS_CANTELLARIA_7264147f-d4df-47db-8392-04853b8f7e7b.webp",
-            "title": "Centalla Asiatica Biotech",
+            "title": "Centalla Asiatica",
             "heading_tag": "h3",
             "content": "<p>Apaise la peau, favorise sa réparation et révèle un teint plus éclatant.</p>",
             "link_url": "",
@@ -707,7 +707,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "separate_section_with_border": false,
-        "visibility": "desktop",
+        "visibility": "all",
         "hide_product_information": false,
         "show_buy_button": false,
         "show_product_secondary_image": false,
