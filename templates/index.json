@@ -351,6 +351,7 @@
     },
     "image_collage_text_lba_G3BiCk": {
       "type": "image-collage-text-lba",
+      "disabled": true,
       "name": "Duo régénératif (mobile)",
       "settings": {
         "image_main": "shopify://shop_images/99288d56-1680-482b-a3ff-3578735ac848.png",
