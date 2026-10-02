@@ -201,7 +201,7 @@ may have important consequence on the section itself.
                       <span class="slideshow__slide-title-mobile">{{ block.settings.mobile_title }}</span>
                       <span class="slideshow__slide-title-desktop">{{ block.settings.title }}</span>
                     {%- else -%}
-                      {{- block.settings.title -}}
+                      {{- block.settings.title | newline_to_br -}}
                     {%- endif -%}
                   </h1>
                 {%- endif -%}
