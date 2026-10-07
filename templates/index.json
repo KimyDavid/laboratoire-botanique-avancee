@@ -646,7 +646,7 @@
           "type": "button",
           "settings": {
             "label": "En savoir plus",
-            "link": "shopify://collections/nos-protocoles",
+            "link": "https://laboratoires-botanique-avancee.com/pages/spa/#philosophie",
             "popup": "",
             "style": "primary"
           }
