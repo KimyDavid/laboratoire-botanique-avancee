@@ -740,6 +740,12 @@
       },
       {
         "type": "text",
+        "id": "free_gift_minimum_amount",
+        "label": "Montant minimum du panier",
+        "info": "En euros, ex : 100. Le cadeau est ajouté quand les produits payants du panier atteignent ce montant (après remises), et retiré en dessous. Laisser vide pour aucun minimum."
+      },
+      {
+        "type": "text",
         "id": "free_gift_start_date",
         "label": "Date de début",
         "info": "Format : YYYY-MM-DD. Laisser vide pour aucune limite."

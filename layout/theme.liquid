@@ -63,6 +63,7 @@
       window.freeGiftConfig = {
         enabled: {{ settings.free_gift_enabled | json }},
         variantId: {{ settings.free_gift_product.first_available_variant.id | default: 'null' }},
+        minimumAmount: {{ settings.free_gift_minimum_amount | default: '' | json }},
         startDate: {{ settings.free_gift_start_date | default: '' | json }},
         endDate: {{ settings.free_gift_end_date | default: '' | json }},
         description: {{ settings.free_gift_description | default: '' | json }}

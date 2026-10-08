@@ -6222,6 +6222,31 @@ import { Delegate as Delegate11 } from "vendor";
     return cart.items.some(item => !item.properties?.[FREE_GIFT_PROPERTY]);
   }
 
+  // Total of the paid products (the gift is excluded), after line and cart discounts, in cents of the active currency
+  function getPaidTotal(cart) {
+    const paidLines = cart.items
+      .filter(item => !item.properties?.[FREE_GIFT_PROPERTY])
+      .reduce((total, item) => total + item.final_line_price, 0);
+
+    const cartDiscounts = (cart.cart_level_discount_applications || [])
+      .reduce((total, discount) => total + (discount.total_allocated_amount || 0), 0);
+
+    return paidLines - cartDiscounts;
+  }
+
+  // Minimum amount set in the theme settings (in the shop currency), converted to cents of the active currency
+  function getMinimumAmount() {
+    const minimum = parseFloat(String(window.freeGiftConfig?.minimumAmount || '').replace(',', '.').replace(/[^0-9.]/g, ''));
+    if (!minimum) return 0;
+
+    const rate = parseFloat(window.Shopify?.currency?.rate) || 1;
+    return Math.round(minimum * rate * 100);
+  }
+
+  function isEligibleForFreeGift(cart) {
+    return hasPaidProduct(cart) && getPaidTotal(cart) >= getMinimumAmount();
+  }
+
   function hasFreeGift(cart) {
     return cart.items.some(item => item.properties?.[FREE_GIFT_PROPERTY]);
   }
@@ -6275,7 +6300,8 @@ import { Delegate as Delegate11 } from "vendor";
       return;
     }
 
-    const hasPaid = hasPaidProduct(cart);
+    // Eligible: at least one paid product, and the minimum amount reached (if any)
+    const hasPaid = isEligibleForFreeGift(cart);
 
     if (hasPaid && !hasGift) {
       await addFreeGift();
