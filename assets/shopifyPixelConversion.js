@@ -1,5 +1,5 @@
-const PROGRAM_ID = 'YOUR_PROGRAM_ID';
-const KEY = 'YOUR_KEY';
+const PROGRAM_ID = '6a394acf922a983ca84965e8';
+const KEY = '6a394ad0922a983ca84965ea-6a394acf922a983ca84965e8';
 const AFFILAE_TRACKING = 'https://lb.affilae.com/';
 const VERSION = '1.7.4';
 const DEBUG_BEACON_ENABLED = false; // diagnostic beacons (below); enable only for a time-boxed measurement window
