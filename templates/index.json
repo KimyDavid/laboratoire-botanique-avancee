@@ -459,7 +459,7 @@
         "testimonial_FNWgz7": {
           "type": "testimonial",
           "settings": {
-            "content": "<p>\"Au cœur des formules, le complex Neo-Regen agit sur les 3 dimensions des mécanismes régénératifs de la peau. Un complexe surpuissant pour des formules hautement concentrées avec 30% d’actifs pour une efficacité inégalée.\"</p>",
+            "content": "<p>\"Au cœur des formules, le complexe Neo-Regen agit sur les 3 dimensions des mécanismes régénératifs de la peau. Un complexe surpuissant pour des formules hautement concentrées avec 30% d’actifs pour une efficacité inégalée.\"</p>",
             "image": "shopify://shop_images/gala-logo-blanc_1.png",
             "logo_max_width": 75,
             "logo_mobile_max_width": 65,
@@ -467,15 +467,15 @@
             "date": "Février 2026"
           }
         },
-        "testimonial_EHmdfk": {
+        "testimonial_8DcqWz": {
           "type": "testimonial",
           "settings": {
-            "content": "<p>\"Une origine forte, une caution scientifique solide, une formulation irréprochable et une vision capable de durer.\"</p>",
-            "image": "shopify://shop_images/1612159255c93c88d155676bd729e4656a9b299f.png",
-            "logo_max_width": 190,
-            "logo_mobile_max_width": 180,
+            "content": "<p>\"En collaboration avec le Dr Jean-Marc Lemaitre, elle mise sur des formules alliant cellules souches végétales et eau de source, riche en minéraux régénérants.\"</p>",
+            "image": "shopify://shop_images/Vogue_BLANC.png",
+            "logo_max_width": 130,
+            "logo_mobile_max_width": 130,
             "author": "",
-            "date": "Juillet 2026"
+            "date": "Mars 2026"
           }
         },
         "testimonial_4n9Mca": {
@@ -489,23 +489,23 @@
             "date": "Mai 2026"
           }
         },
-        "testimonial_8DcqWz": {
+        "testimonial_EHmdfk": {
           "type": "testimonial",
           "settings": {
-            "content": "<p>\"En collaboration avec le Dr Jean-Marc Lemaitre, elle mise sur des formules alliant cellules souches végétales et eau de source, riche en minéraux régénérants.\"</p>",
-            "image": "shopify://shop_images/Vogue_BLANC.png",
-            "logo_max_width": 130,
-            "logo_mobile_max_width": 130,
+            "content": "<p>\"Une origine forte, une caution scientifique solide, une formulation irréprochable et une vision capable de durer.\"</p>",
+            "image": "shopify://shop_images/1612159255c93c88d155676bd729e4656a9b299f.png",
+            "logo_max_width": 190,
+            "logo_mobile_max_width": 180,
             "author": "",
-            "date": "Mars 2026"
+            "date": "Juillet 2026"
           }
         }
       },
       "block_order": [
         "testimonial_FNWgz7",
-        "testimonial_EHmdfk",
+        "testimonial_8DcqWz",
         "testimonial_4n9Mca",
-        "testimonial_8DcqWz"
+        "testimonial_EHmdfk"
       ],
       "custom_css": [
         ".section-spacing {padding-top: 56px; padding-bottom: 56px;}"
