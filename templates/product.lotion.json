@@ -635,7 +635,7 @@
             "image": "shopify://shop_images/Texture_lotion_1.webp",
             "title": "Prouesse de formulation",
             "heading_tag": "h3",
-            "content": "<p>Créé au sein de <strong>nos laboratoires à Baulieu</strong>, la Lotion Infusion d'Hydratation est <strong>exempte de tout ingrédient controversé</strong>. Sans silicone, PEG, et microplastique. Sans alcool.<br/><br/>Délicat parfum frais et enveloppant.<br/>97% d'ingrédients d'origine naturelle.<br/>Notée Excellent sur Yuka. Vegan.</p>",
+            "content": "<p>Créé au sein de <strong>nos laboratoires à Baulieu</strong>, la Lotion Infusion d'Hydratation est <strong>exempte de tout ingrédient controversé</strong>. Sans silicone, PEG, et microplastique. Sans alcool.<br/><br/>Délicat parfum frais et enveloppant.<br/>97% d'ingrédients d'origine naturelle.*<br/>Notée Excellent sur Yuka. Vegan.</p><p></p><h6>*Selon la Norme ISO 16128-1 et ISO 16128-2, calcul prenant en compte<br/>l’eau de formulation.</h6>",
             "link_url": "#",
             "link_text": "Voir la liste INCI",
             "button_popup": "liste-inci",
