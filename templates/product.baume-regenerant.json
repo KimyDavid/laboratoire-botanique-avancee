@@ -325,7 +325,7 @@
       "settings": {
         "title": "Efficacité prouvée cliniquement",
         "content": "",
-        "small_content": "<p>1. Test clinique par mesure instrumentale, 39 femmes, 2 applications par jour pendant 3 mois. &nbsp; &nbsp; &nbsp;2. Test clinique par auto-scorage, 39 femmes, 2 applications par jour pendant 3 mois.</p>",
+        "small_content": "<p>1. Auto-évaluation, 23 femmes, 2 applications par jour pendant 2 mois. &nbsp; 2. Test clinique par scorage, 23 femmes, 2 applications par jour pendant 2 mois.</p>",
         "content_visibility": "desktop",
         "button_label": "Voir tous les résultats",
         "button_link": "#",
