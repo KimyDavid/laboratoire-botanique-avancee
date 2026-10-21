@@ -172,6 +172,69 @@
         "bordered_content": false
       }
     },
+    "image_collage_text_lba_QEeddU": {
+      "type": "image-collage-text-lba",
+      "name": "Technologies néo-regen (mobile)",
+      "settings": {
+        "image_main": "shopify://shop_images/NEW_GAMME_LOTION2_3.jpg",
+        "image_secondary_1_position": "top",
+        "image_secondary_2": "shopify://shop_images/Rectangle_5872_013c8d41-2e75-49fc-b2e3-742ee1aff201.png",
+        "image_secondary_2_position": "bottom",
+        "image_position": "start",
+        "eyebrow": "",
+        "eyebrow_position": "below",
+        "title": "dr. jean-marc lemaître (INSERM)",
+        "content": "<p>Créé avec le Dr Lemaître<strong>, l'expert français </strong>de la longévité, notre<strong> actif exclusif NEO-REGEN</strong> est composé de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.&nbsp;</p><ul><li>Il réactive<strong> 136 gènes</strong> impliqués dans la jeunesse de la peau.&nbsp;</li><li><strong>+71% de Collagène I </strong>dès 8 jours.</li><li>Il<strong> relance la régénération </strong>cellulaire, moléculaire et tissulaire.</li></ul>",
+        "small_content": "",
+        "button_label": "En savoir plus",
+        "button_link": "/pages/expertise#technologie-neoregen",
+        "button_popup": "",
+        "button_product": "",
+        "button_add_to_cart": false,
+        "price_prefix": "",
+        "bordered_content": false,
+        "align_media_to_text": false,
+        "mobile_accordion": true,
+        "mobile_accordion_label": "Technologie neo regen",
+        "mobile_accordion_open": true,
+        "visibility": "mobile",
+        "spacing_top": true,
+        "spacing_bottom": true,
+        "background_color": "#ffffff"
+      }
+    },
+    "image_collage_text_lba_tRCcN4": {
+      "type": "image-collage-text-lba",
+      "name": "Actifs clés (mobile)",
+      "settings": {
+        "image_main": "shopify://shop_images/BULLE_ONAGRE__1.jpg",
+        "image_secondary_1": "shopify://shop_images/pronad_plus_shopify_2000x2000_e2f21c25-c649-4036-a04e-2a63da3b67e7.jpg",
+        "image_secondary_1_position": "top",
+        "image_secondary_2": "shopify://shop_images/ectoine_shopify_2000x2000_992ea019-3270-47c3-ab21-81c3abf5bfab.jpg",
+        "image_secondary_2_position": "bottom",
+        "image_position": "start",
+        "eyebrow": "136 gènes impliqués dans la jeunesse de la peau",
+        "eyebrow_position": "below",
+        "title": "Des actifs clés",
+        "content": "<p><strong>Cellules souches d'onagre</strong> : Préservent l’équilibre de la peau et la renforce face aux agressions extérieures. Soutient la barrière cutanée.<br/><br/><strong>Complexe PRO NAD+</strong>&nbsp;: Soutient la production d’énergie cellulaire et favorise les mécanismes de réparation.&nbsp;<br/><br/><strong>Ectoïne Biotech&nbsp;:</strong> Bouclier protecteur, antioxydant, protège des agressions extérieures, hydratation long terme.</p><h4>96% d’ingrédients d’origine naturelle</h4>",
+        "small_content": "",
+        "button_label": "Voir la liste INCI",
+        "button_link": "",
+        "button_popup": "liste-inci",
+        "button_product": "",
+        "button_add_to_cart": false,
+        "price_prefix": "",
+        "bordered_content": false,
+        "align_media_to_text": false,
+        "mobile_accordion": true,
+        "mobile_accordion_label": "Actifs clés",
+        "mobile_accordion_open": false,
+        "visibility": "mobile",
+        "spacing_top": true,
+        "spacing_bottom": false,
+        "background_color": "#ffffff"
+      }
+    },
     "content_key_figures_lba_4LYVhf": {
       "type": "content-key-figures-lba",
       "blocks": {
@@ -528,6 +591,8 @@
   "order": [
     "main",
     "rich_text_AhPNjA",
+    "image_collage_text_lba_QEeddU",
+    "image_collage_text_lba_tRCcN4",
     "content_key_figures_lba_4LYVhf",
     "keywords_banner_lba_xAEpzG",
     "rich_text_FYJmca",
