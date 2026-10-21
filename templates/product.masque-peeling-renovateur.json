@@ -235,6 +235,68 @@
         "background_color": "#ffffff"
       }
     },
+    "content_key_figures_lba_pccftr": {
+      "type": "content-key-figures-lba",
+      "blocks": {
+        "stat_96X8Pt": {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "",
+            "value": "100%",
+            "label": "peau plus lisse¹"
+          }
+        },
+        "stat_wwDRLC": {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "",
+            "value": "+92%",
+            "label": "éclat²"
+          }
+        },
+        "stat_FRtAYL": {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "",
+            "value": "91%",
+            "label": "confort¹"
+          }
+        },
+        "stat_R3mHhf": {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "",
+            "value": "87%",
+            "label": "Peau plus dense¹"
+          }
+        }
+      },
+      "block_order": [
+        "stat_96X8Pt",
+        "stat_wwDRLC",
+        "stat_FRtAYL",
+        "stat_R3mHhf"
+      ],
+      "name": "Efficacité prouvée cliniquement (mobile)",
+      "settings": {
+        "title": "Efficacité prouvée cliniquement",
+        "content": "",
+        "small_content": "<p>¹ Étude d’auto-évaluation réalisée sur 23<br/>volontaires à J+56, sous contrôle dermatologique.<br/>² Score clinicien réalisé sur 23 volontaires à J+56.</p>",
+        "content_visibility": "desktop",
+        "button_label": "Voir tous les résultats",
+        "button_link": "#",
+        "button_popup": "results",
+        "button_style": "outline",
+        "button_visibility": "all",
+        "layout": "split",
+        "table_title": "",
+        "show_dividers": false,
+        "row_gap": 0,
+        "visibility": "mobile",
+        "background_color": "#3c626b",
+        "text_color": "#ffffff"
+      }
+    },
     "content_key_figures_lba_4LYVhf": {
       "type": "content-key-figures-lba",
       "blocks": {
@@ -593,6 +655,7 @@
     "rich_text_AhPNjA",
     "image_collage_text_lba_QEeddU",
     "image_collage_text_lba_tRCcN4",
+    "content_key_figures_lba_pccftr",
     "content_key_figures_lba_4LYVhf",
     "keywords_banner_lba_xAEpzG",
     "rich_text_FYJmca",
