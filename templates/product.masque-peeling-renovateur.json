@@ -25,6 +25,16 @@
             "show_below_gallery": false
           }
         },
+        "text_rX7eEM": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>97% d’ingrédients d’origine naturelle.*<br/>Sans ingrédient controversé.<br/>produit en france.</h4>"
+          }
+        },
+        "relative_products_nje9cV": {
+          "type": "relative_products",
+          "settings": {}
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -45,7 +55,7 @@
           "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
           "settings": {}
         },
-        "buy_buttons": {
+        "buy_buttons_c43e8L": {
           "type": "buy_buttons",
           "settings": {
             "show_payment_button": false,
@@ -56,36 +66,18 @@
             "payment_button_text_color": ""
           }
         },
-        "line_informations_9jHJHa": {
-          "type": "line-informations",
-          "settings": {}
-        },
-        "modal_QPCNeE": {
-          "type": "modal",
-          "settings": {
-            "button_title": "Trouvez le soin qui vous convient",
-            "button_style": "link",
-            "stretch_button": false,
-            "button_background": "",
-            "button_text_color": "",
-            "modal_title": "Trouvez le soin qui vous convient",
-            "modal_content": "",
-            "image": "shopify://shop_images/TABLEAU_PRESCRIPTION_optimized.png",
-            "image_mobile": "shopify://shop_images/TABLEAU_DE_PRESCRIPTION_-_MOBILE_optimized.png"
-          }
-        },
-        "button_HUyMtW": {
+        "button_iLWaxM": {
           "type": "button",
           "settings": {
             "link": "shopify://pages/diagnostic",
-            "text": "Faire un diagnostic",
-            "stretch": false,
-            "background": "#3c626b",
-            "text_color": "#ffffff",
-            "border_color": "",
-            "background_mobile": "",
-            "text_color_mobile": "",
-            "border_color_mobile": "",
+            "text": "Faire mon diagnostic de peau",
+            "stretch": true,
+            "background": "#ffffff",
+            "text_color": "#3c626b",
+            "border_color": "#3c626b",
+            "background_mobile": "#3c626b",
+            "text_color_mobile": "#ffffff",
+            "border_color_mobile": "#3c626b",
             "visibility": "all"
           }
         },
@@ -102,33 +94,30 @@
             "page": ""
           }
         },
-        "accordion_Ab4cXq": {
-          "type": "accordion",
+        "product_upsell_4YrC4x": {
+          "type": "product_upsell",
           "settings": {
-            "show_open": false,
-            "show_below_gallery": false,
-            "icon": "none",
-            "title": "Design éco-conçu",
-            "content": "{{ product.metafields.custom.info_produit_design | metafield_tag }}<ul><li>Consigne de tri</li></ul>",
-            "show_image_above_text": false,
-            "image": "shopify://shop_images/image_17.webp",
-            "liquid": "",
-            "page": ""
+            "eyebrow": "Pour commencer",
+            "title": "Coffret découverte",
+            "description": "<p>Nos deux soins emblématiques pour une semaine de régénération cutanée. Efficacité prouvée cliniquement.</p>",
+            "product": "coffret-decouverte-box",
+            "button_label": "Acheter",
+            "visibility": "desktop"
           }
         }
       },
       "block_order": [
         "title",
         "description",
+        "text_rX7eEM",
+        "relative_products_nje9cV",
         "price",
         "variant_picker",
         "recharge_subscriptions_subscription_widget_v2_zxAiiW",
-        "buy_buttons",
-        "line_informations_9jHJHa",
-        "modal_QPCNeE",
-        "button_HUyMtW",
+        "buy_buttons_c43e8L",
+        "button_iLWaxM",
         "accordion_Yw977X",
-        "accordion_Ab4cXq"
+        "product_upsell_4YrC4x"
       ],
       "settings": {
         "color_scheme": "scheme-2",
@@ -397,6 +386,78 @@
         "padding_block": 16
       }
     },
+    "multi_column_gNYKUq": {
+      "type": "multi-column",
+      "blocks": {
+        "image_with_text_erQGpA": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Column title",
+            "heading_tag": "h3",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_url": "",
+            "link_text": "",
+            "button_popup": "",
+            "product": "",
+            "show_price": true
+          }
+        },
+        "image_with_text_LPmUUp": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Column title",
+            "heading_tag": "h3",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_url": "",
+            "link_text": "",
+            "button_popup": "",
+            "product": "",
+            "show_price": true
+          }
+        },
+        "image_with_text_J34K9B": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Column title",
+            "heading_tag": "h3",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_url": "",
+            "link_text": "",
+            "button_popup": "",
+            "product": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_erQGpA",
+        "image_with_text_LPmUUp",
+        "image_with_text_J34K9B"
+      ],
+      "name": "t:sections.multi_column.presets.multi_column.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "columns_per_row": 3,
+        "stack_on_mobile": false,
+        "overlap_image": false,
+        "image_ratio": "original",
+        "content_alignment": "start",
+        "text_alignment": "start",
+        "spacing": "md",
+        "subheading": "About",
+        "title": "Multi-column",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "link",
+        "button_size": "sm",
+        "accordion": "none",
+        "accordion_label": "",
+        "accordion_open": false,
+        "visibility": "all"
+      }
+    },
     "rich_text_FYJmca": {
       "type": "rich-text",
       "blocks": {
@@ -566,6 +627,84 @@
         "custom_class": ""
       }
     },
+    "multi_column_CKWKkh": {
+      "type": "multi-column",
+      "blocks": {
+        "image_with_text_iP69F8": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/BAGUE_BAUME_86c8e914-7dcc-45ab-bcca-b99e3f035970.jpg",
+            "title": "Prouesse de formulation",
+            "heading_tag": "h3",
+            "content": "<p>Créé au sein de <strong>nos laboratoires à Baulieu,</strong> le Baume Onctueux Régénératif est <strong>exempt de tout ingrédient controversé</strong>. Zéro silicone, zéro PEG, zéro microplastique.&nbsp;<br/><br/>30% d'actifs<br/>97% d'ingrédients d'origine naturelle.*<br/>Notée Excellent sur Yuka. Végan.<br/>Délicat parfum frais et réconfortant.</p><p></p><h6>*Selon la Norme ISO 16128-1 et ISO 16128-2, calcul prenant en compte<br/>l’eau de formulation.</h6>",
+            "link_url": "#",
+            "link_text": "Voir la liste INCI",
+            "button_popup": "liste-inci",
+            "product": "",
+            "show_price": true
+          }
+        },
+        "image_with_text_LVGkmb": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_6003.png",
+            "title": "Conseils d’utilisation",
+            "heading_tag": "h3",
+            "content": "<p><strong>1. Activer</strong><br/></p><ul><li>Réaliser 5 pressions avec les doigts sur les zones ganglionnaires : oreilles, sous-mâchoire et clavicules.</li></ul><p><strong>2. Appliquer</strong><br/></p><ul><li>Prélever une noisette de baume et la réchauffer entre les mains.<br/></li></ul><p><strong>3. Drainer et régénérer</strong><br/></p><ul><li>Lisser du menton vers les yeux.</li><li>Étirer doucement les tissus des joues vers les oreilles, puis redescendre vers le cou.&nbsp;</li><li>Lisser le front vers le haut, puis les tempes vers l’extérieur.<br/></li></ul>",
+            "link_url": "",
+            "link_text": "",
+            "button_popup": "",
+            "product": "",
+            "show_price": true
+          }
+        },
+        "image_with_text_KaJTyC": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/2b99dce2-a71d-4995-bf8e-9a0b53deb7a9.jpg",
+            "title": "Recharge et format voyage",
+            "heading_tag": "h3",
+            "content": "<p>La recharge est logée dans son pot en verre pour une utilisation quotidienne.</p><p>Lors de vos déplacements, elle se <strong>déclipse </strong>et se referme avec son<strong> couvercle dédié,</strong> dissimulé dans le coffret, pour devenir un <strong>&nbsp;format nomade</strong>. Système breveté.</p><p>La recharge est conçue 100% en aluminium.<br/>L’écrin est créé avec des <strong>artisans français</strong>.&nbsp;<br/>Pot en verre, couvercle en résine.&nbsp;</p>",
+            "link_url": "",
+            "link_text": "Acheter",
+            "button_popup": "",
+            "product": "recharge-creme-regenerative-visage",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_iP69F8",
+        "image_with_text_LVGkmb",
+        "image_with_text_KaJTyC"
+      ],
+      "custom_css": [
+        "h3 {font-size: 24px;}"
+      ],
+      "name": "Multi-column (Desktop)",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "columns_per_row": 3,
+        "stack_on_mobile": false,
+        "overlap_image": false,
+        "image_ratio": "1 / 1",
+        "content_alignment": "start",
+        "text_alignment": "start",
+        "spacing": "sm",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "solid",
+        "button_size": "base",
+        "accordion": "none",
+        "accordion_label": "",
+        "accordion_open": false,
+        "visibility": "desktop"
+      }
+    },
     "featured_collections_zYxDEF": {
       "type": "featured-collections",
       "blocks": {
@@ -613,12 +752,14 @@
     "content_key_figures_lba_pccftr",
     "content_key_figures_lba_4LYVhf",
     "keywords_banner_lba_xAEpzG",
+    "multi_column_gNYKUq",
     "rich_text_FYJmca",
     "image_collage_text_lba_mkTLXU",
     "image_collage_text_lba_3FYc6F",
     "image_collage_text_lba_tzYqMc",
     "image_collage_text_lba_kngWfp",
     "1792572210b5a44146",
+    "multi_column_CKWKkh",
     "featured_collections_zYxDEF"
   ]
 }
