@@ -145,6 +145,96 @@
         "max_image_zoom_level": 3
       }
     },
+    "rich_text_AhPNjA": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_fqpYTn": {
+          "type": "richtext",
+          "settings": {
+            "content": "<h3>Notre conciergerie est à votre écoute sur Whatsapp pour vous accompagner :<br/><a href=\"tel:+33632796960\" title=\"tel:+33632796960\">+33 6 32 79 69 60</a></h3>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_fqpYTn"
+      ],
+      "custom_css": [
+        "h3 {font-size: 24px;}"
+      ],
+      "name": "Texte enrichi (desktop)",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "visibility": "desktop",
+        "content_width": "xl",
+        "text_position": "center",
+        "remove_vertical_spacing": false,
+        "bordered_content": false
+      }
+    },
+    "content_key_figures_lba_4LYVhf": {
+      "type": "content-key-figures-lba",
+      "blocks": {
+        "stat_M99wzr": {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "",
+            "value": "100%",
+            "label": "peau plus lisse¹"
+          }
+        },
+        "stat_Pt7pyJ": {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "",
+            "value": "+92%",
+            "label": "éclat²"
+          }
+        },
+        "stat_Gbk7WU": {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "",
+            "value": "91%",
+            "label": "Confort¹"
+          }
+        },
+        "stat_eWWB9g": {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "",
+            "value": "87%",
+            "label": "Douceur¹"
+          }
+        }
+      },
+      "block_order": [
+        "stat_M99wzr",
+        "stat_Pt7pyJ",
+        "stat_Gbk7WU",
+        "stat_eWWB9g"
+      ],
+      "name": "Contenu + chiffres clés",
+      "settings": {
+        "title": "Efficacité prouvée cliniquement",
+        "content": "",
+        "small_content": "<p>1. Auto-évaluation, 23 femmes, 2 applications par jour pendant 2 mois. &nbsp; 2. Test clinique par scorage, 23 femmes, 2 applications par jour pendant 2 mois.</p>",
+        "content_visibility": "desktop",
+        "button_label": "Voir tous les résultats",
+        "button_link": "#",
+        "button_popup": "results",
+        "button_style": "outline",
+        "button_visibility": "all",
+        "layout": "full",
+        "table_title": "",
+        "show_dividers": false,
+        "row_gap": 40,
+        "visibility": "desktop",
+        "background_color": "#ffffff",
+        "text_color": "#3c626b",
+        "background_image": "shopify://shop_images/6f00f8ad6f46fc057b3972a0d7b734a81a12f90d_1.jpg"
+      }
+    },
     "featured_collections_fmd6QB": {
       "type": "featured-collections",
       "blocks": {
@@ -376,6 +466,8 @@
   },
   "order": [
     "main",
+    "rich_text_AhPNjA",
+    "content_key_figures_lba_4LYVhf",
     "featured_collections_fmd6QB",
     "rich_text_CLpUjt",
     "slider_vertical_product_lba_6cdKzx",
