@@ -392,6 +392,7 @@
         "image_with_text_erQGpA": {
           "type": "image_with_text",
           "settings": {
+            "image": "shopify://shop_images/BULLE_ONAGRE__1.jpg",
             "title": "Column title",
             "heading_tag": "h3",
             "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
@@ -405,6 +406,7 @@
         "image_with_text_LPmUUp": {
           "type": "image_with_text",
           "settings": {
+            "image": "shopify://shop_images/BULLE_ONAGRE__1.jpg",
             "title": "Column title",
             "heading_tag": "h3",
             "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
@@ -418,6 +420,7 @@
         "image_with_text_J34K9B": {
           "type": "image_with_text",
           "settings": {
+            "image": "shopify://shop_images/BULLE_ONAGRE__1.jpg",
             "title": "Column title",
             "heading_tag": "h3",
             "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
