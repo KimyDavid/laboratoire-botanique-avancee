@@ -1,0 +1,768 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h2"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false,
+            "show_below_gallery": false
+          }
+        },
+        "text_rX7eEM": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>97% d’ingrédients d’origine naturelle.*<br/>Sans ingrédient controversé.<br/>produit en france.</h4>"
+          }
+        },
+        "relative_products_nje9cV": {
+          "type": "relative_products",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_style": "block",
+            "swatch_selector_style": "block_swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
+        "recharge_subscriptions_subscription_widget_v2_zxAiiW": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {}
+        },
+        "buy_buttons_c43e8L": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": false,
+            "atc_button_background": "#3c626b",
+            "atc_button_text_color": "#ffffff",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "button_iLWaxM": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/diagnostic",
+            "text": "Faire mon diagnostic de peau",
+            "stretch": true,
+            "background": "#ffffff",
+            "text_color": "#3c626b",
+            "border_color": "#3c626b",
+            "background_mobile": "#3c626b",
+            "text_color_mobile": "#ffffff",
+            "border_color_mobile": "#3c626b",
+            "visibility": "all"
+          }
+        },
+        "accordion_Yw977X": {
+          "type": "accordion",
+          "settings": {
+            "show_open": false,
+            "show_below_gallery": false,
+            "icon": "none",
+            "title": "Actifs clés",
+            "content": "{{ product.metafields.custom.info_produit_actifs_cles | metafield_tag }}",
+            "show_image_above_text": false,
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "product_upsell_4YrC4x": {
+          "type": "product_upsell",
+          "settings": {
+            "eyebrow": "Pour commencer",
+            "title": "Coffret découverte",
+            "description": "<p>Nos deux soins emblématiques pour une semaine de régénération cutanée. Efficacité prouvée cliniquement.</p>",
+            "product": "coffret-decouverte-box",
+            "button_label": "Acheter",
+            "visibility": "desktop"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "description",
+        "text_rX7eEM",
+        "relative_products_nje9cV",
+        "price",
+        "variant_picker",
+        "recharge_subscriptions_subscription_widget_v2_zxAiiW",
+        "buy_buttons_c43e8L",
+        "button_iLWaxM",
+        "accordion_Yw977X",
+        "product_upsell_4YrC4x"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "container_size": "full",
+        "product_info_size": 50,
+        "show_sticky_add_to_cart": true,
+        "center_basic_info": false,
+        "desktop_media_layout": "grid",
+        "desktop_media_grid_gap": 0,
+        "mobile_controls": "free_scroll",
+        "enable_media_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": false,
+        "max_image_zoom_level": 3
+      }
+    },
+    "rich_text_AhPNjA": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_fqpYTn": {
+          "type": "richtext",
+          "settings": {
+            "content": "<h3>Notre conciergerie est à votre écoute sur Whatsapp pour vous accompagner :<br/><a href=\"tel:+33632796960\" title=\"tel:+33632796960\">+33 6 32 79 69 60</a></h3>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_fqpYTn"
+      ],
+      "custom_css": [
+        "h3 {font-size: 24px;}"
+      ],
+      "name": "Texte enrichi (desktop)",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "visibility": "desktop",
+        "content_width": "xl",
+        "text_position": "center",
+        "remove_vertical_spacing": false,
+        "bordered_content": false
+      }
+    },
+    "image_collage_text_lba_QEeddU": {
+      "type": "image-collage-text-lba",
+      "name": "Technologies néo-regen (mobile)",
+      "settings": {
+        "image_main": "shopify://shop_images/NEW_GAMME_LOTION2_3.jpg",
+        "image_secondary_1_position": "top",
+        "image_secondary_2": "shopify://shop_images/Rectangle_5872_013c8d41-2e75-49fc-b2e3-742ee1aff201.png",
+        "image_secondary_2_position": "bottom",
+        "image_position": "start",
+        "eyebrow": "",
+        "eyebrow_position": "below",
+        "title": "dr. jean-marc lemaître (INSERM)",
+        "content": "<p>Créé avec le Dr Lemaître<strong>, l'expert français </strong>de la longévité, notre<strong> actif exclusif NEO-REGEN</strong> est composé de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.&nbsp;</p><ul><li>Il réactive<strong> 136 gènes</strong> impliqués dans la jeunesse de la peau.&nbsp;</li><li><strong>+71% de Collagène I </strong>dès 8 jours.</li><li>Il<strong> relance la régénération </strong>cellulaire, moléculaire et tissulaire.</li></ul>",
+        "small_content": "",
+        "button_label": "En savoir plus",
+        "button_link": "/pages/expertise#technologie-neoregen",
+        "button_popup": "",
+        "button_product": "",
+        "button_add_to_cart": false,
+        "price_prefix": "",
+        "bordered_content": false,
+        "align_media_to_text": false,
+        "mobile_accordion": true,
+        "mobile_accordion_label": "Technologie neo regen",
+        "mobile_accordion_open": true,
+        "visibility": "mobile",
+        "spacing_top": true,
+        "spacing_bottom": true,
+        "background_color": "#ffffff"
+      }
+    },
+    "image_collage_text_lba_tRCcN4": {
+      "type": "image-collage-text-lba",
+      "name": "Actifs clés (mobile)",
+      "settings": {
+        "image_main": "shopify://shop_images/BULLE_ONAGRE__1.jpg",
+        "image_secondary_1": "shopify://shop_images/pronad_plus_shopify_2000x2000_e2f21c25-c649-4036-a04e-2a63da3b67e7.jpg",
+        "image_secondary_1_position": "top",
+        "image_secondary_2": "shopify://shop_images/ectoine_shopify_2000x2000_992ea019-3270-47c3-ab21-81c3abf5bfab.jpg",
+        "image_secondary_2_position": "bottom",
+        "image_position": "start",
+        "eyebrow": "136 gènes impliqués dans la jeunesse de la peau",
+        "eyebrow_position": "below",
+        "title": "Des actifs clés",
+        "content": "<p><strong>Cellules souches d'onagre</strong> : Préservent l’équilibre de la peau et la renforce face aux agressions extérieures. Soutient la barrière cutanée.<br/><br/><strong>Complexe PRO NAD+</strong>&nbsp;: Soutient la production d’énergie cellulaire et favorise les mécanismes de réparation.&nbsp;<br/><br/><strong>Ectoïne Biotech&nbsp;:</strong> Bouclier protecteur, antioxydant, protège des agressions extérieures, hydratation long terme.</p><h4>96% d’ingrédients d’origine naturelle</h4>",
+        "small_content": "",
+        "button_label": "Voir la liste INCI",
+        "button_link": "",
+        "button_popup": "liste-inci",
+        "button_product": "",
+        "button_add_to_cart": false,
+        "price_prefix": "",
+        "bordered_content": false,
+        "align_media_to_text": false,
+        "mobile_accordion": true,
+        "mobile_accordion_label": "Actifs clés",
+        "mobile_accordion_open": false,
+        "visibility": "mobile",
+        "spacing_top": true,
+        "spacing_bottom": false,
+        "background_color": "#ffffff"
+      }
+    },
+    "content_key_figures_lba_pccftr": {
+      "type": "content-key-figures-lba",
+      "blocks": {
+        "stat_96X8Pt": {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "",
+            "value": "100%",
+            "label": "peau plus lisse¹"
+          }
+        },
+        "stat_wwDRLC": {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "",
+            "value": "+92%",
+            "label": "éclat²"
+          }
+        },
+        "stat_FRtAYL": {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "",
+            "value": "91%",
+            "label": "confort¹"
+          }
+        },
+        "stat_R3mHhf": {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "",
+            "value": "87%",
+            "label": "Peau plus dense¹"
+          }
+        }
+      },
+      "block_order": [
+        "stat_96X8Pt",
+        "stat_wwDRLC",
+        "stat_FRtAYL",
+        "stat_R3mHhf"
+      ],
+      "name": "Efficacité prouvée cliniquement (mobile)",
+      "settings": {
+        "title": "Efficacité prouvée cliniquement",
+        "content": "",
+        "small_content": "<p>¹ Étude d’auto-évaluation réalisée sur 23<br/>volontaires à J+56, sous contrôle dermatologique.<br/>² Score clinicien réalisé sur 23 volontaires à J+56.</p>",
+        "content_visibility": "desktop",
+        "button_label": "Voir tous les résultats",
+        "button_link": "#",
+        "button_popup": "results",
+        "button_style": "outline",
+        "button_visibility": "all",
+        "layout": "split",
+        "table_title": "",
+        "show_dividers": false,
+        "row_gap": 0,
+        "visibility": "mobile",
+        "background_color": "#3c626b",
+        "text_color": "#ffffff"
+      }
+    },
+    "content_key_figures_lba_4LYVhf": {
+      "type": "content-key-figures-lba",
+      "blocks": {
+        "stat_M99wzr": {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "",
+            "value": "96%",
+            "label": "PEAU IMMÉDIATEMENT PLUS DOUCE​ET CONFORTABLE¹"
+          }
+        },
+        "stat_Pt7pyJ": {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "",
+            "value": "96%",
+            "label": "PEAU RÉGÉNÉRÉE ¹"
+          }
+        },
+        "stat_Gbk7WU": {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "",
+            "value": "93%",
+            "label": "GRAIN DE PEAU​PLUS AFFINÉ ET LISSE¹"
+          }
+        },
+        "stat_eWWB9g": {
+          "type": "stat",
+          "settings": {
+            "eyebrow": "",
+            "value": "93%",
+            "label": "PEAU PLUS ÉCLATANTE¹"
+          }
+        }
+      },
+      "block_order": [
+        "stat_M99wzr",
+        "stat_Pt7pyJ",
+        "stat_Gbk7WU",
+        "stat_eWWB9g"
+      ],
+      "name": "Contenu + chiffres clés",
+      "settings": {
+        "title": "Efficacité prouvée cliniquement",
+        "content": "",
+        "small_content": "<p>1. Test clinique par auto-évaluation, 27 femmes caucasiennes, 3 applications par semaine durant 1 mois.</p>",
+        "content_visibility": "desktop",
+        "button_label": "Voir tous les résultats",
+        "button_link": "#",
+        "button_popup": "results",
+        "button_style": "outline",
+        "button_visibility": "all",
+        "layout": "full",
+        "table_title": "",
+        "show_dividers": false,
+        "row_gap": 40,
+        "visibility": "desktop",
+        "background_color": "#ffffff",
+        "text_color": "#3c626b",
+        "background_image": "shopify://shop_images/6f00f8ad6f46fc057b3972a0d7b734a81a12f90d_1.jpg"
+      }
+    },
+    "keywords_banner_lba_xAEpzG": {
+      "type": "keywords-banner-lba",
+      "blocks": {
+        "item_49MgDx": {
+          "type": "item",
+          "settings": {
+            "text": "produit en France"
+          }
+        },
+        "item_fAwhJn": {
+          "type": "item",
+          "settings": {
+            "text": "Rechargeable"
+          }
+        },
+        "item_xcrbxH": {
+          "type": "item",
+          "settings": {
+            "text": "Livraison offerte"
+          }
+        }
+      },
+      "block_order": [
+        "item_49MgDx",
+        "item_fAwhJn",
+        "item_xcrbxH"
+      ],
+      "name": "Bandeau mots-clés",
+      "settings": {
+        "visibility": "desktop",
+        "background_color": "#ffffff",
+        "text_color": "#3c626b",
+        "show_separators": true,
+        "show_border_bottom": true,
+        "padding_block": 16
+      }
+    },
+    "multi_column_gNYKUq": {
+      "type": "multi-column",
+      "blocks": {
+        "image_with_text_erQGpA": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/BULLE_ONAGRE__1.jpg",
+            "title": "<strong>CELLULES SOUCHES D’ONAGRE</strong>​<strong>&nbsp;</strong>",
+            "heading_tag": "h3",
+            "content": "<p>Répare et renforce la peau, soutient sa barrière protectrice et favorise la détoxification cellulaire.<br/><br/>​​<em>Etude menée avec le Dr Lemaitre sur l’onagre</em>​ <em>in-vivo et ex-vivo.</em></p>",
+            "link_url": "",
+            "link_text": "",
+            "button_popup": "",
+            "product": "",
+            "show_price": true
+          }
+        },
+        "image_with_text_LPmUUp": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/BULLE_ONAGRE__1.jpg",
+            "title": "<strong>COMPLEXE EXCLUSIF EXFOLIANT</strong>​&nbsp;",
+            "heading_tag": "h3",
+            "content": "<p>Quatre acides complémentaires pour agir sur la cohésion des cornéocytes, favoriser l’élimination des cellules mortes et affiner le relief cutané, tout en contribuant au maintien de l’hydratation.​</p>",
+            "link_url": "",
+            "link_text": "",
+            "button_popup": "",
+            "product": "",
+            "show_price": true
+          }
+        },
+        "image_with_text_J34K9B": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/BULLE_ONAGRE__1.jpg",
+            "title": "&nbsp;<strong>BISABOLOL</strong>​",
+            "heading_tag": "h3",
+            "content": "<p>Calme les irritations et apaise la peau. Aide à tolérer l’action des acides et contribue à concilier efficacité exfoliante et respect des peaux sensibles.​</p>",
+            "link_url": "",
+            "link_text": "",
+            "button_popup": "",
+            "product": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_erQGpA",
+        "image_with_text_LPmUUp",
+        "image_with_text_J34K9B"
+      ],
+      "name": "t:sections.multi_column.presets.multi_column.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "columns_per_row": 3,
+        "stack_on_mobile": false,
+        "overlap_image": false,
+        "image_ratio": "original",
+        "content_alignment": "start",
+        "text_alignment": "start",
+        "spacing": "md",
+        "subheading": "",
+        "title": "LES ACTIFS",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "link",
+        "button_size": "sm",
+        "accordion": "none",
+        "accordion_label": "",
+        "accordion_open": false,
+        "visibility": "all"
+      }
+    },
+    "rich_text_FYJmca": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_KdVqkV": {
+          "type": "richtext",
+          "settings": {
+            "content": "<h3>Notre conciergerie est à votre écoute sur Whatsapp pour vous accompagner :<br/><a href=\"tel:+33632796960\" title=\"tel:+33632796960\">+33 6 32 79 69 60</a></h3>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_KdVqkV"
+      ],
+      "name": "Contenu contact (mobile)",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "visibility": "mobile",
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false,
+        "bordered_content": false
+      }
+    },
+    "image_collage_text_lba_mkTLXU": {
+      "type": "image-collage-text-lba",
+      "name": "Technologies néo-regen (desktop)",
+      "settings": {
+        "image_main": "shopify://shop_images/NEW_GAMME_LOTION2_2.png",
+        "image_secondary_1_position": "middle",
+        "image_secondary_2": "shopify://shop_images/IMG_9122_2_copy.png",
+        "image_secondary_2_position": "middle",
+        "image_position": "end",
+        "eyebrow": "Collaboration avec dr. jean-marc lemaître",
+        "eyebrow_position": "below",
+        "title": "Technologie neo-regen",
+        "content": "<p>Créé avec le Dr Lemaître<strong>, l'expert français </strong>de la longévité, notre<strong> actif exclusif NEO-REGEN</strong> est concentré dans tous nos soins. Composé de millions de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.&nbsp;</p><ul><li>Il réactive<strong> 136 gènes</strong> impliqués dans la jeunesse de la peau.&nbsp;</li><li><strong>+71% de Collagène I </strong>dès 8 jours.</li><li>Il<strong> relance la régénération </strong>cellulaire, moléculaire et tissulaire.</li></ul>",
+        "small_content": "",
+        "button_label": "En savoir plus",
+        "button_link": "/pages/expertise#technologie-neoregen",
+        "button_popup": "",
+        "button_product": "",
+        "button_add_to_cart": false,
+        "price_prefix": "",
+        "bordered_content": false,
+        "align_media_to_text": false,
+        "mobile_accordion": true,
+        "mobile_accordion_label": "Technologie neo regen",
+        "mobile_accordion_open": false,
+        "visibility": "desktop",
+        "spacing_top": false,
+        "spacing_bottom": false,
+        "background_color": "#ffffff"
+      }
+    },
+    "image_collage_text_lba_3FYc6F": {
+      "type": "image-collage-text-lba",
+      "name": "Conseils d'utilisation (mobile)",
+      "settings": {
+        "image_secondary_1_position": "top",
+        "image_secondary_2_position": "bottom",
+        "image_position": "end",
+        "eyebrow": "",
+        "eyebrow_position": "below",
+        "title": "",
+        "content": "<p>1. Prélevez une noisette de crème à l'aide de la spatule, puis réchauffer au creux des mains.&nbsp;<br/><br/>2. A l'aide des paumes de mains, masser de bas en haut puis du centre vers les extrémités.</p>",
+        "small_content": "",
+        "button_label": "",
+        "button_link": "",
+        "button_popup": "",
+        "button_product": "",
+        "button_add_to_cart": false,
+        "price_prefix": "",
+        "bordered_content": false,
+        "align_media_to_text": false,
+        "mobile_accordion": true,
+        "mobile_accordion_label": "Conseils d'utilisation",
+        "mobile_accordion_open": false,
+        "visibility": "mobile",
+        "spacing_top": false,
+        "spacing_bottom": true,
+        "background_color": "#ffffff"
+      }
+    },
+    "image_collage_text_lba_tzYqMc": {
+      "type": "image-collage-text-lba",
+      "name": "Prouesse de formulation (mobile)",
+      "settings": {
+        "image_main": "shopify://shop_images/NEW_GAMME_LOTION2_3_1.jpg",
+        "image_secondary_1_position": "top",
+        "image_secondary_2": "shopify://shop_images/BAGUE_BAUME_86c8e914-7dcc-45ab-bcca-b99e3f035970.jpg",
+        "image_secondary_2_position": "bottom",
+        "image_position": "start",
+        "eyebrow": "",
+        "eyebrow_position": "below",
+        "title": "Prouesse de formulation",
+        "content": "<p>Créé au sein de <strong>nos laboratoires à Baulieu,</strong> le Baume Onctueux Régénératif est <strong>exempt de tout ingrédient controversé</strong>. Zéro silicone, zéro PEG, zéro microplastique.&nbsp;<br/><br/>30% d'actifs.&nbsp;<br/>20 millions de cellules souches végétales.<br/>96% d'ingrédients d'origine naturelle.<br/>Notée Excellent sur Yuka. Végan.<br/>Délicat parfum frais et réconfortant.</p>",
+        "small_content": "",
+        "button_label": "En savoir plus",
+        "button_link": "/pages/expertise#prouesse-formulation",
+        "button_popup": "",
+        "button_product": "",
+        "button_add_to_cart": false,
+        "price_prefix": "",
+        "bordered_content": false,
+        "align_media_to_text": false,
+        "mobile_accordion": true,
+        "mobile_accordion_label": "Formulation",
+        "mobile_accordion_open": false,
+        "visibility": "mobile",
+        "spacing_top": false,
+        "spacing_bottom": false,
+        "background_color": "#ffffff"
+      }
+    },
+    "image_collage_text_lba_kngWfp": {
+      "type": "image-collage-text-lba",
+      "name": "Recharge format voyage (mobile)",
+      "settings": {
+        "image_main": "shopify://shop_images/2b99dce2-a71d-4995-bf8e-9a0b53deb7a9.jpg",
+        "image_secondary_1_position": "top",
+        "image_secondary_2_position": "bottom",
+        "image_position": "end",
+        "eyebrow": "",
+        "eyebrow_position": "below",
+        "title": "",
+        "content": "<p>La recharge est logée dans son pot en verre pour une utilisation quotidienne.</p><p>Lors de vos déplacements, elle se <strong>déclipse </strong>et se referme avec son <strong>couvercle dédié</strong>, dissimulé dans le coffret, pour devenir un <strong>format nomade</strong>. Système breveté.</p><p>La recharge est conçue 100% en aluminium. L’écrin est créé avec des <strong>artisans français</strong>.&nbsp;<br/>Pot en verre, couvercle en bio-résine.&nbsp;</p>",
+        "small_content": "",
+        "button_label": "Acheter",
+        "button_link": "shopify://products/recharge-creme-regenerative-visage",
+        "button_popup": "",
+        "button_product": "recharge-creme-regenerative-visage",
+        "button_add_to_cart": true,
+        "price_prefix": "",
+        "bordered_content": false,
+        "align_media_to_text": false,
+        "mobile_accordion": true,
+        "mobile_accordion_label": "Recharge et format voyage",
+        "mobile_accordion_open": false,
+        "visibility": "mobile",
+        "spacing_top": true,
+        "spacing_bottom": true,
+        "background_color": "#ffffff"
+      }
+    },
+    "1792572210b5a44146": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_akJVTH": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_akJVTH"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "custom_class": ""
+      }
+    },
+    "multi_column_CKWKkh": {
+      "type": "multi-column",
+      "blocks": {
+        "image_with_text_iP69F8": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/BAGUE_BAUME_86c8e914-7dcc-45ab-bcca-b99e3f035970.jpg",
+            "title": "Prouesse de formulation",
+            "heading_tag": "h3",
+            "content": "<p>Créé au sein de <strong>nos laboratoires à Baulieu</strong>, le Masque Peeling Renovateur est <strong>exempt de tout ingrédient controversé.</strong> Zéro silicone, zéro PEG, zéro microplastique.<br/><br/>​​34% d'actifs​<br/>96% d'ingrédients d'origine naturelle.​Notée Excellent sur Yuka. Végan.​<br/>Délicat parfum frais et réconfortant.​</p>",
+            "link_url": "#",
+            "link_text": "Voir la liste INCI",
+            "button_popup": "liste-inci",
+            "product": "",
+            "show_price": true
+          }
+        },
+        "image_with_text_LVGkmb": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_6003.png",
+            "title": "Conseils d’utilisation",
+            "heading_tag": "h3",
+            "content": "<p><strong>Deux à trois fois par semaine : </strong>​</p><p>1. Appliquer tout d'abord une fine couche et masser.​<br/>2. Appliquer par la suite une couche épaisse et laisser poser 15 minutes avant de rincer soigneusement à l'eau tiède.​</p><p>​<strong>Pour une efficacité optimale : </strong>​</p><p>1. Appliquer une fine couche et masser uniformément jusqu’à pénétration. ​<br/>2. Laisser poser pendant la nuit.​<br/>3. Rincer au réveil. ​</p>",
+            "link_url": "",
+            "link_text": "",
+            "button_popup": "",
+            "product": "",
+            "show_price": true
+          }
+        },
+        "image_with_text_KaJTyC": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/2b99dce2-a71d-4995-bf8e-9a0b53deb7a9.jpg",
+            "title": "Recharge et format voyage",
+            "heading_tag": "h3",
+            "content": "<p>La recharge est logée dans son pot en verre pour une utilisation quotidienne.</p><p>Lors de vos déplacements, elle se <strong>déclipse </strong>et se referme avec son<strong> couvercle dédié,</strong> dissimulé dans le coffret, pour devenir un <strong>&nbsp;format nomade</strong>. Système breveté.</p><p>La recharge est conçue 100% en aluminium.<br/>L’écrin est créé avec des <strong>artisans français</strong>.&nbsp;<br/>Pot en verre, couvercle en résine.&nbsp;</p>",
+            "link_url": "",
+            "link_text": "Acheter",
+            "button_popup": "",
+            "product": "recharge-masque-peeling-renovateur",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_iP69F8",
+        "image_with_text_LVGkmb",
+        "image_with_text_KaJTyC"
+      ],
+      "custom_css": [
+        "h3 {font-size: 24px;}"
+      ],
+      "name": "Multi-column (Desktop)",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "columns_per_row": 3,
+        "stack_on_mobile": false,
+        "overlap_image": false,
+        "image_ratio": "1 / 1",
+        "content_alignment": "start",
+        "text_alignment": "start",
+        "spacing": "sm",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "solid",
+        "button_size": "base",
+        "accordion": "none",
+        "accordion_label": "",
+        "accordion_open": false,
+        "visibility": "desktop"
+      }
+    },
+    "featured_collections_zYxDEF": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_cpBwC6": {
+          "type": "collection",
+          "settings": {
+            "collection": "le-rituel",
+            "products_count": 8,
+            "title": "Compléter le rituel",
+            "link_url": "",
+            "link_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_cpBwC6"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": false,
+        "visibility": "all",
+        "hide_product_information": false,
+        "show_rating_on_image": false,
+        "show_product_description": false,
+        "show_buy_button": false,
+        "show_product_secondary_image": false,
+        "carousel_design": "default",
+        "stack_products": false,
+        "carousel_items_desktop": "default",
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing": 4,
+        "vertical_spacing_desktop": 128,
+        "vertical_spacing_mobile": 48,
+        "subheading": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_AhPNjA",
+    "image_collage_text_lba_QEeddU",
+    "image_collage_text_lba_tRCcN4",
+    "content_key_figures_lba_pccftr",
+    "content_key_figures_lba_4LYVhf",
+    "keywords_banner_lba_xAEpzG",
+    "multi_column_gNYKUq",
+    "rich_text_FYJmca",
+    "image_collage_text_lba_mkTLXU",
+    "image_collage_text_lba_3FYc6F",
+    "image_collage_text_lba_tzYqMc",
+    "image_collage_text_lba_kngWfp",
+    "1792572210b5a44146",
+    "multi_column_CKWKkh",
+    "featured_collections_zYxDEF"
+  ]
+}
