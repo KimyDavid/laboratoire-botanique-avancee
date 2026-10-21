@@ -235,6 +235,67 @@
         "background_image": "shopify://shop_images/6f00f8ad6f46fc057b3972a0d7b734a81a12f90d_1.jpg"
       }
     },
+    "keywords_banner_lba_xAEpzG": {
+      "type": "keywords-banner-lba",
+      "blocks": {
+        "item_49MgDx": {
+          "type": "item",
+          "settings": {
+            "text": "produit en France"
+          }
+        },
+        "item_fAwhJn": {
+          "type": "item",
+          "settings": {
+            "text": "Rechargeable"
+          }
+        },
+        "item_xcrbxH": {
+          "type": "item",
+          "settings": {
+            "text": "Livraison offerte"
+          }
+        }
+      },
+      "block_order": [
+        "item_49MgDx",
+        "item_fAwhJn",
+        "item_xcrbxH"
+      ],
+      "name": "Bandeau mots-clés",
+      "settings": {
+        "visibility": "desktop",
+        "background_color": "#ffffff",
+        "text_color": "#3c626b",
+        "show_separators": true,
+        "show_border_bottom": true,
+        "padding_block": 16
+      }
+    },
+    "rich_text_FYJmca": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_KdVqkV": {
+          "type": "richtext",
+          "settings": {
+            "content": "<h3>Notre conciergerie est à votre écoute sur Whatsapp pour vous accompagner :<br/><a href=\"tel:+33632796960\" title=\"tel:+33632796960\">+33 6 32 79 69 60</a></h3>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_KdVqkV"
+      ],
+      "name": "Contenu contact (mobile)",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "visibility": "mobile",
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false,
+        "bordered_content": false
+      }
+    },
     "featured_collections_fmd6QB": {
       "type": "featured-collections",
       "blocks": {
@@ -468,6 +529,8 @@
     "main",
     "rich_text_AhPNjA",
     "content_key_figures_lba_4LYVhf",
+    "keywords_banner_lba_xAEpzG",
+    "rich_text_FYJmca",
     "featured_collections_fmd6QB",
     "rich_text_CLpUjt",
     "slider_vertical_product_lba_6cdKzx",
