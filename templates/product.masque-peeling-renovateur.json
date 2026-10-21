@@ -293,32 +293,32 @@
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "100%",
-            "label": "peau plus lisse¹"
+            "value": "96%",
+            "label": "PEAU IMMÉDIATEMENT PLUS DOUCE​ET CONFORTABLE¹"
           }
         },
         "stat_Pt7pyJ": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "+92%",
-            "label": "éclat²"
+            "value": "96%",
+            "label": "PEAU RÉGÉNÉRÉE ¹"
           }
         },
         "stat_Gbk7WU": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "91%",
-            "label": "Confort¹"
+            "value": "93%",
+            "label": "GRAIN DE PEAU​PLUS AFFINÉ ET LISSE¹"
           }
         },
         "stat_eWWB9g": {
           "type": "stat",
           "settings": {
             "eyebrow": "",
-            "value": "87%",
-            "label": "Douceur¹"
+            "value": "93%",
+            "label": "PEAU PLUS ÉCLATANTE¹"
           }
         }
       },
