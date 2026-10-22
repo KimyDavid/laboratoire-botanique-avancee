@@ -143,6 +143,77 @@
         "padding_block": 12
       }
     },
+    "featured_collections_7b9Vyg": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_HiHMAM": {
+          "type": "collection",
+          "settings": {
+            "collection": "le-rituel",
+            "products_count": 6,
+            "title": "Les soins",
+            "link_url": "shopify://collections/le-rituel",
+            "link_text": "Voir tout"
+          }
+        }
+      },
+      "block_order": [
+        "collection_HiHMAM"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {.section-spacing {padding-top: 120px; }}"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": false,
+        "visibility": "all",
+        "hide_product_information": false,
+        "show_rating_on_image": true,
+        "show_product_description": true,
+        "show_buy_button": false,
+        "show_product_secondary_image": false,
+        "carousel_design": "large",
+        "stack_products": false,
+        "carousel_items_desktop": "4",
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 2,
+        "horizontal_spacing": 20,
+        "vertical_spacing_desktop": 40,
+        "vertical_spacing_mobile": 40,
+        "subheading": ""
+      }
+    },
+    "featured_product_QcrXDx": {
+      "type": "featured-product",
+      "blocks": {
+        "judge_me_reviews_preview_badge_GzCwfX": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_preview_badge_GzCwfX"
+      ],
+      "name": "t:sections.featured_product.presets.featured_product.name",
+      "settings": {
+        "product": "coffret-decouverte-box",
+        "image": "shopify://shop_images/a34fab0bf052f23e0456d5c33dfffb3cce910e12.jpg",
+        "image_position": "start",
+        "image_overflow": 48,
+        "min_height": 460,
+        "eyebrow": "Pour commencer",
+        "title": "Le coffret découverte",
+        "description": "<p>Nos deux soins emblématiques pour une peau plus lisse, plus ferme, nourrie et apaisée dès 7 jours.&nbsp;Efficacité prouvée cliniquement.</p>",
+        "button_label": "Acheter",
+        "show_price": true,
+        "background_color": "#3c626b",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#3c626b",
+        "visibility": "all"
+      }
+    },
     "content_key_figures_lba_RR4R39": {
       "type": "content-key-figures-lba",
       "blocks": {
@@ -203,77 +274,6 @@
         "visibility": "all",
         "background_color": "#ffffff",
         "text_color": "#3c626b"
-      }
-    },
-    "featured_product_QcrXDx": {
-      "type": "featured-product",
-      "blocks": {
-        "judge_me_reviews_preview_badge_GzCwfX": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_preview_badge_GzCwfX"
-      ],
-      "name": "t:sections.featured_product.presets.featured_product.name",
-      "settings": {
-        "product": "coffret-decouverte-box",
-        "image": "shopify://shop_images/a34fab0bf052f23e0456d5c33dfffb3cce910e12.jpg",
-        "image_position": "start",
-        "image_overflow": 48,
-        "min_height": 460,
-        "eyebrow": "Pour commencer",
-        "title": "Le coffret découverte",
-        "description": "<p>Nos deux soins emblématiques pour une peau plus lisse, plus ferme, nourrie et apaisée dès 7 jours.&nbsp;Efficacité prouvée cliniquement.</p>",
-        "button_label": "Acheter",
-        "show_price": true,
-        "background_color": "#3c626b",
-        "text_color": "#ffffff",
-        "button_background": "#ffffff",
-        "button_text_color": "#3c626b",
-        "visibility": "all"
-      }
-    },
-    "featured_collections_7b9Vyg": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_HiHMAM": {
-          "type": "collection",
-          "settings": {
-            "collection": "le-rituel",
-            "products_count": 6,
-            "title": "Les soins",
-            "link_url": "shopify://collections/le-rituel",
-            "link_text": "Voir tout"
-          }
-        }
-      },
-      "block_order": [
-        "collection_HiHMAM"
-      ],
-      "custom_css": [
-        "@media (min-width: 768px) {.section-spacing {padding-top: 120px; }}"
-      ],
-      "name": "t:sections.featured_collections.presets.featured_collections.name",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "separate_section_with_border": false,
-        "visibility": "all",
-        "hide_product_information": false,
-        "show_rating_on_image": true,
-        "show_product_description": true,
-        "show_buy_button": false,
-        "show_product_secondary_image": false,
-        "carousel_design": "large",
-        "stack_products": false,
-        "carousel_items_desktop": "4",
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 2,
-        "horizontal_spacing": 20,
-        "vertical_spacing_desktop": 40,
-        "vertical_spacing_mobile": 40,
-        "subheading": ""
       }
     },
     "image_collage_text_lba_6AmHtN": {
@@ -567,6 +567,7 @@
         "richtext_zTqra7",
         "button_bKbjgn"
       ],
+      "disabled": true,
       "name": "Le domaine de baulieu (desktop)",
       "settings": {
         "color_scheme": "scheme-1",
@@ -788,9 +789,9 @@
     "slideshow_RPwAx6",
     "keywords_banner_lba_eJBBam",
     "keywords_banner_lba_mjkMA8",
-    "content_key_figures_lba_RR4R39",
-    "featured_product_QcrXDx",
     "featured_collections_7b9Vyg",
+    "featured_product_QcrXDx",
+    "content_key_figures_lba_RR4R39",
     "image_collage_text_lba_6AmHtN",
     "image_collage_text_lba_G3BiCk",
     "image_collage_text_lba_XXGgpm",
