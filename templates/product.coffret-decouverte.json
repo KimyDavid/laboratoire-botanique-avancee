@@ -54,7 +54,7 @@
           "settings": {
             "show_payment_button": false,
             "show_gift_card_recipient": false,
-            "atc_button_background": "#3C626B",
+            "atc_button_background": "#3c626b",
             "atc_button_text_color": "#ffffff",
             "payment_button_background": "",
             "payment_button_text_color": ""
@@ -91,8 +91,13 @@
             "link": "shopify://pages/diagnostic",
             "text": "Faire un diagnostic",
             "stretch": false,
-            "background": "#3C626B",
-            "text_color": "#ffffff"
+            "background": "#3c626b",
+            "text_color": "#ffffff",
+            "border_color": "",
+            "background_mobile": "",
+            "text_color_mobile": "",
+            "border_color_mobile": "",
+            "visibility": "all"
           }
         },
         "accordion_Yw977X": {
@@ -172,9 +177,11 @@
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
+        "visibility": "all",
         "content_width": "md",
         "text_position": "center",
-        "remove_vertical_spacing": false
+        "remove_vertical_spacing": false,
+        "bordered_content": false
       }
     },
     "image_text_lba_pAgiGq": {
@@ -299,7 +306,8 @@
         "image_position": "start",
         "content_width": "md",
         "remove_vertical_spacing": true,
-        "id": ""
+        "id": "",
+        "visibility": "all"
       }
     },
     "image_with_text_LQeQr3": {
@@ -358,7 +366,8 @@
         "image_position": "end",
         "content_width": "md",
         "remove_vertical_spacing": true,
-        "id": ""
+        "id": "",
+        "visibility": "all"
       }
     },
     "image_text_lba_aUjXA3": {
@@ -405,9 +414,11 @@
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
+        "visibility": "all",
         "content_width": "md",
         "text_position": "center",
-        "remove_vertical_spacing": false
+        "remove_vertical_spacing": false,
+        "bordered_content": false
       }
     },
     "image_text_lba_ELymAP": {
@@ -437,7 +448,7 @@
         "video_size": "full-height",
         "image_position": "left",
         "title": "PREMIÈRE MONDIALE",
-        "text": "<p><strong>Pour la première fois au monde </strong>et en collaboration avec le<strong> Dr Lemaitre</strong>, l'efficacité d'actifs cosmétiques est prouvée sur un modèle révolutionnaire, issu de 30 ans de recherche en médecine régénérative : <strong>l'organoïde de peau. </strong></p>",
+        "text": "<p><strong>Pour la première fois au monde </strong>et en collaboration avec le<strong> Dr Lemaître</strong>, l'efficacité d'actifs cosmétiques est prouvée sur un modèle révolutionnaire, issu de 30 ans de recherche en médecine régénérative : <strong>l'organoïde de peau.&nbsp;</strong></p>",
         "button_link": "/pages/expertise/#dr-jm-lemaitre",
         "button_label": "En savoir plus",
         "id": ""
@@ -463,7 +474,8 @@
         "color_scheme": "",
         "separate_section_with_border": true,
         "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false
+        "remove_horizontal_spacing": false,
+        "custom_class": ""
       }
     },
     "featured_collections_fmd6QB": {
@@ -487,14 +499,20 @@
       "settings": {
         "color_scheme": "scheme-2",
         "separate_section_with_border": false,
+        "visibility": "all",
         "hide_product_information": false,
+        "show_rating_on_image": false,
+        "show_product_description": false,
+        "show_buy_button": true,
         "show_product_secondary_image": false,
         "carousel_design": "default",
         "stack_products": false,
+        "carousel_items_desktop": "default",
         "products_per_row_mobile": "2",
         "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 1,
-        "vertical_spacing_factor": 1,
+        "horizontal_spacing": 4,
+        "vertical_spacing_desktop": 128,
+        "vertical_spacing_mobile": 48,
         "subheading": ""
       }
     },
