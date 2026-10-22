@@ -623,6 +623,14 @@ div[slot="footer"] .contents .button--outline:hover {
     max-width: calc((100% - 48px) / 3);
     width: 100%;
   }
+  /* Only 2 sub menus: the list takes the space up to the images, split in 2 columns instead of 3 */
+  .header__primary-nav .mega-menu__linklist:not(.no_sub_child):not(:has(> :nth-child(3))) {
+    flex: 1 1 0;
+    flex-wrap: nowrap;
+  }
+  .header__primary-nav .mega-menu__linklist:not(.no_sub_child):not(:has(> :nth-child(3))) > * {
+    max-width: calc((100% - 24px) / 2);
+  }
   .header__primary-nav  .mega-menu__linklist {
     gap: 24px;
   }

@@ -3719,9 +3719,11 @@ var CustomDetails = class extends HTMLElement {
     }
   }
   async open({ instant = false } = {}) {
-    if (this.disclosureElement.getAttribute("aria-expanded") === "true") {
+    if (this.disclosureElement.getAttribute("aria-expanded") === "true" && this.disclosureElement.open) {
       return;
     }
+    this.hideAnimationControls?.cancel?.();
+    this.hideAnimationControls = null;
     this.disclosureElement.open = true;
     this.disclosureElement.setAttribute("aria-expanded", "true");
     const controls = this.createShowAnimationControls();
@@ -3734,11 +3736,12 @@ var CustomDetails = class extends HTMLElement {
     if (!this.disclosureElement.open) {
       return;
     }
-    this.createHideAnimationControls()?.finished.then((event) => {
-      if (event !== void 0) {
+    this.hideAnimationControls = this.createHideAnimationControls();
+    this.hideAnimationControls?.finished.then((event) => {
+      if (event !== void 0 && this.disclosureElement.getAttribute("aria-expanded") === "false") {
         this.disclosureElement.removeAttribute("open");
       }
-    });
+    }).catch(() => {});
   }
   createShowAnimationControls() {
   }
