@@ -152,7 +152,7 @@
           {%- assign show_locale_selector = true -%}
         {%- endif -%}
 
-        {%- if show_country_selector or show_locale_selector -%}
+        {% comment %}{%- if show_country_selector or show_locale_selector -%}
           <div class="localization-selectors">
             {%- if show_country_selector -%}
               {%- render 'localization-selector', type: 'country', placement: 'top-start', show_country_name: section.settings.show_country_name, show_country_flag: section.settings.show_country_flag -%}
@@ -162,7 +162,7 @@
               {%- render 'localization-selector', type: 'locale', placement: 'top-start' -%}
             {%- endif -%}
           </div>
-        {%- endif -%}
+        {%- endif -%}{% endcomment %}
 
         <p class="heading text-subdued text-xxs">© {{ 'now' | date: '%Y' }} - {{ shop.name }} {{ powered_by_link }}</p>
 
