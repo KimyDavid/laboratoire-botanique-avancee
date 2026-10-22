@@ -3863,23 +3863,21 @@ detectClickOutside_fn = function(event) {
     this.toggle(false);
   }
 };
-/**
- * On desktop device, if the mode is set to hover, we open/close the dropdown on hover
- */
+
 detectHover_fn = function(event) {
   if (this.trigger !== "hover") {
     return;
   }
-  if (event.type === "mouseover") {
+  const isOnOverlay = event.type === "mouseover" && event.target.closest(".overlay_mega_menu");
+  if (event.type === "mouseover" && !isOnOverlay) {
     clearTimeout(__privateGet(this, _hoverTimer));
     this.toggle(true);
-  } else if (event.type === "mouseout") {
+  } else if (event.type === "mouseout" || isOnOverlay) {
+    clearTimeout(__privateGet(this, _hoverTimer));
     __privateSet(this, _hoverTimer, setTimeout(() => this.toggle(false), this.mouseOverDelayTolerance));
   }
 };
-/**
- * Try to detect when the user hover a different link, to immediately close the item without extra delay
- */
+
 detectHoverOutside_fn = function(event) {
   if (this.trigger !== "hover") {
     return;
@@ -4715,6 +4713,12 @@ var DropdownMenuDisclosure = class extends MenuDisclosure {
   }
 };
 var MegaMenuDisclosure = class extends MenuDisclosure {
+  get contentElement() {
+    return this.disclosureElement.querySelector(":scope > .mega-menu") || super.contentElement;
+  }
+  get overlayElement() {
+    return this.disclosureElement.querySelector(":scope > .overlay_mega_menu");
+  }
   createShowAnimationControls() {
     const linklists = Array.from(this.contentElement.querySelectorAll(".mega-menu__linklist > li"));
     let menuItemsSequence = [];
@@ -4725,14 +4729,18 @@ var MegaMenuDisclosure = class extends MenuDisclosure {
         [this.contentElement.querySelector(".mega-menu__promo"), { opacity: [0, 1] }, { duration: 0.3, at: "-0.15" }]
       ];
     }
+    const overlaySequence = this.overlayElement ? [[this.overlayElement, { opacity: [0, 1] }, { duration: 0.25, at: "<" }]] : [];
     return timeline9([
       [this.contentElement, { opacity: [0, 1] }, { duration: 0.25 }],
+      ...overlaySequence,
       ...menuItemsSequence
     ]);
   }
   createHideAnimationControls() {
+    const overlaySequence = this.overlayElement ? [[this.overlayElement, { opacity: [1, 0] }, { duration: 0.4, at: "<" }]] : [];
     return timeline9([
-      [this.contentElement, { opacity: [1, 0] }, { duration: 0.4 }]
+      [this.contentElement, { opacity: [1, 0] }, { duration: 0.4 }],
+      ...overlaySequence
     ]);
   }
 };
