@@ -184,7 +184,7 @@
       "name": "Popup latérale",
       "settings": {
         "popup_id": "results",
-        "title": "Les résultats après 1 mois",
+        "title": "Les résultats",
         "content": "",
         "product_metafield": "custom.resultats",
         "content_font_size": "default"
