@@ -418,14 +418,14 @@
       {%- sections 'overlay-group' -%}
     {%- endif -%}
 
-    {% assign current_path = request.path %}
+    {% comment %} {% assign current_path = request.path %}
     {% assign base_url = shop.url %}
     {%- if current_path contains '/en/' -%}
       {% assign fr_path = current_path | remove: '/en/' %}
       <link rel="alternate" hreflang="fr" href="{{ base_url }}/{{ fr_path }}">
     {%- else -%}
       <link rel="alternate" hreflang="fr" href="{{ base_url }}{{ current_path }}">
-    {%- endif -%}
+    {%- endif -%}{% endcomment %}
 
     <main id="main" class="anchor">
       {{ content_for_layout }}
