@@ -135,7 +135,7 @@ therefore using a different structure for the Shadow DOM template
             {%- render 'icon' with 'picto-localization', width: 20 -%}
               {{- 'general.localization.language' | t -}}
           </a>
-           
+           {%- render 'localization-selector', type: 'locale', placement: 'top-start' -%}
                 <noscript>
                   <div class="lang-switcher-noscript">
                     <a href="https://laboratoires-botanique-avancee.com" hreflang="fr" lang="fr">FR</a>
