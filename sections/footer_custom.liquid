@@ -28,7 +28,8 @@
                 <a href="https://laboratoires-botanique-avancee.com/en" hreflang="en" lang="en">EN</a>
               </div>
             </noscript>
-            {%- render 'localization-selector', type: 'locale', placement: 'top-start' -%}</li>
+            {% comment %}{%- render 'localization-selector', type: 'locale', placement: 'top-start' -%}{% endcomment %}
+          </li>
         </ul>
       {% endif %}
       {% if section.settings.left_menu_mobile != blank %}
