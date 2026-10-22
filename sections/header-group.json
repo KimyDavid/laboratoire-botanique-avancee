@@ -52,8 +52,24 @@
             "image_2_link": "shopify://collections/les-recharges"
           }
         },
+        "mega_menu_G3bYVH": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "UNIVERS",
+            "images_position": "right",
+            "image_1": "shopify://shop_images/1950X1950-LABO.webp",
+            "image_1_heading": "nos laboratoires",
+            "image_1_text": "",
+            "image_1_link": "/pages/expertise/#laboratoire-biotechnologie",
+            "image_2": "shopify://shop_images/1950X1950_FLEUR_COUPEE_2.webp",
+            "image_2_heading": "La technologie NEO-REGEN",
+            "image_2_text": "",
+            "image_2_link": "/pages/expertise/#technologie-neoregen"
+          }
+        },
         "mega_menu_djGb99": {
           "type": "mega_menu",
+          "disabled": true,
           "settings": {
             "menu_item": "HISTOIRE",
             "images_position": "right",
@@ -67,8 +83,9 @@
             "image_2_link": "shopify://pages/nos-engagements"
           }
         },
-        "mega_menu_G3bYVH": {
+        "mega_menu_LYQyFJ": {
           "type": "mega_menu",
+          "disabled": true,
           "settings": {
             "menu_item": "EXPERTISE",
             "images_position": "right",
@@ -100,8 +117,9 @@
       },
       "block_order": [
         "mega_menu_3KFE9p",
-        "mega_menu_djGb99",
         "mega_menu_G3bYVH",
+        "mega_menu_djGb99",
+        "mega_menu_LYQyFJ",
         "mega_menu_zqyJaE"
       ],
       "custom_css": [],
