@@ -132,7 +132,7 @@
         "logo": "shopify://shop_images/Logo_3.svg",
         "logo_max_width": 240,
         "logo_mobile_max_width": 45,
-        "menu": "main-menu",
+        "menu": "main-menu-new",
         "sidebar_menu": "header-menu-mobile",
         "menu_open_trigger": "hover",
         "menu_text_font": "heading",
