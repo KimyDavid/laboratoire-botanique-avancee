@@ -135,7 +135,7 @@ therefore using a different structure for the Shadow DOM template
             {%- render 'icon' with 'picto-localization', width: 20 -%}
               {{- 'general.localization.language' | t -}}
           </a>
-           {%- render 'localization-selector', type: 'locale', placement: 'top-start' -%}
+           
                 <noscript>
                   <div class="lang-switcher-noscript">
                     <a href="https://laboratoires-botanique-avancee.com" hreflang="fr" lang="fr">FR</a>
@@ -144,7 +144,7 @@ therefore using a different structure for the Shadow DOM template
                 </noscript>
         </div>
 
-        {%- if show_country_selector or show_locale_selector -%}
+        {% comment %}{%- if show_country_selector or show_locale_selector -%}
           <div class="localization-selectors">
             {%- if show_country_selector -%}
               {%- render 'localization-selector', type: 'country', placement: 'top-start', show_country_name: section.settings.show_country_name, show_country_flag: section.settings.show_country_flag, id_prefix: 'header-sidebar' -%}
@@ -158,7 +158,7 @@ therefore using a different structure for the Shadow DOM template
               {%- render 'localization-selector', type: 'locale', placement: 'top-start', id_prefix: 'header-sidebar' -%}
             {%- endif -%}
           </div>
-        {%- endif -%}
+        {%- endif -%}{% endcomment %}
       </div>
     {%- endif -%}
   </div>
