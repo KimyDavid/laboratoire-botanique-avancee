@@ -222,9 +222,9 @@
             {%- endif -%}
 
             {%- if show_locale_selector -%}
-              {% if localization.available_languages.size > 1 %}
+              {% comment %}{% if localization.available_languages.size > 1 %}
                 {%- render 'localization-selector', type: 'locale', placement: 'bottom-end', id_prefix: 'header-nav' -%}
-              {% else %}
+              {% else %}{% endcomment %}
                 <li class="lang_selector_header_desktop"></li>
                 <noscript>
                   <div class="lang-switcher-noscript">
@@ -232,7 +232,7 @@
                     <a href="https://laboratoires-botanique-avancee.com/en" hreflang="en" lang="en">EN</a>
                   </div>
                 </noscript>
-              {% endif %}
+              {% comment %}{% endif %}{% endcomment %}
             {%- endif -%}
           </li>
         {%- endif -%}
