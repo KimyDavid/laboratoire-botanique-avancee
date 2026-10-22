@@ -59,6 +59,15 @@
       <script src="{{ 'vendor/qrcode.js' | shopify_asset_url }}" defer></script>
     {%- endif -%}
     
+    <script data-cookieconsent="ignore">
+      window.Shopify = window.Shopify || {};
+      Shopify.designMode = Shopify.designMode ?? {{ request.design_mode | json }};
+      Shopify.locale = Shopify.locale || {{ request.locale.iso_code | json }};
+      Shopify.country = Shopify.country || {{ localization.country.iso_code | json }};
+      Shopify.routes = Shopify.routes || { root: {{ routes.root_url | append: '/' | replace: '//', '/' | json }} };
+      Shopify.currency = Shopify.currency || { active: {{ cart.currency.iso_code | json }}, rate: "1.0" };
+    </script>
+
     <script>
       window.freeGiftConfig = {
         enabled: {{ settings.free_gift_enabled | json }},
