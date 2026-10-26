@@ -20,6 +20,7 @@
         },
         "variant_picker_A6D8MV": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "hide_sold_out_variants": true,
             "selector_style": "block",
