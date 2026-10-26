@@ -204,7 +204,7 @@
         "min_height": 460,
         "eyebrow": "Pour commencer",
         "title": "Le coffret découverte",
-        "description": "<p>Nos deux soins emblématiques pour une peau plus lisse, plus ferme, nourrie et apaisée dès 7 jours.&nbsp;Efficacité prouvée cliniquement.</p>",
+        "description": "<p>Nos deux soins emblématiques pour une peau plus lisse, plus ferme, nourrie et apaisée dès 7 jours.&nbsp;Efficacité prouvée cliniquement.<br/><em><br/>La valeur de votre Coffret Découverte sera déduite lors de votre prochaine commande. Votre code vous sera communiqué par email.&nbsp;</em></p>",
         "button_label": "Acheter",
         "show_price": true,
         "background_color": "#3c626b",
