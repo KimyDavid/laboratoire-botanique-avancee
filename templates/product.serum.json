@@ -263,7 +263,7 @@
       "settings": {
         "title": "Efficacité prouvée cliniquement",
         "content": "",
-        "small_content": "<p>1. Mesure instrumentale, 39 femmes, 2 applications par jour pendant 3 mois.<br/>2. Test clinique par auto-scorage, 39 femmes, 2 applications par jour pendant 3 mois.<br/>3. Auto-évaluation, 39 femmes, 2 applications par jour pendant 3 mois.</p>",
+        "small_content": "<p>1. Mesure instrumentale, 40 femmes, 2 applications par jour pendant 3 mois.<br/>2. Test clinique par auto-scorage, 40 femmes, 2 applications par jour pendant 3 mois.<br/>3. Auto-évaluation, 40 femmes, 2 applications par jour pendant 3 mois.</p>",
         "content_visibility": "desktop",
         "button_label": "Voir tous les résultats",
         "button_link": "#",
@@ -424,7 +424,7 @@
           "type": "image_with_text",
           "settings": {
             "image": "shopify://shop_images/1950X1950_INGREDIENTS_CANTELLARIA_7264147f-d4df-47db-8392-04853b8f7e7b.webp",
-            "title": "Centalla Asiatica",
+            "title": "Centella Asiatica",
             "heading_tag": "h3",
             "content": "<p>Apaise la peau, favorise sa réparation et révèle un teint plus éclatant.</p>",
             "link_url": "",
