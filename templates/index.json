@@ -244,9 +244,9 @@
         "stat_nGtwE8": {
           "type": "stat",
           "settings": {
-            "eyebrow": "efficacité prouvée dès",
+            "eyebrow": "efficacité cliniquement prouvée en",
             "value": "3 mois",
-            "label": "cliniquement"
+            "label": ""
           }
         }
       },
