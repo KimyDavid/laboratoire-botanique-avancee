@@ -330,7 +330,7 @@
         "richtext_9wgDw9": {
           "type": "richtext",
           "settings": {
-            "content": "<p>*Test clinique par auto-scorage, 40 femmes caucasiennes, 2 applications par jour pendant 3 mois.<br/><br/>**Mesure instrumentale, 39 femmes caucasiennes, 2 applications par jour pendant 3 mois.<br/></p>",
+            "content": "<p>*Test clinique par auto-scorage, 40 femmes, 2 applications par jour pendant 3 mois.<br/><br/>**Mesure instrumentale, 39 femmes, 2 applications par jour pendant 3 mois.<br/></p>",
             "font_size": "xxs"
           }
         },
