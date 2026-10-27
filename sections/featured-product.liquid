@@ -66,7 +66,7 @@
             {%- endif -%}
 
             {%- if section.settings.show_price -%}
-              <span class="featured-lba__price h3">{{ featured_product.price | money }}</span>
+              <span class="featured-lba__price h3"><span class="weglot-exclude">{{ featured_product.price | money }}</span></span>
             {%- endif -%}
           </div>
         {%- endif -%}

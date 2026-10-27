@@ -73,9 +73,9 @@
 
                       <td class="text-end">
                         {%- if settings.currency_code_enabled -%}
-                          {{- line_item.final_line_price | money_with_currency -}}
+                          <span class="weglot-exclude">{{- line_item.final_line_price | money_with_currency -}}</span>
                         {%- else -%}
-                          {{- line_item.final_line_price | money -}}
+                          <span class="weglot-exclude">{{- line_item.final_line_price | money -}}</span>
                         {%- endif -%}
                       </td> {% endcomment %}
                     </tr>
@@ -118,9 +118,9 @@
                     <span class="cta text-start">{{ 'cart.general.subtotal' | t }}</span>
                     <span class="text-end">
                       {%- if settings.currency_code_enabled -%}
-                        {{- cart.items_subtotal_price | money_with_currency -}}
+                        <span class="weglot-exclude">{{- cart.items_subtotal_price | money_with_currency -}}</span>
                       {%- else -%}
-                        {{- cart.items_subtotal_price | money -}}
+                        <span class="weglot-exclude">{{- cart.items_subtotal_price | money -}}</span>
                       {%- endif -%}
                     </span>
                   </div>
@@ -129,7 +129,7 @@
                 {% for discount_application in cart.cart_level_discount_applications %}
                   <div class="h-stack justify-between gap-4 w-full">
                     <span class="discount-badge text-xs">{%- render 'icon' with 'discount', width: 12 -%} {{- discount_application.title -}}</span>
-                    <span class="text-subdued">-{{ discount_application.total_allocated_amount | money }}</span>
+                    <span class="text-subdued">-<span class="weglot-exclude">{{ discount_application.total_allocated_amount | money }}</span></span>
                   </div>
                 {% endfor %}
                 
@@ -152,7 +152,7 @@
 
                 <div class="h-stack justify-between gap-4 w-full">
                   <span class="cta text-start">{{ 'cart.general.total' | t }}</span>
-                  <span class="text-end">{{- cart.total_price | money_with_currency -}}</span>
+                  <span class="text-end"><span class="weglot-exclude">{{- cart.total_price | money_with_currency -}}</span></span>
                 </div>
 
                 {%- if section.settings.show_accelerated_buttons and additional_checkout_buttons -%}

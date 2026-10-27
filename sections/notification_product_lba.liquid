@@ -200,7 +200,7 @@
             <div class="notif-price cta">
               {%- if notif_variant -%}
               {%- else -%}
-                {{ notif_product.price | money }}
+                <span class="weglot-exclude">{{ notif_product.price | money }}</span>
               {%- endif -%}
             </div>
             <a href="{% if notif_variant %}{{ notif_variant.url }}{% else %}{{ notif_product.url }}{% endif %}" class="cta cta--underline notif-link">ACHETER</a>

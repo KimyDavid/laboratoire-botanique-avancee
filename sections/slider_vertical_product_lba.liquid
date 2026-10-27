@@ -129,7 +129,7 @@
                     </div>
                     <div class="content_info _right flex gap-48">                  
                       {% if product %}
-                        <div class="price cta"><span>{{ product.price | money }}</span> {% if product.metafields.custom.contenance != blank %}<span>|</span><span>{{ product.metafields.custom.contenance }}</span>{% endif %}</div>
+                        <div class="price cta"><span><span class="weglot-exclude">{{ product.price | money }}</span></span> {% if product.metafields.custom.contenance != blank %}<span>|</span><span>{{ product.metafields.custom.contenance }}</span>{% endif %}</div>
                         <a href="{{ product.url }}" class="cta  btn-t-white-lba" style="">
                           {{ 'product.general.buy_btn' | t }} {% render 'icon', icon: 'arrow-right-lba' %}
                         </a>

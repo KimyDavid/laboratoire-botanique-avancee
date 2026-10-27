@@ -263,7 +263,7 @@ Supported variables
                         {{ block.settings.button_label | default: 'Acheter' }}
                       </a>
 
-                      <span class="product-upsell__price h3">{{ upsell_product.price | money }}</span>
+                      <span class="product-upsell__price h3"><span class="weglot-exclude">{{ upsell_product.price | money }}</span></span>
                     </div>
                   </div>
                 </div>
@@ -281,7 +281,7 @@ Supported variables
                       <div class="relative-product__content">
                         <div class="relative-product__header">
                           <span class="relative-product__label h3">{{ item_label }}</span>
-                          <span class="relative-product__price h3">{{ sub_product.price | money }}</span>
+                          <span class="relative-product__price h3"><span class="weglot-exclude">{{ sub_product.price | money }}</span></span>
                         </div>
                       </div>
                     </a>

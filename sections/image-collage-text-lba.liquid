@@ -191,9 +191,9 @@
 
                   {%- if has_main_button and button_product != blank -%}
                     {%- if section.settings.price_prefix != blank -%}
-                      <span class="collage-text__price collage-text__price--prefixed h3"><span class="collage-text__price-prefix">{{ section.settings.price_prefix }} - </span>{{ button_product.price | money }}</span>
+                      <span class="collage-text__price collage-text__price--prefixed h3"><span class="collage-text__price-prefix">{{ section.settings.price_prefix }} - </span><span class="weglot-exclude">{{ button_product.price | money }}</span></span>
                     {%- else -%}
-                      <span class="collage-text__price h3">{{ button_product.price | money }}</span>
+                      <span class="collage-text__price h3"><span class="weglot-exclude">{{ button_product.price | money }}</span></span>
                     {%- endif -%}
                   {%- endif -%}
 

@@ -10,7 +10,7 @@
 
 {%- capture teaser_button_label -%}
   {{- section.settings.button_label | default: 'Acheter' -}}
-  {%- if section.settings.show_price_in_button and teaser_product != blank %} - {{ teaser_product.price | money_without_trailing_zeros }}{% endif -%}
+  {%- if section.settings.show_price_in_button and teaser_product != blank %} - <span class="weglot-exclude">{{ teaser_product.price | money_without_trailing_zeros }}</span>{% endif -%}
 {%- endcapture -%}
 
 {%- if teaser_image != blank or teaser_title != blank -%}

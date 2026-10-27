@@ -168,7 +168,7 @@
         {% if product %}
           <div class="content_info _right flex gap-48">  
             <div class="price cta white"  style="">
-              <span>{{ product.price | money }}</span> 
+              <span><span class="weglot-exclude">{{ product.price | money }}</span></span> 
               {% if product.metafields.custom.contenance != blank %}<span class="separator">|</span><span>{{ product.metafields.custom.contenance }}</span>{% endif %}
             </div>
             <a href="{{ product.url }}" class="cta  btn-t-white-lba" style="">

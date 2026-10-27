@@ -27,9 +27,9 @@ Supported variables
           </facet-link>
 
           {%- if section.settings.show_filter_group_name -%}
-            <span class="text-subdued">{{- filter.label }}: {{ filter.min_value.value | default: 0 | money_without_trailing_zeros }} - {{ filter.max_value.value | default: filter.range_max | money_without_trailing_zeros -}}</span>
+            <span class="text-subdued">{{- filter.label }}: <span class="weglot-exclude">{{ filter.min_value.value | default: 0 | money_without_trailing_zeros }}</span> - <span class="weglot-exclude">{{ filter.max_value.value | default: filter.range_max | money_without_trailing_zeros -}}</span></span>
           {%- else -%}
-            <span class="text-subdued">{{- filter.min_value.value | default: 0 | money_without_trailing_zeros }} - {{ filter.max_value.value | default: filter.range_max | money_without_trailing_zeros -}}</span>
+            <span class="text-subdued"><span class="weglot-exclude">{{- filter.min_value.value | default: 0 | money_without_trailing_zeros }}</span> - <span class="weglot-exclude">{{ filter.max_value.value | default: filter.range_max | money_without_trailing_zeros -}}</span></span>
           {%- endif -%}
         </div>
 

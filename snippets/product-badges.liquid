@@ -60,7 +60,7 @@ Supported variables
             {%- if settings.discount_mode == 'percentage' -%}
               {%- assign savings = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | round | append: '%' -%}
             {%- else -%}
-              {%- capture savings -%}{{ variant.compare_at_price | minus: variant.price | money }}{%- endcapture -%}
+              {%- capture savings -%}<span class="weglot-exclude">{{ variant.compare_at_price | minus: variant.price | money }}</span>{%- endcapture -%}
             {%- endif -%}
 
             {%- if show_on_sale_badge -%}

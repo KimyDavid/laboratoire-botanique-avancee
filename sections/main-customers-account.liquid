@@ -84,7 +84,7 @@
 
                                       <div>
                                         {% comment %} <p class="text-subdued">{{ 'customer.order.total' | t }}</p> {% endcomment %}
-                                        <p class="text-end">{{ order.total_net_amount | money }}</p>
+                                        <p class="text-end"><span class="weglot-exclude">{{ order.total_net_amount | money }}</span></p>
                                       </div>
 
                                       <div>
@@ -118,7 +118,7 @@
                                   <td>{{ order.created_at | date: "%d.%m.%y" }}</td>
                                   <td>{{ order.financial_status_label }}</td>
                                   <td>{{ order.fulfillment_status_label }}</td>
-                                  <td>{{ order.total_net_amount | money }}</td>
+                                  <td><span class="weglot-exclude">{{ order.total_net_amount | money }}</span></td>
                                   <td class="text-end"><span class="cta cta--underline">{{ 'customer.order.view_details' | t }}</span></td>
                                 </tr>
                               {%- endfor -%}

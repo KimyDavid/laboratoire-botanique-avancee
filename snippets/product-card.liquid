@@ -195,7 +195,7 @@ Supported variables
               {%- if show_prices -%}
                 {%- if product.tags contains 'has-recharge' and collection.handle != 'les-recharges' -%}
                   {%- assign recharge_product = product.metafields.custom.produit_recharge.value -%}
-                  <span class="price-list price-list--from">À partir de <span class="price-list__amount">{{ recharge_product.price | money }}</span></span>
+                  <span class="price-list price-list--from">À partir de <span class="price-list__amount"><span class="weglot-exclude">{{ recharge_product.price | money }}</span></span></span>
                 {%- else -%}
                   {%- render 'price-list', product: product, context: 'card' -%}
                 {%- endif -%}

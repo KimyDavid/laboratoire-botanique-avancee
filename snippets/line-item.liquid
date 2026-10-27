@@ -120,7 +120,7 @@ Supported variables
         <ul class="v-stack justify-items-start gap-1 unstyled-list" role="list">
           {%- for discount_allocation in line_item.line_level_discount_allocations -%}
             <li class="discount-badge text-xs">
-              {%- render 'icon' with 'discount', width: 12 -%} {{ discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})
+              {%- render 'icon' with 'discount', width: 12 -%} {{ discount_allocation.discount_application.title }} (-<span class="weglot-exclude">{{ discount_allocation.amount | money }}</span>)
             </li>
           {%- endfor -%}
         </ul>

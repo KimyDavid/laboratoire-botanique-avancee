@@ -126,7 +126,7 @@
                         {%- render 'multi-column-button', style: button_style, size: section.settings.button_size, type: 'button', content: block_button_label, aria_controls: popup_id -%}
 
                         {%- if block_product != blank and block.settings.show_price -%}
-                          <span class="multi-column__price h3">{{ block_product.price | money }}</span>
+                          <span class="multi-column__price h3"><span class="weglot-exclude">{{ block_product.price | money }}</span></span>
                         {%- endif -%}
                       {%- elsif block_product != blank -%}
                         {%- comment -%}Without a selling_plan field, the variant is added as a one-time purchase, even if the product offers subscriptions{%- endcomment -%}
@@ -153,7 +153,7 @@
                         {%- endif -%}
 
                         {%- if block.settings.show_price -%}
-                          <span class="multi-column__price h3">{{ block_product.price | money }}</span>
+                          <span class="multi-column__price h3"><span class="weglot-exclude">{{ block_product.price | money }}</span></span>
                         {%- endif -%}
                       {%- else -%}
                         {%- render 'multi-column-button', style: button_style, size: section.settings.button_size, href: block_url, content: block_button_label -%}
