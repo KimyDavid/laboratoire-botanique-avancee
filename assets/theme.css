@@ -2527,7 +2527,7 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
 .product-card__info .product-subtitle {
   margin-bottom: 12px;
   margin-top: -8px;
-  font-family: 'CormorantGaramond Regular', serif;
+  font-family: 'Neutraface Text Demi';
   font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -9316,7 +9316,7 @@ product-rerender {
 .h6, :where(.prose h6) {
   font-size: var(--text-h6);
   line-height: 1.7;
-  font-family: 'CormorantGaramond Regular' !important;
+  font-family: 'Neutraface Text Demi' !important;
   letter-spacing: 0 !important;
   text-transform: none !important;
 }
@@ -9749,7 +9749,7 @@ ul {
 .main-title {
   text-align: center;
   margin: 128px auto;
-  font-family: 'CormorantGaramond Light';
+  font-family: 'Neutraface Text Demi';
   font-size: 56px;
   font-weight: 300;
   letter-spacing: 0px;
@@ -11113,7 +11113,7 @@ body .container_header_contact .contact_reference {
 .product-upsell__eyebrow {
   font-size: 14px;
   margin-bottom: 4px;
-  font-family: 'CormorantGaramond Regular', serif;
+  font-family: 'Neutraface Text Demi';
 }
 
 .product-upsell__description {
@@ -11382,7 +11382,7 @@ collage-text {
 
 .collage-text__stat-eyebrow {
   margin-bottom: 4px !important;
-  font-family: 'CormorantGaramond Regular', serif;
+  font-family: 'Neutraface Text Demi';
   font-size: 13px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -11833,7 +11833,7 @@ collage-text {
 
 .key-figures__eyebrow {
   margin: 0 0 12px;
-  font-family: 'CormorantGaramond Regular', serif;
+  font-family: 'Neutraface Text Demi';
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -12157,7 +12157,7 @@ collage-text {
 
 .featured-lba__eyebrow {
   margin: 0 0 8px;
-  font-family: 'CormorantGaramond Regular', serif;
+  font-family: 'Neutraface Text Demi';
   font-size: 14px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -12320,7 +12320,7 @@ collage-text {
 }
 
 .testimonial-grid__category {
-  font-family: 'CormorantGaramond Regular', serif;
+  font-family: 'Neutraface Text Demi';
   letter-spacing: 0.14em;
 }
 

@@ -187,7 +187,7 @@ section .section-reviews .jdgm-carousel-review-list {
 }
 
 section .section-reviews .jm-average-rating-display .jm-text:last-child {
-  font-family: CormorantGaramond Regular;
+  font-family: 'Neutraface Text Demi';
   font-size: 14px;
   line-height: 1.6;
   letter-spacing: .12em;
