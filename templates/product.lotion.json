@@ -43,6 +43,12 @@
           "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
           "settings": {}
         },
+        "price_c3kjpN": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -88,6 +94,7 @@
         "text_qa4MPD",
         "relative_products_JBLBDc",
         "recharge_subscriptions_subscription_widget_v2_zxAiiW",
+        "price_c3kjpN",
         "buy_buttons",
         "button_HUyMtW",
         "product_upsell_A8RkbM"
