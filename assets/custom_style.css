@@ -1168,7 +1168,7 @@ div[slot="footer"] .contents .button--outline:hover {
 }
 @media (min-width: 768px) {
   .slideshow__slide-subtitle {
-    font-family: 'Neutraface Text Demi';
+    font-family: 'CormorantGaramond Regular';
   }
 }
 
@@ -1197,7 +1197,7 @@ div[slot="footer"] .contents .button--outline:hover {
 @media (min-width: 1024px) {
   .slideshow__slide-subtitle.slideshow__slide-content p {
     font-variant: none;
-    font-family: 'Neutraface Text Demi';
+    font-family: 'CormorantGaramond Regular';
   }
 }
 
@@ -1228,7 +1228,7 @@ div[slot="footer"] .contents .button--outline:hover {
 }
 
 .slideshow__slide-title.h1 {
-  font-family: 'Neutraface Text Demi';
+  font-family: 'CormorantGaramond Regular';
   font-variant: all-small-caps;
   font-size: 56px;
   line-height: 1.2;
@@ -1243,7 +1243,7 @@ div[slot="footer"] .contents .button--outline:hover {
     line-height: 1;
     font-weight: 300;
     margin-top: 12px;
-    font-family: 'Neutraface Text Demi';
+    font-family: 'CormorantGaramond Light';
   }
 }
 
@@ -1401,7 +1401,7 @@ div[slot="footer"] .contents .button--outline:hover {
 
 .jdgm-prev-badge .jdgm-prev-badge__text {
   margin-left: 5px;
-        font-family: 'Neutraface Text Demi';
+        font-family: 'CormorantGaramond Regular';
         font-size: 14px;
         line-height: 1.6;
         letter-spacing: 0.12em;
