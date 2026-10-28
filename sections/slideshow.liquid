@@ -211,15 +211,13 @@ may have important consequence on the section itself.
                   </div>
                 {%- endif -%}
                 {%- if block.settings.title != blank or block.settings.mobile_title != blank -%}
-                  <h1 class="h1 slideshow__slide-title slideshow__slide-title--video" style="--title-size-mobile: {{ block.settings.mobile_title_size }}px; --title-size-desktop: {{ block.settings.title_size }}px;">
-                    {%- if block.settings.mobile_title != blank -%}
-                      {%- comment -%}Different titles: the mobile one below 1024px, the desktop one above{%- endcomment -%}
-                      <span class="slideshow__slide-title-mobile">{{ block.settings.mobile_title | newline_to_br }}</span>
-                      <span class="slideshow__slide-title-desktop">{{ block.settings.title | newline_to_br }}</span>
-                    {%- else -%}
-                      {{- block.settings.title | newline_to_br -}}
-                    {%- endif -%}
-                  </h1>
+                  {%- capture title_style -%}--title-size-mobile: {{ block.settings.mobile_title_size }}px; --title-size-desktop: {{ block.settings.title_size }}px;{%- endcapture -%}
+                  {%- if block.settings.mobile_title != blank and block.settings.title != blank -%}
+                    <h1 class="h1 slideshow__slide-title slideshow__slide-title--video slideshow__slide-title-mobile" style="{{ title_style }}">{{ block.settings.mobile_title | newline_to_br }}</h1>
+                    <p class="h1 slideshow__slide-title slideshow__slide-title--video slideshow__slide-title-desktop" style="{{ title_style }}" aria-hidden="true">{{ block.settings.title | newline_to_br }}</p>
+                  {%- else -%}
+                    <h1 class="h1 slideshow__slide-title slideshow__slide-title--video" style="{{ title_style }}">{{ block.settings.title | default: block.settings.mobile_title | newline_to_br }}</h1>
+                  {%- endif -%}
                 {%- endif -%}
                 {%- if block.settings.subheading != blank -%}
                   <p class="slideshow__slide-subtitle slideshow__slide-subtitle--video" style="--subtitle-size-desktop: {{ block.settings.subtitle_size }}px;">{{ block.settings.subheading }}</p>

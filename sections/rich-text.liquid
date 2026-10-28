@@ -47,7 +47,11 @@
               {%- assign richtext_content = block.settings.content | strip_html | strip -%}
               {%- if richtext_content != blank -%}
                 <div {{ block.shopify_attributes }}>
-                  {{- block.settings.content -}}
+                  {%- if block.settings.h3_as_paragraph -%}
+                    {{- block.settings.content | replace: '<h3>', '<p class="h3">' | replace: '</h3>', '</p>' -}}
+                  {%- else -%}
+                    {{- block.settings.content -}}
+                  {%- endif -%}
                 </div>
               {%- endif -%}
             {%- when 'page' -%}
@@ -263,6 +267,13 @@
           "id": "content",
           "label": "t:global.text.content",
           "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+        },
+        {
+          "type": "checkbox",
+          "id": "h3_as_paragraph",
+          "label": "Afficher les titres H3 comme paragraphes (SEO)",
+          "info": "Même apparence, mais sans balise de titre.",
+          "default": false
         }
       ]
     },
