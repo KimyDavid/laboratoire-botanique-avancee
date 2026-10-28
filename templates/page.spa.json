@@ -275,6 +275,51 @@
         "visibility": "all"
       }
     },
+    "image_with_text_8Raxrj": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_niFcAj": {
+          "type": "heading",
+          "settings": {
+            "text": "SHEBARA RESORT",
+            "heading_tag": "h2"
+          }
+        },
+        "richtext_7f6qgW": {
+          "type": "richtext",
+          "settings": {
+            "content": "<h3>the red sea destination, arabie saoudite</h3><p>Sur une île de la mer Rouge, distinguée par Time Magazine parmi les « World’s Greatest Places 2025 », le Shebara Resort accueille des soins Laboratoires Botanique Avancée. Les tensions se dissolvent, le corps retrouve son équilibre, la peau révèle son éclat.</p>",
+            "font_size": "base"
+          }
+        },
+        "link_jcnCaL": {
+          "type": "link",
+          "settings": {
+            "text": "DÉCOUVRIR LE SPA",
+            "url": "https://airelles.com/fr/destination/chateau-de-versailles-hotel/spa-airelles-chateau-de-versailles"
+          }
+        }
+      },
+      "block_order": [
+        "heading_niFcAj",
+        "richtext_7f6qgW",
+        "link_jcnCaL"
+      ],
+      "custom_css": [],
+      "name": "t:sections.image_with_text.presets.image_with_text.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": false,
+        "image": "shopify://shop_images/SHEBARA_1.jpg",
+        "image_fullsize": true,
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": true,
+        "id": "",
+        "visibility": "all"
+      }
+    },
     "image_with_text_TVqgw3": {
       "type": "image-with-text",
       "blocks": {
@@ -404,6 +449,7 @@
     "image_with_text_EmHkxX",
     "image_with_text_EEA7Na",
     "image_with_text_LNnXkL",
+    "image_with_text_8Raxrj",
     "image_with_text_TVqgw3",
     "image_with_text_YADHKz",
     "image_with_text_gFELFG"
