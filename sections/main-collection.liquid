@@ -138,6 +138,19 @@ LIQUID
 <div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
   <div class="container_full">
     <div class="v-stack gap-6">
+            
+            <div class="container_header">
+              <div class="content _left">
+                <div class="container_title">
+                  <h1 class="h2">{{ collection.title }}</h1>
+                  <span>({{ collection.products_count }})</span>
+                </div>
+                <div class="container_description p">
+                  {{ collection.description }}
+                </div>
+              </div>
+            </div>
+            
       {%- if collection.all_products_count == 0 -%}
         <div class="empty-state">
           <div class="prose">
@@ -151,18 +164,6 @@ LIQUID
       {%- else -%}
         {%- if show_filters or section.settings.show_sort_by or section.settings.show_grid_mode_selector or section.settings.show_results_count -%}
           <height-observer variable="collection-toolbar" class="collection-toolbar full-bleed">
-            
-            <div class="container_header">
-              <div class="content _left">
-                <div class="container_title">
-                  <h1 class="h2">{{ collection.title }}</h1>
-                  <span>({{ collection.products_count }})</span>
-                </div>
-                <div class="container_description p">
-                  {{ collection.description }}
-                </div>
-              </div>
-            </div>
             <div class="collection-toolbar__button-list">
               {%- if show_filters -%}
                 <div class="collection-toolbar__button-container {% if section.settings.filter_layout == 'sidebar' %}md:hidden{% endif %}">
