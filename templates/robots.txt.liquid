@@ -1,14 +1,14 @@
-{% for group in robots.default_groups %}
-  {{- group.user_agent -}}
-
-  {% for rule in group.rules %}
-    {{- rule -}}
-  {% endfor %}
-
-  {%- if group.sitemap != blank -%}
-    {{ group.sitemap }}
-  {%- endif -%}
-{% endfor %}
+{%- for group in robots.default_groups -%}
+  {{- group.user_agent }}
+  {%- for rule in group.rules -%}
+    {%- unless rule.directive == 'Disallow' and rule.value contains '/policies/' %}
+{{ rule }}
+    {%- endunless -%}
+  {%- endfor -%}
+  {%- if group.sitemap != blank %}
+{{ group.sitemap }}
+  {%- endif %}
+{% endfor -%}
 
 Sitemap: https://laboratoires-botanique-avancee.com/pages/llms
 Sitemap: https://laboratoires-botanique-avancee.com/llms.txt
@@ -18,13 +18,18 @@ Sitemap: https://laboratoires-botanique-avancee.com/llms-full.txt
 # llms.txt: /pages/llms-txt
 
 User-agent: GPTBot
-Allow: / 
+User-agent: ClaudeBot
+User-agent: PerplexityBot
+User-agent: Google-Extended
 
-User-agent: ClaudeBot 
-Allow: / 
-
-User-agent: PerplexityBot 
-Allow: / 
-
-User-agent: Google-Extended 
 Allow: /
+Disallow: /cart
+Disallow: /carts
+Disallow: /checkout
+Disallow: /checkouts/
+Disallow: /account
+Disallow: /orders
+Disallow: /search
+Disallow: /collections/*sort_by*
+Disallow: /*preview_theme_id*
+Disallow: /recommendations/products
