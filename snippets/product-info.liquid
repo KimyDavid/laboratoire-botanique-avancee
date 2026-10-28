@@ -501,7 +501,11 @@ Supported variables
             {%- when 'text' -%}
               {%- if block.settings.text != blank -%}
                 <div class="prose">
-                  {{- block.settings.text -}}
+                  {%- if block.settings.headings_as_paragraphs -%}
+                    {%- render 'headings-to-paragraphs', html: block.settings.text -%}
+                  {%- else -%}
+                    {{- block.settings.text -}}
+                  {%- endif -%}
                 </div>
               {%- endif -%}
 

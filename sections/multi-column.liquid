@@ -114,10 +114,20 @@
               {%- if block.settings.title != blank or block.settings.content != blank or block_button_label != blank -%}
                 <div class="text-{{ section.settings.text_alignment }} multi-column__content {% if section.settings.spacing == 'xs' %}multi-column__content--spacing{% endif %}">
                   {%- if block.settings.title != blank -%}
-                    <{{ block.settings.heading_tag }} class="{{ block.settings.heading_tag }}" style="margin-bottom:4px;">{{ block.settings.title }}</{{ block.settings.heading_tag }}>
+                    {%- liquid
+                      assign title_html_tag = block.settings.html_tag | default: 'auto'
+                      if title_html_tag == 'auto'
+                        assign title_html_tag = block.settings.heading_tag
+                      endif
+                    -%}
+                    <{{ title_html_tag }} class="{{ block.settings.heading_tag }}" style="margin-bottom:4px;">{{ block.settings.title }}</{{ title_html_tag }}>
                   {%- endif -%}
 
-                  {{- block.settings.content -}}
+                  {%- if block.settings.content_headings_as_paragraphs -%}
+                    {%- render 'headings-to-paragraphs', html: block.settings.content, plain: true -%}
+                  {%- else -%}
+                    {{- block.settings.content -}}
+                  {%- endif -%}
 
                   {%- if block_button_label != blank and block_url != blank or block_button_label != blank and popup_handle != blank -%}
                     <div class="multi-column__footer">
@@ -451,10 +461,30 @@
           "default": "h3"
         },
         {
+          "type": "select",
+          "id": "html_tag",
+          "label": "Balise HTML du titre",
+          "info": "Par défaut, identique au style. Permet un H2 avec le style H3, ou un paragraphe (SEO).",
+          "options": [
+            { "value": "auto", "label": "Identique au style" },
+            { "value": "h2", "label": "H2" },
+            { "value": "h3", "label": "H3" },
+            { "value": "p", "label": "Paragraphe" }
+          ],
+          "default": "auto"
+        },
+        {
           "type": "richtext",
           "id": "content",
           "label": "t:global.text.content",
           "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
+        },
+        {
+          "type": "checkbox",
+          "id": "content_headings_as_paragraphs",
+          "label": "Titres du contenu en paragraphes (SEO)",
+          "info": "Même apparence, sans balise de titre (ex. mentions, notes de bas de page).",
+          "default": false
         },
         {
           "type": "url",
@@ -553,10 +583,30 @@
           "default": "h3"
         },
         {
+          "type": "select",
+          "id": "html_tag",
+          "label": "Balise HTML du titre",
+          "info": "Par défaut, identique au style. Permet un H2 avec le style H3, ou un paragraphe (SEO).",
+          "options": [
+            { "value": "auto", "label": "Identique au style" },
+            { "value": "h2", "label": "H2" },
+            { "value": "h3", "label": "H3" },
+            { "value": "p", "label": "Paragraphe" }
+          ],
+          "default": "auto"
+        },
+        {
           "type": "richtext",
           "id": "content",
           "label": "t:global.text.content",
           "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
+        },
+        {
+          "type": "checkbox",
+          "id": "content_headings_as_paragraphs",
+          "label": "Titres du contenu en paragraphes (SEO)",
+          "info": "Même apparence, sans balise de titre (ex. mentions, notes de bas de page).",
+          "default": false
         },
         {
           "type": "url",

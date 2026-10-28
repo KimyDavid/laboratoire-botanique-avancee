@@ -43,6 +43,7 @@
         "text_qa4MPD": {
           "type": "text",
           "settings": {
+            "headings_as_paragraphs": true,
             "text": "<h4><strong>produite en france.<br/>96% d’ingrédients d’origine naturelle.*<br/>Sans ingrédient controversé.</strong></h4>"
           }
         },
@@ -154,6 +155,7 @@
       "type": "image-collage-text-lba",
       "name": "Technologies néo-regen (mobile)",
       "settings": {
+        "title_tag": "p",
         "image_main": "shopify://shop_images/NEW_GAMME_LOTION2_3.jpg",
         "image_secondary_1_position": "top",
         "image_secondary_2": "shopify://shop_images/Rectangle_5872_013c8d41-2e75-49fc-b2e3-742ee1aff201.png",
@@ -336,6 +338,7 @@
       ],
       "name": "Contenu + chiffres clés",
       "settings": {
+        "title_tag": "p",
         "title": "Efficacité prouvée cliniquement",
         "content": "",
         "small_content": "<p>1. Test clinique par mesure instrumentale, 39 femmes caucasiennes, 2 applications par jour pendant 3 mois. &nbsp; &nbsp; &nbsp;2. Test clinique par auto-scorage, 39 femmes, 2 applications par jour pendant 3 mois.</p>",
@@ -559,6 +562,7 @@
       "type": "image-collage-text-lba",
       "name": "Prouesse de formulation (mobile)",
       "settings": {
+        "title_tag": "p",
         "image_main": "shopify://shop_images/NEW_GAMME_LOTION2_3_1.jpg",
         "image_secondary_1_position": "top",
         "image_secondary_2": "shopify://shop_images/1950X1950_TEXTURE_FRETTE_CREME.webp",
@@ -647,6 +651,8 @@
         "image_with_text_zVYNDC": {
           "type": "image_with_text",
           "settings": {
+            "html_tag": "p",
+            "content_headings_as_paragraphs": true,
             "image": "shopify://shop_images/1950X1950_TEXTURE_FRETTE_CREME.webp",
             "title": "Prouesse de formulation",
             "heading_tag": "h3",
@@ -661,6 +667,7 @@
         "image_with_text_79Rz9D": {
           "type": "image_with_text",
           "settings": {
+            "html_tag": "h2",
             "image": "shopify://shop_images/Rectangle_6003.png",
             "title": "Conseils d’utilisation",
             "heading_tag": "h3",

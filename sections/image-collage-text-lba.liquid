@@ -87,7 +87,8 @@
               {%- endif -%}
 
               {%- if section.settings.title != blank -%}
-                <h2 class="collage-text__title h2">{{ section.settings.title | newline_to_br }}</h2>
+                {%- assign title_tag = section.settings.title_tag | default: 'h2' -%}
+                <{{ title_tag }} class="collage-text__title h2">{{ section.settings.title | newline_to_br }}</{{ title_tag }}>
               {%- endif -%}
 
               {%- if section.settings.eyebrow != blank and section.settings.eyebrow_position != 'above' -%}
@@ -296,6 +297,18 @@
       "id": "title",
       "label": "Titre",
       "info": "Un retour à la ligne est conservé à l'affichage."
+    },
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "Balise HTML du titre",
+      "info": "Apparence inchangée. Mettre « Paragraphe » sur la version en double (mobile/desktop) pour le SEO.",
+      "options": [
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "p", "label": "Paragraphe" }
+      ],
+      "default": "h2"
     },
     {
       "type": "richtext",

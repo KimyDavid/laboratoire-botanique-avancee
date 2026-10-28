@@ -1416,3 +1416,24 @@ div[slot="footer"] .contents .button--outline:hover {
         text-transform: uppercase;
         font-weight: bold;
 }
+
+.prose p.h2, .prose p.h3, .prose p.h4 {
+  margin-block-start: 1.5rem;
+}
+
+.prose :where(p.h2 + *, p.h3 + *, p.h4 + *) {
+  margin-block-start: .5rem;
+}
+
+p.heading-as-p,
+.multi-column__content p.heading-as-p {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.heading-as-p--1 { font-size: 2em; }
+.heading-as-p--2 { font-size: 1.5em; }
+.heading-as-p--3 { font-size: 1.17em; }
+.heading-as-p--4 { font-size: 1em; }
+.heading-as-p--5 { font-size: .83em; }
+.heading-as-p--6 { font-size: .67em; }

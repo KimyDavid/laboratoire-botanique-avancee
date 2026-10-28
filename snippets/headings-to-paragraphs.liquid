@@ -1,0 +1,24 @@
+{%- comment -%}
+Affiche un contenu richtext en remplaçant les titres <h1>…<h6> par des <p class="hN"> :
+même apparence, sans balise de titre (SEO).
+
+Variables :
+* html (obligatoire)
+* plain : true si les titres n'avaient pas de style du thème (hors .prose) ; on reproduit alors le style
+  par défaut du navigateur avec les classes heading-as-p (voir custom_style.css)
+{%- endcomment -%}
+
+{%- liquid
+  assign output = html
+  for i in (1..6)
+    assign open_tag = '<h' | append: i | append: '>'
+    assign close_tag = '</h' | append: i | append: '>'
+    if plain
+      assign new_open_tag = '<p class="heading-as-p heading-as-p--' | append: i | append: '">'
+    else
+      assign new_open_tag = '<p class="h' | append: i | append: '">'
+    endif
+    assign output = output | replace: open_tag, new_open_tag | replace: close_tag, '</p>'
+  endfor
+  echo output
+-%}

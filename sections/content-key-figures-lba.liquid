@@ -23,7 +23,8 @@
     <div class="key-figures__inner">
       <div class="key-figures__text">
         {%- if section.settings.title != blank -%}
-          <h2 class="key-figures__title h2">{{ section.settings.title | newline_to_br }}</h2>
+          {%- assign title_tag = section.settings.title_tag | default: 'h2' -%}
+          <{{ title_tag }} class="key-figures__title h2">{{ section.settings.title | newline_to_br }}</{{ title_tag }}>
         {%- endif -%}
 
         {%- if section.settings.content != blank -%}
@@ -128,6 +129,18 @@
       "label": "Titre",
       "info": "Un retour à la ligne est conservé à l'affichage.",
       "default": "Le premier laboratoire au coeur d'un domaine de 300 hectares"
+    },
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "Balise HTML du titre",
+      "info": "Apparence inchangée. Mettre « Paragraphe » sur la version en double (mobile/desktop) pour le SEO.",
+      "options": [
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "p", "label": "Paragraphe" }
+      ],
+      "default": "h2"
     },
     {
       "type": "richtext",
