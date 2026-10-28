@@ -304,7 +304,7 @@
         "image_position": "right",
         "title": "LA TECHNOLOGIE EXCLUSIVE NEO-REGEN : UNE TRIPLE EFFICACITÉ",
         "text": "<p>NEO-REGEN réactive 136 gènes impliqués dans le vieillissement de la peau soutenant et protégeant ses capacités régénératives. Cocréée avec le docteur Lemaitre, pionnier de la longévité cellulaire. </p><p>Son efficacité a été démontrée cliniquement à 3 niveaux : Régénération tissulaire, cellulaire et moléculaire.</p><p>Composition : cellules souches de Lys et de Pivoine au pouvoir de régénération infini et Eau de Baulieu liposomée.</p>",
-        "button_link": "https://laboratoires-botanique-avancee.com/pages/expertise/#technologie-neoregen",
+        "button_link": "https://laboratoires-botanique-avancee.com/pages/expertise#technologie-neoregen",
         "button_label": "Découvrir le neo-regen",
         "id": "neo-regen"
       }
@@ -323,7 +323,7 @@
             "title": "NEO-REGEN TECHNOLOGIE EXCLUSIVE",
             "description": "<p><strong>Triple efficacité </strong>: relance la régénération de la peau à 3 niveaux</p><p>-Régénération cellulaire<br/>-Régénération moléculaire<br/>-Régénération tissulaire<br/><br/>Créée en collaboration avec le Dr Lemaitre, l’expert français de la longévité. </p>",
             "button_texte": "Découvrir le neo-regen",
-            "button": "/pages/expertise/#technologie-neoregen"
+            "button": "/pages/expertise#technologie-neoregen"
           }
         }
       },
@@ -433,7 +433,7 @@
         "image_position": "left",
         "title": "Gestuelle d'application",
         "text": "<p><span style=\"text-decoration:underline\">Relâchement musculaire et drainage</span><br/>Libérer les tensions des muscles puissants qui impactent la jeunesse du visage et son éclat.<br/><br/>Étape 1<br/>Relâchement en zigzag du muscle occipital, responsable des crispations du visage et de l'affaissement des paupières.</p><p></p><p><br/>Étape 2<br/>Lissage et drainage du cou et de la nuque, pour la résorption des toxines.<br/><br/><span style=\"text-decoration:underline\">Contouring</span></p><p>Pour redessiner et rehausser le contour du visage, ouvrir le regard.<br/><br/>Étape 1<br/>Sculpter les contours en liftant le visage, par des lignes successives qui épousent la structure osseuse des tissus.</p><p><br/>Étape 2<br/>Maintenir les tissus liftés avec l'autre main, d'un geste à l'autre afin d'ancrer le résultat.<br/></p><p></p><p></p>",
-        "button_link": "/pages/expertise/#dr-jm-lemaitre",
+        "button_link": "/pages/expertise#dr-jm-lemaitre",
         "button_label": "",
         "id": ""
       }
@@ -579,8 +579,6 @@
         "stack_products": false,
         "products_per_row_mobile": "2",
         "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 1,
-        "vertical_spacing_factor": 1,
         "subheading": ""
       }
     },

@@ -97,7 +97,7 @@
           "settings": {
             "title": "",
             "heading_tag": "h3",
-            "content": "<p><a href=\"/pages/histoire/#territoire-botanique\" target=\"_blank\" title=\"/pages/histoire/#territoire-botanique\">Baulieu, terroir botanique</a></p><p><a href=\"/pages/histoire/#artisanat-savoir-faire\" target=\"_blank\" title=\"/pages/histoire/#artisanat-savoir-faire\">Artisanat d’excellence</a></p><p><a href=\"/pages/histoire/#hospitalite\" target=\"_blank\" title=\"/pages/histoire/#hospitalite\">Art de recevoir</a></p><p><a href=\"/pages/nos-engagements\" target=\"_blank\" title=\"/pages/nos-engagements\">Nos engagements</a></p>",
+            "content": "<p><a href=\"/pages/histoire#territoire-botanique\" target=\"_blank\" title=\"/pages/histoire#territoire-botanique\">Baulieu, terroir botanique</a></p><p><a href=\"/pages/histoire#artisanat-savoir-faire\" target=\"_blank\" title=\"/pages/histoire#artisanat-savoir-faire\">Artisanat d’excellence</a></p><p><a href=\"/pages/histoire#hospitalite\" target=\"_blank\" title=\"/pages/histoire#hospitalite\">Art de recevoir</a></p><p><a href=\"/pages/nos-engagements\" target=\"_blank\" title=\"/pages/nos-engagements\">Nos engagements</a></p>",
             "link_url": "",
             "link_text": ""
           }
@@ -136,7 +136,7 @@
           "settings": {
             "title": "",
             "heading_tag": "h3",
-            "content": "<p><a href=\"/pages/expertise/#laboratoire-biotechnologie\" target=\"_blank\" title=\"/pages/expertise/#laboratoire-biotechnologie\">Nos laboratoires de biotechnologie</a></p><p><a href=\"/pages/expertise/#laboratoire-biotechnologie\" target=\"_blank\" title=\"/pages/expertise/#laboratoire-biotechnologie\">La technologie Neo-Regen</a></p><p><a href=\"/pages/expertise/#dr-jm-lemaitre\" target=\"_blank\" title=\"/pages/expertise/#dr-jm-lemaitre\">Dr Jean-Marc LEMAITRE</a></p><p><a href=\"/pages/expertise/#prouesse-formulation\" target=\"_blank\" title=\"/pages/expertise/#prouesse-formulation\">Une prouesse de formulation</a></p>",
+            "content": "<p><a href=\"/pages/expertise#laboratoire-biotechnologie\" target=\"_blank\" title=\"/pages/expertise#laboratoire-biotechnologie\">Nos laboratoires de biotechnologie</a></p><p><a href=\"/pages/expertise#laboratoire-biotechnologie\" target=\"_blank\" title=\"/pages/expertise#laboratoire-biotechnologie\">La technologie Neo-Regen</a></p><p><a href=\"/pages/expertise#dr-jm-lemaitre\" target=\"_blank\" title=\"/pages/expertise#dr-jm-lemaitre\">Dr Jean-Marc LEMAITRE</a></p><p><a href=\"/pages/expertise#prouesse-formulation\" target=\"_blank\" title=\"/pages/expertise#prouesse-formulation\">Une prouesse de formulation</a></p>",
             "link_url": "",
             "link_text": ""
           }

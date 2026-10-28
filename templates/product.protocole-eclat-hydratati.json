@@ -199,7 +199,7 @@
         "image_position": "right",
         "title": "LA TECHNOLOGIE EXCLUSIVE NEO-REGEN : UNE TRIPLE EFFICACITÉ",
         "text": "<p>NEO-REGEN réactive 136 gènes impliqués dans le vieillissement de la peau, relançant ainsi ses capacités régénératives. Cocréée avec le Dr Lemaitre, pionnier de la longévité cellulaire. </p><p>Son efficacité a été démontrée cliniquement à 3 niveaux :  Régénération tissulaire, cellulaire et moléculaire.</p><p>Composition : cellules souches de Lys et de Pivoine au pouvoir de régénération infini et Eau de Baulieu liposomée relipidante.</p>",
-        "button_link": "https://laboratoires-botanique-avancee.com/pages/expertise/#technologie-neoregen",
+        "button_link": "https://laboratoires-botanique-avancee.com/pages/expertise#technologie-neoregen",
         "button_label": "Découvrir le neo-regen",
         "id": "neo-regen"
       }
@@ -218,7 +218,7 @@
             "title": "NEO-REGEN TECHNOLOGIE EXCLUSIVE",
             "description": "<p><strong>Triple efficacité </strong>: relance la régénération de la peau à 3 niveaux</p><p>-Régénération cellulaire<br/>-Régénération moléculaire<br/>-Régénération tissulaire<br/><br/>Créée en collaboration avec le Dr Lemaitre, l’expert français de la<br/>longévité. </p>",
             "button_texte": "Découvrir le neo-regen",
-            "button": "/pages/expertise/#technologie-neoregen"
+            "button": "/pages/expertise#technologie-neoregen"
           }
         }
       },
@@ -337,7 +337,7 @@
         "image_position": "left",
         "title": "PREMIÈRE MONDIALE",
         "text": "<p><strong>Pour la première fois au monde </strong>et en collaboration avec le<strong> Dr Lemaitre</strong>, l'efficacité d'actifs cosmétiques est prouvée sur un modèle révolutionnaire, issu de 30 ans de recherche en médecine régénérative : <strong>l'organoïde de peau. </strong></p>",
-        "button_link": "/pages/expertise/#dr-jm-lemaitre",
+        "button_link": "/pages/expertise#dr-jm-lemaitre",
         "button_label": "En savoir plus",
         "id": ""
       }
@@ -392,8 +392,6 @@
         "stack_products": false,
         "products_per_row_mobile": "2",
         "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 1,
-        "vertical_spacing_factor": 1,
         "subheading": ""
       }
     },
