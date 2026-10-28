@@ -647,7 +647,7 @@
           "type": "button",
           "settings": {
             "label": "En savoir plus",
-            "link": "https://laboratoires-botanique-avancee.com/pages/spa/#philosophie",
+            "link": "https://laboratoires-botanique-avancee.com/pages/spa#philosophie",
             "popup": "",
             "style": "primary"
           }
@@ -702,7 +702,7 @@
           "type": "button",
           "settings": {
             "label": "Découvrir les soins",
-            "link": "https://laboratoires-botanique-avancee.com/pages/spa/#philosophie",
+            "link": "https://laboratoires-botanique-avancee.com/pages/spa#philosophie",
             "popup": "",
             "style": "primary"
           }

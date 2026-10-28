@@ -175,7 +175,7 @@
           "settings": {
             "title": "",
             "heading_tag": "h3",
-            "content": "<p><a href=\"/pages/spa/#philosophie\" target=\"_blank\" title=\"/pages/spa/#philosophie\">Notre philosophie</a></p><p><a href=\"/pages/spa/#nos-protocoles\" target=\"_blank\" title=\"/pages/spa/#nos-protocoles\">Nos protocoles régénératifs</a></p><p><a href=\"/pages/spa/#nos-maisons\" target=\"_blank\" title=\"/pages/spa/#nos-maisons\">Nos maisons d’exception</a></p>",
+            "content": "<p><a href=\"/pages/spa#philosophie\" target=\"_blank\" title=\"/pages/spa#philosophie\">Notre philosophie</a></p><p><a href=\"/pages/spa#nos-protocoles\" target=\"_blank\" title=\"/pages/spa#nos-protocoles\">Nos protocoles régénératifs</a></p><p><a href=\"/pages/spa#nos-maisons\" target=\"_blank\" title=\"/pages/spa#nos-maisons\">Nos maisons d’exception</a></p>",
             "link_url": "",
             "link_text": ""
           }

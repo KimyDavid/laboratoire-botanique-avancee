@@ -107,11 +107,11 @@
             "image_1": "shopify://shop_images/1950X1950_TEXTURE-OUTIL.webp",
             "image_1_heading": "les expériences de soin",
             "image_1_text": "",
-            "image_1_link": "/pages/spa/#nos-protocoles",
+            "image_1_link": "/pages/spa#nos-protocoles",
             "image_2": "shopify://shop_images/1950x1097_SPA_CHIMERE.webp",
             "image_2_heading": "notre philosophie",
             "image_2_text": "",
-            "image_2_link": "/pages/spa/#philosophie"
+            "image_2_link": "/pages/spa#philosophie"
           }
         }
       },
