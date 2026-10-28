@@ -18,17 +18,6 @@
             "heading_tag": "h2"
           }
         },
-        "variant_picker_A6D8MV": {
-          "type": "variant_picker",
-          "disabled": true,
-          "settings": {
-            "hide_sold_out_variants": true,
-            "selector_style": "block",
-            "swatch_selector_style": "swatch",
-            "variant_image_options": "",
-            "size_chart_page": ""
-          }
-        },
         "judge_me_reviews_preview_badge_jWmTcW": {
           "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
@@ -49,6 +38,16 @@
         "relative_products_JBLBDc": {
           "type": "relative_products",
           "settings": {}
+        },
+        "variant_picker_A6D8MV": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": true,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
         },
         "recharge_subscriptions_subscription_widget_v2_zxAiiW": {
           "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
@@ -94,11 +93,11 @@
       },
       "block_order": [
         "title",
-        "variant_picker_A6D8MV",
         "judge_me_reviews_preview_badge_jWmTcW",
         "description",
         "text_qa4MPD",
         "relative_products_JBLBDc",
+        "variant_picker_A6D8MV",
         "recharge_subscriptions_subscription_widget_v2_zxAiiW",
         "buy_buttons",
         "button_HUyMtW",
