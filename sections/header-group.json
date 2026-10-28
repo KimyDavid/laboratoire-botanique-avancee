@@ -42,11 +42,11 @@
           "settings": {
             "menu_item": "SHOP",
             "images_position": "right",
-            "image_1": "shopify://shop_images/LBA-COFFRETS-251126_124198_R2_copie.png",
+            "image_1": "shopify://shop_images/LBA-COFFRETS-251126_124198_R2_copie.webp",
             "image_1_heading": "Coffret découverte",
             "image_1_text": "",
             "image_1_link": "shopify://products/coffret-decouverte-box",
-            "image_2": "shopify://shop_images/af3e1ae0128f3bccc33670f8a8a1b0886aee887d.png",
+            "image_2": "shopify://shop_images/af3e1ae0128f3bccc33670f8a8a1b0886aee887d.webp",
             "image_2_heading": "Les recharges",
             "image_2_text": "",
             "image_2_link": "shopify://collections/les-recharges"
