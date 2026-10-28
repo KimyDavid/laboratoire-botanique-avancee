@@ -68,7 +68,7 @@ Supported variables
       %}
 
       <fieldset class="variant-picker__option flex gap-2 {% if resolved_option_selector_style == 'block_swatch' %}variant-picker__option--swatch{% else %}flex-column{% endif %}">
-        <div class="variant-picker__option-info h-stack justify-between gap-2 hidden">
+        <div class="variant-picker__option-info h-stack justify-between gap-2">
           <div class="h-stack gap-1 {% if resolved_option_selector_style != 'swatch' and resolved_option_selector_style != 'block_swatch' %}hidden{% endif %}">
             <legend>{{ option.name }}</legend>
 
