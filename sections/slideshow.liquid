@@ -9,6 +9,21 @@ may have important consequence on the section itself.
 {%- if section.blocks.size > 0 -%}
   {%- assign carousel_id = 'carousel-' | append: section.id -%}
 
+  {%- comment -%}Préchargement de l'affiche mobile de la 1re vidéo (LCP mobile){%- endcomment -%}
+  {%- assign first_block = section.blocks.first -%}
+  {%- if first_block.type == 'video' -%}
+    {%- liquid
+      if first_block.settings.mobile_video != blank
+        assign lcp_poster = first_block.settings.mobile_poster | default: first_block.settings.mobile_video.preview_image
+      else
+        assign lcp_poster = first_block.settings.poster | default: first_block.settings.video.preview_image
+      endif
+    -%}
+    {%- if lcp_poster != blank -%}
+      <link rel="preload" as="image" href="{{ lcp_poster | image_url: width: 1080 }}" media="(max-width: 699px)" fetchpriority="high">
+    {%- endif -%}
+  {%- endif -%}
+
   <slideshow-carousel id="{{ carousel_id }}" class="slideshow" allow-swipe {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %} cell-selector=".slideshow__slide" {% if section.settings.autoplay %}autoplay="{{ section.settings.cycle_speed }}"{% endif %} {% if section.settings.autoplay and section.settings.autoplay_pause_on_video %}autoplay-pause-on-video{% endif %} role="region" style="{% render 'surface', background: section.settings.background %}">
     {%- for block in section.blocks -%}
       {%- capture slide -%}
@@ -52,10 +67,10 @@ may have important consequence on the section itself.
 
               if block.settings.video != blank
                 if block.settings.mobile_video == blank
-                  render 'media', media: block.settings.video, autoplay: true, loop: loop_video, controls: false, preload: forloop.first
+                  render 'slideshow-video', video: block.settings.video, poster: block.settings.poster, loop: loop_video
                 else
-                  render 'media', media: block.settings.video, autoplay: true, loop: loop_video, controls: false, preload: forloop.first, class: 'hidden sm:block'
-                  render 'media', media: block.settings.mobile_video, autoplay: true, loop: loop_video, controls: false, preload: forloop.first, class: 'sm:hidden'
+                  render 'slideshow-video', video: block.settings.video, poster: block.settings.poster, loop: loop_video, class: 'hidden sm:block'
+                  render 'slideshow-video', video: block.settings.mobile_video, poster: block.settings.mobile_poster, max_height: 1280, loop: loop_video, class: 'sm:hidden'
                 endif
               else
                 capture placeholder_image
@@ -715,7 +730,20 @@ may have important consequence on the section itself.
         {
           "type": "video",
           "id": "mobile_video",
-          "label": "t:global.video.mobile_video"
+          "label": "t:global.video.mobile_video",
+          "info": "720p, H.264, 1,5 Mb/s max (moins de 2 Mo)."
+        },
+        {
+          "type": "image_picker",
+          "id": "poster",
+          "label": "Affiche (poster) desktop",
+          "info": "WebP, 1080 px de large. Affichée pendant le chargement de la vidéo."
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_poster",
+          "label": "Affiche (poster) mobile",
+          "info": "WebP, 1080 px de large. Préchargée en priorité sur mobile."
         },
         {
           "type": "checkbox",

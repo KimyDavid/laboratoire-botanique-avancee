@@ -1,0 +1,46 @@
+{%- comment -%}
+Vidéo du slideshow, optimisée :
+- preload="none" : seule la vidéo visible est chargée (theme.js passe preload à "metadata" et lance la lecture
+  quand l'élément entre dans l'écran, ce qui n'arrive jamais pour la version masquée en display:none) ;
+- poster : image personnalisée en 1080 px, sinon l'aperçu Shopify de la vidéo en 1080 px ;
+- max_height : on ne sert que le fichier MP4 dont la hauteur est inférieure ou égale à cette valeur.
+
+Variables : video (obligatoire), poster, max_height (défaut 1080), loop, class
+{%- endcomment -%}
+
+{%- liquid
+  assign max_height = max_height | default: 1080
+  assign poster_image = poster | default: video.preview_image
+
+  assign selected_source = nil
+  assign mp4_sources = video.sources | where: 'format', 'mp4' | sort: 'height' | reverse
+  for source in mp4_sources
+    if source.height <= max_height
+      assign selected_source = source
+      break
+    endif
+  endfor
+  if selected_source == nil
+    assign selected_source = mp4_sources | last
+  endif
+-%}
+
+<video-media {% if class %}class="{{ class }}"{% endif %} type="video" autoplay style="--aspect-ratio: {{ video.aspect_ratio }};">
+  <video
+    playsinline
+    muted
+    {% if loop %}loop{% endif %}
+    preload="none"
+    {% if poster_image != blank %}poster="{{ poster_image | image_url: width: 1080 }}"{% endif %}
+    width="{{ selected_source.width | default: video.preview_image.width }}"
+    height="{{ selected_source.height | default: video.preview_image.height }}"
+  >
+    {%- if selected_source -%}
+      <source src="{{ selected_source.url }}" type="{{ selected_source.mime_type }}">
+    {%- else -%}
+      {%- for source in video.sources -%}
+        <source src="{{ source.url }}" type="{{ source.mime_type }}">
+      {%- endfor -%}
+    {%- endif -%}
+  </video>
+</video-media>
