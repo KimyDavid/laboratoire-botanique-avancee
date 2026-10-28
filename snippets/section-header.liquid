@@ -13,9 +13,11 @@ Supported variables
 * heading: the heading to show
 * content: an optional content to show
 * text_alignment: alignment of header's text (supports "start", "center" or "end") - default to being centered
+* heading_tag: HTML tag of the heading ("h1" or "h2") - default to h2
 {%- endcomment -%}
 
 {% assign heading_class = heading_class | default: 'h2' %}
+{% if heading_tag != 'h1' %}{% assign heading_tag = 'h2' %}{% endif %}
 
 {% if subheading != blank or heading != blank or content != blank %}
   <div class="section-header justify-self-{{ text_alignment | default: 'center' }} text-{{ text_alignment | default: 'center' }} {% if button_label != blank and button_link != blank %}with-link{% endif %}">
@@ -26,7 +28,7 @@ Supported variables
         {%- endif -%}
 
         {%- if heading != blank -%}
-          <h2 class="{{ heading_class }}">{{- heading -}}</h2>
+          <{{ heading_tag }} class="{{ heading_class }}">{{- heading -}}</{{ heading_tag }}>
         {%- endif -%}
 
         {{- content -}}

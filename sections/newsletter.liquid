@@ -35,7 +35,6 @@ LIQUID
 {% assign heading_class = 'h2' %}
 {% if section.settings.image != blank %}
   {% assign text_alignment = 'left' %}
-  {% assign heading_class = 'main-title' %}
 {% endif %}
 
 <div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.image != blank %}color-scheme--with-image-overlay{% else %}section-spacing {% if section.settings.separate_section_with_border %}bordered-section{% endif %}{% endif %}">
@@ -56,7 +55,7 @@ LIQUID
     {%- endif -%}
 
     <div class="content section-stack gap-8 text-{{ text_alignment }}">
-      {%- render 'section-header', heading: section.settings.title, content: section.settings.content, text_alignment: text_alignment, heading_class: heading_class -%}
+      {%- render 'section-header', heading: section.settings.title, content: section.settings.content, text_alignment: text_alignment, heading_class: heading_class, heading_tag: section.settings.heading_tag -%}
 
       <div class="newsletter-wrapper text-center">
         <h3 class="newsletter-title">{{ section.settings.subheading }}</h3>
@@ -186,6 +185,17 @@ LIQUID
       "id": "title",
       "label": "t:global.text.heading",
       "default": "Newsletter"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Balise du titre",
+      "info": "Une seule balise H1 par page, pour le SEO.",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" }
+      ],
+      "default": "h2"
     },
     {
       "type": "richtext",
