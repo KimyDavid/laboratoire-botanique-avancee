@@ -168,7 +168,7 @@ only way to do it on Shopify right now.
               NOTE: for the product gallery, the autoplay does not work in a similar way. It is always false at the product level,
               and the product-gallery component itself will autoplay (if needed)
               {%- endcomment -%}
-              {%- render 'media', media: media, sizes: sizes, preload: preload, controls: true, playsinline: true, muted: enable_media_autoplay, loop: enable_video_looping, group: 'product', product: product -%}
+              {%- render 'media', media: media, sizes: sizes, widths: '400,800,1200', preload: preload, controls: true, playsinline: true, muted: enable_media_autoplay, loop: enable_video_looping, group: 'product', product: product -%}
             </div>
           {%- endfor -%}
         {%- else -%}

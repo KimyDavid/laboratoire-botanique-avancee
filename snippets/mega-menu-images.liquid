@@ -22,7 +22,7 @@ Supported variables
   {%- capture image_content -%}
     {%- if block.settings[image_setting] -%}
       <div class="overflow-hidden">
-        {{- block.settings[image_setting] | image_url: width: 300 | image_tag: loading: 'lazy', sizes: '315px', widths: '315,630,945', class: 'zoom-image group-hover:zoom' -}}
+        {{- block.settings[image_setting] | image_url: width: 1200 | image_tag: loading: 'lazy', sizes: '315px', widths: '400,800,1200', class: 'zoom-image group-hover:zoom' -}}
       </div>
     {%- endif -%}
 
