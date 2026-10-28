@@ -18,17 +18,6 @@
             "heading_tag": "h2"
           }
         },
-        "variant_picker_A6D8MV": {
-          "type": "variant_picker",
-          "disabled": true,
-          "settings": {
-            "hide_sold_out_variants": true,
-            "selector_style": "block",
-            "swatch_selector_style": "swatch",
-            "variant_image_options": "",
-            "size_chart_page": ""
-          }
-        },
         "judge_me_reviews_preview_badge_jWmTcW": {
           "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
@@ -43,13 +32,23 @@
         "text_qa4MPD": {
           "type": "text",
           "settings": {
-            "headings_as_paragraphs": true,
-            "text": "<h4><strong>produite en france.<br/>96% d’ingrédients d’origine naturelle.*<br/>Sans ingrédient controversé.</strong></h4>"
+            "text": "<h4><strong>produite en france.<br/>96% d’ingrédients d’origine naturelle.*<br/>Sans ingrédient controversé.</strong></h4>",
+            "headings_as_paragraphs": true
           }
         },
         "relative_products_JBLBDc": {
           "type": "relative_products",
           "settings": {}
+        },
+        "variant_picker_A6D8MV": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": true,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
         },
         "recharge_subscriptions_subscription_widget_v2_zxAiiW": {
           "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
@@ -95,11 +94,11 @@
       },
       "block_order": [
         "title",
-        "variant_picker_A6D8MV",
         "judge_me_reviews_preview_badge_jWmTcW",
         "description",
         "text_qa4MPD",
         "relative_products_JBLBDc",
+        "variant_picker_A6D8MV",
         "recharge_subscriptions_subscription_widget_v2_zxAiiW",
         "buy_buttons",
         "button_HUyMtW",
@@ -155,7 +154,6 @@
       "type": "image-collage-text-lba",
       "name": "Technologies néo-regen (mobile)",
       "settings": {
-        "title_tag": "p",
         "image_main": "shopify://shop_images/NEW_GAMME_LOTION2_3.jpg",
         "image_secondary_1_position": "top",
         "image_secondary_2": "shopify://shop_images/Rectangle_5872_013c8d41-2e75-49fc-b2e3-742ee1aff201.png",
@@ -164,6 +162,7 @@
         "eyebrow": "",
         "eyebrow_position": "below",
         "title": "dr. jean-marc lemaître (INSERM)",
+        "title_tag": "p",
         "content": "<p>Créé avec le Dr Lemaître<strong>, l'expert français </strong>de la longévité, notre<strong> actif exclusif NEO-REGEN</strong> est composé de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.&nbsp;</p><ul><li>Il réactive<strong> 136 gènes</strong> impliqués dans la jeunesse de la peau.&nbsp;</li><li><strong>+71% de Collagène I </strong>dès 8 jours.</li><li>Il <strong>relance la régénération </strong>cellulaire, moléculaire et tissulaire.</li></ul>",
         "small_content": "",
         "button_label": "En savoir plus",
@@ -196,6 +195,7 @@
         "eyebrow": "136 gènes impliqués dans la jeunesse de la peau",
         "eyebrow_position": "below",
         "title": "Des actifs clés",
+        "title_tag": "h2",
         "content": "<p><strong>Niacinamide</strong> : Stimule la synthèse de collagène, unifie le teint et améliore visiblement la qualité de la peau.<br/><strong><br/>7 Céramides&nbsp;:</strong> Restaurent la barrière cutanée, renforcent l'hydratation et apportent confort à la peau.&nbsp;<br/><strong><br/>Ectoïne Biotech&nbsp;:</strong> Bouclier protecteur, antioxydant, protège des agressions extérieures, hydratation long terme.</p><h4>96% d’ingrédients d’origine naturelle</h4>",
         "small_content": "",
         "button_label": "Voir la liste INCI",
@@ -277,6 +277,7 @@
       "name": "Efficacité prouvée cliniquement (mobile)",
       "settings": {
         "title": "Efficacité prouvée cliniquement",
+        "title_tag": "h2",
         "content": "",
         "small_content": "<p>1. Test clinique par mesure instrumentale, 2 applications par jour pendant 3 mois. / 2. Test clinique par auto-scorage, 2 applications par jour pendant 3 mois.</p>",
         "content_visibility": "desktop",
@@ -338,8 +339,8 @@
       ],
       "name": "Contenu + chiffres clés",
       "settings": {
-        "title_tag": "p",
         "title": "Efficacité prouvée cliniquement",
+        "title_tag": "p",
         "content": "",
         "small_content": "<p>1. Test clinique par mesure instrumentale, 39 femmes caucasiennes, 2 applications par jour pendant 3 mois. &nbsp; &nbsp; &nbsp;2. Test clinique par auto-scorage, 39 femmes, 2 applications par jour pendant 3 mois.</p>",
         "content_visibility": "desktop",
@@ -429,7 +430,9 @@
             "image": "shopify://shop_images/niacinamide_2_copy.webp",
             "title": "Niacinamide&nbsp;",
             "heading_tag": "h3",
+            "html_tag": "auto",
             "content": "<p>Stimule la synthèse de collagène, unifie le teint et améliore visiblement la qualité de la peau.</p>",
+            "content_headings_as_paragraphs": false,
             "link_url": "#",
             "link_text": "",
             "button_popup": "",
@@ -443,7 +446,9 @@
             "image": "shopify://shop_images/1950X1950_CERAMIDES.webp",
             "title": "complexe 7 Céramides",
             "heading_tag": "h3",
+            "html_tag": "auto",
             "content": "<p>Restaurent la barrière cutanée, renforcent l'hydratation et apportent confort à la peau.</p>",
+            "content_headings_as_paragraphs": false,
             "link_url": "",
             "link_text": "",
             "button_popup": "",
@@ -457,7 +462,9 @@
             "image": "shopify://shop_images/1950X1950_ECTOINE.webp",
             "title": "ECTOÏNE BIOTECH",
             "heading_tag": "h3",
+            "html_tag": "auto",
             "content": "<p>Bouclier protecteur, antioxydant, protège des agressions extérieures, hydratation long terme.</p>",
+            "content_headings_as_paragraphs": false,
             "link_url": "",
             "link_text": "",
             "button_popup": "",
@@ -510,6 +517,7 @@
         "eyebrow": "Collaboration avec dr. jean-marc lemaître",
         "eyebrow_position": "below",
         "title": "Technologie neo-regen",
+        "title_tag": "h2",
         "content": "<p>Créé avec le Dr Lemaître<strong>, l'expert français </strong>de la longévité, notre<strong> actif exclusif NEO-REGEN</strong> est concentré dans tous nos soins. Composé de millions de cellules souches de Lys, de Pivoine et d’Eau de Baulieu.&nbsp;</p><ul><li>Il réactive<strong> 136 gènes</strong> impliqués dans la jeunesse de la peau.&nbsp;</li><li><strong>+71% de Collagène I </strong>dès 8 jours.</li><li>Il<strong> relance la régénération </strong>cellulaire, moléculaire et tissulaire.</li></ul>",
         "small_content": "",
         "button_label": "En savoir plus",
@@ -539,6 +547,7 @@
         "eyebrow": "",
         "eyebrow_position": "below",
         "title": "",
+        "title_tag": "h2",
         "content": "<p>1. Prélevez une noisette de crème à l’aide de la spatule, puis le réchauffer au creux des mains.</p><p>2. A l’aide des paumes de mains, masser de bas en haut puis du centre vers les extrémités.</p>",
         "small_content": "",
         "button_label": "",
@@ -562,7 +571,6 @@
       "type": "image-collage-text-lba",
       "name": "Prouesse de formulation (mobile)",
       "settings": {
-        "title_tag": "p",
         "image_main": "shopify://shop_images/NEW_GAMME_LOTION2_3_1.jpg",
         "image_secondary_1_position": "top",
         "image_secondary_2": "shopify://shop_images/1950X1950_TEXTURE_FRETTE_CREME.webp",
@@ -571,6 +579,7 @@
         "eyebrow": "",
         "eyebrow_position": "below",
         "title": "Prouesse de formulation",
+        "title_tag": "p",
         "content": "<p>Créée au sein de <strong>nos Laboratoires à Baulieu, </strong>la Crème Fondante Régénérative est <strong>exempte de tout ingrédient controversé</strong>. Zéro silicone, zéro PEG, zéro microplastique.</p><p>30% d’actifs.<br/>96% d'ingrédients d’origine naturelle.<br/>Notée Excellent sur Yuka. Végan.<br/>Délicat parfum frais et réconfortant.</p>",
         "small_content": "",
         "button_label": "En savoir plus",
@@ -602,6 +611,7 @@
         "eyebrow": "",
         "eyebrow_position": "below",
         "title": "",
+        "title_tag": "h2",
         "content": "<p>La recharge est logée dans son pot en verre pour une utilisation quotidienne.</p><p>Lors de vos déplacements, elle se <strong>déclipse </strong>et se referme avec son <strong>couvercle dédié</strong>, dissimulé dans le coffret, pour devenir un véritable<strong> format nomade.</strong> Système breveté.</p><p>La recharge est conçue 100% en aluminium. L’écrin est créé avec des<strong> artisans français</strong>. Pot en verre, couvercle en bio-résine.&nbsp;</p>",
         "small_content": "",
         "button_label": "Acheter",
@@ -651,12 +661,12 @@
         "image_with_text_zVYNDC": {
           "type": "image_with_text",
           "settings": {
-            "html_tag": "p",
-            "content_headings_as_paragraphs": true,
             "image": "shopify://shop_images/1950X1950_TEXTURE_FRETTE_CREME.webp",
             "title": "Prouesse de formulation",
             "heading_tag": "h3",
+            "html_tag": "p",
             "content": "<p>Créée au sein de <strong>nos Laboratoires à Baulieu, </strong>la Crème Fondante Régénérative est <strong>exempte de tout ingrédient controversé</strong>. Zéro silicone, zéro PEG, zéro microplastique.</p><p>30% d’actifs.<br/>96% d'ingrédients d’origine naturelle.*<br/>Notée Excellent sur Yuka. Végan.<br/>Délicat parfum frais et réconfortant.</p><p></p><h6>*Selon la Norme ISO 16128-1 et ISO 16128-2, calcul prenant en compte<br/>l’eau de formulation.</h6>",
+            "content_headings_as_paragraphs": true,
             "link_url": "#",
             "link_text": "Voir la liste INCI",
             "button_popup": "liste-inci",
@@ -667,11 +677,12 @@
         "image_with_text_79Rz9D": {
           "type": "image_with_text",
           "settings": {
-            "html_tag": "h2",
             "image": "shopify://shop_images/Rectangle_6003.png",
             "title": "Conseils d’utilisation",
             "heading_tag": "h3",
+            "html_tag": "h2",
             "content": "<p>1. Prélevez une noisette de crème à l’aide de la spatule, puis réchauffez-la au creux des mains.</p><p>2. A l’aide des paumes de mains, masser de bas en haut puis du centre vers les extrémités.</p>",
+            "content_headings_as_paragraphs": false,
             "link_url": "",
             "link_text": "",
             "button_popup": "",
@@ -685,7 +696,9 @@
             "image": "shopify://shop_images/Rectangle_6002.png",
             "title": "La Recharge&nbsp;",
             "heading_tag": "h3",
+            "html_tag": "auto",
             "content": "<p>La recharge est logée dans son pot en verre pour une utilisation quotidienne.<br/>Lors de vos déplacements, elle se <strong>déclipse </strong>et se referme avec son <strong>couvercle dédié</strong>, dissimulé dans le coffret, pour devenir un format <strong>nomade</strong>. Système breveté.</p><p>La recharge est conçue 100% en aluminium. L’écrin est créé avec des <strong>artisans français</strong>.&nbsp;<br/>Pot en verre, couvercle en résine.&nbsp;</p>",
+            "content_headings_as_paragraphs": false,
             "link_url": "",
             "link_text": "Acheter",
             "button_popup": "",
