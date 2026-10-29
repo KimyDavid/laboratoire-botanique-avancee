@@ -2540,6 +2540,13 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
   line-height: 1.6;
 }
 
+.product-title.h2,
+.product-title .h3 {
+  text-transform: none;
+  letter-spacing: 0;
+  font-variant: normal;
+}
+
 @media (max-width: 768px) {
   .product-info .product-title.h2 {
     font-size: 21px;
