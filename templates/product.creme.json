@@ -32,7 +32,8 @@
         "text_qa4MPD": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>produite en france.<br/>96% d’ingrédients d’origine naturelle.*<br/>Sans ingrédient controversé.</strong></p>"
+            "text": "<p>Produite en france.<br/>96% d’ingrédients d’origine naturelle.*<br/>Sans ingrédient controversé.</p>",
+            "headings_as_paragraphs": false
           }
         },
         "relative_products_JBLBDc": {
