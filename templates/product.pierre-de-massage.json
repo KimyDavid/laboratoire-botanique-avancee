@@ -338,6 +338,7 @@
         "stat_NcfrmY",
         "stat_j8dGVF"
       ],
+      "disabled": true,
       "name": "Contenu + chiffres clés",
       "settings": {
         "title": "Efficacité prouvée cliniquement",
@@ -387,6 +388,7 @@
         "item_9W6fTT",
         "item_eqdM7q"
       ],
+      "disabled": true,
       "name": "Bandeau mots-clés",
       "settings": {
         "visibility": "desktop",
@@ -429,10 +431,10 @@
           "type": "image_with_text",
           "settings": {
             "image": "shopify://shop_images/niacinamide_2_copy.webp",
-            "title": "Niacinamide&nbsp;",
+            "title": "<strong>RELÂCHEMENT MUSCULAIRE ET DRAINAGE&nbsp;</strong>",
             "heading_tag": "h3",
             "html_tag": "auto",
-            "content": "<p>Stimule la synthèse de collagène, unifie le teint et améliore visiblement la qualité de la peau.</p>",
+            "content": "<p>Effectuez des mouvements en<br/>zigzag des tempes vers &nbsp;l’arrière de la<br/>tête pour libérer les tensions.</p><p>Lissez délicatement le cou et la<br/>nuque vers les épaules pour favoriser le drainage.</p>",
             "content_headings_as_paragraphs": false,
             "link_url": "#",
             "link_text": "",
@@ -445,10 +447,10 @@
           "type": "image_with_text",
           "settings": {
             "image": "shopify://shop_images/1950X1950_CERAMIDES.webp",
-            "title": "complexe 7 Céramides",
+            "title": "<strong>CONTOURS DU VISAGE ET REHAUSSEMENT DES POMMETTES&nbsp;</strong>",
             "heading_tag": "h3",
             "html_tag": "auto",
-            "content": "<p>Restaurent la barrière cutanée, renforcent l'hydratation et apportent confort à la peau.</p>",
+            "content": "<p>Sculpter les contours en liftant<br/>le visage par des lignes successives qui épousent la structure osseuse des<br/>tissus: l’ovale du visage et les pommettes.</p>",
             "content_headings_as_paragraphs": false,
             "link_url": "",
             "link_text": "",
@@ -461,10 +463,10 @@
           "type": "image_with_text",
           "settings": {
             "image": "shopify://shop_images/1950X1950_ECTOINE.webp",
-            "title": "ECTOÏNE BIOTECH",
+            "title": "<strong>OUVERTURE DU REGARD&nbsp;</strong>",
             "heading_tag": "h3",
             "html_tag": "auto",
-            "content": "<p>Bouclier protecteur, antioxydant, protège des agressions extérieures, hydratation long terme.</p>",
+            "content": "<p>Lisser délicatement le contour<br/>inférieur de l’œil, du coin interne vers la tempe.<br/><br/>Poursuivre le mouvement sous l’arcade sourcilière, en remontant légèrement pour<br/>ouvrir le regard.</p>",
             "content_headings_as_paragraphs": false,
             "link_url": "",
             "link_text": "",
@@ -508,6 +510,7 @@
     },
     "image_collage_text_lba_JtF69y": {
       "type": "image-collage-text-lba",
+      "disabled": true,
       "name": "Technologies néo-regen (desktop)",
       "settings": {
         "image_main": "shopify://shop_images/NEW_GAMME_LOTION2_2.png",
@@ -713,6 +716,7 @@
         "image_with_text_79Rz9D",
         "image_with_text_4ggwCB"
       ],
+      "disabled": true,
       "custom_css": [
         "h3 {font-size: 24px;}"
       ],
