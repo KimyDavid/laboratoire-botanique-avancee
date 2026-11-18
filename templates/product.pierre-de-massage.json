@@ -31,6 +31,7 @@
         },
         "text_qa4MPD": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>Produite en france.<br/>96% d’ingrédients d’origine naturelle.*<br/>Sans ingrédient controversé.</p>",
             "headings_as_paragraphs": false
