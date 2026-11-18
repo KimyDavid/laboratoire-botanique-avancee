@@ -482,6 +482,7 @@
         "image_with_text_WHTMAF",
         "image_with_text_DwDqhj"
       ],
+      "disabled": true,
       "custom_css": [
         "h3 {font-size: 24px;}"
       ],
