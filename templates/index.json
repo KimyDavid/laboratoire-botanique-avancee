@@ -17,7 +17,7 @@
           "settings": {
             "video": "shopify://files/videos/LBA_hero_desktop_1080p.mp4",
             "mobile_video": "shopify://files/videos/LBA_hero_mobile_720p.mp4",
-            "serve_original": false,
+            "serve_original": true,
             "allow_sound": true,
             "subheading": "",
             "title": "Soins français d'exception créés au Domaine de Baulieu. \n30% d'actifs pour réactiver la jeunesse de la peau. \nEfficacité prouvée cliniquement.",
