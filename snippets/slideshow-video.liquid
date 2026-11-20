@@ -3,9 +3,11 @@ Vidéo du slideshow, optimisée :
 - preload="none" : seule la vidéo visible est chargée (theme.js passe preload à "metadata" et lance la lecture
   quand l'élément entre dans l'écran, ce qui n'arrive jamais pour la version masquée en display:none) ;
 - poster : image personnalisée en 1080 px, sinon l'aperçu Shopify de la vidéo en 1080 px ;
-- max_height : on ne sert que le fichier MP4 dont la hauteur est inférieure ou égale à cette valeur.
+- max_height : on ne sert que le fichier MP4 dont la hauteur est inférieure ou égale à cette valeur ;
+- use_original : sert le fichier MP4 tel qu'il a été uploadé, sans la recompression Shopify
+  (à utiliser quand la vidéo a déjà été compressée avant l'upload).
 
-Variables : video (obligatoire), poster, max_height (défaut 1080), loop, class
+Variables : video (obligatoire), poster, max_height (défaut 1080), loop, use_original, class
 {%- endcomment -%}
 
 {%- liquid
@@ -23,6 +25,21 @@ Variables : video (obligatoire), poster, max_height (défaut 1080), loop, class
   if selected_source == nil
     assign selected_source = mp4_sources | last
   endif
+
+  assign original_url = nil
+  if use_original and selected_source and selected_source.url contains '/vp/'
+    assign url_base = selected_source.url | split: '/vp/' | first
+    assign video_hash = selected_source.url | split: '/vp/' | last | split: '/' | first
+    assign original_url = url_base | append: '/o/v/' | append: video_hash | append: '.mp4'
+  endif
+
+  if original_url
+    assign video_width = video.preview_image.width
+    assign video_height = video.preview_image.height
+  else
+    assign video_width = selected_source.width | default: video.preview_image.width
+    assign video_height = selected_source.height | default: video.preview_image.height
+  endif
 -%}
 
 <video-media {% if class %}class="{{ class }}"{% endif %} type="video" autoplay style="--aspect-ratio: {{ video.aspect_ratio }};">
@@ -32,10 +49,12 @@ Variables : video (obligatoire), poster, max_height (défaut 1080), loop, class
     {% if loop %}loop{% endif %}
     preload="none"
     {% if poster_image != blank %}poster="{{ poster_image | image_url: width: 1080 }}"{% endif %}
-    width="{{ selected_source.width | default: video.preview_image.width }}"
-    height="{{ selected_source.height | default: video.preview_image.height }}"
+    width="{{ video_width }}"
+    height="{{ video_height }}"
   >
-    {%- if selected_source -%}
+    {%- if original_url -%}
+      <source src="{{ original_url }}" type="video/mp4">
+    {%- elsif selected_source -%}
       <source src="{{ selected_source.url }}" type="{{ selected_source.mime_type }}">
     {%- else -%}
       {%- for source in video.sources -%}

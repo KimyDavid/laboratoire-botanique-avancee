@@ -67,10 +67,10 @@ may have important consequence on the section itself.
 
               if block.settings.video != blank
                 if block.settings.mobile_video == blank
-                  render 'slideshow-video', video: block.settings.video, poster: block.settings.poster, loop: loop_video
+                  render 'slideshow-video', video: block.settings.video, poster: block.settings.poster, loop: loop_video, use_original: block.settings.serve_original
                 else
-                  render 'slideshow-video', video: block.settings.video, poster: block.settings.poster, loop: loop_video, class: 'hidden sm:block'
-                  render 'slideshow-video', video: block.settings.mobile_video, poster: block.settings.mobile_poster, max_height: 1280, loop: loop_video, class: 'sm:hidden'
+                  render 'slideshow-video', video: block.settings.video, poster: block.settings.poster, loop: loop_video, use_original: block.settings.serve_original, class: 'hidden sm:block'
+                  render 'slideshow-video', video: block.settings.mobile_video, poster: block.settings.mobile_poster, max_height: 1280, loop: loop_video, use_original: block.settings.serve_original, class: 'sm:hidden'
                 endif
               else
                 capture placeholder_image
@@ -730,6 +730,13 @@ may have important consequence on the section itself.
           "id": "mobile_video",
           "label": "t:global.video.mobile_video",
           "info": "720p, H.264, 1,5 Mb/s max (moins de 2 Mo)."
+        },
+        {
+          "type": "checkbox",
+          "id": "serve_original",
+          "label": "Servir les fichiers vidéo d'origine",
+          "info": "À cocher seulement si les vidéos ont été compressées avant l'upload (desktop 1080p, mobile 720p). Sinon, Shopify sert ses propres versions recompressées.",
+          "default": false
         },
         {
           "type": "image_picker",
