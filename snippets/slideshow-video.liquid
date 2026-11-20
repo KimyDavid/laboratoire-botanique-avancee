@@ -1,7 +1,9 @@
 {%- comment -%}
 Vidéo du slideshow, optimisée :
-- preload="none" : seule la vidéo visible est chargée (theme.js passe preload à "metadata" et lance la lecture
-  quand l'élément entre dans l'écran, ce qui n'arrive jamais pour la version masquée en display:none) ;
+- preload="none" : la vidéo n'est chargée qu'à l'approche de l'écran (theme.js passe preload à "metadata") ;
+- responsive : quand une vidéo desktop et une vidéo mobile sont rendues (class avec "hidden"), les sources sont
+  mises en data-src et un petit script n'active que celle qui est affichée. Sans ça, le navigateur
+  téléchargeait aussi la vidéo masquée ;
 - poster : image personnalisée en 1080 px, sinon l'aperçu Shopify de la vidéo en 1080 px ;
 - max_height : on ne sert que le fichier MP4 dont la hauteur est inférieure ou égale à cette valeur ;
 - use_original : sert le fichier MP4 tel qu'il a été uploadé, sans la recompression Shopify
@@ -40,6 +42,16 @@ Variables : video (obligatoire), poster, max_height (défaut 1080), loop, use_or
     assign video_width = selected_source.width | default: video.preview_image.width
     assign video_height = selected_source.height | default: video.preview_image.height
   endif
+
+  assign is_responsive = false
+  if class contains 'hidden'
+    assign is_responsive = true
+  endif
+  if is_responsive
+    assign src_attr = 'data-src'
+  else
+    assign src_attr = 'src'
+  endif
 -%}
 
 <video-media {% if class %}class="{{ class }}"{% endif %} type="video" autoplay style="--aspect-ratio: {{ video.aspect_ratio }};">
@@ -53,13 +65,35 @@ Variables : video (obligatoire), poster, max_height (défaut 1080), loop, use_or
     height="{{ video_height }}"
   >
     {%- if original_url -%}
-      <source src="{{ original_url }}" type="video/mp4">
+      <source {{ src_attr }}="{{ original_url }}" type="video/mp4">
     {%- elsif selected_source -%}
-      <source src="{{ selected_source.url }}" type="{{ selected_source.mime_type }}">
+      <source {{ src_attr }}="{{ selected_source.url }}" type="{{ selected_source.mime_type }}">
     {%- else -%}
       {%- for source in video.sources -%}
-        <source src="{{ source.url }}" type="{{ source.mime_type }}">
+        <source {{ src_attr }}="{{ source.url }}" type="{{ source.mime_type }}">
       {%- endfor -%}
     {%- endif -%}
   </video>
 </video-media>
+{%- if is_responsive -%}
+<script>
+  (function () {
+    var media = document.currentScript.previousElementSibling;
+    function activate() {
+      if (!media || media.hasAttribute('data-src-active')) return true;
+      if (getComputedStyle(media).display === 'none') return false;
+      media.querySelectorAll('source[data-src]').forEach(function (s) {
+        s.setAttribute('src', s.getAttribute('data-src'));
+        s.removeAttribute('data-src');
+      });
+      media.setAttribute('data-src-active', '');
+      media.querySelector('video').load();
+      return true;
+    }
+    if (!activate()) {
+      var onResize = function () { if (activate()) window.removeEventListener('resize', onResize); };
+      window.addEventListener('resize', onResize, { passive: true });
+    }
+  })();
+</script>
+{%- endif -%}
