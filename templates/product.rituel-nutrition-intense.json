@@ -276,35 +276,18 @@
         "id": ""
       }
     },
-    "image_text_lba_n6eKY8": {
-      "type": "image-text-lba",
-      "name": "Duo image + texte",
-      "settings": {
-        "section_height": "full-height",
-        "image": "shopify://shop_images/1950X1950_RECHARGE_OUVERTE_CREME.webp",
-        "background_color": "#ffffff",
-        "image_layout": "boxed",
-        "video_size": "full-height",
-        "image_position": "right",
-        "title": "Crème yeux soyeuse Régénérative",
-        "text": "<p><strong>32% d'actifs pour un regard défatigué.<br/><br/></strong>Sa texture baume&nbsp;lisse les rides (83%), illumine (93%) et hydrate (95%) intensément.<br/><br/>Les cernes et les poches sont diminués (80%), la paupière est raffermie (97%).</p>",
-        "button_link": "shopify://products/creme-yeux-soyeuse-regenerative",
-        "button_label": "Découvrir",
-        "id": ""
-      }
-    },
     "image_text_lba_DXJK8q": {
       "type": "image-text-lba",
       "name": "Duo image + texte",
       "settings": {
         "section_height": "full-height",
-        "image": "shopify://shop_images/Baulieu_In_Situ1238_Shopify.webp",
+        "image": "shopify://shop_images/8b46793a8774a4fe86f3b431724fc0b44b8f19bc.png",
         "background_color": "#ffffff",
         "image_layout": "boxed",
         "video_size": "full-height",
         "image_position": "left",
         "title": "La Recharge",
-        "text": "<p>Pensées pour vous accompagner partout, nos recharges en aluminium conjuguent élégance, légèreté et praticité.<br/><br/>Recyclables à l’infini, elles offrent une nouvelle approche du soin, alliant raffinement et durabilité.</p>",
+        "text": "<p>La recharge est logée dans son pot en verre pour une utilisation quotidienne.<br/><br/>Lors de vos déplacements, elle se déclipse et se referme avec son couvercle dédié, dissimulé dans le coffret, pour devenir un format nomade. Système breveté.<br/><br/>La recharge est conçue 100% en aluminium. L’écrin est créé avec des artisans français.&nbsp;<br/>Pot en verre, couvercle en résine.</p>",
         "button_link": "shopify://products/creme-fondante-regenerative",
         "button_label": "Découvrir",
         "id": ""
@@ -505,7 +488,6 @@
     "slider_vertical_product_lba_6cdKzx",
     "image_text_lba_VBcQTb",
     "image_text_lba_GgqdPP",
-    "image_text_lba_n6eKY8",
     "image_text_lba_DXJK8q",
     "rich_text_NjM6pw",
     "image_text_lba_ELymAP",
