@@ -293,18 +293,18 @@
         "id": ""
       }
     },
-    "image_text_lba_DXJK8q": {
+    "image_text_lba_ByhcED": {
       "type": "image-text-lba",
       "name": "Duo image + texte",
       "settings": {
         "section_height": "full-height",
-        "image": "shopify://shop_images/Baulieu_In_Situ1238_Shopify.webp",
+        "image": "shopify://shop_images/bague-peeling-shopify.jpg",
         "background_color": "#ffffff",
         "image_layout": "boxed",
         "video_size": "full-height",
         "image_position": "left",
-        "title": "La Recharge",
-        "text": "<p>Pensées pour vous accompagner partout, nos recharges en aluminium conjuguent élégance, légèreté et praticité.<br/><br/>Recyclables à l’infini, elles offrent une nouvelle approche du soin, alliant raffinement et durabilité.</p>",
+        "title": "Masque Peeling Rénovateur",
+        "text": "<p><strong>Le premier soin exfoliant concentré à 34% d'actifs alliant haute efficacité et tolérance optimale.<br/><br/></strong>La peau est plus lisse (93%) et douce (96%), le grain de peau s’affine (93%), les pores sont moins visibles (81%). Le teint est éclatant (93%) et uniforme.<br/><br/>Appliquez 2 à 3 fois par semaine le soir sur peau propre.&nbsp;</p>",
         "button_link": "shopify://products/creme-fondante-regenerative",
         "button_label": "Découvrir",
         "id": ""
@@ -506,7 +506,7 @@
     "image_text_lba_VBcQTb",
     "image_text_lba_GgqdPP",
     "image_text_lba_n6eKY8",
-    "image_text_lba_DXJK8q",
+    "image_text_lba_ByhcED",
     "rich_text_NjM6pw",
     "image_text_lba_ELymAP",
     "1785499112f820d03d",
