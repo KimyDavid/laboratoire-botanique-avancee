@@ -247,13 +247,13 @@
       "name": "Duo image + texte",
       "settings": {
         "section_height": "full-height",
-        "image": "shopify://shop_images/1950X1950_KVLOTION.webp",
+        "image": "shopify://shop_images/1950X1950TEXTURESERUM.webp",
         "background_color": "#ffffff",
         "image_layout": "boxed",
         "video_size": "full-height",
         "image_position": "right",
-        "title": "Lotion Infusion d'Hydratation",
-        "text": "<p>Concentrée en <strong>NEO-REGEN </strong>et enrichie de<strong> 7,5 millions de cellules souches végétales.</strong></p><p>Son action lissante et hydratante révèle un grain de peau affiné et éclatant. La peau est comme revitalisée, réactivée.</p><p><br/><strong>100% des femmes l’ayant testé la recommande et souhaitent l’acheter.</strong></p>",
+        "title": "Sérum en Crème Régénératif",
+        "text": "<p><strong>L'efficacité d'un sérum combiné au confort d'une crème.<br/><br/>30% d'actifs </strong>pour raffermir la peau (+53%), lisser les rides (-21%), booster l'éclat (+47%), redonner souplesse et élasticité (75%), et&nbsp;hydrater en profondeur (88%).</p>",
         "button_link": "shopify://products/lotion-infusion-hydratation",
         "button_label": "Découvrir",
         "id": ""
@@ -270,7 +270,7 @@
         "video_size": "full-height",
         "image_position": "left",
         "title": "crème fondante régénérative",
-        "text": "<p><strong>Une prouesse de formulation avec 30% d'actifs et 20 millions de cellules souches végétales.</strong></p><p> </p><p><strong>RÉSULTATS</strong> : +92% de confort et +24% d'uniformité du teint en 3 mois*, une peau raffermie, lissée, douce et régénérée en profondeur.  <br/><br/></p><p><strong>ACTIFS CLÉS</strong></p><ul><li>20 millions de cellules souches végétales: + 71% de Collagène I ¹ ; - 53% du marqueur MMP-1 responsable de la dégradation de la matrice extra-cellulaire ². </li><li>Niacinamide : uniformité du teint via la régulation de la mélanogénèse.</li><li>7 Céramides: renouvellement des kératinocytes et renforcement de la barrière cutanée.</li><li>Ectoïne : hydratation et protection de la peau.<br/><br/></li></ul><p>Une formule sans silicone, sans PEG, sans phénoxyéthanol ou tout ingrédient suspecté néfaste pour la peau.</p>",
+        "text": "<p><strong>30% d'actifs&nbsp;pour une peau régénérée de l'intérieur.</strong><br/><br/>Sa&nbsp;texture riche et fondante&nbsp;raffermit la peau (+53%), lisse les rides (-20%) et unifie le teint (+24%).&nbsp;<br/><br/>La peau est plus rebondie, plus lumineuse, plus confortable, tout au long de la<br/>journée.&nbsp;</p>",
         "button_link": "shopify://products/creme-fondante-regenerative",
         "button_label": "Découvrir",
         "id": ""
