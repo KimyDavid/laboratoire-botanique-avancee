@@ -16,9 +16,167 @@
         "show_title": true,
         "page_width": "xs"
       }
+    },
+    "rich_text_nkHx4K": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_deRfUP": {
+          "type": "heading",
+          "settings": {
+            "text": "&nbsp;<strong>Le Sérum en Crème Régénératif, la Crème Fondante Régénérative et la Crème Yeux Soyeuse Régénérative</strong> relancent les mécanismes de jeunesse de la peau, révélant une peau plus ferme, souple et éclatante, et un regard visiblement défatigué.&nbsp;",
+            "heading_tag": "h1-light"
+          }
+        }
+      },
+      "block_order": [
+        "heading_deRfUP"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "visibility": "all",
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false,
+        "bordered_content": false
+      }
+    },
+    "image_text_lba_x9tt3Y": {
+      "type": "image-text-lba",
+      "name": "Duo image + texte",
+      "settings": {
+        "section_height": "full-height",
+        "image": "shopify://shop_images/1950X1950_KVLOTION.webp",
+        "background_color": "#ffffff",
+        "image_layout": "boxed",
+        "video_size": "full-height",
+        "image_position": "right",
+        "title": "Lotion Infusion d'Hydratation",
+        "text": "<p>Concentrée en <strong>NEO-REGEN </strong>et enrichie de<strong> 7,5 millions de cellules souches végétales.</strong></p><p>Son action lissante et hydratante révèle un grain de peau affiné et éclatant. La peau est comme revitalisée, réactivée.</p><p><br/><strong>100% des femmes l’ayant testé la recommande et souhaitent l’acheter.</strong></p>",
+        "button_link": "shopify://products/lotion-infusion-hydratation",
+        "button_label": "Découvrir",
+        "id": ""
+      }
+    },
+    "image_text_lba_dQtETn": {
+      "type": "image-text-lba",
+      "name": "Duo image + texte",
+      "settings": {
+        "section_height": "full-height",
+        "image": "shopify://shop_images/31_BAULIEU_KV_ET_SCIENCE_V8_rvb_copie.webp",
+        "background_color": "#ffffff",
+        "image_layout": "boxed",
+        "video_size": "full-height",
+        "image_position": "left",
+        "title": "crème fondante régénérative",
+        "text": "<p><strong>Une prouesse de formulation avec 30% d'actifs et 20 millions de cellules souches végétales.</strong></p><p>&nbsp;</p><p><strong>RÉSULTATS</strong> : +92% de confort et +24% d'uniformité du teint en 3 mois*, une peau raffermie, lissée, douce et régénérée en profondeur. &nbsp;<br/><br/></p><p><strong>ACTIFS CLÉS</strong></p><ul><li>20 millions de cellules souches végétales: + 71% de Collagène I ¹ ; - 53% du marqueur MMP-1 responsable de la dégradation de la matrice extra-cellulaire ².&nbsp;</li><li>Niacinamide : uniformité du teint via la régulation de la mélanogénèse.</li><li>7 Céramides: renouvellement des kératinocytes et renforcement de la barrière cutanée.</li><li>Ectoïne : hydratation et protection de la peau.<br/><br/></li></ul><p>Une formule sans silicone, sans PEG, sans phénoxyéthanol ou tout ingrédient suspecté néfaste pour la peau.</p>",
+        "button_link": "shopify://products/creme-fondante-regenerative",
+        "button_label": "Découvrir",
+        "id": ""
+      }
+    },
+    "image_text_lba_pDxW99": {
+      "type": "image-text-lba",
+      "name": "Duo image + texte",
+      "settings": {
+        "section_height": "full-height",
+        "image": "shopify://shop_images/1950X1950_KV_YEUX.webp",
+        "background_color": "#ffffff",
+        "image_layout": "boxed",
+        "video_size": "full-height",
+        "image_position": "right",
+        "title": "Crème yeux soyeuse Régénérative",
+        "text": "<p>Hautement concentrée à <strong>32% d’actifs.</strong></p><p>Le contour de l'œil est lissé. Les cernes, poches et ridules sont atténuées, le regard est reposé, éclatant.&nbsp;</p><p><br/><strong>93% regard plus reposé, plus lumineux et revitalisé.</strong></p>",
+        "button_link": "shopify://products/creme-yeux-soyeuse-regenerative",
+        "button_label": "Découvrir",
+        "id": ""
+      }
+    },
+    "image_text_lba_dUAXHY": {
+      "type": "image-text-lba",
+      "name": "Duo image + texte",
+      "settings": {
+        "section_height": "full-height",
+        "image": "shopify://shop_images/31_BAULIEU_KV_ET_SCIENCE_V8_rvb_copie.webp",
+        "background_color": "#ffffff",
+        "image_layout": "boxed",
+        "video_size": "full-height",
+        "image_position": "left",
+        "title": "crème fondante régénérative",
+        "text": "<p><strong>Une prouesse de formulation avec 30% d'actifs et 20 millions de cellules souches végétales.</strong></p><p>&nbsp;</p><p><strong>RÉSULTATS</strong> : +92% de confort et +24% d'uniformité du teint en 3 mois*, une peau raffermie, lissée, douce et régénérée en profondeur. &nbsp;<br/><br/></p><p><strong>ACTIFS CLÉS</strong></p><ul><li>20 millions de cellules souches végétales: + 71% de Collagène I ¹ ; - 53% du marqueur MMP-1 responsable de la dégradation de la matrice extra-cellulaire ².&nbsp;</li><li>Niacinamide : uniformité du teint via la régulation de la mélanogénèse.</li><li>7 Céramides: renouvellement des kératinocytes et renforcement de la barrière cutanée.</li><li>Ectoïne : hydratation et protection de la peau.<br/><br/></li></ul><p>Une formule sans silicone, sans PEG, sans phénoxyéthanol ou tout ingrédient suspecté néfaste pour la peau.</p>",
+        "button_link": "shopify://products/creme-fondante-regenerative",
+        "button_label": "Découvrir",
+        "id": ""
+      }
+    },
+    "rich_text_khdALG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_amP8mb": {
+          "type": "heading",
+          "settings": {
+            "text": "Pour la <strong>première fois au monde</strong>, une efficacité prouvée sur <strong>organoïde de peau</strong>, issu de <strong>30 ans de recherche </strong>en médecine régénérative. ",
+            "heading_tag": "h1-light"
+          }
+        }
+      },
+      "block_order": [
+        "heading_amP8mb"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "visibility": "all",
+        "content_width": "md",
+        "text_position": "center",
+        "remove_vertical_spacing": false,
+        "bordered_content": false
+      }
+    },
+    "image_text_lba_kHn68c": {
+      "type": "image-text-lba",
+      "blocks": {
+        "description_PaApVn": {
+          "type": "description",
+          "settings": {
+            "image": "shopify://shop_images/787ee7f667a8f258fcf01afa035928af7db6c96b_127be234-de9e-425c-b41a-38cfa8eaa30a.png",
+            "title_": "Jean-Marc Lemaitre",
+            "text": "<p>Diplômé d'un Doctorat de Biologie Moléculaire et Cellulaire (1995).<br/>- Première équipe au monde a avoir démontré que le vieillissement cellulaire était réversible (2011).<br/>- Directeur de recherche INSERM.<br/>- Co-directeur de l’Institut de Médecine Régénérative de Montpellier. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "description_PaApVn"
+      ],
+      "custom_css": [
+        "section {background: #fafafa;}"
+      ],
+      "name": "Duo image + texte",
+      "settings": {
+        "section_height": "full-height",
+        "background_color": "#ffffff",
+        "image_layout": "full",
+        "video": "shopify://files/videos/LBA_CD_7s-30-ANS-RECHERCHE_1_1.mp4",
+        "video_size": "full-height",
+        "image_position": "left",
+        "title": "PREMIÈRE MONDIALE",
+        "text": "<p><strong>Pour la première fois au monde </strong>et en collaboration avec le<strong> Dr Lemaitre</strong>, l'efficacité d'actifs cosmétiques est prouvée sur un modèle révolutionnaire, issu de 30 ans de recherche en médecine régénérative : <strong>l'organoïde de peau.&nbsp;</strong></p>",
+        "button_link": "/pages/expertise#dr-jm-lemaitre",
+        "button_label": "En savoir plus",
+        "id": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_nkHx4K",
+    "image_text_lba_x9tt3Y",
+    "image_text_lba_dQtETn",
+    "image_text_lba_pDxW99",
+    "image_text_lba_dUAXHY",
+    "rich_text_khdALG",
+    "image_text_lba_kHn68c"
   ]
 }
