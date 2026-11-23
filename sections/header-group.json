@@ -168,7 +168,7 @@
           "settings": {
             "enable_notification": true,
             "image": "shopify://shop_images/lba-spa-soin-visage-saint-tropez-carre.jpg",
-            "text": "Résidence éphémère à l’Institut du Bon Marché du 23 novembre au 6 décembre. Réservez votre soin.&nbsp;",
+            "text": "Résidence éphémère à l’Institut du Bon Marché. Réservez votre soin &nbsp;du 23 novembre au 6 décembre.",
             "link": "https://www.lebonmarche.com/fr/institut-lba",
             "delay": 3,
             "duration": 6,

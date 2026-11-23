@@ -185,6 +185,62 @@
         "subheading": ""
       }
     },
+    "image_collage_text_lba_GayEge": {
+      "type": "image-collage-text-lba",
+      "blocks": {
+        "button_xy76Lc": {
+          "type": "button",
+          "settings": {
+            "label": "En savoir plus",
+            "link": "https://laboratoires-botanique-avancee.com/pages/spa#philosophie",
+            "popup": "",
+            "style": "primary"
+          }
+        },
+        "button_gHwDdf": {
+          "type": "button",
+          "settings": {
+            "label": "Où nous trouver",
+            "link": "shopify://pages/nos-boutiques",
+            "popup": "",
+            "style": "outline"
+          }
+        }
+      },
+      "block_order": [
+        "button_xy76Lc",
+        "button_gHwDdf"
+      ],
+      "name": "Nos protocoles régénératifs (desktop)",
+      "settings": {
+        "image_main": "shopify://shop_images/NEW_GAMME_LOTION2_1_1.jpg",
+        "image_secondary_1": "shopify://shop_images/Rectangle_5939.jpg",
+        "image_secondary_1_position": "middle",
+        "image_secondary_2_position": "bottom",
+        "image_position": "start",
+        "eyebrow": "Remettre en mouvement.",
+        "eyebrow_position": "above",
+        "title": "nos protocoles \nrégénératifs",
+        "title_tag": "h2",
+        "content": "<p>En cabine de soin Laboratoires Botanique Avancée, <strong>la beauté se réactive par le mouvement</strong>. Nos protocoles agissent en profondeur sur les fascias, la circulation lymphatique et sur la posture pour libérer les tensions, restaurer l’alignement et relancer l’énergie cellulaire.</p>",
+        "small_content": "",
+        "button_label": "",
+        "button_link": "",
+        "button_popup": "",
+        "button_product": "",
+        "button_add_to_cart": false,
+        "price_prefix": "",
+        "bordered_content": false,
+        "align_media_to_text": false,
+        "mobile_accordion": false,
+        "mobile_accordion_label": "Voir plus",
+        "mobile_accordion_open": false,
+        "visibility": "desktop",
+        "spacing_top": true,
+        "spacing_bottom": true,
+        "background_color": "#ffffff"
+      }
+    },
     "featured_product_QcrXDx": {
       "type": "featured-product",
       "blocks": {
@@ -645,62 +701,6 @@
         "visibility": "mobile"
       }
     },
-    "image_collage_text_lba_GayEge": {
-      "type": "image-collage-text-lba",
-      "blocks": {
-        "button_xy76Lc": {
-          "type": "button",
-          "settings": {
-            "label": "En savoir plus",
-            "link": "https://laboratoires-botanique-avancee.com/pages/spa#philosophie",
-            "popup": "",
-            "style": "primary"
-          }
-        },
-        "button_gHwDdf": {
-          "type": "button",
-          "settings": {
-            "label": "Où nous trouver",
-            "link": "shopify://pages/nos-boutiques",
-            "popup": "",
-            "style": "outline"
-          }
-        }
-      },
-      "block_order": [
-        "button_xy76Lc",
-        "button_gHwDdf"
-      ],
-      "name": "Nos protocoles régénératifs (desktop)",
-      "settings": {
-        "image_main": "shopify://shop_images/NEW_GAMME_LOTION2_1_1.jpg",
-        "image_secondary_1": "shopify://shop_images/Rectangle_5939.jpg",
-        "image_secondary_1_position": "middle",
-        "image_secondary_2_position": "bottom",
-        "image_position": "start",
-        "eyebrow": "Remettre en mouvement.",
-        "eyebrow_position": "above",
-        "title": "nos protocoles \nrégénératifs",
-        "title_tag": "h2",
-        "content": "<p>En cabine de soin Laboratoires Botanique Avancée, <strong>la beauté se réactive par le mouvement</strong>. Nos protocoles agissent en profondeur sur les fascias, la circulation lymphatique et sur la posture pour libérer les tensions, restaurer l’alignement et relancer l’énergie cellulaire.</p>",
-        "small_content": "",
-        "button_label": "",
-        "button_link": "",
-        "button_popup": "",
-        "button_product": "",
-        "button_add_to_cart": false,
-        "price_prefix": "",
-        "bordered_content": false,
-        "align_media_to_text": false,
-        "mobile_accordion": false,
-        "mobile_accordion_label": "Voir plus",
-        "mobile_accordion_open": false,
-        "visibility": "desktop",
-        "spacing_top": true,
-        "spacing_bottom": true,
-        "background_color": "#ffffff"
-      }
-    },
     "image_collage_text_lba_8RrKf4": {
       "type": "image-collage-text-lba",
       "blocks": {
@@ -798,6 +798,7 @@
     "slideshow_RPwAx6",
     "keywords_banner_lba_eJBBam",
     "keywords_banner_lba_mjkMA8",
+    "image_collage_text_lba_GayEge",
     "featured_collections_7b9Vyg",
     "featured_product_QcrXDx",
     "content_key_figures_lba_RR4R39",
@@ -807,7 +808,6 @@
     "testimonials_bF9n9E",
     "image_with_text_overlay_wX6kPw",
     "image_with_text_byehHd",
-    "image_collage_text_lba_GayEge",
     "image_collage_text_lba_8RrKf4",
     "image_collage_text_lba_PL6XAj"
   ]
