@@ -759,6 +759,7 @@
     },
     "image_collage_text_lba_PL6XAj": {
       "type": "image-collage-text-lba",
+      "disabled": true,
       "custom_css": [
         "h6 {margin-top: 0 !important;}",
         "@media (min-width: 768px) {.collage-text__inner--bordered .collage-text__text {padding-block: 80px; }}"
