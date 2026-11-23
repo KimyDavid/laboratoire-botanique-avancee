@@ -264,7 +264,7 @@
       "name": "Duo image + texte",
       "settings": {
         "section_height": "full-height",
-        "image": "shopify://shop_images/31_BAULIEU_KV_ET_SCIENCE_V8_rvb_copie.webp",
+        "image": "shopify://shop_images/1950X1950_TEXTURE_FRETTE_CREME.webp",
         "background_color": "#ffffff",
         "image_layout": "boxed",
         "video_size": "full-height",
@@ -287,7 +287,7 @@
         "video_size": "full-height",
         "image_position": "right",
         "title": "Crème yeux soyeuse Régénérative",
-        "text": "<p>Hautement concentrée à <strong>32% d’actifs.</strong></p><p>Le contour de l'œil est lissé. Les cernes, poches et ridules sont atténuées, le regard est reposé, éclatant. </p><p><br/><strong>93% regard plus reposé, plus lumineux et revitalisé.</strong></p>",
+        "text": "<p><strong>32% d'actifs pour un regard défatigué.<br/><br/></strong>Sa texture baume&nbsp;lisse les rides (83%), illumine (93%) et hydrate (95%) intensément.<br/><br/>Les cernes et les poches sont diminués (80%), la paupière est raffermie (97%).</p>",
         "button_link": "shopify://products/creme-yeux-soyeuse-regenerative",
         "button_label": "Découvrir",
         "id": ""
