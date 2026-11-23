@@ -293,6 +293,23 @@
         "id": ""
       }
     },
+    "image_text_lba_DXJK8q": {
+      "type": "image-text-lba",
+      "name": "Duo image + texte",
+      "settings": {
+        "section_height": "full-height",
+        "image": "shopify://shop_images/1950X1950_TEXTURE_FRETTE_CREME.webp",
+        "background_color": "#ffffff",
+        "image_layout": "boxed",
+        "video_size": "full-height",
+        "image_position": "left",
+        "title": "crème fondante régénérative",
+        "text": "<p>Pensées pour vous accompagner partout, nos recharges en aluminium conjuguent élégance, légèreté et praticité.<br/><br/>Recyclables à l’infini, elles offrent une nouvelle approche du soin, alliant raffinement et durabilité.</p>",
+        "button_link": "shopify://products/creme-fondante-regenerative",
+        "button_label": "Découvrir",
+        "id": ""
+      }
+    },
     "rich_text_NjM6pw": {
       "type": "rich-text",
       "blocks": {
@@ -489,6 +506,7 @@
     "image_text_lba_VBcQTb",
     "image_text_lba_GgqdPP",
     "image_text_lba_n6eKY8",
+    "image_text_lba_DXJK8q",
     "rich_text_NjM6pw",
     "image_text_lba_ELymAP",
     "1785499112f820d03d",
