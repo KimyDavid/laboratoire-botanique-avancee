@@ -130,7 +130,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "separate_section_with_border": false,
-        "image": "shopify://shop_images/LBA_ST_TROPEZ_web_2048.jpg",
+        "image": "shopify://shop_images/airelles-chateau-de-la-messardiere.jpg",
         "image_fullsize": true,
         "reveal_on_scroll": true,
         "image_position": "start",
@@ -175,7 +175,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "separate_section_with_border": false,
-        "image": "shopify://shop_images/LBA_COURCHEVEL_HD_V2__16.jpg",
+        "image": "shopify://shop_images/airelles-courchevel-facade.jpg",
         "image_fullsize": true,
         "reveal_on_scroll": true,
         "image_position": "end",
@@ -220,7 +220,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "separate_section_with_border": false,
-        "image": "shopify://shop_images/LBA_VERSAILLES_HD__1.jpg",
+        "image": "shopify://shop_images/airelles-le-grand-controle-orangerie.jpg",
         "image_fullsize": true,
         "reveal_on_scroll": true,
         "image_position": "start",
@@ -265,7 +265,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "separate_section_with_border": false,
-        "image": "shopify://shop_images/PDP_lba-portrait_VincentLeroux.jpg",
+        "image": "shopify://shop_images/airelles-pan-dei-palais-facade.jpg",
         "image_fullsize": true,
         "reveal_on_scroll": true,
         "image_position": "end",
