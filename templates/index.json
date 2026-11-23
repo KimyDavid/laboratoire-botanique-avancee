@@ -144,6 +144,63 @@
         "padding_block": 12
       }
     },
+    "image_collage_text_lba_GayEge": {
+      "type": "image-collage-text-lba",
+      "blocks": {
+        "button_xy76Lc": {
+          "type": "button",
+          "settings": {
+            "label": "Réserver",
+            "link": "https://laboratoires-botanique-avancee.com/pages/spa#philosophie",
+            "popup": "",
+            "style": "primary"
+          }
+        },
+        "button_gHwDdf": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "label": "Où nous trouver",
+            "link": "shopify://pages/nos-boutiques",
+            "popup": "",
+            "style": "outline"
+          }
+        }
+      },
+      "block_order": [
+        "button_xy76Lc",
+        "button_gHwDdf"
+      ],
+      "name": "Nos protocoles régénératifs (desktop)",
+      "settings": {
+        "image_main": "shopify://shop_images/laboratoires-botanique-avancee-vitrine-bon-marche.jpg",
+        "image_secondary_1": "shopify://shop_images/Rectangle_5939.jpg",
+        "image_secondary_1_position": "middle",
+        "image_secondary_2_position": "bottom",
+        "image_position": "start",
+        "eyebrow": "",
+        "eyebrow_position": "above",
+        "title": "résidence éphémère à l'institut du Bon marché Rive Gauche",
+        "title_tag": "h2",
+        "content": "<p>Du <strong>23 novembre au 6 décembre</strong>, Laboratoires Botanique Avancée vous invite à découvrir une résidence éphémère à l’Institut du Bon Marché.</p><p>&nbsp;À cette occasion, nos soins régénérants rencontrent l’expertise de deux facialistes invitées, <strong>Aurélia Del Sol</strong> et <strong>Jeanne Casimir</strong>, pour une expérience de massage du visage sur mesure.</p>",
+        "small_content": "",
+        "button_label": "",
+        "button_link": "",
+        "button_popup": "",
+        "button_product": "",
+        "button_add_to_cart": false,
+        "price_prefix": "",
+        "bordered_content": false,
+        "align_media_to_text": false,
+        "mobile_accordion": false,
+        "mobile_accordion_label": "Voir plus",
+        "mobile_accordion_open": false,
+        "visibility": "desktop",
+        "spacing_top": true,
+        "spacing_bottom": true,
+        "background_color": "#ffffff"
+      }
+    },
     "featured_collections_7b9Vyg": {
       "type": "featured-collections",
       "blocks": {
@@ -183,62 +240,6 @@
         "vertical_spacing_desktop": 40,
         "vertical_spacing_mobile": 40,
         "subheading": ""
-      }
-    },
-    "image_collage_text_lba_GayEge": {
-      "type": "image-collage-text-lba",
-      "blocks": {
-        "button_xy76Lc": {
-          "type": "button",
-          "settings": {
-            "label": "En savoir plus",
-            "link": "https://laboratoires-botanique-avancee.com/pages/spa#philosophie",
-            "popup": "",
-            "style": "primary"
-          }
-        },
-        "button_gHwDdf": {
-          "type": "button",
-          "settings": {
-            "label": "Où nous trouver",
-            "link": "shopify://pages/nos-boutiques",
-            "popup": "",
-            "style": "outline"
-          }
-        }
-      },
-      "block_order": [
-        "button_xy76Lc",
-        "button_gHwDdf"
-      ],
-      "name": "Nos protocoles régénératifs (desktop)",
-      "settings": {
-        "image_main": "shopify://shop_images/NEW_GAMME_LOTION2_1_1.jpg",
-        "image_secondary_1": "shopify://shop_images/Rectangle_5939.jpg",
-        "image_secondary_1_position": "middle",
-        "image_secondary_2_position": "bottom",
-        "image_position": "start",
-        "eyebrow": "Remettre en mouvement.",
-        "eyebrow_position": "above",
-        "title": "nos protocoles \nrégénératifs",
-        "title_tag": "h2",
-        "content": "<p>En cabine de soin Laboratoires Botanique Avancée, <strong>la beauté se réactive par le mouvement</strong>. Nos protocoles agissent en profondeur sur les fascias, la circulation lymphatique et sur la posture pour libérer les tensions, restaurer l’alignement et relancer l’énergie cellulaire.</p>",
-        "small_content": "",
-        "button_label": "",
-        "button_link": "",
-        "button_popup": "",
-        "button_product": "",
-        "button_add_to_cart": false,
-        "price_prefix": "",
-        "bordered_content": false,
-        "align_media_to_text": false,
-        "mobile_accordion": false,
-        "mobile_accordion_label": "Voir plus",
-        "mobile_accordion_open": false,
-        "visibility": "desktop",
-        "spacing_top": true,
-        "spacing_bottom": true,
-        "background_color": "#ffffff"
       }
     },
     "featured_product_QcrXDx": {
